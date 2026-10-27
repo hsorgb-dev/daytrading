@@ -21,6 +21,19 @@ an order on its own. Paper trading is the default.
 > [github.com/Jakeschincariol/trader-skill](https://github.com/Jakeschincariol/trader-skill).
 > This repo is its day-trading sequel: the Trader skill v2.
 
+> **This fork (hsorgb-dev/daytrading)** changes the Time Machine only. The
+> original drew every 5-minute bar on its own, which turns each replay into a
+> random walk and loses the follow-through a breakout lives on, and it quoted
+> 10,000 replays of a few dozen days as if they were precise. Here it draws
+> runs of real consecutive bars (a block bootstrap) from past days that had
+> the same setup, takes costs and gaps through the stop into account, and
+> reports 95 % intervals from the days, not the replays. `--classic` still
+> gives the original numbers bit for bit. Details:
+> [trader-timemachine/SKILL.md](trader-timemachine/SKILL.md). To install this
+> fork, use `https://github.com/hsorgb-dev/daytrading` (or
+> `/plugin marketplace add hsorgb-dev/daytrading`) in place of the original
+> links below.
+
 ## Install
 
 Paste this into Claude:
@@ -106,6 +119,12 @@ An example, the trade in the reel: Tesla, Monday October 19 2026, real data.
    the same rule on those 59 real sessions: it fired 33 times, 13 hit the
    target, 15 the stop, 5 neither. Its verdict: close to a coin flip. That is
    the point of looking before you risk a dollar.
+   *In this fork* the default run draws 30-minute runs of real bars from the
+   24 past days that had broken out by 10:15, with 0.02 a share of costs:
+   target first 29.1 %, stop first 22.3 %. The point estimate leans to the
+   target, but resampling those 24 days spans 34 % to 76 % around the 50 %
+   break-even, and the history's average net R is -0.069 with a 95 % interval
+   of -0.38 to +0.25. Verdict: no clear lean, within the noise of 24 days.
 6. **`/trader-budget`** with a $5,000 account and a $50 max loss per trade:
    50 / 5.86 = 8 shares ($2,913.44). If the stop fills at 358.32, the loss is
    $46.88. It writes one bracket order: buy 8 TSLA, stop-loss 358.32,
@@ -173,7 +192,8 @@ variables, never in the chat.
 **The Time Machine is a simulation, not a prediction.** It is built from the
 stock's own last 60 days of 5-minute bars. The future can do things those 60
 days never did: an earnings report, a halt, a headline. Treat its odds as a
-reality check, never as a promise.
+reality check, never as a promise. 10,000 replays of 24 days are still only
+24 days of evidence: read the 95 % ranges, not the decimals.
 
 **A stop is a plan, not a guarantee.** In a fast market or across a gap, a
 stop order can fill well past its price. The max loss shown is the loss at

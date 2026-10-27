@@ -50,6 +50,14 @@ def plan(**kw):
 
 
 def machine(p=None, text=TEXT, now=NOW_UTC, **kw):
+    """The original Time Machine (tm.CLASSIC): the reel's numbers, bit for bit."""
+    opts = dict(tm.CLASSIC)
+    opts.update(kw)
+    return tm.time_machine(text, p or plan(), now, **opts)
+
+
+def improved(p=None, text=TEXT, now=NOW_UTC, **kw):
+    """The default: block bootstrap, setup pool, costs and gap fills."""
     return tm.time_machine(text, p or plan(), now, **kw)
 
 
@@ -527,7 +535,7 @@ class Cli(unittest.TestCase):
         shutil.rmtree(self.d)
 
     def test_run_with_the_plan_end_to_end(self):
-        code, text, err = run(["run", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--write", self.out])
+        code, text, err = run(["run", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--write", self.out, "--classic"])
         self.assertEqual(code, 0, err)
         self.assertIn("target first   29.4 %", text)
         self.assertIn("Close to a coin flip: target first 29.4 % vs stop first 25.5 %.", text)
@@ -544,7 +552,7 @@ class Cli(unittest.TestCase):
         self.assertEqual(doc["plan"]["from"], self.plan)
 
     def test_json_output(self):
-        code, text, _ = run(["run", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--json"])
+        code, text, _ = run(["run", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--json", "--classic"])
         self.assertEqual(code, 0)
         doc = json.loads(text)
         self.assertEqual(doc["mc"]["p_stop"], 0.2548)
@@ -555,7 +563,7 @@ class Cli(unittest.TestCase):
     def test_the_plan_as_flags_matches_the_file(self):
         code, text, err = run(["run", "--symbol", "tsla", "--date", "2026-10-19", "--entry", "364.18",
                                "--stop", "358.32", "--target", "370.04", "--entry-time", "10:15 AM",
-                               "--offline", TSLA, "--now", NOW, "--json"])
+                               "--offline", TSLA, "--now", NOW, "--json", "--classic"])
         self.assertEqual(code, 0, err)
         doc = json.loads(text)
         self.assertEqual((doc["mc"]["p_target"], doc["mc"]["p_green"]), (0.2938, 0.5168))
@@ -594,7 +602,7 @@ class Cli(unittest.TestCase):
         self.assertEqual(run([])[0], 1)
 
     def test_chart(self):
-        run(["run", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--write", self.out])
+        run(["run", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--write", self.out, "--classic"])
         code, text, _ = run(["chart", "--from", self.out])
         self.assertEqual(code, 0)
         lines = text.splitlines()
@@ -606,8 +614,210 @@ class Cli(unittest.TestCase):
         self.assertIn("4:00", text)
         self.assertEqual(lines[-2:], ["Close to a coin flip: target first 29.4 % vs stop first 25.5 %.",
                                       "45.1 % of the replays hit neither by 4:00 PM; the price at 4:00 PM decides those."])
-        code, again, _ = run(["chart", "--plan", self.plan, "--offline", TSLA, "--now", NOW])
+        code, again, _ = run(["chart", "--plan", self.plan, "--offline", TSLA, "--now", NOW, "--classic"])
         self.assertEqual(again, text)
+
+
+class Improved(unittest.TestCase):
+    """The default run: block bootstrap from the setup days, costs, gap fills, honest intervals."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.doc = improved()
+
+    def test_the_default_run_on_the_fixture(self):
+        m = self.doc["mc"]
+        self.assertEqual((m["method"], m["block_bars"], m["pool"], m["pool_sessions"], m["sessions_in_data"]),
+                         ("block", 6, "setup", 24, 59))
+        self.assertEqual((m["pool_from"], m["pool_to"]), ("2026-07-30", "2026-10-09"))
+        self.assertEqual((m["p_target"], m["p_stop"], m["p_neither"]), (0.2912, 0.2233, 0.4855))
+        self.assertEqual((m["avg_R"], m["avg_R_gross"], m["cost_r"]), (0.062, 0.065, 0.0034))
+        self.assertAlmostEqual(m["p_target"] + m["p_stop"] + m["p_neither"], 1.0, places=6)
+
+    def test_the_days_not_the_replays_set_the_uncertainty(self):
+        ci = self.doc["mc"]["ci95"]
+        self.assertEqual((ci["days"], ci["resamples"], ci["replays_each"]), (24, 200, 200))
+        self.assertEqual(ci["target_share"], [0.34, 0.763])
+        self.assertEqual(ci["avg_R"], [-0.191, 0.341])
+
+    def test_a_lean_inside_the_noise_is_not_called_a_lean(self):
+        # 57 % looks like a lean against 50 %, but resampling the 24 days spans 34 % to 76 %
+        self.assertTrue(self.doc["verdict"].startswith("No clear lean, within the noise of 24 days: at 1R after "
+                                                       "costs the target has to come first in 50 %"))
+        self.assertEqual(self.doc["verdict_notes"][0],
+                         "Resampling the 24 past days moves the target's share between 34 % and 76 % "
+                         "(break-even 50 %) and the average net R between -0.19 and +0.34.")
+
+    def test_the_history_with_costs_and_intervals(self):
+        h = self.doc["history"]
+        self.assertEqual((h["triggered"], h["target"], h["stop"], h["close"]), (33, 13, 15, 5))
+        self.assertEqual((h["avg_R"], h["avg_R_net"]), (-0.062, -0.069))
+        self.assertEqual(h["ci95"], {"target_share": [0.295, 0.642], "avg_R_net": [-0.384, 0.251]})
+        self.assertTrue(all(t["R_net"] < t["R"] + 0.005 for t in h["trades"]))
+        self.assertLess(h["avg_R_net"], h["avg_R"])
+        self.assertEqual(self.doc["evidence"], "History: no edge that can be told apart from zero (average net R "
+                                               "-0.069, 95 % interval -0.38 to +0.25, 33 trades).")
+
+    def test_the_report_says_how_it_was_drawn(self):
+        text = "\n".join(tm.report(self.doc))
+        for line in ("runs of about 6 consecutive bars (30 min)", "the 24 of its last 59 full sessions where the "
+                     "setup had fired by 10:15 AM", "Costs of 0.02 a share round trip (0.003R)",
+                     "opens through the stop fills at its open", "95 % interval of the average -0.38 to +0.25",
+                     "History: no edge that can be told apart from zero"):
+            self.assertIn(line, text)
+
+    def test_same_seed_same_numbers(self):
+        a = improved(replays=1000, seed=3)
+        b = improved(replays=1000, seed=3)
+        self.assertEqual(a["mc"], b["mc"])
+        self.assertEqual(a["history"], b["history"])
+
+    def test_the_flags_of_classic_give_the_reel_numbers(self):
+        m = improved(**tm.CLASSIC)["mc"]
+        self.assertEqual((m["p_target"], m["p_stop"], m["avg_R"]), (0.2938, 0.2548, 0.034))
+        self.assertNotIn("ci95", m)
+        self.assertEqual(sha(m["bands"]), SIM_BANDS)
+
+    def test_bad_options(self):
+        for kw in ({"method": "magic"}, {"pool": "some"}, {"block_bars": 0}, {"cost": -0.01}):
+            with self.assertRaises(tm.TMError, msg=kw):
+                improved(replays=10, **kw)
+
+    def test_too_few_setup_days_falls_back_to_all(self):
+        old = tm.MIN_SETUP_SESSIONS
+        tm.MIN_SETUP_SESSIONS = 100
+        try:
+            m = improved(replays=200)["mc"]
+        finally:
+            tm.MIN_SETUP_SESSIONS = old
+        self.assertEqual((m["pool"], m["pool_sessions"]), ("all", 59))
+        self.assertIn("only 24 past session(s) had the setup by 10:15 AM, fewer than 100", m["pool_note"])
+
+    def test_the_setup_days_are_the_days_that_had_broken_out_by_the_entry(self):
+        days, _ = tm.full_sessions(tm.split_sessions(tm.parse_bars(tm.chart_result(TEXT, "TSLA"), NOW_UTC)[1]),
+                                   "2026-10-19")
+        rule = {"or_minutes": 15}
+        idx = tm.setup_days(days, rule, 8)
+        self.assertEqual(len(idx), 24)
+        for i, (_, D) in enumerate(days):
+            oh = max(b["h"] for b in D[:3])
+            fired = any(D[j]["c"] > oh for j in range(3, 9))
+            self.assertEqual(i in idx, fired)
+
+
+class Sampling(unittest.TestCase):
+    """What the two samplers keep and lose, on pools built by hand."""
+
+    @staticmethod
+    def trend_pool(days=40):
+        # half the days rise 0.2 % every bar, half fall 0.2 % every bar: strong bar-to-bar dependence
+        pool = [[] for _ in range(tm.SESSION_BARS)]
+        for d in range(days):
+            r = 1.002 if d % 2 == 0 else 0.998
+            for i in range(1, tm.SESSION_BARS):
+                pool[i].append((1.0, max(1.0, r), min(1.0, r), r))
+        return pool
+
+    def test_a_long_block_is_one_real_session(self):
+        pool = self.trend_pool()
+        draws = tm.block_draws(pool, 0, tm.SESSION_BARS - 1, 0, 78)
+        seq = list(draws(random.Random(1)))
+        self.assertEqual(len(set(seq)), 1)     # every bar from the same day: the trend is kept
+
+    def test_iid_loses_the_trend_and_block_keeps_it(self):
+        pool = self.trend_pool()
+        k, last, stop, target = 8, 77, 90.0, 110.0
+        iid = tm.simulate(pool, 100.0, stop, target, k, last, 2000, 1, 0, draws=tm.iid_draws(pool, k, last, 0))
+        blk = tm.simulate(pool, 100.0, stop, target, k, last, 2000, 1, 0,
+                          draws=tm.block_draws(pool, k, last, 0, 78))
+        # a whole trending day moves 69 bars * 0.2 % = about 15 %: block replays reach the 10 % stop or target,
+        # iid replays mix up and down bars and almost never get there
+        self.assertGreater(blk["p_target"] + blk["p_stop"], 0.95)
+        self.assertLess(iid["p_target"] + iid["p_stop"], 0.05)
+        self.assertGreater(blk["p_target"], 0.4)
+        self.assertGreater(blk["p_stop"], 0.4)
+
+    def test_the_setup_days_restrict_the_draws(self):
+        pool = self.trend_pool()
+        seq = list(tm.block_draws(pool, 0, 77, 2, 3, days=[0, 2, 4])(random.Random(5)))
+        self.assertTrue(all(x[3] > 1 for x in seq))   # only the rising days
+        seq = list(tm.make_draws(pool, 0, 77, 2, "iid", 6, [1, 3])(random.Random(5)))
+        self.assertTrue(all(x[3] < 1 for x in seq))   # only the falling days
+
+    def flat_pool_with_a_gap(self, k):
+        pool = [[(1.0, 1.0, 1.0, 1.0)] for _ in range(tm.SESSION_BARS)]
+        pool[0] = []
+        pool[k + 1] = [(0.95, 0.96, 0.94, 0.95)]   # the next bar opens 5 % lower
+        return pool
+
+    def test_a_gap_through_the_stop_fills_at_the_open(self):
+        k = 10
+        pool = self.flat_pool_with_a_gap(k)
+        dr = tm.iid_draws(pool, k, 77, 0)
+        gap = tm.simulate(pool, 100.0, 98.0, 102.0, k, 77, 10, 1, 0, draws=dr, gap_fill=True)
+        plain = tm.simulate(pool, 100.0, 98.0, 102.0, k, 77, 10, 1, 0, draws=dr, gap_fill=False)
+        self.assertEqual((gap["p_stop"], plain["p_stop"]), (1.0, 1.0))
+        self.assertEqual(plain["avg_R"], -1.0)
+        self.assertEqual(gap["avg_R"], -2.5)      # filled at 95, risk 2: -5 / 2
+
+    def test_costs_come_off_every_r_and_raise_break_even(self):
+        k = 10
+        pool = self.flat_pool_with_a_gap(k)
+        dr = tm.iid_draws(pool, k, 77, 0)
+        m = tm.simulate(pool, 100.0, 98.0, 102.0, k, 77, 10, 1, 0, draws=dr, cost=0.2)
+        self.assertEqual((m["avg_R_gross"], m["avg_R"], m["cost_r"]), (-1.0, -1.1, 0.1))
+        # 1R with 0.1R of costs: share * 0.9 = (1 - share) * 1.1, break-even 55 %
+        self.assertAlmostEqual(tm.lean({"p_target": 0.3, "p_stop": 0.3, "r_at_target": 1.0, "cost_r": 0.1})[2],
+                               0.55)
+        self.assertTrue(tm.verdict({"p_target": 0.32, "p_stop": 0.28, "r_at_target": 1.0, "cost_r": 0.1})
+                        .startswith("Close to break-even: at 1R after costs the target has to come first in 55 %"))
+
+
+class Stats(unittest.TestCase):
+    def test_wilson(self):
+        self.assertEqual(tm.wilson(13, 28), [0.295, 0.642])
+        self.assertEqual(tm.wilson(5, 5), [0.566, 1.0])
+        self.assertIsNone(tm.wilson(0, 0))
+
+    def test_bootstrap_mean(self):
+        self.assertIsNone(tm.bootstrap_mean_ci([1.0]))
+        self.assertEqual(tm.bootstrap_mean_ci([0.5] * 10), [0.5, 0.5])
+        lo, hi = tm.bootstrap_mean_ci([-1.0, 1.0] * 20)
+        self.assertTrue(lo < 0 < hi)
+
+    def test_evidence_lines(self):
+        base = {"rule": {"setup": "orb"}, "triggered": 40, "avg_R_net": 0.2}
+        self.assertTrue(tm.evidence(dict(base, ci95={"avg_R_net": [0.05, 0.4]}))
+                        .startswith("History: a positive edge after costs"))
+        self.assertTrue(tm.evidence(dict(base, avg_R_net=-0.3, ci95={"avg_R_net": [-0.5, -0.1]}))
+                        .startswith("History: a negative edge after costs"))
+        self.assertEqual(tm.evidence(dict(base, triggered=12, ci95={"avg_R_net": [0.1, 0.3]})),
+                         "History: only 12 trade(s) with this rule, too few to tell an edge from luck.")
+        self.assertIsNone(tm.evidence({"rule": None, "triggered": 0}))
+
+
+class CliImproved(unittest.TestCase):
+    def test_the_new_flags(self):
+        d = tempfile.mkdtemp()
+        try:
+            p = os.path.join(d, "plan.json")
+            with open(p, "w") as fh:
+                json.dump(PLAN, fh)
+            code, text, err = run(["run", "--plan", p, "--offline", TSLA, "--now", NOW, "--json",
+                                   "--method", "iid", "--pool", "all", "--cost", "0", "--no-gap-fill"])
+            self.assertEqual(code, 0, err)
+            doc = json.loads(text)
+            self.assertEqual((doc["mc"]["p_target"], doc["mc"]["p_stop"]), (0.2938, 0.2548))
+            code, text, err = run(["run", "--plan", p, "--offline", TSLA, "--now", NOW, "--replays", "500",
+                                   "--block-bars", "12", "--cost", "0.05"])
+            self.assertEqual(code, 0, err)
+            self.assertIn("runs of about 12 consecutive bars (60 min)", text)
+            self.assertIn("Costs of 0.05 a share", text)
+            code, _, err = run(["run", "--plan", p, "--offline", TSLA, "--now", NOW, "--block-bars", "0"])
+            self.assertEqual(code, 1)
+            self.assertIn("--block-bars", err)
+        finally:
+            shutil.rmtree(d)
 
 
 if __name__ == "__main__":

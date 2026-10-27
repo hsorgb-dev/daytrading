@@ -14,7 +14,21 @@ session in the data.
     python3 timemachine.py chart                        # ASCII fan chart of the replays
     python3 timemachine.py chart --from trader/timemachine.json
 
-How the replays work (the reel's sim.py, same algorithm, same random draws):
+The default run (this fork) differs from the original in five places; --classic
+gives the original numbers bit for bit:
+  - --method block: stationary block bootstrap. Bars come in runs of about
+    --block-bars (6) consecutive real bars from one past session, so momentum
+    and volatility clusters survive. The original drew every bar on its own.
+  - --pool setup: only past days where the rule had fired by the entry bar
+    (at least 15, else all days, with a note).
+  - --cost (0.02 a share round trip) comes off every R; break-even moves up.
+  - gap fills: a bar that opens beyond the stop fills at its open.
+  - honest intervals: the pool's DAYS resampled 200 times give a 95 % range for
+    the replays; the history gets a Wilson interval for the target's share and a
+    bootstrap interval for the average net R. A lean whose range still contains
+    break-even is reported as "No clear lean, within the noise of N days".
+
+How the replays work in --classic (the reel's sim.py, same algorithm, same random draws):
   1. Fetch 60 days of 5-minute bars (Yahoo v8 chart, range=60d interval=5m;
      one request). Keep only FULL sessions before the plan's date: 78 bars,
      9:30 to 4:00 New York time. Half days, gaps and today are left out.
@@ -346,59 +360,111 @@ def pct(a, q):
     return a[min(len(a) - 1, int(q * len(a)))]
 
 
-def simulate(pool, entry, stop, target, k, last, replays=10000, seed=19, window=2, side="buy"):
-    """Monte Carlo replays of bars k+1..last. Same draws and order as the reel's sim.py."""
+def iid_draws(pool, k, last, window):
+    """The original sampler (the reel's sim.py): every bar drawn on its own from any
+    past session at the same time of day (+- window bars). Bar-to-bar dependence
+    (momentum, volatility clusters, the day's regime) is lost: each replay is a
+    random walk with the stock's time-of-day volatility profile."""
+    def draws(rng):
+        choice = rng.choice
+        for i in range(k + 1, last + 1):
+            j = i if window == 0 else min(SESSION_BARS - 1, max(1, i + rng.randint(-window, window)))
+            yield choice(pool[j])
+    return draws
+
+
+def block_draws(pool, k, last, window, block_bars, days=None):
+    """Stationary block bootstrap (Politis & Romano 1994): bars come in runs of
+    consecutive bars from ONE past session, at the same time of day (+- window,
+    fixed for the run). A new run starts with probability 1 / block_bars per bar,
+    so runs last block_bars bars on average. Inside a run the real sequence is
+    kept, so a breakout's follow-through (or its failure) survives the resampling.
+    days: the session indices to draw from (the setup pool), default all."""
+    n = len(pool[1])
+    days = list(range(n)) if days is None else list(days)
+    p_new = 0.0 if block_bars >= SESSION_BARS else 1.0 / max(1, block_bars)   # 78: one whole past session
+
+    def draws(rng):
+        d, off = None, 0
+        for i in range(k + 1, last + 1):
+            if d is None or rng.random() < p_new:
+                d = days[rng.randrange(len(days))]
+                off = rng.randint(-window, window) if window else 0
+            j = min(SESSION_BARS - 1, max(1, i + off))
+            yield pool[j][d]
+    return draws
+
+
+def simulate(pool, entry, stop, target, k, last, replays=10000, seed=19, window=2, side="buy",
+             draws=None, cost=0.0, gap_fill=False, light=False):
+    """Monte Carlo replays of bars k+1..last.
+    draws: a sampler from iid_draws / block_draws (default iid_draws: the same
+    draws and order as the reel's sim.py, bit for bit).
+    cost: round-trip cost per share (fees, spread, slippage), taken off every
+    replay's R. gap_fill: a bar that OPENS beyond the stop fills at its open, not
+    at the stop (a gap through a stop order); a bar opening beyond the target
+    fills at the target (conservative for a limit order)."""
     long = side == "buy"
     risk = (entry - stop) if long else (stop - entry)
     r_target = round(((target - entry) if long else (entry - target)) / risk, 4)
-
-    def slot(rng, i):
-        return i if window == 0 else min(SESSION_BARS - 1, max(1, i + rng.randint(-window, window)))
+    if draws is None:
+        draws = iid_draws(pool, k, last, window)
 
     rng = random.Random(seed)
-    choice = rng.choice
-    outcomes, closes, paths = [], [], []
+    outcomes, closes, paths, exits = [], [], [], []
     for n in range(replays):
         p = entry
         outcome = None
+        fill = None
         keep = n < SAMPLE_PATHS
         path = [entry]
-        for i in range(k + 1, last + 1):
-            o, h, l, c = choice(pool[slot(rng, i)])
-            hi, lo, cl = p * h, p * l, p * c
+        for o, h, l, c in draws(rng):
+            op, hi, lo, cl = p * o, p * h, p * l, p * c
             if outcome is None:
                 if long:
                     if lo <= stop:
                         outcome = "stop"        # both inside one bar: count the loss (conservative)
+                        fill = op if gap_fill and op < stop else stop
                     elif hi >= target:
                         outcome = "target"
+                        fill = target
                 else:
                     if hi >= stop:
                         outcome = "stop"
+                        fill = op if gap_fill and op > stop else stop
                     elif lo <= target:
                         outcome = "target"
+                        fill = target
             p = cl
             if keep:
                 path.append(round(p, 2))
         outcomes.append(outcome or "close")
         closes.append(p)
+        exits.append(fill)
         if keep:
             paths.append(path)
     cnt = {x: outcomes.count(x) for x in ("target", "stop", "close")}
     green = sum(1 for o, p in zip(outcomes, closes)
                 if o == "target" or (o == "close" and (p > entry if long else p < entry)))
-    Rs = [r_target if o == "target" else -1.0 if o == "stop" else ((p - entry) if long else (entry - p)) / risk
-          for o, p in zip(outcomes, closes)]
+
+    def r_of(o, p, f):
+        if o == "target":
+            return r_target
+        if o == "stop":
+            return (((f - entry) if long else (entry - f)) / risk) if gap_fill else -1.0
+        return ((p - entry) if long else (entry - p)) / risk
+    Rs = [r_of(o, p, f) for o, p, f in zip(outcomes, closes, exits)]
+    cost_r = cost / risk if risk > 0 else 0.0
+    if light:   # the counts only, for the day-level uncertainty loop
+        return {"target": cnt["target"], "stop": cnt["stop"], "avg_R": statistics.mean(Rs) - cost_r}
     srt = sorted(closes)
     # percentile bands per bar for the fan chart: a second run of 2,000 paths, same seed
     rng = random.Random(seed)
-    choice = rng.choice
     allp = []
     for n in range(BAND_PATHS):
         p = entry
         path = [entry]
-        for i in range(k + 1, last + 1):
-            o, h, l, c = choice(pool[slot(rng, i)])
+        for o, h, l, c in draws(rng):
             p = p * c
             path.append(p)
         allp.append(path)
@@ -418,10 +484,53 @@ def simulate(pool, entry, stop, target, k, last, replays=10000, seed=19, window=
         "p_target": round(cnt["target"] / replays, 4), "p_stop": round(cnt["stop"] / replays, 4),
         "p_neither": round(cnt["close"] / replays, 4), "p_green": round(green / replays, 4),
         "median_close": round(pct(srt, 0.5), 2), "p5_close": round(pct(srt, 0.05), 2),
-        "p95_close": round(pct(srt, 0.95), 2), "avg_R": round(statistics.mean(Rs), 3),
+        "p95_close": round(pct(srt, 0.95), 2), "avg_R": round(statistics.mean(Rs) - cost_r, 3),
+        "avg_R_gross": round(statistics.mean(Rs), 3), "cost_per_share": cost, "cost_r": round(cost_r, 4),
+        "gap_fill": bool(gap_fill),
         "r_at_target": r_target, "band_paths": BAND_PATHS, "bands": bands, "sample_paths": paths,
         "hist": {"lo": round(lo_, 2), "hi": round(hi_, 2), "bins": bins},
     }
+
+
+def make_draws(pool, k, last, window, method, block_bars, days=None):
+    """The sampler for a method over a set of session indices (None = all, repeats allowed)."""
+    if method == "block":
+        return block_draws(pool, k, last, window, block_bars, days)
+    if days is None:
+        return iid_draws(pool, k, last, window)
+    sub = [[row[d] for d in days] if row else row for row in pool]
+    return iid_draws(sub, k, last, window)
+
+
+DAY_RESAMPLES = 200
+DAY_REPLAYS = 200
+
+
+def day_uncertainty(pool, entry, stop, target, k, last, window, side, method, block_bars, days, cost, gap_fill,
+                    seed, resamples=DAY_RESAMPLES, replays=DAY_REPLAYS):
+    """How much the odds move when the past DAYS are resampled: 10,000 replays of
+    24 days still only hold 24 days of information. Each round draws the pool's
+    days with replacement, runs a small simulation on them, and keeps the target's
+    share of the replays that hit one side and the average net R. Returns their
+    95 % ranges (percentile), or None with fewer than 2 days."""
+    base = list(range(len(pool[1]))) if days is None else list(days)
+    if len(base) < 2 or resamples < 1:
+        return None
+    rng = random.Random(seed + 7919)
+    shares, avgs = [], []
+    for b in range(resamples):
+        pick = [base[rng.randrange(len(base))] for _ in base]
+        dr = make_draws(pool, k, last, window, method, block_bars, pick)
+        r = simulate(pool, entry, stop, target, k, last, replays, seed + 1 + b, window, side, draws=dr,
+                     cost=cost, gap_fill=gap_fill, light=True)
+        if r["target"] + r["stop"]:
+            shares.append(r["target"] / (r["target"] + r["stop"]))
+        avgs.append(r["avg_R"])
+    shares.sort()
+    avgs.sort()
+    return {"days": len(base), "resamples": resamples, "replays_each": replays,
+            "target_share": [round(pct(shares, 0.025), 3), round(pct(shares, 0.975), 3)] if shares else None,
+            "avg_R": [round(pct(avgs, 0.025), 3), round(pct(avgs, 0.975), 3)]}
 
 
 # ---------------------------------------------------------------- stop rules and the history replay
@@ -448,10 +557,15 @@ def rule_stop(rule, oh, ol, entry, long):
     return cents_away(entry * (1 - frac) if long else entry * (1 + frac), long)
 
 
-def history_replay(sessions, rule, last, side="buy"):
+def history_replay(sessions, rule, last, side="buy", cost=0.0, gap_fill=False, seed=19):
     """The plan's rule on every past full session: entry = the first bar after the
     opening range to close beyond it (up to the --until bar), then stop first, then
-    target, bar by bar, else the close at --until."""
+    target, bar by bar, else the close at --until.
+    cost: round-trip cost per share, taken off each trade's R ("R_net").
+    gap_fill: a bar that opens beyond the stop fills at its open (see simulate).
+    Adds the honest uncertainty: a Wilson 95 % interval for the target's share of
+    the trades that hit one side, and a bootstrap 95 % interval for the average
+    net R (resampling the trades, fixed seed)."""
     long = side == "buy"
     n = rule["or_minutes"] // 5
     trades = []
@@ -467,27 +581,94 @@ def history_replay(sessions, rule, last, side="buy"):
             continue
         t = round(e + rule["target_r"] * risk, 2) if long else round(e - rule["target_r"] * risk, 2)
         oc = None
+        fill = s
         for b in D[kk + 1:last + 1]:
             if (b["l"] <= s) if long else (b["h"] >= s):
                 oc = "stop"
+                if gap_fill and ((b["o"] < s) if long else (b["o"] > s)):
+                    fill = b["o"]
                 break
             if (b["h"] >= t) if long else (b["l"] <= t):
                 oc = "target"
                 break
         cl = D[last]["c"]
-        R = ((t - e) if long else (e - t)) / risk if oc == "target" else -1.0 if oc == "stop" else \
-            ((cl - e) if long else (e - cl)) / risk
-        trades.append({"date": d, "time": clock12(OPEN_MIN + 5 * (kk + 1)), "entry": e, "stop": s, "target": t,
-                       "outcome": oc or "close", "R": round(R, 2)})
+        if oc == "target":
+            R = ((t - e) if long else (e - t)) / risk
+        elif oc == "stop":
+            R = ((fill - e) if long else (e - fill)) / risk
+        else:
+            R = ((cl - e) if long else (e - cl)) / risk
+        trades.append({"date": d, "time": clock12(OPEN_MIN + 5 * (kk + 1)), "bar": kk, "entry": e, "stop": s,
+                       "target": t, "outcome": oc or "close", "R": round(R, 2),
+                       "R_net": round(R - cost / risk, 3)})
+    tg = sum(1 for x in trades if x["outcome"] == "target")
+    st = sum(1 for x in trades if x["outcome"] == "stop")
+    nets = [x["R_net"] for x in trades]
     return {
         "sessions": len(sessions), "triggered": len(trades),
-        "target": sum(1 for x in trades if x["outcome"] == "target"),
-        "stop": sum(1 for x in trades if x["outcome"] == "stop"),
+        "target": tg, "stop": st,
         "close": sum(1 for x in trades if x["outcome"] == "close"),
         "green": sum(1 for x in trades if x["R"] > 0),
         "avg_R": round(statistics.mean(x["R"] for x in trades), 3) if trades else None,
+        "avg_R_net": round(statistics.mean(nets), 3) if trades else None,
+        "cost_per_share": cost, "gap_fill": bool(gap_fill),
+        "ci95": {"target_share": wilson(tg, tg + st), "avg_R_net": bootstrap_mean_ci(nets, seed=seed)},
         "rule": rule, "trades": trades,
     }
+
+
+def wilson(hits, n, z=1.96):
+    """Wilson 95 % interval for a share hits / n, [lo, hi] rounded to 3 places; None when n = 0."""
+    if n <= 0:
+        return None
+    p = hits / n
+    den = 1 + z * z / n
+    mid = (p + z * z / (2 * n)) / den
+    half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / den
+    return [round(max(0.0, mid - half), 3), round(min(1.0, mid + half), 3)]
+
+
+def bootstrap_mean_ci(xs, reps=5000, seed=19):
+    """Percentile bootstrap 95 % interval for the mean of xs; None with fewer than 2 values."""
+    if len(xs) < 2:
+        return None
+    rng = random.Random(seed)
+    n = len(xs)
+    means = sorted(sum(xs[rng.randrange(n)] for _ in range(n)) / n for _ in range(reps))
+    return [round(pct(means, 0.025), 3), round(pct(means, 0.975), 3)]
+
+
+def setup_days(sessions, rule, k, side="buy"):
+    """Indices of the past sessions where the plan's rule had fired by the entry
+    bar k: the days that looked like today at entry time (the setup pool)."""
+    long = side == "buy"
+    n = rule["or_minutes"] // 5
+    out = []
+    for idx, (_, D) in enumerate(sessions):
+        oh, ol = opening_range(D, n)
+        if any((D[i]["c"] > oh) if long else (D[i]["c"] < ol) for i in range(n, k + 1)):
+            out.append(idx)
+    return out
+
+
+MIN_SETUP_SESSIONS = 15
+
+
+def evidence(h):
+    """One line on what the real history can and cannot tell, from its 95 % interval."""
+    if not h.get("rule") or not h.get("triggered"):
+        return None
+    n, avg = h["triggered"], h["avg_R_net"]
+    ci = (h.get("ci95") or {}).get("avg_R_net")
+    if n < 20 or not ci:
+        return ("History: only %d trade(s) with this rule, too few to tell an edge from luck." % n)
+    lo, hi = ci
+    span = "average net R %+.3f, 95 %% interval %+.2f to %+.2f, %d trades" % (avg, lo, hi, n)
+    if lo > 0:
+        return "History: a positive edge after costs (%s)." % span
+    if hi < 0:
+        return "History: a negative edge after costs (%s)." % span
+    return "History: no edge that can be told apart from zero (%s)." % span
 
 
 # ---------------------------------------------------------------- the plan
@@ -635,7 +816,8 @@ def lean(mc):
     if pt + ps <= 0:
         return None
     r = mc.get("r_at_target") or 1.0
-    share, even = pt / (pt + ps), 1.0 / (1.0 + r)
+    c = mc.get("cost_r") or 0.0     # costs move break-even up: share * (r - c) = (1 - share) * (1 + c)
+    share, even = pt / (pt + ps), (1.0 + c) / (1.0 + r)
     return share - even, share, even
 
 
@@ -648,8 +830,13 @@ def verdict(mc):
             _until12(mc), _until12(mc))
     d, share, even = lv
     r = mc.get("r_at_target") or 1.0
-    one_r = abs(r - 1.0) < 0.005
-    if abs(d) < COIN_FLIP:
+    costs = bool(mc.get("cost_r"))
+    one_r = abs(r - 1.0) < 0.005 and not costs
+    band = ((mc.get("ci95") or {}).get("target_share")) or None
+    if band and band[0] <= even <= band[1] and abs(d) >= COIN_FLIP:
+        # the point estimate leans, but resampling the past days moves it across break-even
+        head = "No clear lean, within the noise of %d days" % mc["ci95"]["days"]
+    elif abs(d) < COIN_FLIP:
         head = "Close to a coin flip" if one_r else "Close to break-even"
     elif abs(d) < STRONG:
         head = "Leans toward the target" if d > 0 else "Leans toward the stop"
@@ -658,13 +845,21 @@ def verdict(mc):
     odds = "target first %.1f %% vs stop first %.1f %%" % (100 * pt, 100 * ps)
     if one_r:
         return "%s: %s." % (head, odds)
-    return ("%s: at %gR the target has to come first in %.0f %% of the replays that hit one side; "
-            "it did in %.0f %% (%s)." % (head, round(r, 2), 100 * even, 100 * share, odds))
+    return ("%s: at %gR%s the target has to come first in %.0f %% of the replays that hit one side; "
+            "it did in %.0f %% (%s)." % (head, round(r, 2), " after costs" if costs else "", 100 * even,
+                                          100 * share, odds))
 
 
 def verdict_notes(mc):
     """The lines printed right below the verdict, so nothing reads as one-sided."""
     notes = []
+    ci = mc.get("ci95") or {}
+    lv0 = lean(mc)
+    if ci.get("target_share") and lv0 is not None:
+        notes.append("Resampling the %d past days moves the target's share between %.0f %% and %.0f %% "
+                     "(break-even %.0f %%) and the average net R between %+.2f and %+.2f."
+                     % (ci["days"], 100 * ci["target_share"][0], 100 * ci["target_share"][1], 100 * lv0[2],
+                        ci["avg_R"][0], ci["avg_R"][1]))
     pn = mc.get("p_neither", 0)
     if pn > MANY_NEITHER and lean(mc) is not None:
         notes.append("%.1f %% of the replays hit neither by %s; the price at %s decides those."
@@ -676,12 +871,31 @@ def verdict_notes(mc):
     return notes
 
 
-def time_machine(text, plan, now_utc, replays=10000, seed=19, window=2, until=None, source="yahoo"):
-    """Chart JSON text + a normalized plan -> the timemachine.json document."""
+DEFAULT_COST = 0.02   # round-trip cost per share in the stock's currency: fees + spread + slippage (an assumption)
+CLASSIC = {"method": "iid", "pool": "all", "cost": 0.0, "gap_fill": False,   # the original Time Machine
+           "uncertainty": False}
+
+
+def time_machine(text, plan, now_utc, replays=10000, seed=19, window=2, until=None, source="yahoo",
+                 method="block", block_bars=6, pool="setup", cost=DEFAULT_COST, gap_fill=True, uncertainty=True):
+    """Chart JSON text + a normalized plan -> the timemachine.json document.
+    method: "block" (default, keeps runs of real bars together) or "iid" (the original).
+    pool: "setup" (default, only past days where the rule had fired by the entry
+    bar, falls back to all days when fewer than MIN_SETUP_SESSIONS) or "all".
+    cost: round-trip cost per share. gap_fill: fill a gap through the stop at the open.
+    CLASSIC holds the settings that reproduce the original numbers bit for bit."""
     if not 1 <= replays <= 1000000:
         raise TMError("--replays must be between 1 and 1,000,000")
     if not 0 <= window <= 10:
         raise TMError("--window must be between 0 and 10 bars")
+    if method not in ("block", "iid"):
+        raise TMError("--method must be block or iid, not %r" % method)
+    if pool not in ("setup", "all"):
+        raise TMError("--pool must be setup or all, not %r" % pool)
+    if not 1 <= block_bars <= 78:
+        raise TMError("--block-bars must be between 1 and 78")
+    if not 0 <= cost < 1e6 or cost != cost:
+        raise TMError("--cost must be zero or a positive amount per share")
     sym = plan["symbol"]
     result = chart_result(text, sym)
     meta, bars, dropped = parse_bars(result, now_utc)
@@ -720,16 +934,34 @@ def time_machine(text, plan, now_utc, replays=10000, seed=19, window=2, until=No
     if len(sessions) < MIN_SESSIONS:
         raise TMError("only %d full session(s) of %s before %s in the data; the time machine needs at least %d"
                       % (len(sessions), sym, plan["date"], MIN_SESSIONS))
-    pool = build_pool(sessions)
-    mc = simulate(pool, plan["entry"], plan["stop"], plan["target"], k, last, replays, seed, window, plan["side"])
-    mc = dict(mc, until=clock24(until_min), pool_sessions=len(sessions), pool_from=sessions[0][0],
-              pool_to=sessions[-1][0],
-              band_times=[clock24(OPEN_MIN + 5 * (j + 1)) for j in range(k, last + 1)])
+    pool_bars = build_pool(sessions)
     rule = resolve_rule(plan, entry_day)
+    days, pool_used, pool_note = None, "all", None
+    if pool == "setup":
+        if not rule:
+            pool_note = "setup pool needs an orb plan; drew from all %d sessions" % len(sessions)
+        else:
+            sd = setup_days(sessions, rule, k, plan["side"])
+            if len(sd) >= MIN_SETUP_SESSIONS:
+                days, pool_used = sd, "setup"
+            else:
+                pool_note = ("only %d past session(s) had the setup by %s, fewer than %d; drew from all %d sessions"
+                             % (len(sd), plan["entry_time"], MIN_SETUP_SESSIONS, len(sessions)))
+    draws = make_draws(pool_bars, k, last, window, method, block_bars, days)
+    mc = simulate(pool_bars, plan["entry"], plan["stop"], plan["target"], k, last, replays, seed, window,
+                  plan["side"], draws=draws, cost=cost, gap_fill=gap_fill)
+    if uncertainty:
+        mc["ci95"] = day_uncertainty(pool_bars, plan["entry"], plan["stop"], plan["target"], k, last, window,
+                                     plan["side"], method, block_bars, days, cost, gap_fill, seed)
+    used = sessions if days is None else [sessions[d] for d in days]
+    mc = dict(mc, until=clock24(until_min), pool_sessions=len(used), pool_from=used[0][0],
+              pool_to=used[-1][0], method=method, block_bars=block_bars if method == "block" else None,
+              pool=pool_used, pool_note=pool_note, sessions_in_data=len(sessions),
+              band_times=[clock24(OPEN_MIN + 5 * (j + 1)) for j in range(k, last + 1)])
     plan_out = {kk: v for kk, v in plan.items() if v is not None}
     if rule:
         plan_out["stop_rule"] = rule["stop_rule"]
-        history = history_replay(sessions, rule, last, plan["side"])
+        history = history_replay(sessions, rule, last, plan["side"], cost=cost, gap_fill=gap_fill, seed=seed)
     else:
         history = {"sessions": len(sessions), "triggered": 0, "rule": None, "trades": [],
                    "note": "skipped: the history replay knows the opening-range breakout (orb) only, "
@@ -747,6 +979,7 @@ def time_machine(text, plan, now_utc, replays=10000, seed=19, window=2, until=No
         "history": history,
         "verdict": verdict(mc),
         "verdict_notes": verdict_notes(mc),
+        "evidence": evidence(history),
         "warnings": warn,
         "note": ("A simulation built from %s's own last %d full sessions. It is not a prediction: earnings, "
                  "news and halts can do things those sessions never did. Same seed, same numbers." % (sym, len(sessions))),
@@ -757,6 +990,21 @@ def time_machine(text, plan, now_utc, replays=10000, seed=19, window=2, until=No
 
 def pc(x):
     return "%.1f %%" % (100.0 * x)
+
+
+def sampling_line(p, m):
+    """How the replays were drawn, in one sentence."""
+    if m.get("pool") == "setup":
+        src = ("the %d of its last %d full sessions where the setup had fired by %s (%s to %s)"
+               % (m["pool_sessions"], m["sessions_in_data"], p["entry_time"], m["pool_from"], m["pool_to"]))
+    else:
+        src = "its last %d full sessions (%s to %s)" % (m["pool_sessions"], m["pool_from"], m["pool_to"])
+    if m.get("method", "iid") == "block":
+        return ("Bars are drawn in runs of about %d consecutive bars (%d min) from one past session at a time, "
+                "at the same time of day (+-%d bars), out of %s for %s."
+                % (m["block_bars"], 5 * m["block_bars"], m["window"], src, p["symbol"]))
+    return ("Each bar is drawn whole from %s's own 5-min bars at the same time of day (+-%d bars) over %s."
+            % (p["symbol"], m["window"], src))
 
 
 def report(doc):
@@ -771,8 +1019,20 @@ def report(doc):
            p["target"], ("%g" % r), p["risk_per_share"]),
         "%s replays of the rest of the session, %s to %s (%d five-minute bars), seed %d."
         % ("{:,}".format(m["replays"]), p["entry_time"], until, m["bars_left"], m["seed"]),
-        "Each bar is drawn whole from %s's own 5-min bars at the same time of day (+-%d bars) over its last "
-        "%d full sessions (%s to %s)." % (p["symbol"], m["window"], m["pool_sessions"], m["pool_from"], m["pool_to"]),
+        sampling_line(p, m),
+    ]
+    if m.get("pool_note"):
+        lines.append("Note: " + m["pool_note"] + ".")
+    if m.get("cost_per_share") or m.get("gap_fill"):
+        bits = []
+        if m.get("cost_per_share"):
+            bits.append("costs of %.2f a share round trip (%.3fR) are taken off every R"
+                        % (m["cost_per_share"], m["cost_r"]))
+        if m.get("gap_fill"):
+            bits.append("a bar that opens through the stop fills at its open, not at the stop")
+        text = "; ".join(bits)
+        lines.append(text[0].upper() + text[1:] + ".")
+    lines += [
         "",
         "  target first   %s" % pc(m["p_target"]),
         "  stop first     %s" % pc(m["p_stop"]),
@@ -796,11 +1056,25 @@ def report(doc):
                          "those %d real sessions fired %d times: %d target, %d stop, %d neither. Average R %+.3f."
                          % (ru["or_minutes"], stop_words, ru["target_r"], h["sessions"], h["triggered"],
                             h["target"], h["stop"], h["close"], h["avg_R"]))
+            ci = h.get("ci95") or {}
+            extra = []
+            if h.get("avg_R_net") is not None and h.get("cost_per_share"):
+                extra.append("after costs %+.3f" % h["avg_R_net"])
+            if ci.get("avg_R_net"):
+                extra.append("95 %% interval of the average %+.2f to %+.2f" % tuple(ci["avg_R_net"]))
+            if ci.get("target_share"):
+                extra.append("target share of the decided trades %.0f %% to %.0f %%"
+                             % (100 * ci["target_share"][0], 100 * ci["target_share"][1]))
+            if extra:
+                lines.append("  " + "; ".join(extra) + ".")
         else:
             lines.append("History: the same rule never fired in those %d sessions." % h["sessions"])
     else:
         lines.append("History: " + h.get("note", "skipped."))
-    lines += ["", doc["verdict"]] + list(doc.get("verdict_notes") or []) + [""]
+    lines += ["", doc["verdict"]] + list(doc.get("verdict_notes") or [])
+    if doc.get("evidence"):
+        lines.append(doc["evidence"])
+    lines.append("")
     for w in doc.get("warnings") or []:
         lines.append("Note: " + w + ".")
     if doc["data"]["short_sessions_left_out"]:
@@ -874,7 +1148,10 @@ def compute(a):
         text, source = read_offline(a.offline, plan["symbol"]), "offline"
     else:
         text, source = fetch_chart(plan["symbol"]), "yahoo"
-    return time_machine(text, plan, now, a.replays, a.seed, a.window, a.until, source)
+    opts = dict(method=a.method, block_bars=a.block_bars, pool=a.pool, cost=a.cost, gap_fill=not a.no_gap_fill)
+    if a.classic:
+        opts.update(CLASSIC)
+    return time_machine(text, plan, now, a.replays, a.seed, a.window, a.until, source, **opts)
 
 
 def cmd_run(a):
@@ -931,6 +1208,17 @@ def main(argv=None):
         p.add_argument("--until", help="end each replay at this time (default 16:00, the close)")
         p.add_argument("--offline", metavar="FILE", help="a saved Yahoo chart JSON (.json or .json.gz), no network")
         p.add_argument("--now", help='pretend it is this time ("2026-10-19 10:15" New York, or ISO with Z)')
+        p.add_argument("--method", default="block", choices=["block", "iid"],
+                       help="block: runs of real consecutive bars (default); iid: every bar on its own (original)")
+        p.add_argument("--block-bars", type=int, default=6, help="average run length in bars for --method block")
+        p.add_argument("--pool", default="setup", choices=["setup", "all"],
+                       help="setup: only past days where the rule had fired by the entry (default); all: every day")
+        p.add_argument("--cost", type=float, default=DEFAULT_COST,
+                       help="round-trip cost per share: fees + spread + slippage (default %.2f)" % DEFAULT_COST)
+        p.add_argument("--no-gap-fill", action="store_true",
+                       help="count a gap through the stop as exactly -1R (the original)")
+        p.add_argument("--classic", action="store_true",
+                       help="the original Time Machine: --method iid --pool all --cost 0 --no-gap-fill")
 
     p = sub.add_parser("run", help="replay the plan: 10,000 simulated sessions plus the history")
     common(p)
