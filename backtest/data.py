@@ -30,10 +30,20 @@ class DataError(Exception):
     pass
 
 
-def _get(url, headers=None, timeout=30):
+def _get(url, headers=None, timeout=30, tries=5):
+    """GET with retries on dropped connections and timeouts (HTTP errors are raised
+    to the caller, which handles 429s itself)."""
     req = urllib.request.Request(url, headers=dict({"User-Agent": UA}, **(headers or {})))
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8")
+    for attempt in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode("utf-8")
+        except urllib.error.HTTPError:
+            raise
+        except (urllib.error.URLError, ConnectionError, TimeoutError, OSError):
+            if attempt == tries - 1:
+                raise
+            time.sleep(2 * (attempt + 1))
 
 
 def _cache_path(cache, source, sym, interval, tag=""):
