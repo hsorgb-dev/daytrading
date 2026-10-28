@@ -60,3 +60,15 @@ python3 -m backtest.research.op_search --cache bt_cache --out bt_results/op_sear
 `orb_grid` reproduces the engine's base ORB to the cent except for half-cent
 rounding of split/dividend-adjusted prices (about 1 % of trades differ by a
 cent at entry). `op_search` reproduces the playbook base run exactly.
+
+## Darvas box (research/darvas.py)
+
+Daily bars built from the same 5-minute cache. Rules and the 24 variants were
+committed before the first run (see the module docstring); search years
+2022-2023, test 2024-2026 once, benchmarks: equal-weight buy and hold of the
+same 99 stocks, SPY, and random entries with the same stop distance and holding
+period.
+
+```bash
+python3 -m backtest.research.darvas --cache bt_cache --out bt_results/darvas   # ~30 s
+```
