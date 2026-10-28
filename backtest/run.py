@@ -119,13 +119,8 @@ def main(argv=None):
     a = p.parse_args(argv)
 
     symbols = a.symbols.split(",") if a.symbols else LIQUID_100
-    bars, failed = load(symbols, a, True)
     step = int(a.interval.rstrip("m")) if a.source == "yahoo" else 5
-    if a.source == "alpaca" and a.interval == "1m":
-        bars = {s: {d: data.resample(b, 5) for d, b in days.items()} for s, days in bars.items()}
-    all_days = sorted({d for days in bars.values() for d in days})
     base_kw = dict(or_minutes=15, stop_rule="or_mid", target_r=2.0)
-
     variants = [
         ("Basis: Skill-Regel, Fill nächster Open, 0,02 $", base_kw, "next_open", a.cost, 0),
         ("Fill zum Signal-Close (wie Skill-Replay)", base_kw, "signal_close", a.cost, 0),
@@ -139,19 +134,38 @@ def main(argv=None):
         ("Range 30 Min", dict(base_kw, or_minutes=30), "next_open", a.cost, 0),
         ("Volumen ≥ 1,5x Range-Schnitt", dict(base_kw, min_volume_x=1.5), "next_open", a.cost, 0),
     ]
-    results = {"source": a.source, "interval": a.interval, "symbols": len(symbols), "loaded": len(bars),
+    slim = lambda t: {"date": t["date"], "R_net": t["R_net"], "outcome": t["outcome"]}
+    # one symbol at a time: load, run every variant and the benchmark, let the bars go.
+    # Holding six years of 5-minute bars for 99 stocks at once needs more memory than we have.
+    per_variant = [[] for _ in variants]
+    pl, failed, loaded, all_days = [], {}, 0, set()
+    for n, sym in enumerate(symbols):
+        got, f = load([sym], a, False)
+        failed.update(f)
+        if sym not in got:
+            continue
+        bars1 = got
+        if a.source == "alpaca" and a.interval == "1m":
+            bars1 = {sym: {d: data.resample(b, 5) for d, b in got[sym].items()}}
+        loaded += 1
+        all_days.update(bars1[sym])
+        for vi, (name, kw, fill, cost, slip) in enumerate(variants):
+            tr = run_rule(bars1, step, kw, fill, cost, slip)
+            per_variant[vi].extend(tr if vi == 0 else [slim(t) for t in tr])
+            if vi == 0:
+                pl.extend(slim(t) for t in run_placebo(bars1, step, tr, "next_open", a.cost, 0, seed=3 + n))
+        del got, bars1
+        if (n + 1) % 10 == 0:
+            print("  %d/%d symbols done" % (n + 1, len(symbols)), file=sys.stderr, flush=True)
+    all_days = sorted(all_days)
+    bars = {}
+    results = {"source": a.source, "interval": a.interval, "symbols": len(symbols), "loaded": loaded,
                "failed": failed, "first_day": all_days[0] if all_days else None,
                "last_day": all_days[-1] if all_days else None, "sessions": len(all_days), "variants": []}
-    base_trades = None
-    for name, kw, fill, cost, slip in variants:
-        tr = run_rule(bars, step, kw, fill, cost, slip)
-        s = engine.summarize(tr)
-        results["variants"].append({"name": name, "rule": kw, "fill": fill, "cost": cost, "slip_bps": slip, **s})
-        if base_trades is None:
-            base_trades = tr
-
-    # placebo: random-time longs, same days, same risk
-    pl = run_placebo(bars, step, base_trades, "next_open", a.cost, 0)
+    for (name, kw, fill, cost, slip), tr in zip(variants, per_variant):
+        results["variants"].append({"name": name, "rule": kw, "fill": fill, "cost": cost, "slip_bps": slip,
+                                    **engine.summarize(tr)})
+    base_trades = per_variant[0]
     results["placebo"] = engine.summarize(pl)
     results["placebo"]["draws_per_trade"] = 20
 
@@ -205,7 +219,7 @@ def main(argv=None):
         for t in sorted(base_trades, key=lambda t: (t["date"], t["sig_t"], t["symbol"])):
             w.writerow([t[c] for c in cols] + [t["meta"]["or_pct"]])
 
-    print("%s: %d/%d symbols, %d sessions %s..%s" % (a.source, len(bars), len(symbols), len(all_days),
+    print("%s: %d/%d symbols, %d sessions %s..%s" % (a.source, loaded, len(symbols), len(all_days),
                                                      results["first_day"], results["last_day"]))
     print("%-42s %6s %6s %7s %17s %6s" % ("Variante", "n", "win%", "avg R", "95%-KI (Tage)", "PF"))
     rows = results["variants"] + [dict(results["placebo"], name="Benchmark: gleiche Zeit, Zufallstag")]
