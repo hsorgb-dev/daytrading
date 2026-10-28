@@ -45,3 +45,18 @@ Alpaca needs `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` in the environment
   (`max_risk`, `rej_min_pen`), off in the base case.
 - ES=F on Yahoo is the rolling front month; the EMA20 sees the roll jump once
   a quarter.
+
+## Parameter search (research/)
+
+Needs numpy, pandas and pyarrow. Runs on the cached Alpaca data, searches on
+2021–2023 only and scores every config on 2024–2026 for the record.
+
+```bash
+python3 -m backtest.research.orb_grid --cache bt_cache --out bt_results/orb_grid.parquet   # ~1 min
+python3 -m backtest.research.orb_search --grid bt_results/orb_grid.parquet --out bt_results/orb_search.csv
+python3 -m backtest.research.op_search --cache bt_cache --out bt_results/op_search.csv     # ~10 min
+```
+
+`orb_grid` reproduces the engine's base ORB to the cent except for half-cent
+rounding of split/dividend-adjusted prices (about 1 % of trades differ by a
+cent at entry). `op_search` reproduces the playbook base run exactly.

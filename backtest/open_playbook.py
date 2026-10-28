@@ -64,7 +64,7 @@ def find_signal(bars, idx, ema, scale, p):
     if len(por) < p["min_por_bars"]:
         return None, "pre-open range incomplete (%d bars)" % len(por)
     ph, pl = max(b["h"] for b in por), min(b["l"] for b in por)
-    win = [i for i in day if WIN_FIRST <= bars[i]["t"] <= WIN_LAST]
+    win = [i for i in day if WIN_FIRST <= bars[i]["t"] <= p.get("win_last", WIN_LAST)]
     if not win or bars[win[0]]["t"] != WIN_FIRST:
         return None, "no 09:30 bar"
     buf, maxd = p["buffer"] * scale, p["max_dist"] * scale
@@ -75,6 +75,7 @@ def find_signal(bars, idx, ema, scale, p):
         prev_c = bars[i - 1]["c"]
         rng = b["h"] - b["l"]
         body = abs(b["c"] - b["o"])
+        can = b["t"] >= p.get("min_sig", WIN_FIRST)     # entries allowed from this bar on
         # ---- rejection (entry at this bar's close)
         if p["rejection"]:
             pen = p["rej_min_pen"] * scale
@@ -83,10 +84,10 @@ def find_signal(bars, idx, ema, scale, p):
             if b["h"] > ph + pen:
                 was_above = True
             inside = pl < b["c"] < ph
-            if inside and was_below and (b["l"] < pl or prev_c < pl):
+            if can and inside and was_below and (b["l"] < pl or prev_c < pl):
                 return {"k": i, "side": "long", "setup": "rejection", "entry": b["c"],
                         "stop": b["l"] - buf, "por": (ph, pl)}, None
-            if inside and was_above and (b["h"] > ph or prev_c > ph):
+            if can and inside and was_above and (b["h"] > ph or prev_c > ph):
                 return {"k": i, "side": "short", "setup": "rejection", "entry": b["c"],
                         "stop": b["h"] + buf, "por": (ph, pl)}, None
         # ---- continuation entry (needs an arming bar one or two bars back)
@@ -101,7 +102,7 @@ def find_signal(bars, idx, ema, scale, p):
                 else:
                     ok = (b["c"] < b["o"] and rng > 0 and body >= 0.5 * rng and b["c"] < pl
                           and (not p["ema"] or b["c"] < ema[i]) and pl - b["c"] <= maxd)
-                if ok:
+                if ok and can:
                     stop = b["l"] - buf if side == "long" else b["h"] + buf
                     return {"k": i, "side": side, "setup": "continuation", "entry": b["c"], "stop": stop,
                             "por": (ph, pl)}, None
