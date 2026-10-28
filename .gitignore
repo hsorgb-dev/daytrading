@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 trader/
+bt_cache/
+bt_results/
