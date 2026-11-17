@@ -36,7 +36,7 @@
 <div class="ft">
   <header id="kopf">
     <h1 class="ft-title">Day Trader Forward-Test</h1>
-    <p class="ft-sub">Paper-Test der ORB-Strategie (A, B) und dreier weiterer Intraday-Strategien (C, D, E, seit 17.11.2026 mit Backfill ab 20.10.), Tag für Tag nach US-Börsenschluss nachgespielt. 10.000 $ je Variante, 1 % Risiko je Trade, Kosten abgezogen. Keine echten Orders.</p>
+    <p class="ft-sub">Paper-Test von elf Intraday-Varianten, Tag für Tag nach US-Börsenschluss nachgespielt. Start mit 10.000 $ je Variante, 1 % Risiko vom aktuellen Kontostand je Trade, Gewinne und Verluste werden reinvestiert, Kosten abgezogen. Keine echten Orders. Alle Kennzahlen zählen ab dem gemeinsamen Vorwärts-Start am 17.11.2026; die nachgerechneten Tage davor stehen unten als Referenz.</p>
   </header>
 
   <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Variante C2: <b data-draw="leadC2">—</b>. Variante C3: <b data-draw="leadC3">—</b>. Variante F: <b data-draw="leadF">—</b>. Variante G: <b data-draw="leadG">—</b>. Variante G2: <b data-draw="leadG2">—</b>. Variante GQ: <b data-draw="leadGQ">—</b>. Stand: <span data-draw="stand">—</span>.</p>
@@ -188,7 +188,7 @@
   </div>
 
   <section class="ft-card" id="equity">
-    <h2>Equity-Verlauf (Start 10.000 $)</h2>
+    <h2>Equity-Verlauf (Start 10.000 $ am 17.11.2026)</h2>
     <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span><span><i data-draw="legC3"></i>C3 · VWAP Trailing</span><span><i data-draw="legF"></i>F · Stocks in Play</span><span><i data-draw="legG"></i>G · SPY-Momentum</span><span><i data-draw="legG2"></i>G2 · SPY breit</span><span><i data-draw="legGQ"></i>GQ · QQQ</span></div>
     <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
     <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
@@ -219,6 +219,15 @@
     </table></div>
   </section>
 
+  <section class="ft-card ft-tm" id="backfill">
+    <h2>Backfill 20.10.–16.11.2026 (Referenz)</h2>
+    <p class="ft-cap">Nachgerechnete Tage vor dem Vorwärts-Start. Sie zählen nicht für die Entscheidung; C, D und E wurden mit Blick auf diese Daten geschärft. C2 und C3 haben keinen Backfill.</p>
+    <div class="ft-wrap"><table data-source="backfill" data-row-key="variant">
+      <thead><tr><th data-field="variant">Variante</th><th data-field="trades">Trades</th><th data-field="net_pnl">Netto $</th><th data-field="avg_r">R netto je Risiko-$</th></tr></thead>
+      <tbody data-draw="backfill-table"></tbody>
+    </table></div>
+  </section>
+
   <details id="regelwerk">
     <summary>Regelwerk und Grenzen des Tests</summary>
     <ul>
@@ -233,7 +242,7 @@
       <li>Variante C3 (ab 17.11.2026, ohne Backfill): wie C2, plus Trailing-Stop. Sobald der Trade +1R erreicht, folgt der Stop dem bisherigen Hoch im Abstand 1,5R, nur nach oben und wirksam ab dem nächsten Bar. Auch C3 ist aus der Auswertung der ersten 20 Tage abgeleitet, es zählt nur der Vorwärts-Teil.</li>
       <li>Varianten F und G (seit 17.11.2026, Regeln aus zwei veröffentlichten Studien, Backfill ab 20.10.): handeln long und short und haben eigene Positionsgrößen mit bis zu 4× Hebel. Das bräuchte in der Praxis ein Margin-Konto; für Daytrading mit US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital. F wählt eigene Titel (nicht die Watchlist von A–E) und rechnet Einstieg und Stop auf 1-Minuten-Bars, weil der Stop nur Cent vom Einstieg entfernt liegt. G handelt nur SPY, mit 0,01 % Slippage statt 0,05 %. R ist bei G wenig aussagekräftig, weil der Abstand zum ersten Stop oft nur Cent beträgt; G besser nach Netto-$ und Drawdown beurteilen.</li>
       <li>Varianten G2 und GQ (seit 17.11.2026, Backfill ab 20.10.): G2 nutzt die 1,5-fach breitere Noise Area, die in der Studie die höhere Sharpe Ratio hatte. GQ wendet die Regeln von G unverändert auf QQQ an, damit sich schneller eine Stichprobe aufbaut. Sonst wie G.</li>
-      <li>Entscheidung frühestens nach 60 Trades: weiter nur bei R netto je Risiko-$ über +0,2 und kleinerem Drawdown als CIM.</li>
+      <li>Entscheidung frühestens nach 60 Trades ab dem gemeinsamen Vorwärts-Start am 17.11.2026: weiter nur bei R netto je Risiko-$ über +0,2 und kleinerem Drawdown als CIM.</li>
     </ul>
   </details>
 </div>
@@ -242,9 +251,12 @@
   window.ftVariants = ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ'];
   dash.calc('kpis', {
     title: 'Kennzahlen je Variante',
-    description: 'Summen und Quoten über alle Trades einer Variante. R netto = Netto-Ergebnis geteilt durch das geplante Risiko aller Trades (Stück × Abstand zum Stop). Drawdown aus der täglichen Equity.',
+    description: 'Summen und Quoten über alle Trades einer Variante ab dem Vorwärts-Start am 17.11.2026. R netto = Netto-Ergebnis geteilt durch das geplante Risiko aller Trades (Stück × Abstand zum Stop). Drawdown aus der täglichen Equity.',
     inputs: ['trades', 'days'],
     fn: (trades, days) => ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ'].map((variant) => {
+      const start = '2026-11-17';
+      trades = trades.filter((r) => r.date >= start);
+      days = days.filter((d) => d.date >= start);
       const t = trades.filter((r) => r.variant === variant);
       const n = t.length;
       const net = t.reduce((s, r) => s + r.net_pnl, 0);
@@ -275,13 +287,13 @@
 
   dash.calc('equity', {
     title: 'Equity je Handelstag',
-    description: '10.000 $ plus kumuliertes Netto-Ergebnis je Variante nach jedem Handelstag.',
+    description: '10.000 $ am Vorwärts-Start (17.11.2026) plus kumuliertes Netto-Ergebnis je Variante nach jedem Handelstag.',
     inputs: ['days'],
     fn: (days) => {
       const out = [];
       ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ'].forEach((variant) => {
         let eq = 10000;
-        days.filter((d) => d.variant === variant).sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
+        days.filter((d) => d.variant === variant && d.date >= '2026-11-17').sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
           eq += d.net_pnl;
           out.push({ date: d.date, variant, equity: Math.round(eq * 100) / 100 });
         });
@@ -421,7 +433,7 @@
     const d = dash.data('trades');
     tb.replaceChildren();
     if (d.status !== 'ok') return;
-    const rows = d.data.filter((r) => !window.ftFilter || r.variant === window.ftFilter)
+    const rows = d.data.filter((r) => r.date >= '2026-11-17' && (!window.ftFilter || r.variant === window.ftFilter))
       .slice().sort((a, b) => (a.date + a.trigger_time < b.date + b.trigger_time ? 1 : -1));
     const reason = { target: 'Ziel', stop: 'Stop', stop_gap: 'Stop (Gap)', trail: 'Trailing', trail_gap: 'Trailing (Gap)', flat: 'Glatt' };
     rows.forEach((r) => {
@@ -435,6 +447,34 @@
         const td = document.createElement('td');
         td.textContent = v;
         if (i === 11 || i === 12) td.className = r.net_pnl > 0 ? 'ft-good' : r.net_pnl < 0 ? 'ft-bad' : '';
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  });
+
+  dash.calc('backfill', {
+    title: 'Backfill 20.10.–16.11.2026 je Variante',
+    description: 'Nachgerechnete Tage vor dem Vorwärts-Start am 17.11.2026, nur als Referenz. Sie zählen nicht für die Entscheidung.',
+    inputs: ['trades'],
+    fn: (trades) => ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'G2', 'GQ'].map((variant) => {
+      const t = trades.filter((r) => r.variant === variant && r.date < '2026-11-17');
+      const net = t.reduce((s, r) => s + r.net_pnl, 0);
+      const risk = t.reduce((s, r) => s + r.shares * r.risk_ps, 0);
+      return { variant, trades: t.length, net_pnl: Math.round(net * 100) / 100, avg_r: risk ? Math.round(1000 * net / risk) / 1000 : null };
+    }),
+  });
+  dash.draw('backfill-table', (tb) => {
+    const k = dash.data('backfill');
+    tb.replaceChildren();
+    if (k.status !== 'ok' || !k.data) return;
+    k.data.forEach((r) => {
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-key', r.variant);
+      [r.variant, String(r.trades), window.ftFmt.usd(r.net_pnl), r.avg_r == null ? '–' : window.ftFmt.r(r.avg_r)].forEach((v, i) => {
+        const td = document.createElement('td');
+        td.textContent = v;
+        if (i === 2) td.className = r.net_pnl > 0 ? 'ft-good' : r.net_pnl < 0 ? 'ft-bad' : '';
         tr.appendChild(td);
       });
       tb.appendChild(tr);

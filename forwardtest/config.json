@@ -1,6 +1,7 @@
 {
   "_note": "Regelwerk des Paper-Forward-Tests. Waehrend der Testphase NICHT aendern (eingefroren ab Start). Neue Ideen als eigene Variante.",
   "capital": 10000,
+  "reinvest": {"from": "2026-11-17", "_note": "Ab diesem Tag gemeinsamer Vorwaerts-Start aller Varianten bei 10.000 $; Gewinne und Verluste werden reinvestiert (Kapital und $-Grenzen skalieren mit dem Kontostand). Davor Backfill mit fester Basis, nur Referenz."},
   "cash_buffer_pct": 10,
   "max_loss_per_trade": 100,
   "max_daily_loss": 300,

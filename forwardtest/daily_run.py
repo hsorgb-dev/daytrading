@@ -31,6 +31,10 @@ Ablauf je Tag D (nur Daten, die zum jeweiligen Zeitpunkt bekannt waren):
      Kommission je Seite.
   6. Optional die Time Machine fuer jeden Trade (Prognose vs. Ergebnis).
 
+Reinvestieren: ab config "reinvest.from" (17.11.2026) rechnet jede Variante mit ihrem aktuellen
+Kontostand (10.000 $ plus alle Ergebnisse seit diesem Tag). Kapital und alle $-Grenzen skalieren
+mit (1 % Risiko, 3 % Tagesverlust ...). Davor, im Backfill, gilt die feste Basis von 10.000 $.
+
 Schreibt forwardtest/journal/trades.csv, forwardtest/journal/days.csv und
 forwardtest/logs/<D>.json. Laeuft ein Tag erneut, werden seine Zeilen ersetzt.
 Nur Standardbibliothek. Kein Broker, keine Orders.
@@ -863,7 +867,33 @@ def run_spy_momentum(day, data, symbols, spark, cfg, vcfg, vname):
 SPECIAL = {"sip_orb": run_sip_orb, "spy_momentum": run_spy_momentum}
 
 
-def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
+SCALED = ("capital", "max_loss_per_trade", "max_daily_loss", "max_order_usd")
+
+
+def account_cfg(cfg, equity):
+    """Rules for one variant on one day. With reinvesting, capital and every $ limit move with
+    the variant's account (risk stays 1 %, the daily limit 3 %, ...); the minimum order stays."""
+    if equity is None:
+        return cfg
+    f = equity / float(cfg["capital"])
+    return dict(cfg, **{k: cfg[k] * f for k in SCALED})
+
+
+def starting_equity(cfg, first_day, rows):
+    """Account of each variant before first_day: capital plus all journal results since the
+    reinvest start. Before that start the fixed basis applies (None)."""
+    start = (cfg.get("reinvest") or {}).get("from")
+    if not start or first_day.isoformat() < start:
+        return {}
+    eq = {v: float(cfg["capital"]) for v in cfg["variants"]}
+    for r in rows:
+        if start <= r["date"] < first_day.isoformat() and r["variant"] in eq:
+            eq[r["variant"]] += float(r["net_pnl"] or 0)
+    return eq
+
+
+def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None, equity=None):
+    base_cfg = cfg
     if frozen:
         log("%s: Watchlist aus dem Log (eingefroren) ..." % day.isoformat())
         wl, n_cands = frozen["watchlist"], frozen.get("setup_candidates")
@@ -885,9 +915,10 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
                                     "watchlist": wl, "missing_5m": missing, "variants": {}}
     spy_o = spy[0]["o"] if 0 in spy else None
     spy_c = spy[max(spy)]["c"] if spy else None
-    for vname, vcfg in sorted(cfg["variants"].items()):
+    for vname, vcfg in sorted(base_cfg["variants"].items()):
         if vcfg.get("forward_from") and day.isoformat() < vcfg["forward_from"]:
             continue  # forward-only variant: no backfill before its start
+        cfg = account_cfg(base_cfg, (equity or {}).get(vname))
         if vcfg.get("strategy") in SPECIAL:
             tr, drow, det = SPECIAL[vcfg["strategy"]](day, data, symbols, spark, cfg, vcfg, vname)
             trades.extend(tr)
@@ -1040,16 +1071,23 @@ def main(argv=None):
     log("  %d von %d Titeln nach Vorfilter (Volumen >= %s)." % (len(symbols), len(universe),
                                                                pre["prefilter_min_volume"]))
     all_trades, all_days, tm_cache = [], [], {}
+    start = (cfg.get("reinvest") or {}).get("from")
+    equity = starting_equity(cfg, days[0], read_csv(os.path.join(HERE, "journal", "days.csv")))
     for d in days:
+        if start and d.isoformat() >= start and not equity:  # a backfill that reaches the start
+            equity = {v: float(cfg["capital"]) for v in cfg["variants"]}
         log_path = os.path.join(HERE, "logs", d.isoformat() + ".json")
         old = None
         if only and os.path.exists(log_path):
             with open(log_path, encoding="utf-8") as fh:
                 old = json.load(fh)
         tr, dy, detail = run_day(d, data, symbols, sp, cfg, not a.no_tm and cfg["timemachine"]["enabled"], tm_cache,
-                                 frozen=old)
+                                 frozen=old, equity=equity or None)
         all_trades += tr
         all_days += dy
+        for v in dy:
+            if equity:
+                equity[v["variant"]] = equity.get(v["variant"], float(cfg["capital"])) + v["net_pnl"]
         if old:
             old.setdefault("variants", {}).update(detail["variants"])
             detail = old

@@ -72,7 +72,13 @@ Studien regelgetreu um. Sie handeln long und short und haben eigene Größenrege
 F und G bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
 US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital.
 
-Alle Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.
+**Gemeinsamer Vorwärts-Start am 17.11.2026, mit Reinvestieren.** Ab diesem Tag startet
+jede Variante mit 10.000 $ und rechnet mit ihrem aktuellen Kontostand: 1 % Risiko vom
+Kontostand je Trade, und alle $-Grenzen (Tagesverlust, max. Order, Kapital für Cash und
+Hebel) wachsen oder schrumpfen mit. Die Mindestorder von 500 $ bleibt fest. Gesteuert
+über `reinvest.from` in `config.json`. Die Tage davor (Backfill ab 20.10.) liefen mit
+fester Basis von 10.000 $ und zählen nur als Referenz. Das Dashboard zeigt alle
+Kennzahlen ab dem Start und den Backfill getrennt.
 
 Das Regelwerk in `config.json` ist ab Start eingefroren (C–E ab 17.11.2026). Neue Ideen kommen als
 weitere Variante dazu, nicht als Änderung an A oder B.
@@ -95,5 +101,5 @@ weitere Variante dazu, nicht als Änderung an A oder B.
 
 ## Entscheidungsregel
 
-Frühestens nach 60 Trades bzw. ca. 3 Monaten. Weiterverfolgen nur, wenn der
+Gezählt ab dem Vorwärts-Start am 17.11.2026. Frühestens nach 60 Trades bzw. ca. 3 Monaten. Weiterverfolgen nur, wenn der
 Erwartungswert nach Kosten über +0,2R liegt und der Drawdown kleiner ist als bei CIM.
