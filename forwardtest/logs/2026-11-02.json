@@ -1105,6 +1105,362 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 536,
+   "in_play": [
+    {
+     "symbol": "CLRO",
+     "rv": 8.21
+    },
+    {
+     "symbol": "HST",
+     "rv": 8.12
+    },
+    {
+     "symbol": "ORLY",
+     "rv": 7.16
+    },
+    {
+     "symbol": "FOXA",
+     "rv": 6.81
+    },
+    {
+     "symbol": "VLTO",
+     "rv": 5.23
+    },
+    {
+     "symbol": "TEM",
+     "rv": 4.45
+    },
+    {
+     "symbol": "LITE",
+     "rv": 3.61
+    },
+    {
+     "symbol": "EC",
+     "rv": 3.51
+    },
+    {
+     "symbol": "CAPR",
+     "rv": 3.45
+    },
+    {
+     "symbol": "FISV",
+     "rv": 3.39
+    },
+    {
+     "symbol": "EQX",
+     "rv": 3.37
+    },
+    {
+     "symbol": "WRBY",
+     "rv": 3.36
+    },
+    {
+     "symbol": "EQNR",
+     "rv": 3.33
+    },
+    {
+     "symbol": "ORCL",
+     "rv": 3.32
+    },
+    {
+     "symbol": "XEL",
+     "rv": 3.16
+    },
+    {
+     "symbol": "HMY",
+     "rv": 3.12
+    },
+    {
+     "symbol": "MRVL",
+     "rv": 3.11
+    },
+    {
+     "symbol": "BXDC",
+     "rv": 3.01
+    },
+    {
+     "symbol": "TSEM",
+     "rv": 3.0
+    },
+    {
+     "symbol": "ARMK",
+     "rv": 2.94
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "ORLY",
+     "time": "09:35",
+     "side": 1,
+     "price": 90.06
+    },
+    {
+     "symbol": "LITE",
+     "time": "09:35",
+     "side": -1,
+     "price": 753.0
+    },
+    {
+     "symbol": "EC",
+     "time": "09:35",
+     "side": -1,
+     "price": 16.52
+    },
+    {
+     "symbol": "FISV",
+     "time": "09:35",
+     "side": 1,
+     "price": 50.92
+    },
+    {
+     "symbol": "EQX",
+     "time": "09:35",
+     "side": 1,
+     "price": 10.18
+    },
+    {
+     "symbol": "XEL",
+     "time": "09:35",
+     "side": 1,
+     "price": 79.15
+    },
+    {
+     "symbol": "MRVL",
+     "time": "09:35",
+     "side": -1,
+     "price": 185.96
+    },
+    {
+     "symbol": "BXDC",
+     "time": "09:35",
+     "side": 1,
+     "price": 16.05
+    },
+    {
+     "symbol": "TSEM",
+     "time": "09:36",
+     "side": -1,
+     "price": 152.02
+    },
+    {
+     "symbol": "FOXA",
+     "time": "09:37",
+     "side": -1,
+     "price": 64.01
+    },
+    {
+     "symbol": "EQNR",
+     "time": "09:37",
+     "side": -1,
+     "price": 45.98
+    },
+    {
+     "symbol": "WRBY",
+     "time": "09:38",
+     "side": 1,
+     "price": 24.98
+    },
+    {
+     "symbol": "ARMK",
+     "time": "09:38",
+     "side": 1,
+     "price": 54.94
+    },
+    {
+     "symbol": "HMY",
+     "time": "09:46",
+     "side": 1,
+     "price": 15.31
+    },
+    {
+     "symbol": "ORCL",
+     "time": "09:48",
+     "side": -1,
+     "price": 123.81
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "F",
+     "symbol": "ORLY",
+     "setups": "long RV 7.2x",
+     "dollar_vol_prev": null,
+     "or_high": 90.06,
+     "or_low": 88.9,
+     "trigger_time": "09:35",
+     "volume_x": 7.16,
+     "signal": "sip_long",
+     "ref_level": 90.06,
+     "entry": 90.06,
+     "stop": 89.83,
+     "target": null,
+     "risk_ps": 0.23,
+     "shares": 434,
+     "notional": 39086.04,
+     "exit_time": "10:18",
+     "exit_price": 89.83,
+     "exit_reason": "stop",
+     "gross_pnl": -99.82,
+     "costs": 43.38,
+     "net_pnl": -143.2,
+     "r_net": -1.435,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "F",
+     "symbol": "LITE",
+     "setups": "short RV 3.6x",
+     "dollar_vol_prev": null,
+     "or_high": 800.12,
+     "or_low": 753.0,
+     "trigger_time": "09:35",
+     "volume_x": 3.61,
+     "signal": "sip_short",
+     "ref_level": 753.0,
+     "entry": 753.0,
+     "stop": 760.19,
+     "target": null,
+     "risk_ps": 7.19,
+     "shares": 1,
+     "notional": 753.0,
+     "exit_time": "09:40",
+     "exit_price": 760.19,
+     "exit_reason": "stop",
+     "gross_pnl": -7.19,
+     "costs": 2.76,
+     "net_pnl": -9.95,
+     "r_net": -1.384,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "F",
+     "symbol": "HMY",
+     "setups": "long RV 3.1x",
+     "dollar_vol_prev": null,
+     "or_high": 15.31,
+     "or_low": 14.96,
+     "trigger_time": "09:46",
+     "volume_x": 3.12,
+     "signal": "sip_long",
+     "ref_level": 15.31,
+     "entry": 15.31,
+     "stop": 15.24,
+     "target": null,
+     "risk_ps": 0.07,
+     "shares": 59,
+     "notional": 903.29,
+     "exit_time": "10:59",
+     "exit_price": 15.24,
+     "exit_reason": "stop",
+     "gross_pnl": -4.13,
+     "costs": 2.9,
+     "net_pnl": -7.03,
+     "r_net": -1.702,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "EC",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "FISV",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "EQX",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "XEL",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "MRVL",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "BXDC",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "TSEM",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "FOXA",
+     "time": "09:37",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "EQNR",
+     "time": "09:37",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "WRBY",
+     "time": "09:38",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "ARMK",
+     "time": "09:38",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "ORCL",
+     "time": "09:48",
+     "why": "0 Stueck (Hebel-Limit)"
+    }
+   ]
+  },
+  "G": {
+   "shares": 32,
+   "daily_vol_pct": 0.801,
+   "prior_close": 755.719970703125,
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 760.36,
+     "or_low": 754.81,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 760.36,
+     "entry": 760.45,
+     "stop": 760.36,
+     "target": null,
+     "risk_ps": 0.09,
+     "shares": 32,
+     "notional": 24334.4,
+     "exit_time": "11:00",
+     "exit_price": 760.98,
+     "exit_reason": "trail",
+     "gross_pnl": 16.96,
+     "costs": 6.87,
+     "net_pnl": 10.09,
+     "r_net": 3.503,
+     "data_note": "Hebel 2.43x (Tagesvola 0.80 %)"
+    }
+   ]
   }
  }
 }

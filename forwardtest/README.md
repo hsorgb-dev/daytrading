@@ -50,6 +50,25 @@ ein Ziel und läuft für C2 nicht.
 Trade +1R erreicht, folgt der Stop dem bisherigen Hoch im Abstand 1,5R (nur nach oben,
 wirksam ab dem nächsten Bar). Ausstiegsgrund im Journal: `trail` bzw. `trail_gap`.
 
+**Varianten F und G** (seit 17.11.2026, Backfill ab 20.10.) setzen zwei veröffentlichte
+Studien regelgetreu um. Sie handeln long und short und haben eigene Größenregeln:
+
+- **F, Stocks-in-Play-ORB** (Zarattini/Barbon/Aziz 2024): Universum Open > 5 $, Ø-Volumen
+  14 Tage ≥ 1 Mio., ATR(14) > 0,50 $. Die 20 Titel mit dem höchsten relativen Volumen der
+  ersten 5 Minuten (vs. Schnitt der 14 Vortage, mind. 100 %). Grüne erste Kerze: nur long per
+  Stop-Order am Hoch; rot: nur short am Tief; Doji: kein Trade. Stop 10 % ATR, Ausstieg 16:00.
+  1 % Risiko je Trade, Gesamtposition bis 4× Kapital, Mindestorder 500 $. Einstieg und Stop
+  laufen auf 1-Minuten-Bars; im Einstiegs-Bar gilt ein Pfadmodell (grüner Bar: erst Tief, dann
+  Hoch; roter Bar umgekehrt).
+- **G, SPY Intraday-Momentum** (Zarattini/Aziz/Barbon 2024): Noise Area aus der mittleren
+  absoluten Bewegung seit dem Open je Uhrzeit (14 Tage), Band um max/min(Open, Vortagesschluss).
+  Prüfung nur 10:00, 10:30, … 15:30: über dem Band long, darunter short. Trailing-Stop
+  max(Band, VWAP) bzw. min(Band, VWAP), zu denselben Zeiten geprüft, Umkehr möglich. Ausstieg
+  16:00. Größe Kapital × min(4, 2 % ÷ Tagesvolatilität 14 Tage). Slippage 0,01 %.
+
+Beide bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
+US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital.
+
 Alle Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.
 
 Das Regelwerk in `config.json` ist ab Start eingefroren (C–E ab 17.11.2026). Neue Ideen kommen als

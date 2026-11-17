@@ -1072,6 +1072,389 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 535,
+   "in_play": [
+    {
+     "symbol": "DECK",
+     "rv": 17.9
+    },
+    {
+     "symbol": "KLAR",
+     "rv": 9.98
+    },
+    {
+     "symbol": "TEVA",
+     "rv": 4.9
+    },
+    {
+     "symbol": "CRDO",
+     "rv": 3.63
+    },
+    {
+     "symbol": "IBKR",
+     "rv": 3.61
+    },
+    {
+     "symbol": "BE",
+     "rv": 3.57
+    },
+    {
+     "symbol": "NCLH",
+     "rv": 3.26
+    },
+    {
+     "symbol": "MDLZ",
+     "rv": 2.92
+    },
+    {
+     "symbol": "MXL",
+     "rv": 2.73
+    },
+    {
+     "symbol": "TECK",
+     "rv": 2.62
+    },
+    {
+     "symbol": "SYF",
+     "rv": 2.44
+    },
+    {
+     "symbol": "VIR",
+     "rv": 2.39
+    },
+    {
+     "symbol": "SSL",
+     "rv": 2.39
+    },
+    {
+     "symbol": "DOW",
+     "rv": 2.35
+    },
+    {
+     "symbol": "MRNA",
+     "rv": 2.33
+    },
+    {
+     "symbol": "SSNC",
+     "rv": 2.31
+    },
+    {
+     "symbol": "HAWK",
+     "rv": 2.29
+    },
+    {
+     "symbol": "SGI",
+     "rv": 2.27
+    },
+    {
+     "symbol": "AMRZ",
+     "rv": 2.26
+    },
+    {
+     "symbol": "WDC",
+     "rv": 2.13
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "TEVA",
+     "time": "09:35",
+     "side": -1,
+     "price": 39.21
+    },
+    {
+     "symbol": "CRDO",
+     "time": "09:35",
+     "side": -1,
+     "price": 145.61
+    },
+    {
+     "symbol": "BE",
+     "time": "09:35",
+     "side": -1,
+     "price": 196.3
+    },
+    {
+     "symbol": "NCLH",
+     "time": "09:35",
+     "side": -1,
+     "price": 14.61
+    },
+    {
+     "symbol": "MXL",
+     "time": "09:35",
+     "side": -1,
+     "price": 58.86
+    },
+    {
+     "symbol": "SYF",
+     "time": "09:35",
+     "side": 1,
+     "price": 74.22
+    },
+    {
+     "symbol": "VIR",
+     "time": "09:35",
+     "side": -1,
+     "price": 10.23
+    },
+    {
+     "symbol": "MRNA",
+     "time": "09:35",
+     "side": -1,
+     "price": 186.6
+    },
+    {
+     "symbol": "SGI",
+     "time": "09:35",
+     "side": -1,
+     "price": 64.0
+    },
+    {
+     "symbol": "KLAR",
+     "time": "09:36",
+     "side": -1,
+     "price": 12.88
+    },
+    {
+     "symbol": "MDLZ",
+     "time": "09:36",
+     "side": -1,
+     "price": 64.81
+    },
+    {
+     "symbol": "TECK",
+     "time": "09:36",
+     "side": -1,
+     "price": 58.78
+    },
+    {
+     "symbol": "SSL",
+     "time": "09:36",
+     "side": 1,
+     "price": 17.28
+    },
+    {
+     "symbol": "SSNC",
+     "time": "09:36",
+     "side": -1,
+     "price": 85.76
+    },
+    {
+     "symbol": "HAWK",
+     "time": "09:36",
+     "side": -1,
+     "price": 11.25
+    },
+    {
+     "symbol": "AMRZ",
+     "time": "09:39",
+     "side": -1,
+     "price": 39.82
+    },
+    {
+     "symbol": "DOW",
+     "time": "11:11",
+     "side": 1,
+     "price": 32.25
+    },
+    {
+     "symbol": "IBKR",
+     "time": "15:07",
+     "side": -1,
+     "price": 80.61
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "F",
+     "symbol": "TEVA",
+     "setups": "short RV 4.9x",
+     "dollar_vol_prev": null,
+     "or_high": 39.75,
+     "or_low": 39.21,
+     "trigger_time": "09:35",
+     "volume_x": 4.9,
+     "signal": "sip_short",
+     "ref_level": 39.21,
+     "entry": 39.21,
+     "stop": 39.32,
+     "target": null,
+     "risk_ps": 0.11,
+     "shares": 909,
+     "notional": 35641.89,
+     "exit_time": "09:44",
+     "exit_price": 39.32,
+     "exit_reason": "stop",
+     "gross_pnl": -99.99,
+     "costs": 44.78,
+     "net_pnl": -144.77,
+     "r_net": -1.448,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "F",
+     "symbol": "CRDO",
+     "setups": "short RV 3.6x",
+     "dollar_vol_prev": null,
+     "or_high": 152.07,
+     "or_low": 145.61,
+     "trigger_time": "09:35",
+     "volume_x": 3.63,
+     "signal": "sip_short",
+     "ref_level": 145.61,
+     "entry": 145.61,
+     "stop": 147.21,
+     "target": null,
+     "risk_ps": 1.6,
+     "shares": 29,
+     "notional": 4222.69,
+     "exit_time": "09:41",
+     "exit_price": 147.21,
+     "exit_reason": "stop",
+     "gross_pnl": -46.4,
+     "costs": 6.25,
+     "net_pnl": -52.65,
+     "r_net": -1.135,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "F",
+     "symbol": "DOW",
+     "setups": "long RV 2.4x",
+     "dollar_vol_prev": null,
+     "or_high": 32.25,
+     "or_low": 31.91,
+     "trigger_time": "11:11",
+     "volume_x": 2.35,
+     "signal": "sip_long",
+     "ref_level": 32.25,
+     "entry": 32.25,
+     "stop": 32.16,
+     "target": null,
+     "risk_ps": 0.09,
+     "shares": 1111,
+     "notional": 35829.75,
+     "exit_time": "16:00",
+     "exit_price": 32.6,
+     "exit_reason": "flat",
+     "gross_pnl": 388.85,
+     "costs": 47.13,
+     "net_pnl": 341.71,
+     "r_net": 3.417,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "F",
+     "symbol": "IBKR",
+     "setups": "short RV 3.6x",
+     "dollar_vol_prev": null,
+     "or_high": 81.56,
+     "or_low": 80.61,
+     "trigger_time": "15:07",
+     "volume_x": 3.61,
+     "signal": "sip_short",
+     "ref_level": 80.61,
+     "entry": 80.61,
+     "stop": 80.91,
+     "target": null,
+     "risk_ps": 0.3,
+     "shares": 51,
+     "notional": 4111.11,
+     "exit_time": "16:00",
+     "exit_price": 80.27,
+     "exit_reason": "flat",
+     "gross_pnl": 17.34,
+     "costs": 6.1,
+     "net_pnl": 11.24,
+     "r_net": 0.735,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "BE",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "NCLH",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "MXL",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "SYF",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "VIR",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "MRNA",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "SGI",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "KLAR",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "MDLZ",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "TECK",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "SSL",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "SSNC",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "HAWK",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "AMRZ",
+     "time": "09:39",
+     "why": "Order unter Minimum"
+    }
+   ]
+  },
+  "G": {
+   "shares": 39,
+   "daily_vol_pct": 0.665,
+   "prior_close": 763.9600219726562,
+   "taken": []
   }
  }
 }

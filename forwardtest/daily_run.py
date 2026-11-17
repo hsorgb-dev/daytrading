@@ -37,6 +37,7 @@ Nur Standardbibliothek. Kein Broker, keine Orders.
 """
 
 import argparse
+import calendar
 import csv
 import datetime
 import importlib.util
@@ -79,9 +80,26 @@ class Data:
     def __init__(self, cache, pause=0.25):
         self.cache = cache
         self.pause = pause
+        self.mem = {}
         os.makedirs(cache, exist_ok=True)
 
     def _cached(self, name, fetch):
+        if name in self.mem:
+            return self.mem[name]
+        doc = self._load(name, fetch)
+        if not name.startswith(("chart_1m/", "chart_60d_5m/")):  # intraday files are large: not kept
+            self.mem[name] = doc
+        return doc
+
+    def first_bars(self, sym):
+        """First 5-minute bar of each day of the 60-day chart, kept in memory (F needs ~600 a day)."""
+        key = ("first", sym)
+        if key not in self.mem:
+            ch = self.chart(sym, "60d", "5m")
+            self.mem[key] = None if "error" in ch else _first_bars(ch)
+        return self.mem[key]
+
+    def _load(self, name, fetch):
         p = os.path.join(self.cache, name)
         if os.path.exists(p):
             with open(p, encoding="utf-8") as fh:
@@ -114,6 +132,20 @@ class Data:
             time.sleep(self.pause)
             try:
                 return scan.parse_chart(scan.yahoo_get(scan.chart_path(sym, rng, interval)), sym)
+            except scan.ScanError as e:
+                return {"error": str(e)}
+        return self._cached(name, fetch)
+
+    def chart_1m(self, sym, day):
+        """1-minute bars of one session (Yahoo keeps them about 30 days)."""
+        name = "chart_1m/%s/%s.json" % (day.isoformat(), scan.to_yahoo(sym))
+        p1 = calendar.timegm(datetime.datetime.combine(day, datetime.time(12, 0)).timetuple())
+
+        def fetch():
+            time.sleep(self.pause)
+            path = "/v8/finance/chart/%s?period1=%d&period2=%d&interval=1m" % (scan.to_yahoo(sym), p1, p1 + 10 * 3600)
+            try:
+                return scan.parse_chart(scan.yahoo_get(path), sym)
             except scan.ScanError as e:
                 return {"error": str(e)}
         return self._cached(name, fetch)
@@ -168,8 +200,8 @@ def hhmm(text):
     return datetime.time(int(h), int(m))
 
 
-def day_bars(series, day):
-    """{slot: bar} of complete 5-minute regular-session bars on `day`."""
+def day_bars(series, day, step=300):
+    """{slot: bar} of complete regular-session bars on `day` (5-minute, or 1-minute with step=60)."""
     s = scan.session(day)
     if not s:
         return {}
@@ -178,13 +210,13 @@ def day_bars(series, day):
     o, h, l, c, v = (series.get(k) for k in ("o", "h", "l", "c", "v"))
     out = {}
     for i, ts in enumerate(series.get("t") or []):
-        if ts % 300 or c[i] is None or h is None or h[i] is None or l[i] is None:
+        if ts % step or c[i] is None or h is None or h[i] is None or l[i] is None:
             continue
         et = scan.ts_to_eastern(ts)
         if et.date() != day or not (open_dt <= et < close_dt):
             continue
-        slot = int((et - open_dt).total_seconds()) // 300
-        out[slot] = {"slot": slot, "start": et, "end": et + datetime.timedelta(minutes=5),
+        slot = int((et - open_dt).total_seconds()) // step
+        out[slot] = {"slot": slot, "start": et, "end": et + datetime.timedelta(seconds=step),
                      "o": float(o[i]) if o and o[i] is not None else float(c[i]),
                      "h": float(h[i]), "l": float(l[i]), "c": float(c[i]), "v": (v[i] or 0) if v else 0}
     return out
@@ -550,6 +582,285 @@ def tm_fields(doc):
             "tm_hist_avg_r": hist.get("avg_R_net"), "tm_verdict": (doc.get("verdict") or "")[:200]}
 
 
+# ---------------------------------------------------------------- F and G: published intraday strategies
+# Own selection, long AND short, own sizing (paper rules), no Time Machine.
+
+def book(entry, px, n, side, reason, costs):
+    """Gross/net P&L of one round trip, side +1 long / -1 short, our cost model."""
+    sl = costs["slippage_pct"] / 100.0
+    fill_in = entry * (1 + side * sl)
+    fill_out = px if reason == "target" else px * (1 - side * sl)
+    comm = 2 * max(costs["commission_min"], n * costs["commission_per_share"])
+    gross = side * (px - entry) * n
+    net = side * (fill_out - fill_in) * n - comm
+    return round(gross, 2), round(gross - net, 2), round(net, 2)
+
+
+def exit_sided(bars, k_entry, stop, side, flat_dt, entry_bar="path"):
+    """Stop or close for a position opened inside bar k_entry. Inside the entry bar the order of
+    high and low is unknown. "path" (default): a green bar runs open-low-high-close, a red bar
+    open-high-low-close; the stop counts only if the price reaches it after the fill.
+    "conservative": any touch of the stop in the entry bar counts. "optimistic": never."""
+    last = None
+    for k in sorted(bars):
+        if k < k_entry:
+            continue
+        b = bars[k]
+        if b["start"] >= flat_dt:
+            break
+        last = b
+        hit = b["l"] <= stop if side > 0 else b["h"] >= stop
+        if k == k_entry and entry_bar != "conservative":
+            green = b["c"] >= b["o"]
+            if entry_bar == "optimistic":
+                hit = False
+            elif side > 0:   # long fill on the way up: green bar has its low before the high
+                hit = (b["c"] <= stop) if green else (b["l"] <= stop)
+            else:            # short fill on the way down: red bar has its high before the low
+                hit = (b["h"] >= stop) if green else (b["c"] >= stop)
+        if k > k_entry and (b["o"] <= stop if side > 0 else b["o"] >= stop):
+            return b["o"], "stop_gap", b["end"]
+        if hit:
+            return stop, "stop", b["end"]
+        if b["end"] >= flat_dt:
+            return b["c"], "flat", b["end"]
+    return (last["c"], "flat", last["end"]) if last else (None, "", None)
+
+
+def _ohlcv_days(series):
+    """{date: (o, h, l, c, v)} of a daily series."""
+    out = {}
+    for i, ts in enumerate(series.get("t") or []):
+        vals = [series.get(k)[i] if series.get(k) else None for k in ("o", "h", "l", "c", "v")]
+        if None in vals[:4]:
+            continue
+        out[et_date(ts)] = tuple(float(x or 0) for x in vals)
+    return out
+
+
+def _first_bars(series):
+    """{date: first regular 5-minute bar (9:30)} of an intraday series."""
+    out = {}
+    o, h, l, c, v = (series.get(k) for k in ("o", "h", "l", "c", "v"))
+    for i, ts in enumerate(series.get("t") or []):
+        et = scan.ts_to_eastern(ts)
+        if et.hour == 9 and et.minute == 30 and c[i] is not None and o[i] is not None:
+            out[et.date()] = {"o": float(o[i]), "h": float(h[i]), "l": float(l[i]), "c": float(c[i]),
+                              "v": (v[i] or 0) if v else 0}
+    return out
+
+
+def run_sip_orb(day, data, symbols, spark, cfg, vcfg, vname):
+    """F: 5-minute ORB on Stocks in Play (Zarattini, Barbon, Aziz 2024).
+    Universe: open > 5 $, 14-day average volume >= 1M, 14-day ATR > 0.50 $.
+    Stocks in Play: the 20 with the highest relative volume of the first 5 minutes
+    (vs. the average first 5 minutes of the 14 prior days), at least 100 %.
+    Green first candle: long only, stop order at its high. Red: short only, at its low.
+    Doji: no trade. Stop 10 % of ATR from the fill. Exit at the 16:00 close.
+    Size: 1 % of capital at risk, total exposure at most `leverage` x capital, order >= min_order_usd.
+    Entry and exit run on 1-minute bars (the stop is only cents away); without them no trade."""
+    look, top = vcfg.get("lookback", 14), vcfg.get("top_n", 20)
+    uni = {}
+    for sym in symbols:
+        sp = spark.get(sym)  # closes only: cheap pre-check on the price
+        if not sp:
+            continue
+        closes = [c for c in (sp.get("c") or []) if c is not None]
+        if not closes or max(closes[-look - 1:]) <= vcfg.get("min_price", 5):
+            continue
+        ch = data.chart(sym, "6mo", "1d")  # daily high/low/volume for ATR and average volume
+        if "error" in ch:
+            continue
+        rows = _ohlcv_days(ch)
+        ds = [d for d in sorted(rows) if d < day]
+        if len(ds) < look + 1 or ds[-1] != prev_trading_day(day):
+            continue
+        last = ds[-look:]
+        avg_v = sum(rows[d][4] for d in last) / look
+        trs = []
+        for d0, d1 in zip(ds[-look - 1:-1], last):
+            h, l, pc = rows[d1][1], rows[d1][2], rows[d0][3]
+            trs.append(max(h - l, abs(h - pc), abs(l - pc)))
+        atr = sum(trs) / look
+        if avg_v >= vcfg.get("min_avg_volume", 1e6) and atr > vcfg.get("min_atr", 0.5) and rows[ds[-1]][3] > 0:
+            uni[sym] = atr
+    cands = []
+    for sym in sorted(uni):
+        fb = data.first_bars(sym)
+        if not fb or day not in fb or fb[day]["o"] <= vcfg.get("min_price", 5):
+            continue
+        prior = [d for d in sorted(fb) if d < day][-look:]
+        if len(prior) < look:
+            continue
+        avg0 = sum(fb[d]["v"] for d in prior) / float(look)
+        if not avg0:
+            continue
+        rv = fb[day]["v"] / avg0
+        if rv >= vcfg.get("min_rel_volume", 1.0):
+            cands.append((rv, sym))
+    cands.sort(key=lambda x: (-x[0], x[1]))
+    play = cands[:top]
+    s = scan.session(day)
+    flat_dt = datetime.datetime.combine(day, s[1])
+    trigs, skipped = [], []
+    for rv, sym in play:
+        bars = day_bars(data.chart(sym, "60d", "5m"), day)
+        if 0 not in bars:
+            skipped.append({"symbol": sym, "why": "Eroeffnungs-Bar fehlt"})
+            continue
+        b0 = bars[0]
+        side = 1 if b0["c"] > b0["o"] else -1 if b0["c"] < b0["o"] else 0
+        if not side:
+            skipped.append({"symbol": sym, "why": "Doji"})
+            continue
+        level = b0["h"] if side > 0 else b0["l"]
+        m1 = data.chart_1m(sym, day)
+        bars = day_bars(m1, day, step=60) if "error" not in m1 else {}
+        if not bars:
+            skipped.append({"symbol": sym, "why": "1-Min-Daten fehlen"})
+            continue
+        for k in sorted(bars):
+            b = bars[k]
+            if k < 5 or b["start"] >= flat_dt:  # stop order is live from 9:35
+                continue
+            if (side > 0 and b["h"] >= level) or (side < 0 and b["l"] <= level):
+                fill = max(b["o"], level) if side > 0 else min(b["o"], level)
+                trigs.append((b["start"], -rv, sym, side, round(fill, 2), k, b, b0, bars))
+                break
+    trigs.sort(key=lambda x: (x[0], x[1]))
+    lev, capital = vcfg.get("leverage", 4), cfg["capital"]
+    risk_usd = capital * vcfg.get("risk_pct", 1.0) / 100.0
+    trades, open_pos = [], []
+    for start, nrv, sym, side, entry, k, b, b0, bars in trigs:
+        atr = uni[sym]
+        dist = vcfg.get("stop_atr", 0.10) * atr
+        stop = floor_cent(entry - dist) if side > 0 else math.ceil((entry + dist) * 100 - 1e-9) / 100.0
+        risk = round(side * (entry - stop), 2)
+        if risk <= 0:
+            skipped.append({"symbol": sym, "why": "Stop nicht hinter Einstieg"})
+            continue
+        used = sum(p["notional"] for p in open_pos if p["exit_t"] > b["start"])
+        n = min(int(risk_usd // risk + 1e-9), int(max(capital * lev - used, 0) // entry))
+        if n < 1:
+            skipped.append({"symbol": sym, "time": label(b["start"]), "why": "0 Stueck (Hebel-Limit)"})
+            continue
+        if n * entry < cfg["min_order_usd"]:
+            skipped.append({"symbol": sym, "time": label(b["start"]), "why": "Order unter Minimum"})
+            continue
+        px, reason, exit_t = exit_sided(bars, k, stop, side, flat_dt, vcfg.get("entry_bar", "path"))
+        gross, costs, net = book(entry, px, n, side, reason, cfg["costs"])
+        trades.append({"date": day.isoformat(), "variant": vname, "symbol": sym,
+                       "setups": "%s RV %.1fx" % ("long" if side > 0 else "short", -nrv),
+                       "dollar_vol_prev": None, "or_high": round(b0["h"], 2), "or_low": round(b0["l"], 2),
+                       "trigger_time": label(b["start"]), "volume_x": round(-nrv, 2),
+                       "signal": "sip_long" if side > 0 else "sip_short", "ref_level": round(b0["h"] if side > 0 else b0["l"], 2),
+                       "entry": entry, "stop": stop, "target": None, "risk_ps": risk, "shares": n,
+                       "notional": round(n * entry, 2), "exit_time": label(exit_t), "exit_price": round(px, 2),
+                       "exit_reason": reason, "gross_pnl": gross, "costs": costs, "net_pnl": net,
+                       "r_net": round(net / (n * risk), 3), "data_note": "1-Min-Bars, Stop-Order ab 9:35"})
+        open_pos.append({"notional": n * entry, "exit_t": exit_t})
+    day_row = {"watchlist": len(play), "with_data": len(play), "triggers": len(trigs), "taken": len(trades),
+               "skipped": len(skipped)}
+    detail = {"universe": len(uni), "in_play": [{"symbol": sym, "rv": round(rv, 2)} for rv, sym in play],
+              "triggers": [{"symbol": t[2], "time": label(t[0]), "side": t[3], "price": t[4]} for t in trigs],
+              "taken": trades, "skipped": skipped}
+    return trades, day_row, detail
+
+
+def run_spy_momentum(day, data, symbols, spark, cfg, vcfg, vname):
+    """G: SPY intraday momentum (Zarattini, Aziz, Barbon 2024).
+    Noise area per time of day: sigma = mean over 14 prior days of |close(time) / open - 1|.
+    Upper = max(open, prior close) * (1 + sigma), lower = min(open, prior close) * (1 - sigma).
+    Checks only at HH:00 and HH:30 from 10:00: above upper -> long, below lower -> short.
+    Trailing stop max(upper, VWAP) for longs, min(lower, VWAP) for shorts, checked at the same
+    times; a stop can reverse into the other side. Flat at the 16:00 close.
+    Size: capital * min(4, 2 % / 14-day daily volatility of SPY) / open, fixed for the day.
+    Our choices: 5-minute bars (paper: 1-minute); no entry if the price is already beyond VWAP
+    against the trade (the stop would sit on the wrong side)."""
+    sym = vcfg.get("symbol", "SPY")
+    look = vcfg.get("lookback", 14)
+    ch = data.chart(sym, "60d", "5m")
+    dch = data.chart(sym, "6mo", "1d")
+    empty = ([], {"watchlist": 1, "with_data": 0, "triggers": 0, "taken": 0, "skipped": 0}, {"note": ""})
+    if "error" in ch or "error" in dch:
+        empty[2]["note"] = "SPY-Daten fehlen"
+        return empty
+    bars = day_bars(ch, day)
+    days_in = sorted({et_date(ts) for ts in ch.get("t") or []})
+    prior = [d for d in days_in if d < day][-look:]
+    drows = _ohlcv_days(dch)
+    dcl = [drows[d][3] for d in sorted(drows) if d < day]
+    if 0 not in bars or len(prior) < look or len(dcl) < look + 1:
+        empty[2]["note"] = "zu wenig Historie oder Eroeffnungs-Bar fehlt"
+        return empty
+    pbars = {d: day_bars(ch, d) for d in prior}
+    rets = [dcl[i] / dcl[i - 1] - 1 for i in range(len(dcl) - look, len(dcl))]
+    mu = sum(rets) / look
+    vol = math.sqrt(sum((r - mu) ** 2 for r in rets) / (look - 1))
+    o, pc = bars[0]["o"], dcl[-1]
+    n = int(cfg["capital"] * min(vcfg.get("max_leverage", 4), vcfg.get("target_vol", 0.02) / vol) // o)
+    s = scan.session(day)
+    open_dt = datetime.datetime.combine(day, s[0])
+    flat_dt = datetime.datetime.combine(day, s[1])
+    checks = []
+    t = datetime.datetime.combine(day, hhmm(vcfg.get("first_check", "10:00")))
+    while t < flat_dt:
+        checks.append(int((t - open_dt).total_seconds()) // 300 - 1)  # slot of the bar ending at t
+        t += datetime.timedelta(minutes=30)
+    costs = dict(cfg["costs"], **(vcfg.get("costs") or {}))
+    pv = vv = 0.0
+    vwap = {}
+    for k in sorted(bars):
+        b = bars[k]
+        pv += (b["h"] + b["l"] + b["c"]) / 3.0 * b["v"]
+        vv += b["v"]
+        vwap[k] = pv / vv if vv else b["c"]
+    trades, pos, entries = [], None, 0
+
+    def close(p, px, k, reason):
+        g, c, net = book(p["entry"], px, n, p["side"], reason, costs)
+        trades.append({"date": day.isoformat(), "variant": vname, "symbol": sym,
+                       "setups": "%s Noise Area" % ("long" if p["side"] > 0 else "short"), "dollar_vol_prev": None,
+                       "or_high": p["ub"], "or_low": p["lb"], "trigger_time": p["time"], "volume_x": None,
+                       "signal": "spy_mom_long" if p["side"] > 0 else "spy_mom_short", "ref_level": p["ref"],
+                       "entry": p["entry"], "stop": p["stop"], "target": None, "risk_ps": p["risk"], "shares": n,
+                       "notional": round(n * p["entry"], 2), "exit_time": label(bars[k]["end"]),
+                       "exit_price": round(px, 2), "exit_reason": reason, "gross_pnl": g, "costs": c, "net_pnl": net,
+                       "r_net": round(net / (n * p["risk"]), 3),
+                       "data_note": "Hebel %.2fx (Tagesvola %.2f %%)" % (n * o / cfg["capital"], 100 * vol)})
+
+    for k in checks:
+        if k not in bars:
+            continue
+        mv = [abs(pbars[d][k]["c"] / pbars[d][0]["o"] - 1) for d in prior if k in pbars[d] and 0 in pbars[d]]
+        if len(mv) < look // 2:
+            continue
+        sig = sum(mv) / len(mv)
+        ub, lb = max(o, pc) * (1 + sig), min(o, pc) * (1 - sig)
+        px, vw = bars[k]["c"], vwap[k]
+        if pos:
+            stop = max(ub, vw) if pos["side"] > 0 else min(lb, vw)
+            if (pos["side"] > 0 and px < stop) or (pos["side"] < 0 and px > stop):
+                close(pos, px, k, "trail")
+                pos = None
+        if not pos and n >= 1:
+            side = 1 if px > ub else -1 if px < lb else 0
+            if side and side * (px - vw) > 0:
+                st = max(ub, vw) if side > 0 else min(lb, vw)
+                risk = max(round(side * (px - st), 2), 0.01)
+                pos = {"side": side, "entry": round(px, 2), "stop": round(st, 2), "risk": risk, "ub": round(ub, 2),
+                       "lb": round(lb, 2), "ref": round(ub if side > 0 else lb, 2), "time": label(bars[k]["end"])}
+                entries += 1
+    if pos:
+        last = max(k for k in bars if bars[k]["start"] < flat_dt)
+        close(pos, bars[last]["c"], last, "flat")
+    day_row = {"watchlist": 1, "with_data": 1, "triggers": entries, "taken": len(trades), "skipped": 0}
+    return trades, day_row, {"shares": n, "daily_vol_pct": round(100 * vol, 3), "prior_close": pc, "taken": trades}
+
+
+SPECIAL = {"sip_orb": run_sip_orb, "spy_momentum": run_spy_momentum}
+
+
 def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
     if frozen:
         log("%s: Watchlist aus dem Log (eingefroren) ..." % day.isoformat())
@@ -575,6 +886,13 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
     for vname, vcfg in sorted(cfg["variants"].items()):
         if vcfg.get("forward_from") and day.isoformat() < vcfg["forward_from"]:
             continue  # forward-only variant: no backfill before its start
+        if vcfg.get("strategy") in SPECIAL:
+            tr, drow, det = SPECIAL[vcfg["strategy"]](day, data, symbols, spark, cfg, vcfg, vname)
+            trades.extend(tr)
+            days.append(dict(drow, date=day.isoformat(), variant=vname, spy_open=spy_o, spy_close=spy_c,
+                             net_pnl=round(sum(t["net_pnl"] for t in tr), 2), note=det.get("note", "")))
+            detail["variants"][vname] = det
+            continue
         cands = []
         for w in wl:
             b = bars_by[w["symbol"]]

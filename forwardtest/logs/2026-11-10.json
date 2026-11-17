@@ -1115,6 +1115,499 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 574,
+   "in_play": [
+    {
+     "symbol": "DBX",
+     "rv": 128.13
+    },
+    {
+     "symbol": "GFL",
+     "rv": 52.71
+    },
+    {
+     "symbol": "APPS",
+     "rv": 22.02
+    },
+    {
+     "symbol": "SECZ",
+     "rv": 19.45
+    },
+    {
+     "symbol": "TTD",
+     "rv": 18.02
+    },
+    {
+     "symbol": "LEGN",
+     "rv": 13.17
+    },
+    {
+     "symbol": "CHYM",
+     "rv": 11.16
+    },
+    {
+     "symbol": "TTWO",
+     "rv": 9.2
+    },
+    {
+     "symbol": "ICE",
+     "rv": 8.21
+    },
+    {
+     "symbol": "HIMS",
+     "rv": 8.2
+    },
+    {
+     "symbol": "VIK",
+     "rv": 7.85
+    },
+    {
+     "symbol": "SE",
+     "rv": 7.64
+    },
+    {
+     "symbol": "QBTS",
+     "rv": 7.62
+    },
+    {
+     "symbol": "ONON",
+     "rv": 6.34
+    },
+    {
+     "symbol": "EMBJ",
+     "rv": 6.01
+    },
+    {
+     "symbol": "KVYO",
+     "rv": 5.51
+    },
+    {
+     "symbol": "SITE",
+     "rv": 4.55
+    },
+    {
+     "symbol": "FOXA",
+     "rv": 4.29
+    },
+    {
+     "symbol": "SONY",
+     "rv": 4.03
+    },
+    {
+     "symbol": "ZETA",
+     "rv": 3.95
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "DBX",
+     "time": "09:35",
+     "side": 1,
+     "price": 32.33
+    },
+    {
+     "symbol": "APPS",
+     "time": "09:35",
+     "side": -1,
+     "price": 7.17
+    },
+    {
+     "symbol": "LEGN",
+     "time": "09:35",
+     "side": 1,
+     "price": 21.86
+    },
+    {
+     "symbol": "HIMS",
+     "time": "09:35",
+     "side": -1,
+     "price": 20.09
+    },
+    {
+     "symbol": "SE",
+     "time": "09:35",
+     "side": 1,
+     "price": 81.87
+    },
+    {
+     "symbol": "EMBJ",
+     "time": "09:35",
+     "side": 1,
+     "price": 81.52
+    },
+    {
+     "symbol": "KVYO",
+     "time": "09:35",
+     "side": 1,
+     "price": 20.14
+    },
+    {
+     "symbol": "FOXA",
+     "time": "09:35",
+     "side": -1,
+     "price": 66.67
+    },
+    {
+     "symbol": "SONY",
+     "time": "09:35",
+     "side": 1,
+     "price": 26.77
+    },
+    {
+     "symbol": "SECZ",
+     "time": "09:36",
+     "side": 1,
+     "price": 9.45
+    },
+    {
+     "symbol": "GFL",
+     "time": "09:46",
+     "side": 1,
+     "price": 41.68
+    },
+    {
+     "symbol": "CHYM",
+     "time": "09:53",
+     "side": -1,
+     "price": 32.22
+    },
+    {
+     "symbol": "ICE",
+     "time": "10:35",
+     "side": 1,
+     "price": 174.89
+    },
+    {
+     "symbol": "VIK",
+     "time": "10:36",
+     "side": 1,
+     "price": 87.96
+    },
+    {
+     "symbol": "TTD",
+     "time": "10:55",
+     "side": 1,
+     "price": 15.16
+    },
+    {
+     "symbol": "QBTS",
+     "time": "13:00",
+     "side": 1,
+     "price": 11.4
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "DBX",
+     "setups": "long RV 128.1x",
+     "dollar_vol_prev": null,
+     "or_high": 32.33,
+     "or_low": 31.72,
+     "trigger_time": "09:35",
+     "volume_x": 128.13,
+     "signal": "sip_long",
+     "ref_level": 32.33,
+     "entry": 32.33,
+     "stop": 32.2,
+     "target": null,
+     "risk_ps": 0.13,
+     "shares": 769,
+     "notional": 24861.77,
+     "exit_time": "09:37",
+     "exit_price": 32.2,
+     "exit_reason": "stop",
+     "gross_pnl": -99.97,
+     "costs": 32.5,
+     "net_pnl": -132.47,
+     "r_net": -1.325,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "APPS",
+     "setups": "short RV 22.0x",
+     "dollar_vol_prev": null,
+     "or_high": 8.23,
+     "or_low": 7.17,
+     "trigger_time": "09:35",
+     "volume_x": 22.02,
+     "signal": "sip_short",
+     "ref_level": 7.17,
+     "entry": 7.17,
+     "stop": 7.26,
+     "target": null,
+     "risk_ps": 0.09,
+     "shares": 1111,
+     "notional": 7965.87,
+     "exit_time": "09:36",
+     "exit_price": 7.26,
+     "exit_reason": "stop",
+     "gross_pnl": -99.99,
+     "costs": 19.13,
+     "net_pnl": -119.12,
+     "r_net": -1.191,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "LEGN",
+     "setups": "long RV 13.2x",
+     "dollar_vol_prev": null,
+     "or_high": 21.86,
+     "or_low": 20.66,
+     "trigger_time": "09:35",
+     "volume_x": 13.17,
+     "signal": "sip_long",
+     "ref_level": 21.86,
+     "entry": 21.86,
+     "stop": 21.73,
+     "target": null,
+     "risk_ps": 0.13,
+     "shares": 328,
+     "notional": 7170.08,
+     "exit_time": "09:40",
+     "exit_price": 21.73,
+     "exit_reason": "stop",
+     "gross_pnl": -42.64,
+     "costs": 10.43,
+     "net_pnl": -53.07,
+     "r_net": -1.245,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "SECZ",
+     "setups": "long RV 19.4x",
+     "dollar_vol_prev": null,
+     "or_high": 9.45,
+     "or_low": 8.25,
+     "trigger_time": "09:36",
+     "volume_x": 19.45,
+     "signal": "sip_long",
+     "ref_level": 9.45,
+     "entry": 9.45,
+     "stop": 9.37,
+     "target": null,
+     "risk_ps": 0.08,
+     "shares": 843,
+     "notional": 7966.35,
+     "exit_time": "09:38",
+     "exit_price": 9.37,
+     "exit_reason": "stop",
+     "gross_pnl": -67.44,
+     "costs": 16.36,
+     "net_pnl": -83.8,
+     "r_net": -1.243,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "GFL",
+     "setups": "long RV 52.7x",
+     "dollar_vol_prev": null,
+     "or_high": 41.68,
+     "or_low": 40.65,
+     "trigger_time": "09:46",
+     "volume_x": 52.71,
+     "signal": "sip_long",
+     "ref_level": 41.68,
+     "entry": 41.68,
+     "stop": 41.54,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 714,
+     "notional": 29759.52,
+     "exit_time": "09:49",
+     "exit_price": 41.54,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 36.85,
+     "net_pnl": -136.81,
+     "r_net": -1.369,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "CHYM",
+     "setups": "short RV 11.2x",
+     "dollar_vol_prev": null,
+     "or_high": 32.6,
+     "or_low": 32.22,
+     "trigger_time": "09:53",
+     "volume_x": 11.16,
+     "signal": "sip_short",
+     "ref_level": 32.22,
+     "entry": 32.22,
+     "stop": 32.37,
+     "target": null,
+     "risk_ps": 0.15,
+     "shares": 666,
+     "notional": 21458.52,
+     "exit_time": "09:56",
+     "exit_price": 32.37,
+     "exit_reason": "stop",
+     "gross_pnl": -99.9,
+     "costs": 28.17,
+     "net_pnl": -128.07,
+     "r_net": -1.282,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "ICE",
+     "setups": "long RV 8.2x",
+     "dollar_vol_prev": null,
+     "or_high": 174.89,
+     "or_low": 173.58,
+     "trigger_time": "10:35",
+     "volume_x": 8.21,
+     "signal": "sip_long",
+     "ref_level": 174.89,
+     "entry": 174.89,
+     "stop": 174.42,
+     "target": null,
+     "risk_ps": 0.47,
+     "shares": 212,
+     "notional": 37076.68,
+     "exit_time": "16:00",
+     "exit_price": 176.34,
+     "exit_reason": "flat",
+     "gross_pnl": 307.4,
+     "costs": 39.35,
+     "net_pnl": 268.05,
+     "r_net": 2.69,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "VIK",
+     "setups": "long RV 7.8x",
+     "dollar_vol_prev": null,
+     "or_high": 87.96,
+     "or_low": 86.7,
+     "trigger_time": "10:36",
+     "volume_x": 7.85,
+     "signal": "sip_long",
+     "ref_level": 87.96,
+     "entry": 87.96,
+     "stop": 87.62,
+     "target": null,
+     "risk_ps": 0.34,
+     "shares": 33,
+     "notional": 2902.68,
+     "exit_time": "10:42",
+     "exit_price": 87.62,
+     "exit_reason": "stop",
+     "gross_pnl": -11.22,
+     "costs": 4.9,
+     "net_pnl": -16.12,
+     "r_net": -1.437,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "TTD",
+     "setups": "long RV 18.0x",
+     "dollar_vol_prev": null,
+     "or_high": 15.16,
+     "or_low": 14.3,
+     "trigger_time": "10:55",
+     "volume_x": 18.02,
+     "signal": "sip_long",
+     "ref_level": 15.16,
+     "entry": 15.16,
+     "stop": 15.08,
+     "target": null,
+     "risk_ps": 0.08,
+     "shares": 192,
+     "notional": 2910.72,
+     "exit_time": "10:57",
+     "exit_price": 15.08,
+     "exit_reason": "stop",
+     "gross_pnl": -15.36,
+     "costs": 4.9,
+     "net_pnl": -20.26,
+     "r_net": -1.319,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "F",
+     "symbol": "QBTS",
+     "setups": "long RV 7.6x",
+     "dollar_vol_prev": null,
+     "or_high": 11.4,
+     "or_low": 10.83,
+     "trigger_time": "13:00",
+     "volume_x": 7.62,
+     "signal": "sip_long",
+     "ref_level": 11.4,
+     "entry": 11.4,
+     "stop": 11.31,
+     "target": null,
+     "risk_ps": 0.09,
+     "shares": 256,
+     "notional": 2918.4,
+     "exit_time": "13:02",
+     "exit_price": 10.25,
+     "exit_reason": "stop_gap",
+     "gross_pnl": -294.4,
+     "costs": 5.33,
+     "net_pnl": -299.73,
+     "r_net": -13.009,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "HIMS",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "SE",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "EMBJ",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "KVYO",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "FOXA",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "SONY",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    }
+   ]
+  },
+  "G": {
+   "shares": 16,
+   "daily_vol_pct": 1.619,
+   "prior_close": 752.6900024414062,
+   "taken": []
   }
  }
 }

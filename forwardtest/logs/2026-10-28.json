@@ -1110,6 +1110,378 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 528,
+   "in_play": [
+    {
+     "symbol": "ENPH",
+     "rv": 33.78
+    },
+    {
+     "symbol": "BSX",
+     "rv": 12.15
+    },
+    {
+     "symbol": "SLS",
+     "rv": 10.02
+    },
+    {
+     "symbol": "SEDG",
+     "rv": 8.35
+    },
+    {
+     "symbol": "VRT",
+     "rv": 7.47
+    },
+    {
+     "symbol": "STX",
+     "rv": 7.42
+    },
+    {
+     "symbol": "GSK",
+     "rv": 6.31
+    },
+    {
+     "symbol": "HOOD",
+     "rv": 5.37
+    },
+    {
+     "symbol": "NXPI",
+     "rv": 4.94
+    },
+    {
+     "symbol": "SW",
+     "rv": 4.74
+    },
+    {
+     "symbol": "GEV",
+     "rv": 4.71
+    },
+    {
+     "symbol": "IP",
+     "rv": 4.69
+    },
+    {
+     "symbol": "FLEX",
+     "rv": 4.62
+    },
+    {
+     "symbol": "BKR",
+     "rv": 4.53
+    },
+    {
+     "symbol": "UL",
+     "rv": 3.87
+    },
+    {
+     "symbol": "BA",
+     "rv": 3.86
+    },
+    {
+     "symbol": "DB",
+     "rv": 3.79
+    },
+    {
+     "symbol": "APH",
+     "rv": 3.72
+    },
+    {
+     "symbol": "VFC",
+     "rv": 3.2
+    },
+    {
+     "symbol": "RPRX",
+     "rv": 3.14
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "ENPH",
+     "time": "09:35",
+     "side": 1,
+     "price": 25.53
+    },
+    {
+     "symbol": "BSX",
+     "time": "09:35",
+     "side": -1,
+     "price": 40.54
+    },
+    {
+     "symbol": "HOOD",
+     "time": "09:35",
+     "side": 1,
+     "price": 91.64
+    },
+    {
+     "symbol": "GEV",
+     "time": "09:35",
+     "side": -1,
+     "price": 853.01
+    },
+    {
+     "symbol": "BKR",
+     "time": "09:35",
+     "side": -1,
+     "price": 56.48
+    },
+    {
+     "symbol": "DB",
+     "time": "09:35",
+     "side": -1,
+     "price": 33.39
+    },
+    {
+     "symbol": "APH",
+     "time": "09:35",
+     "side": -1,
+     "price": 81.31
+    },
+    {
+     "symbol": "SLS",
+     "time": "09:36",
+     "side": -1,
+     "price": 11.03
+    },
+    {
+     "symbol": "UL",
+     "time": "09:36",
+     "side": 1,
+     "price": 63.69
+    },
+    {
+     "symbol": "NXPI",
+     "time": "09:37",
+     "side": 1,
+     "price": 245.54
+    },
+    {
+     "symbol": "GSK",
+     "time": "09:40",
+     "side": 1,
+     "price": 48.22
+    },
+    {
+     "symbol": "RPRX",
+     "time": "09:40",
+     "side": 1,
+     "price": 64.7
+    },
+    {
+     "symbol": "STX",
+     "time": "09:45",
+     "side": -1,
+     "price": 630.0
+    },
+    {
+     "symbol": "IP",
+     "time": "09:47",
+     "side": 1,
+     "price": 33.15
+    },
+    {
+     "symbol": "BA",
+     "time": "09:50",
+     "side": -1,
+     "price": 166.82
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "F",
+     "symbol": "ENPH",
+     "setups": "long RV 33.8x",
+     "dollar_vol_prev": null,
+     "or_high": 25.53,
+     "or_low": 23.83,
+     "trigger_time": "09:35",
+     "volume_x": 33.78,
+     "signal": "sip_long",
+     "ref_level": 25.53,
+     "entry": 25.53,
+     "stop": 25.35,
+     "target": null,
+     "risk_ps": 0.18,
+     "shares": 555,
+     "notional": 14169.15,
+     "exit_time": "09:37",
+     "exit_price": 25.35,
+     "exit_reason": "stop",
+     "gross_pnl": -99.9,
+     "costs": 19.67,
+     "net_pnl": -119.57,
+     "r_net": -1.197,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F",
+     "symbol": "BSX",
+     "setups": "short RV 12.1x",
+     "dollar_vol_prev": null,
+     "or_high": 42.2,
+     "or_low": 40.54,
+     "trigger_time": "09:35",
+     "volume_x": 12.15,
+     "signal": "sip_short",
+     "ref_level": 40.54,
+     "entry": 40.54,
+     "stop": 40.66,
+     "target": null,
+     "risk_ps": 0.12,
+     "shares": 637,
+     "notional": 25823.98,
+     "exit_time": "09:50",
+     "exit_price": 40.66,
+     "exit_reason": "stop",
+     "gross_pnl": -76.44,
+     "costs": 32.23,
+     "net_pnl": -108.67,
+     "r_net": -1.422,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F",
+     "symbol": "NXPI",
+     "setups": "long RV 4.9x",
+     "dollar_vol_prev": null,
+     "or_high": 245.54,
+     "or_low": 235.0,
+     "trigger_time": "09:37",
+     "volume_x": 4.94,
+     "signal": "sip_long",
+     "ref_level": 245.54,
+     "entry": 245.54,
+     "stop": 244.63,
+     "target": null,
+     "risk_ps": 0.91,
+     "shares": 57,
+     "notional": 13995.78,
+     "exit_time": "09:39",
+     "exit_price": 244.63,
+     "exit_reason": "stop",
+     "gross_pnl": -51.87,
+     "costs": 15.97,
+     "net_pnl": -67.84,
+     "r_net": -1.308,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F",
+     "symbol": "GSK",
+     "setups": "long RV 6.3x",
+     "dollar_vol_prev": null,
+     "or_high": 48.22,
+     "or_low": 47.35,
+     "trigger_time": "09:40",
+     "volume_x": 6.31,
+     "signal": "sip_long",
+     "ref_level": 48.22,
+     "entry": 48.22,
+     "stop": 48.11,
+     "target": null,
+     "risk_ps": 0.11,
+     "shares": 293,
+     "notional": 14128.46,
+     "exit_time": "16:00",
+     "exit_price": 48.76,
+     "exit_reason": "flat",
+     "gross_pnl": 158.22,
+     "costs": 17.14,
+     "net_pnl": 141.08,
+     "r_net": 4.377,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F",
+     "symbol": "BA",
+     "setups": "short RV 3.9x",
+     "dollar_vol_prev": null,
+     "or_high": 170.2,
+     "or_low": 166.82,
+     "trigger_time": "09:50",
+     "volume_x": 3.86,
+     "signal": "sip_short",
+     "ref_level": 166.82,
+     "entry": 166.82,
+     "stop": 167.36,
+     "target": null,
+     "risk_ps": 0.54,
+     "shares": 155,
+     "notional": 25857.1,
+     "exit_time": "11:19",
+     "exit_price": 167.36,
+     "exit_reason": "stop",
+     "gross_pnl": -83.7,
+     "costs": 27.9,
+     "net_pnl": -111.6,
+     "r_net": -1.333,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "HOOD",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "GEV",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "BKR",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "DB",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "APH",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "SLS",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "UL",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "RPRX",
+     "time": "09:40",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "STX",
+     "time": "09:45",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "IP",
+     "time": "09:47",
+     "why": "Order unter Minimum"
+    }
+   ]
+  },
+  "G": {
+   "shares": 38,
+   "daily_vol_pct": 0.68,
+   "prior_close": 769.6599731445312,
+   "taken": []
   }
  }
 }

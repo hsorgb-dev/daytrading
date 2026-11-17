@@ -1117,6 +1117,356 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 523,
+   "in_play": [
+    {
+     "symbol": "IOVA",
+     "rv": 30.91
+    },
+    {
+     "symbol": "CART",
+     "rv": 22.48
+    },
+    {
+     "symbol": "NCLH",
+     "rv": 13.36
+    },
+    {
+     "symbol": "FTNT",
+     "rv": 12.52
+    },
+    {
+     "symbol": "PURR",
+     "rv": 11.83
+    },
+    {
+     "symbol": "GOOG",
+     "rv": 11.51
+    },
+    {
+     "symbol": "DASH",
+     "rv": 10.54
+    },
+    {
+     "symbol": "BXDC",
+     "rv": 10.26
+    },
+    {
+     "symbol": "GOOGL",
+     "rv": 9.62
+    },
+    {
+     "symbol": "NOW",
+     "rv": 8.26
+    },
+    {
+     "symbol": "CAT",
+     "rv": 8.26
+    },
+    {
+     "symbol": "CVNA",
+     "rv": 8.16
+    },
+    {
+     "symbol": "AM",
+     "rv": 8.03
+    },
+    {
+     "symbol": "WEC",
+     "rv": 6.76
+    },
+    {
+     "symbol": "BAX",
+     "rv": 6.19
+    },
+    {
+     "symbol": "FTAI",
+     "rv": 5.88
+    },
+    {
+     "symbol": "AGI",
+     "rv": 5.72
+    },
+    {
+     "symbol": "CMG",
+     "rv": 5.59
+    },
+    {
+     "symbol": "GEN",
+     "rv": 5.56
+    },
+    {
+     "symbol": "FTRE",
+     "rv": 5.23
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "NCLH",
+     "time": "09:35",
+     "side": 1,
+     "price": 17.77
+    },
+    {
+     "symbol": "GOOG",
+     "time": "09:35",
+     "side": -1,
+     "price": 279.61
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "09:35",
+     "side": -1,
+     "price": 281.95
+    },
+    {
+     "symbol": "AM",
+     "time": "09:35",
+     "side": 1,
+     "price": 21.42
+    },
+    {
+     "symbol": "WEC",
+     "time": "09:35",
+     "side": 1,
+     "price": 114.97
+    },
+    {
+     "symbol": "BAX",
+     "time": "09:35",
+     "side": -1,
+     "price": 24.02
+    },
+    {
+     "symbol": "CART",
+     "time": "09:36",
+     "side": -1,
+     "price": 58.22
+    },
+    {
+     "symbol": "FTNT",
+     "time": "09:36",
+     "side": 1,
+     "price": 132.99
+    },
+    {
+     "symbol": "IOVA",
+     "time": "09:37",
+     "side": 1,
+     "price": 11.49
+    },
+    {
+     "symbol": "DASH",
+     "time": "09:37",
+     "side": -1,
+     "price": 175.78
+    },
+    {
+     "symbol": "NOW",
+     "time": "09:37",
+     "side": -1,
+     "price": 113.35
+    },
+    {
+     "symbol": "CAT",
+     "time": "09:38",
+     "side": 1,
+     "price": 647.36
+    },
+    {
+     "symbol": "PURR",
+     "time": "09:39",
+     "side": -1,
+     "price": 10.86
+    },
+    {
+     "symbol": "CVNA",
+     "time": "09:44",
+     "side": 1,
+     "price": 67.71
+    },
+    {
+     "symbol": "FTRE",
+     "time": "10:09",
+     "side": -1,
+     "price": 22.5
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-29",
+     "variant": "F",
+     "symbol": "NCLH",
+     "setups": "long RV 13.4x",
+     "dollar_vol_prev": null,
+     "or_high": 17.77,
+     "or_low": 17.4,
+     "trigger_time": "09:35",
+     "volume_x": 13.36,
+     "signal": "sip_long",
+     "ref_level": 17.77,
+     "entry": 17.77,
+     "stop": 17.7,
+     "target": null,
+     "risk_ps": 0.07,
+     "shares": 1428,
+     "notional": 25375.56,
+     "exit_time": "09:53",
+     "exit_price": 17.7,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 39.61,
+     "net_pnl": -139.57,
+     "r_net": -1.396,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-29",
+     "variant": "F",
+     "symbol": "GOOG",
+     "setups": "short RV 11.5x",
+     "dollar_vol_prev": null,
+     "or_high": 284.76,
+     "or_low": 279.61,
+     "trigger_time": "09:35",
+     "volume_x": 11.51,
+     "signal": "sip_short",
+     "ref_level": 279.61,
+     "entry": 279.61,
+     "stop": 280.41,
+     "target": null,
+     "risk_ps": 0.8,
+     "shares": 52,
+     "notional": 14539.72,
+     "exit_time": "09:43",
+     "exit_price": 280.41,
+     "exit_reason": "stop",
+     "gross_pnl": -41.6,
+     "costs": 16.56,
+     "net_pnl": -58.16,
+     "r_net": -1.398,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-29",
+     "variant": "F",
+     "symbol": "CVNA",
+     "setups": "long RV 8.2x",
+     "dollar_vol_prev": null,
+     "or_high": 67.71,
+     "or_low": 63.81,
+     "trigger_time": "09:44",
+     "volume_x": 8.16,
+     "signal": "sip_long",
+     "ref_level": 67.71,
+     "entry": 67.71,
+     "stop": 67.41,
+     "target": null,
+     "risk_ps": 0.3,
+     "shares": 215,
+     "notional": 14557.65,
+     "exit_time": "09:45",
+     "exit_price": 67.41,
+     "exit_reason": "stop",
+     "gross_pnl": -64.5,
+     "costs": 16.68,
+     "net_pnl": -81.18,
+     "r_net": -1.259,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-29",
+     "variant": "F",
+     "symbol": "FTRE",
+     "setups": "short RV 5.2x",
+     "dollar_vol_prev": null,
+     "or_high": 23.79,
+     "or_low": 22.5,
+     "trigger_time": "10:09",
+     "volume_x": 5.23,
+     "signal": "sip_short",
+     "ref_level": 22.5,
+     "entry": 22.5,
+     "stop": 22.62,
+     "target": null,
+     "risk_ps": 0.12,
+     "shares": 833,
+     "notional": 18742.5,
+     "exit_time": "10:17",
+     "exit_price": 22.62,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 27.12,
+     "net_pnl": -127.08,
+     "r_net": -1.271,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "GOOGL",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "AM",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "WEC",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "BAX",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "CART",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "FTNT",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "IOVA",
+     "time": "09:37",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "DASH",
+     "time": "09:37",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "NOW",
+     "time": "09:37",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "CAT",
+     "time": "09:38",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "PURR",
+     "time": "09:39",
+     "why": "Order unter Minimum"
+    }
+   ]
+  },
+  "G": {
+   "shares": 38,
+   "daily_vol_pct": 0.68,
+   "prior_close": 772.3099975585938,
+   "taken": []
   }
  }
 }

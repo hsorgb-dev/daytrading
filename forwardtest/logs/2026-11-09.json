@@ -1108,6 +1108,428 @@
      "why": "Order unter Minimum"
     }
    ]
+  },
+  "F": {
+   "universe": 574,
+   "in_play": [
+    {
+     "symbol": "OMH",
+     "rv": 24.12
+    },
+    {
+     "symbol": "IONS",
+     "rv": 21.95
+    },
+    {
+     "symbol": "VIR",
+     "rv": 21.51
+    },
+    {
+     "symbol": "LFST",
+     "rv": 15.28
+    },
+    {
+     "symbol": "IBRX",
+     "rv": 14.95
+    },
+    {
+     "symbol": "SGI",
+     "rv": 13.87
+    },
+    {
+     "symbol": "NVDA",
+     "rv": 8.37
+    },
+    {
+     "symbol": "TTD",
+     "rv": 7.73
+    },
+    {
+     "symbol": "JHX",
+     "rv": 6.73
+    },
+    {
+     "symbol": "CGON",
+     "rv": 4.47
+    },
+    {
+     "symbol": "FWDI",
+     "rv": 4.43
+    },
+    {
+     "symbol": "EPD",
+     "rv": 4.09
+    },
+    {
+     "symbol": "HIMS",
+     "rv": 4.02
+    },
+    {
+     "symbol": "VICI",
+     "rv": 3.98
+    },
+    {
+     "symbol": "LUNR",
+     "rv": 3.69
+    },
+    {
+     "symbol": "FLY",
+     "rv": 3.39
+    },
+    {
+     "symbol": "TRIP",
+     "rv": 3.27
+    },
+    {
+     "symbol": "SU",
+     "rv": 3.18
+    },
+    {
+     "symbol": "GTLB",
+     "rv": 3.15
+    },
+    {
+     "symbol": "AMAT",
+     "rv": 3.1
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "VIR",
+     "time": "09:35",
+     "side": 1,
+     "price": 13.95
+    },
+    {
+     "symbol": "IBRX",
+     "time": "09:35",
+     "side": -1,
+     "price": 6.51
+    },
+    {
+     "symbol": "SGI",
+     "time": "09:35",
+     "side": 1,
+     "price": 64.65
+    },
+    {
+     "symbol": "NVDA",
+     "time": "09:35",
+     "side": 1,
+     "price": 175.22
+    },
+    {
+     "symbol": "VICI",
+     "time": "09:35",
+     "side": -1,
+     "price": 24.86
+    },
+    {
+     "symbol": "FLY",
+     "time": "09:35",
+     "side": 1,
+     "price": 21.87
+    },
+    {
+     "symbol": "AMAT",
+     "time": "09:35",
+     "side": 1,
+     "price": 352.04
+    },
+    {
+     "symbol": "CGON",
+     "time": "09:36",
+     "side": -1,
+     "price": 74.79
+    },
+    {
+     "symbol": "HIMS",
+     "time": "09:36",
+     "side": -1,
+     "price": 24.5
+    },
+    {
+     "symbol": "GTLB",
+     "time": "09:36",
+     "side": -1,
+     "price": 45.89
+    },
+    {
+     "symbol": "IONS",
+     "time": "09:37",
+     "side": -1,
+     "price": 31.08
+    },
+    {
+     "symbol": "OMH",
+     "time": "09:38",
+     "side": 1,
+     "price": 24.6
+    },
+    {
+     "symbol": "TTD",
+     "time": "09:38",
+     "side": 1,
+     "price": 14.17
+    },
+    {
+     "symbol": "FWDI",
+     "time": "09:39",
+     "side": 1,
+     "price": 5.47
+    },
+    {
+     "symbol": "SU",
+     "time": "14:44",
+     "side": -1,
+     "price": 66.72
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-09",
+     "variant": "F",
+     "symbol": "VIR",
+     "setups": "long RV 21.5x",
+     "dollar_vol_prev": null,
+     "or_high": 13.95,
+     "or_low": 13.11,
+     "trigger_time": "09:35",
+     "volume_x": 21.51,
+     "signal": "sip_long",
+     "ref_level": 13.95,
+     "entry": 13.95,
+     "stop": 13.87,
+     "target": null,
+     "risk_ps": 0.08,
+     "shares": 1249,
+     "notional": 17423.55,
+     "exit_time": "09:42",
+     "exit_price": 13.87,
+     "exit_reason": "stop",
+     "gross_pnl": -99.92,
+     "costs": 29.86,
+     "net_pnl": -129.78,
+     "r_net": -1.299,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-09",
+     "variant": "F",
+     "symbol": "IBRX",
+     "setups": "short RV 14.9x",
+     "dollar_vol_prev": null,
+     "or_high": 7.26,
+     "or_low": 6.51,
+     "trigger_time": "09:35",
+     "volume_x": 14.95,
+     "signal": "sip_short",
+     "ref_level": 6.51,
+     "entry": 6.51,
+     "stop": 6.58,
+     "target": null,
+     "risk_ps": 0.07,
+     "shares": 1428,
+     "notional": 9296.28,
+     "exit_time": "09:37",
+     "exit_price": 6.58,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 23.63,
+     "net_pnl": -123.59,
+     "r_net": -1.236,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-09",
+     "variant": "F",
+     "symbol": "SGI",
+     "setups": "long RV 13.9x",
+     "dollar_vol_prev": null,
+     "or_high": 64.65,
+     "or_low": 62.13,
+     "trigger_time": "09:35",
+     "volume_x": 13.87,
+     "signal": "sip_long",
+     "ref_level": 64.65,
+     "entry": 64.65,
+     "stop": 64.35,
+     "target": null,
+     "risk_ps": 0.3,
+     "shares": 205,
+     "notional": 13253.25,
+     "exit_time": "09:37",
+     "exit_price": 64.35,
+     "exit_reason": "stop",
+     "gross_pnl": -61.5,
+     "costs": 15.27,
+     "net_pnl": -76.77,
+     "r_net": -1.248,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-09",
+     "variant": "F",
+     "symbol": "IONS",
+     "setups": "short RV 22.0x",
+     "dollar_vol_prev": null,
+     "or_high": 32.58,
+     "or_low": 31.08,
+     "trigger_time": "09:37",
+     "volume_x": 21.95,
+     "signal": "sip_short",
+     "ref_level": 31.08,
+     "entry": 31.08,
+     "stop": 31.26,
+     "target": null,
+     "risk_ps": 0.18,
+     "shares": 555,
+     "notional": 17249.4,
+     "exit_time": "16:00",
+     "exit_price": 30.98,
+     "exit_reason": "flat",
+     "gross_pnl": 55.5,
+     "costs": 22.77,
+     "net_pnl": 32.73,
+     "r_net": 0.328,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-09",
+     "variant": "F",
+     "symbol": "OMH",
+     "setups": "long RV 24.1x",
+     "dollar_vol_prev": null,
+     "or_high": 23.43,
+     "or_low": 19.92,
+     "trigger_time": "09:38",
+     "volume_x": 24.12,
+     "signal": "sip_long",
+     "ref_level": 23.43,
+     "entry": 24.6,
+     "stop": 24.35,
+     "target": null,
+     "risk_ps": 0.25,
+     "shares": 216,
+     "notional": 5313.6,
+     "exit_time": "14:25",
+     "exit_price": 24.35,
+     "exit_reason": "stop",
+     "gross_pnl": -54.0,
+     "costs": 7.45,
+     "net_pnl": -61.45,
+     "r_net": -1.138,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-09",
+     "variant": "F",
+     "symbol": "SU",
+     "setups": "short RV 3.2x",
+     "dollar_vol_prev": null,
+     "or_high": 68.01,
+     "or_low": 66.72,
+     "trigger_time": "14:44",
+     "volume_x": 3.18,
+     "signal": "sip_short",
+     "ref_level": 66.72,
+     "entry": 66.72,
+     "stop": 66.99,
+     "target": null,
+     "risk_ps": 0.27,
+     "shares": 340,
+     "notional": 22684.8,
+     "exit_time": "14:49",
+     "exit_price": 66.99,
+     "exit_reason": "stop",
+     "gross_pnl": -91.8,
+     "costs": 26.13,
+     "net_pnl": -117.93,
+     "r_net": -1.285,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "NVDA",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "VICI",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "FLY",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "CGON",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "HIMS",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "GTLB",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "TTD",
+     "time": "09:38",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "FWDI",
+     "time": "09:39",
+     "why": "Order unter Minimum"
+    }
+   ]
+  },
+  "G": {
+   "shares": 18,
+   "daily_vol_pct": 1.46,
+   "prior_close": 735.2899780273438,
+   "taken": [
+    {
+     "date": "2026-11-09",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 744.09,
+     "or_low": 733.17,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 744.09,
+     "entry": 747.73,
+     "stop": 745.04,
+     "target": null,
+     "risk_ps": 2.69,
+     "shares": 18,
+     "notional": 13459.14,
+     "exit_time": "16:00",
+     "exit_price": 752.61,
+     "exit_reason": "flat",
+     "gross_pnl": 87.84,
+     "costs": 4.7,
+     "net_pnl": 83.14,
+     "r_net": 1.717,
+     "data_note": "Hebel 1.34x (Tagesvola 1.46 %)"
+    }
+   ]
   }
  }
 }

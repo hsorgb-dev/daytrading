@@ -46,7 +46,13 @@
     "C3": {"label": "wie C2, plus Trailing-Stop: ab +1R folgt der Stop dem Hoch im Abstand 1,5R (nur nach oben)",
            "strategy": "vwap_pullback", "no_entries_before": "10:00", "no_entries_after": "15:00",
            "touch_pct": 0.1, "min_stretch_pct": 0.5, "stop_buffer_pct": 0.05, "stop_mult": 1.5, "no_target": true,
-           "trail_r": 1.5, "trail_after_r": 1.0, "added": "2026-11-17", "forward_from": "2026-11-17"}
+           "trail_r": 1.5, "trail_after_r": 1.0, "added": "2026-11-17", "forward_from": "2026-11-17"},
+    "F": {"label": "Stocks-in-Play-ORB (Zarattini/Barbon/Aziz 2024): Top 20 nach relativem Eroeffnungsvolumen, 5-Min-Range, long+short, Stop 10 % ATR, Ausstieg 16:00, 1 % Risiko, Hebel bis 4x",
+          "strategy": "sip_orb", "lookback": 14, "top_n": 20, "min_price": 5, "min_avg_volume": 1000000, "min_atr": 0.5,
+          "min_rel_volume": 1.0, "stop_atr": 0.10, "risk_pct": 1.0, "leverage": 4, "added": "2026-11-17"},
+    "G": {"label": "SPY Intraday-Momentum (Zarattini/Aziz/Barbon 2024): Noise Area 14 Tage, Checks HH:00/HH:30, Trailing max(Band, VWAP), Ausstieg 16:00, Vol-Target 2 %, Hebel bis 4x",
+          "strategy": "spy_momentum", "symbol": "SPY", "lookback": 14, "first_check": "10:00", "target_vol": 0.02,
+          "max_leverage": 4, "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"}
   },
   "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
 }

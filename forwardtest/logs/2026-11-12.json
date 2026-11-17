@@ -954,6 +954,433 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 571,
+   "in_play": [
+    {
+     "symbol": "BZ",
+     "rv": 20.07
+    },
+    {
+     "symbol": "LUNR",
+     "rv": 11.05
+    },
+    {
+     "symbol": "MBGL",
+     "rv": 9.16
+    },
+    {
+     "symbol": "FIGR",
+     "rv": 8.75
+    },
+    {
+     "symbol": "NVDA",
+     "rv": 8.59
+    },
+    {
+     "symbol": "NBIS",
+     "rv": 7.66
+    },
+    {
+     "symbol": "JBS",
+     "rv": 5.65
+    },
+    {
+     "symbol": "AVAH",
+     "rv": 5.47
+    },
+    {
+     "symbol": "ONDS",
+     "rv": 5.32
+    },
+    {
+     "symbol": "KDP",
+     "rv": 4.99
+    },
+    {
+     "symbol": "BRUN",
+     "rv": 4.62
+    },
+    {
+     "symbol": "FCX",
+     "rv": 4.46
+    },
+    {
+     "symbol": "FPS",
+     "rv": 4.41
+    },
+    {
+     "symbol": "OMH",
+     "rv": 4.38
+    },
+    {
+     "symbol": "OCTV",
+     "rv": 4.18
+    },
+    {
+     "symbol": "JCI",
+     "rv": 3.83
+    },
+    {
+     "symbol": "CRWV",
+     "rv": 3.51
+    },
+    {
+     "symbol": "EROC",
+     "rv": 3.49
+    },
+    {
+     "symbol": "BABA",
+     "rv": 3.37
+    },
+    {
+     "symbol": "XEL",
+     "rv": 3.11
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "MBGL",
+     "time": "09:35",
+     "side": 1,
+     "price": 22.63
+    },
+    {
+     "symbol": "NVDA",
+     "time": "09:35",
+     "side": 1,
+     "price": 156.33
+    },
+    {
+     "symbol": "NBIS",
+     "time": "09:35",
+     "side": 1,
+     "price": 126.0
+    },
+    {
+     "symbol": "JCI",
+     "time": "09:35",
+     "side": 1,
+     "price": 143.8
+    },
+    {
+     "symbol": "CRWV",
+     "time": "09:35",
+     "side": 1,
+     "price": 53.85
+    },
+    {
+     "symbol": "EROC",
+     "time": "09:35",
+     "side": -1,
+     "price": 7.31
+    },
+    {
+     "symbol": "OCTV",
+     "time": "09:36",
+     "side": -1,
+     "price": 20.96
+    },
+    {
+     "symbol": "AVAH",
+     "time": "09:37",
+     "side": 1,
+     "price": 14.0
+    },
+    {
+     "symbol": "OMH",
+     "time": "09:37",
+     "side": -1,
+     "price": 6.0
+    },
+    {
+     "symbol": "LUNR",
+     "time": "09:43",
+     "side": -1,
+     "price": 13.6
+    },
+    {
+     "symbol": "JBS",
+     "time": "09:46",
+     "side": -1,
+     "price": 11.91
+    },
+    {
+     "symbol": "FCX",
+     "time": "10:07",
+     "side": -1,
+     "price": 60.27
+    },
+    {
+     "symbol": "XEL",
+     "time": "10:28",
+     "side": 1,
+     "price": 81.63
+    },
+    {
+     "symbol": "BZ",
+     "time": "10:50",
+     "side": -1,
+     "price": 12.9
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "MBGL",
+     "setups": "long RV 9.2x",
+     "dollar_vol_prev": null,
+     "or_high": 22.62,
+     "or_low": 21.09,
+     "trigger_time": "09:35",
+     "volume_x": 9.16,
+     "signal": "sip_long",
+     "ref_level": 22.62,
+     "entry": 22.63,
+     "stop": 22.56,
+     "target": null,
+     "risk_ps": 0.07,
+     "shares": 1428,
+     "notional": 32315.64,
+     "exit_time": "09:36",
+     "exit_price": 22.56,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 46.55,
+     "net_pnl": -146.51,
+     "r_net": -1.466,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "NVDA",
+     "setups": "long RV 8.6x",
+     "dollar_vol_prev": null,
+     "or_high": 156.33,
+     "or_low": 149.27,
+     "trigger_time": "09:35",
+     "volume_x": 8.59,
+     "signal": "sip_long",
+     "ref_level": 156.33,
+     "entry": 156.33,
+     "stop": 155.41,
+     "target": null,
+     "risk_ps": 0.92,
+     "shares": 49,
+     "notional": 7660.17,
+     "exit_time": "16:00",
+     "exit_price": 166.04,
+     "exit_reason": "flat",
+     "gross_pnl": 475.79,
+     "costs": 9.9,
+     "net_pnl": 465.89,
+     "r_net": 10.335,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "OCTV",
+     "setups": "short RV 4.2x",
+     "dollar_vol_prev": null,
+     "or_high": 21.91,
+     "or_low": 20.96,
+     "trigger_time": "09:36",
+     "volume_x": 4.18,
+     "signal": "sip_short",
+     "ref_level": 20.96,
+     "entry": 20.96,
+     "stop": 21.04,
+     "target": null,
+     "risk_ps": 0.08,
+     "shares": 1249,
+     "notional": 26179.04,
+     "exit_time": "09:38",
+     "exit_price": 21.04,
+     "exit_reason": "stop",
+     "gross_pnl": -99.92,
+     "costs": 38.72,
+     "net_pnl": -138.64,
+     "r_net": -1.388,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "AVAH",
+     "setups": "long RV 5.5x",
+     "dollar_vol_prev": null,
+     "or_high": 14.0,
+     "or_low": 12.38,
+     "trigger_time": "09:37",
+     "volume_x": 5.47,
+     "signal": "sip_long",
+     "ref_level": 14.0,
+     "entry": 14.0,
+     "stop": 13.94,
+     "target": null,
+     "risk_ps": 0.06,
+     "shares": 440,
+     "notional": 6160.0,
+     "exit_time": "09:41",
+     "exit_price": 13.94,
+     "exit_reason": "stop",
+     "gross_pnl": -26.4,
+     "costs": 10.55,
+     "net_pnl": -36.95,
+     "r_net": -1.4,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "LUNR",
+     "setups": "short RV 11.0x",
+     "dollar_vol_prev": null,
+     "or_high": 14.61,
+     "or_low": 13.6,
+     "trigger_time": "09:43",
+     "volume_x": 11.05,
+     "signal": "sip_short",
+     "ref_level": 13.6,
+     "entry": 13.6,
+     "stop": 13.71,
+     "target": null,
+     "risk_ps": 0.11,
+     "shares": 909,
+     "notional": 12362.4,
+     "exit_time": "09:44",
+     "exit_price": 13.71,
+     "exit_reason": "stop",
+     "gross_pnl": -99.99,
+     "costs": 21.5,
+     "net_pnl": -121.49,
+     "r_net": -1.215,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "JBS",
+     "setups": "short RV 5.6x",
+     "dollar_vol_prev": null,
+     "or_high": 12.11,
+     "or_low": 11.91,
+     "trigger_time": "09:46",
+     "volume_x": 5.65,
+     "signal": "sip_short",
+     "ref_level": 11.91,
+     "entry": 11.91,
+     "stop": 11.97,
+     "target": null,
+     "risk_ps": 0.06,
+     "shares": 1666,
+     "notional": 19842.06,
+     "exit_time": "16:00",
+     "exit_price": 11.9,
+     "exit_reason": "flat",
+     "gross_pnl": 24.99,
+     "costs": 36.49,
+     "net_pnl": -11.5,
+     "r_net": -0.115,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "FCX",
+     "setups": "short RV 4.5x",
+     "dollar_vol_prev": null,
+     "or_high": 60.92,
+     "or_low": 60.27,
+     "trigger_time": "10:07",
+     "volume_x": 4.46,
+     "signal": "sip_short",
+     "ref_level": 60.27,
+     "entry": 60.27,
+     "stop": 60.56,
+     "target": null,
+     "risk_ps": 0.29,
+     "shares": 207,
+     "notional": 12475.89,
+     "exit_time": "10:41",
+     "exit_price": 60.56,
+     "exit_reason": "stop",
+     "gross_pnl": -60.03,
+     "costs": 14.58,
+     "net_pnl": -74.61,
+     "r_net": -1.243,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "F",
+     "symbol": "BZ",
+     "setups": "short RV 20.1x",
+     "dollar_vol_prev": null,
+     "or_high": 13.96,
+     "or_low": 12.9,
+     "trigger_time": "10:50",
+     "volume_x": 20.07,
+     "signal": "sip_short",
+     "ref_level": 12.9,
+     "entry": 12.9,
+     "stop": 12.96,
+     "target": null,
+     "risk_ps": 0.06,
+     "shares": 968,
+     "notional": 12487.2,
+     "exit_time": "10:58",
+     "exit_price": 12.96,
+     "exit_reason": "stop",
+     "gross_pnl": -58.08,
+     "costs": 22.2,
+     "net_pnl": -80.28,
+     "r_net": -1.382,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "NBIS",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "JCI",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "EROC",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "OMH",
+     "time": "09:37",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "XEL",
+     "time": "10:28",
+     "why": "0 Stueck (Hebel-Limit)"
+    }
+   ]
+  },
+  "G": {
+   "shares": 16,
+   "daily_vol_pct": 1.63,
+   "prior_close": 759.8099975585938,
+   "taken": []
   }
  }
 }

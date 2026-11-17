@@ -1189,6 +1189,570 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 543,
+   "in_play": [
+    {
+     "symbol": "NTRA",
+     "rv": 30.31
+    },
+    {
+     "symbol": "BLZE",
+     "rv": 29.71
+    },
+    {
+     "symbol": "APTV",
+     "rv": 23.18
+    },
+    {
+     "symbol": "CMPS",
+     "rv": 19.17
+    },
+    {
+     "symbol": "SGML",
+     "rv": 16.44
+    },
+    {
+     "symbol": "SUPN",
+     "rv": 14.82
+    },
+    {
+     "symbol": "UPST",
+     "rv": 13.95
+    },
+    {
+     "symbol": "FISV",
+     "rv": 11.29
+    },
+    {
+     "symbol": "SHOP",
+     "rv": 10.69
+    },
+    {
+     "symbol": "KDP",
+     "rv": 7.63
+    },
+    {
+     "symbol": "XEL",
+     "rv": 6.69
+    },
+    {
+     "symbol": "DT",
+     "rv": 6.67
+    },
+    {
+     "symbol": "FIS",
+     "rv": 6.31
+    },
+    {
+     "symbol": "PLTR",
+     "rv": 6.21
+    },
+    {
+     "symbol": "AEHR",
+     "rv": 6.13
+    },
+    {
+     "symbol": "STZ",
+     "rv": 5.6
+    },
+    {
+     "symbol": "ORCL",
+     "rv": 5.2
+    },
+    {
+     "symbol": "UAL",
+     "rv": 4.62
+    },
+    {
+     "symbol": "WAY",
+     "rv": 4.53
+    },
+    {
+     "symbol": "VLTO",
+     "rv": 3.93
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "BLZE",
+     "time": "09:35",
+     "side": -1,
+     "price": 7.9
+    },
+    {
+     "symbol": "APTV",
+     "time": "09:35",
+     "side": -1,
+     "price": 44.0
+    },
+    {
+     "symbol": "SHOP",
+     "time": "09:35",
+     "side": 1,
+     "price": 141.96
+    },
+    {
+     "symbol": "XEL",
+     "time": "09:35",
+     "side": -1,
+     "price": 78.47
+    },
+    {
+     "symbol": "DT",
+     "time": "09:35",
+     "side": 1,
+     "price": 47.43
+    },
+    {
+     "symbol": "PLTR",
+     "time": "09:35",
+     "side": 1,
+     "price": 170.9
+    },
+    {
+     "symbol": "AEHR",
+     "time": "09:35",
+     "side": 1,
+     "price": 60.31
+    },
+    {
+     "symbol": "STZ",
+     "time": "09:35",
+     "side": -1,
+     "price": 138.1
+    },
+    {
+     "symbol": "ORCL",
+     "time": "09:35",
+     "side": 1,
+     "price": 123.18
+    },
+    {
+     "symbol": "NTRA",
+     "time": "09:36",
+     "side": 1,
+     "price": 396.19
+    },
+    {
+     "symbol": "CMPS",
+     "time": "09:36",
+     "side": 1,
+     "price": 9.4
+    },
+    {
+     "symbol": "UAL",
+     "time": "09:36",
+     "side": -1,
+     "price": 109.59
+    },
+    {
+     "symbol": "WAY",
+     "time": "09:36",
+     "side": 1,
+     "price": 26.98
+    },
+    {
+     "symbol": "FIS",
+     "time": "09:38",
+     "side": -1,
+     "price": 39.81
+    },
+    {
+     "symbol": "VLTO",
+     "time": "09:39",
+     "side": -1,
+     "price": 113.0
+    },
+    {
+     "symbol": "SGML",
+     "time": "10:34",
+     "side": 1,
+     "price": 5.63
+    },
+    {
+     "symbol": "SUPN",
+     "time": "10:38",
+     "side": 1,
+     "price": 31.0
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "BLZE",
+     "setups": "short RV 29.7x",
+     "dollar_vol_prev": null,
+     "or_high": 9.67,
+     "or_low": 7.9,
+     "trigger_time": "09:35",
+     "volume_x": 29.71,
+     "signal": "sip_short",
+     "ref_level": 7.9,
+     "entry": 7.9,
+     "stop": 8.0,
+     "target": null,
+     "risk_ps": 0.1,
+     "shares": 999,
+     "notional": 7892.1,
+     "exit_time": "09:37",
+     "exit_price": 8.0,
+     "exit_reason": "stop",
+     "gross_pnl": -99.9,
+     "costs": 17.93,
+     "net_pnl": -117.83,
+     "r_net": -1.179,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "APTV",
+     "setups": "short RV 23.2x",
+     "dollar_vol_prev": null,
+     "or_high": 45.88,
+     "or_low": 44.0,
+     "trigger_time": "09:35",
+     "volume_x": 23.18,
+     "signal": "sip_short",
+     "ref_level": 44.0,
+     "entry": 44.0,
+     "stop": 44.13,
+     "target": null,
+     "risk_ps": 0.13,
+     "shares": 729,
+     "notional": 32076.0,
+     "exit_time": "09:36",
+     "exit_price": 44.13,
+     "exit_reason": "stop",
+     "gross_pnl": -94.77,
+     "costs": 39.41,
+     "net_pnl": -134.18,
+     "r_net": -1.416,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "NTRA",
+     "setups": "long RV 30.3x",
+     "dollar_vol_prev": null,
+     "or_high": 396.19,
+     "or_low": 382.1,
+     "trigger_time": "09:36",
+     "volume_x": 30.31,
+     "signal": "sip_long",
+     "ref_level": 396.19,
+     "entry": 396.19,
+     "stop": 394.17,
+     "target": null,
+     "risk_ps": 2.02,
+     "shares": 49,
+     "notional": 19413.31,
+     "exit_time": "09:38",
+     "exit_price": 394.17,
+     "exit_reason": "stop",
+     "gross_pnl": -98.98,
+     "costs": 21.36,
+     "net_pnl": -120.34,
+     "r_net": -1.216,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "CMPS",
+     "setups": "long RV 19.2x",
+     "dollar_vol_prev": null,
+     "or_high": 9.4,
+     "or_low": 8.64,
+     "trigger_time": "09:36",
+     "volume_x": 19.17,
+     "signal": "sip_long",
+     "ref_level": 9.4,
+     "entry": 9.4,
+     "stop": 9.31,
+     "target": null,
+     "risk_ps": 0.09,
+     "shares": 1111,
+     "notional": 10443.4,
+     "exit_time": "09:37",
+     "exit_price": 9.31,
+     "exit_reason": "stop",
+     "gross_pnl": -99.99,
+     "costs": 21.5,
+     "net_pnl": -121.49,
+     "r_net": -1.215,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "UAL",
+     "setups": "short RV 4.6x",
+     "dollar_vol_prev": null,
+     "or_high": 111.25,
+     "or_low": 109.59,
+     "trigger_time": "09:36",
+     "volume_x": 4.62,
+     "signal": "sip_short",
+     "ref_level": 109.59,
+     "entry": 109.59,
+     "stop": 110.12,
+     "target": null,
+     "risk_ps": 0.53,
+     "shares": 20,
+     "notional": 2191.8,
+     "exit_time": "16:00",
+     "exit_price": 107.25,
+     "exit_reason": "flat",
+     "gross_pnl": 46.7,
+     "costs": 4.17,
+     "net_pnl": 42.53,
+     "r_net": 4.012,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "FIS",
+     "setups": "short RV 6.3x",
+     "dollar_vol_prev": null,
+     "or_high": 40.79,
+     "or_low": 39.81,
+     "trigger_time": "09:38",
+     "volume_x": 6.31,
+     "signal": "sip_short",
+     "ref_level": 39.81,
+     "entry": 39.81,
+     "stop": 39.95,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 714,
+     "notional": 28424.34,
+     "exit_time": "09:39",
+     "exit_price": 39.95,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 35.61,
+     "net_pnl": -135.57,
+     "r_net": -1.356,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "VLTO",
+     "setups": "short RV 3.9x",
+     "dollar_vol_prev": null,
+     "or_high": 114.68,
+     "or_low": 113.0,
+     "trigger_time": "09:39",
+     "volume_x": 3.93,
+     "signal": "sip_short",
+     "ref_level": 113.0,
+     "entry": 113.0,
+     "stop": 113.29,
+     "target": null,
+     "risk_ps": 0.29,
+     "shares": 334,
+     "notional": 37742.0,
+     "exit_time": "09:42",
+     "exit_price": 113.29,
+     "exit_reason": "stop",
+     "gross_pnl": -96.86,
+     "costs": 41.13,
+     "net_pnl": -137.99,
+     "r_net": -1.425,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "SGML",
+     "setups": "long RV 16.4x",
+     "dollar_vol_prev": null,
+     "or_high": 5.63,
+     "or_low": 5.18,
+     "trigger_time": "10:34",
+     "volume_x": 16.44,
+     "signal": "sip_long",
+     "ref_level": 5.63,
+     "entry": 5.63,
+     "stop": 5.55,
+     "target": null,
+     "risk_ps": 0.08,
+     "shares": 1249,
+     "notional": 7031.87,
+     "exit_time": "11:04",
+     "exit_price": 5.55,
+     "exit_reason": "stop",
+     "gross_pnl": -99.92,
+     "costs": 19.47,
+     "net_pnl": -119.39,
+     "r_net": -1.195,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "F",
+     "symbol": "SUPN",
+     "setups": "long RV 14.8x",
+     "dollar_vol_prev": null,
+     "or_high": 31.0,
+     "or_low": 28.35,
+     "trigger_time": "10:38",
+     "volume_x": 14.82,
+     "signal": "sip_long",
+     "ref_level": 31.0,
+     "entry": 31.0,
+     "stop": 30.86,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 714,
+     "notional": 22134.0,
+     "exit_time": "10:40",
+     "exit_price": 30.86,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 29.22,
+     "net_pnl": -129.18,
+     "r_net": -1.292,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "SHOP",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "XEL",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "DT",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "AEHR",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "STZ",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "ORCL",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "WAY",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    }
+   ]
+  },
+  "G": {
+   "shares": 33,
+   "daily_vol_pct": 0.802,
+   "prior_close": 752.0999755859375,
+   "taken": [
+    {
+     "date": "2026-11-03",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 753.65,
+     "or_low": 751.18,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 753.65,
+     "entry": 753.82,
+     "stop": 753.65,
+     "target": null,
+     "risk_ps": 0.16,
+     "shares": 33,
+     "notional": 24876.06,
+     "exit_time": "10:30",
+     "exit_price": 754.56,
+     "exit_reason": "trail",
+     "gross_pnl": 24.42,
+     "costs": 6.98,
+     "net_pnl": 17.44,
+     "r_net": 3.303,
+     "data_note": "Hebel 2.48x (Tagesvola 0.80 %)"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 754.92,
+     "or_low": 749.91,
+     "trigger_time": "11:00",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 754.92,
+     "entry": 756.2,
+     "stop": 754.92,
+     "target": null,
+     "risk_ps": 1.28,
+     "shares": 33,
+     "notional": 24954.6,
+     "exit_time": "12:00",
+     "exit_price": 755.36,
+     "exit_reason": "trail",
+     "gross_pnl": -27.72,
+     "costs": 6.99,
+     "net_pnl": -34.71,
+     "r_net": -0.822,
+     "data_note": "Hebel 2.48x (Tagesvola 0.80 %)"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 755.09,
+     "or_low": 749.74,
+     "trigger_time": "12:30",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 755.09,
+     "entry": 755.69,
+     "stop": 755.09,
+     "target": null,
+     "risk_ps": 0.6,
+     "shares": 33,
+     "notional": 24937.77,
+     "exit_time": "14:30",
+     "exit_price": 755.36,
+     "exit_reason": "trail",
+     "gross_pnl": -10.89,
+     "costs": 6.99,
+     "net_pnl": -17.88,
+     "r_net": -0.903,
+     "data_note": "Hebel 2.48x (Tagesvola 0.80 %)"
+    }
+   ]
   }
  }
 }

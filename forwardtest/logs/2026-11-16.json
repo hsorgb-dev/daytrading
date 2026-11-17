@@ -1004,6 +1004,576 @@
      "why": "max. Trades/Tag erreicht"
     }
    ]
+  },
+  "F": {
+   "universe": 574,
+   "in_play": [
+    {
+     "symbol": "HELP",
+     "rv": 121.39
+    },
+    {
+     "symbol": "CGON",
+     "rv": 59.68
+    },
+    {
+     "symbol": "SMMT",
+     "rv": 25.71
+    },
+    {
+     "symbol": "BXDC",
+     "rv": 15.95
+    },
+    {
+     "symbol": "TJX",
+     "rv": 10.23
+    },
+    {
+     "symbol": "MMED",
+     "rv": 6.13
+    },
+    {
+     "symbol": "TSN",
+     "rv": 5.79
+    },
+    {
+     "symbol": "CHYM",
+     "rv": 5.31
+    },
+    {
+     "symbol": "HTHT",
+     "rv": 4.69
+    },
+    {
+     "symbol": "ADIG",
+     "rv": 4.29
+    },
+    {
+     "symbol": "RIVN",
+     "rv": 4.03
+    },
+    {
+     "symbol": "LFTO",
+     "rv": 3.76
+    },
+    {
+     "symbol": "NTLA",
+     "rv": 3.58
+    },
+    {
+     "symbol": "NVO",
+     "rv": 3.52
+    },
+    {
+     "symbol": "ARMK",
+     "rv": 3.26
+    },
+    {
+     "symbol": "CADL",
+     "rv": 3.05
+    },
+    {
+     "symbol": "BKR",
+     "rv": 2.89
+    },
+    {
+     "symbol": "PG",
+     "rv": 2.85
+    },
+    {
+     "symbol": "SAIL",
+     "rv": 2.84
+    },
+    {
+     "symbol": "IE",
+     "rv": 2.73
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "HELP",
+     "time": "09:35",
+     "side": -1,
+     "price": 8.65
+    },
+    {
+     "symbol": "CGON",
+     "time": "09:35",
+     "side": -1,
+     "price": 85.28
+    },
+    {
+     "symbol": "SMMT",
+     "time": "09:35",
+     "side": 1,
+     "price": 13.0
+    },
+    {
+     "symbol": "TJX",
+     "time": "09:35",
+     "side": -1,
+     "price": 134.11
+    },
+    {
+     "symbol": "TSN",
+     "time": "09:35",
+     "side": 1,
+     "price": 63.2
+    },
+    {
+     "symbol": "NTLA",
+     "time": "09:35",
+     "side": 1,
+     "price": 10.4
+    },
+    {
+     "symbol": "NVO",
+     "time": "09:35",
+     "side": 1,
+     "price": 42.16
+    },
+    {
+     "symbol": "ARMK",
+     "time": "09:35",
+     "side": 1,
+     "price": 52.9
+    },
+    {
+     "symbol": "CADL",
+     "time": "09:35",
+     "side": 1,
+     "price": 6.13
+    },
+    {
+     "symbol": "ADIG",
+     "time": "09:36",
+     "side": -1,
+     "price": 9.59
+    },
+    {
+     "symbol": "MMED",
+     "time": "09:37",
+     "side": 1,
+     "price": 19.08
+    },
+    {
+     "symbol": "HTHT",
+     "time": "09:38",
+     "side": 1,
+     "price": 55.42
+    },
+    {
+     "symbol": "BKR",
+     "time": "09:40",
+     "side": -1,
+     "price": 48.12
+    },
+    {
+     "symbol": "RIVN",
+     "time": "09:45",
+     "side": 1,
+     "price": 12.2
+    },
+    {
+     "symbol": "CHYM",
+     "time": "10:05",
+     "side": -1,
+     "price": 34.14
+    },
+    {
+     "symbol": "BXDC",
+     "time": "10:17",
+     "side": 1,
+     "price": 17.9
+    },
+    {
+     "symbol": "PG",
+     "time": "10:18",
+     "side": 1,
+     "price": 173.33
+    },
+    {
+     "symbol": "IE",
+     "time": "10:27",
+     "side": -1,
+     "price": 6.41
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "HELP",
+     "setups": "short RV 121.4x",
+     "dollar_vol_prev": null,
+     "or_high": 9.55,
+     "or_low": 8.65,
+     "trigger_time": "09:35",
+     "volume_x": 121.39,
+     "signal": "sip_short",
+     "ref_level": 8.65,
+     "entry": 8.65,
+     "stop": 8.74,
+     "target": null,
+     "risk_ps": 0.09,
+     "shares": 1111,
+     "notional": 9610.15,
+     "exit_time": "16:00",
+     "exit_price": 7.67,
+     "exit_reason": "flat",
+     "gross_pnl": 1088.78,
+     "costs": 20.18,
+     "net_pnl": 1068.6,
+     "r_net": 10.687,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "CGON",
+     "setups": "short RV 59.7x",
+     "dollar_vol_prev": null,
+     "or_high": 93.4,
+     "or_low": 85.28,
+     "trigger_time": "09:35",
+     "volume_x": 59.68,
+     "signal": "sip_short",
+     "ref_level": 85.28,
+     "entry": 85.28,
+     "stop": 85.79,
+     "target": null,
+     "risk_ps": 0.51,
+     "shares": 196,
+     "notional": 16714.88,
+     "exit_time": "09:36",
+     "exit_price": 85.79,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 18.76,
+     "net_pnl": -118.72,
+     "r_net": -1.188,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "SMMT",
+     "setups": "long RV 25.7x",
+     "dollar_vol_prev": null,
+     "or_high": 13.0,
+     "or_low": 12.45,
+     "trigger_time": "09:35",
+     "volume_x": 25.71,
+     "signal": "sip_long",
+     "ref_level": 13.0,
+     "entry": 13.0,
+     "stop": 12.86,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 714,
+     "notional": 9282.0,
+     "exit_time": "09:40",
+     "exit_price": 12.86,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 16.37,
+     "net_pnl": -116.33,
+     "r_net": -1.164,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "TJX",
+     "setups": "short RV 10.2x",
+     "dollar_vol_prev": null,
+     "or_high": 135.62,
+     "or_low": 134.11,
+     "trigger_time": "09:35",
+     "volume_x": 10.23,
+     "signal": "sip_short",
+     "ref_level": 134.11,
+     "entry": 134.11,
+     "stop": 134.5,
+     "target": null,
+     "risk_ps": 0.39,
+     "shares": 32,
+     "notional": 4291.52,
+     "exit_time": "16:00",
+     "exit_price": 131.07,
+     "exit_reason": "flat",
+     "gross_pnl": 97.28,
+     "costs": 6.24,
+     "net_pnl": 91.04,
+     "r_net": 7.295,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "ADIG",
+     "setups": "short RV 4.3x",
+     "dollar_vol_prev": null,
+     "or_high": 9.95,
+     "or_low": 9.59,
+     "trigger_time": "09:36",
+     "volume_x": 4.29,
+     "signal": "sip_short",
+     "ref_level": 9.59,
+     "entry": 9.59,
+     "stop": 9.76,
+     "target": null,
+     "risk_ps": 0.17,
+     "shares": 588,
+     "notional": 5638.92,
+     "exit_time": "16:00",
+     "exit_price": 9.29,
+     "exit_reason": "flat",
+     "gross_pnl": 176.4,
+     "costs": 11.43,
+     "net_pnl": 164.97,
+     "r_net": 1.65,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "MMED",
+     "setups": "long RV 6.1x",
+     "dollar_vol_prev": null,
+     "or_high": 19.08,
+     "or_low": 18.71,
+     "trigger_time": "09:37",
+     "volume_x": 6.13,
+     "signal": "sip_long",
+     "ref_level": 19.08,
+     "entry": 19.08,
+     "stop": 18.98,
+     "target": null,
+     "risk_ps": 0.1,
+     "shares": 585,
+     "notional": 11161.8,
+     "exit_time": "09:38",
+     "exit_price": 18.98,
+     "exit_reason": "stop",
+     "gross_pnl": -58.5,
+     "costs": 16.98,
+     "net_pnl": -75.48,
+     "r_net": -1.29,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "HTHT",
+     "setups": "long RV 4.7x",
+     "dollar_vol_prev": null,
+     "or_high": 55.42,
+     "or_low": 52.08,
+     "trigger_time": "09:38",
+     "volume_x": 4.69,
+     "signal": "sip_long",
+     "ref_level": 55.42,
+     "entry": 55.42,
+     "stop": 55.28,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 201,
+     "notional": 11139.42,
+     "exit_time": "09:39",
+     "exit_price": 55.28,
+     "exit_reason": "stop",
+     "gross_pnl": -28.14,
+     "costs": 13.14,
+     "net_pnl": -41.28,
+     "r_net": -1.467,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "BKR",
+     "setups": "short RV 2.9x",
+     "dollar_vol_prev": null,
+     "or_high": 48.72,
+     "or_low": 48.12,
+     "trigger_time": "09:40",
+     "volume_x": 2.89,
+     "signal": "sip_short",
+     "ref_level": 48.12,
+     "entry": 48.12,
+     "stop": 48.36,
+     "target": null,
+     "risk_ps": 0.24,
+     "shares": 416,
+     "notional": 20017.92,
+     "exit_time": "09:43",
+     "exit_price": 48.36,
+     "exit_reason": "stop",
+     "gross_pnl": -99.84,
+     "costs": 24.23,
+     "net_pnl": -124.07,
+     "r_net": -1.243,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "RIVN",
+     "setups": "long RV 4.0x",
+     "dollar_vol_prev": null,
+     "or_high": 12.2,
+     "or_low": 11.96,
+     "trigger_time": "09:45",
+     "volume_x": 4.03,
+     "signal": "sip_long",
+     "ref_level": 12.2,
+     "entry": 12.2,
+     "stop": 12.12,
+     "target": null,
+     "risk_ps": 0.08,
+     "shares": 1249,
+     "notional": 15237.8,
+     "exit_time": "09:52",
+     "exit_price": 12.12,
+     "exit_reason": "stop",
+     "gross_pnl": -99.92,
+     "costs": 27.68,
+     "net_pnl": -127.6,
+     "r_net": -1.277,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "F",
+     "symbol": "CHYM",
+     "setups": "short RV 5.3x",
+     "dollar_vol_prev": null,
+     "or_high": 34.63,
+     "or_low": 34.14,
+     "trigger_time": "10:05",
+     "volume_x": 5.31,
+     "signal": "sip_short",
+     "ref_level": 34.14,
+     "entry": 34.14,
+     "stop": 34.29,
+     "target": null,
+     "risk_ps": 0.15,
+     "shares": 599,
+     "notional": 20449.86,
+     "exit_time": "10:33",
+     "exit_price": 34.29,
+     "exit_reason": "stop_gap",
+     "gross_pnl": -89.85,
+     "costs": 26.48,
+     "net_pnl": -116.34,
+     "r_net": -1.295,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "TSN",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "NTLA",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "NVO",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "ARMK",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "CADL",
+     "time": "09:35",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "BXDC",
+     "time": "10:17",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "PG",
+     "time": "10:18",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "IE",
+     "time": "10:27",
+     "why": "Order unter Minimum"
+    }
+   ]
+  },
+  "G": {
+   "shares": 16,
+   "daily_vol_pct": 1.615,
+   "prior_close": 754.3699951171875,
+   "taken": [
+    {
+     "date": "2026-11-16",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 757.45,
+     "or_low": 746.6,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 746.6,
+     "entry": 746.51,
+     "stop": 746.6,
+     "target": null,
+     "risk_ps": 0.1,
+     "shares": 16,
+     "notional": 11944.16,
+     "exit_time": "11:00",
+     "exit_price": 746.74,
+     "exit_reason": "trail",
+     "gross_pnl": -3.68,
+     "costs": 4.39,
+     "net_pnl": -8.07,
+     "r_net": -5.044,
+     "data_note": "Hebel 1.20x (Tagesvola 1.62 %)"
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "G",
+     "symbol": "SPY",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 759.82,
+     "or_low": 744.25,
+     "trigger_time": "12:30",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 744.25,
+     "entry": 743.52,
+     "stop": 744.25,
+     "target": null,
+     "risk_ps": 0.73,
+     "shares": 16,
+     "notional": 11896.32,
+     "exit_time": "16:00",
+     "exit_price": 740.05,
+     "exit_reason": "flat",
+     "gross_pnl": 55.52,
+     "costs": 4.37,
+     "net_pnl": 51.15,
+     "r_net": 4.379,
+     "data_note": "Hebel 1.20x (Tagesvola 1.62 %)"
+    }
+   ]
   }
  }
 }
