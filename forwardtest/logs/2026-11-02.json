@@ -1556,6 +1556,290 @@
      "data_note": "Hebel 1.18x (Tagesvola 1.62 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": 0.626,
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.63%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 754.26,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.68,
+     "shares": 33,
+     "notional": 24890.58,
+     "exit_time": "16:00",
+     "exit_price": 752.12,
+     "exit_reason": "flat",
+     "gross_pnl": -70.62,
+     "costs": 6.97,
+     "net_pnl": -77.59,
+     "r_net": -1.4,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "short",
+     "dollar_vol_prev": null,
+     "or_high": 695.71,
+     "or_low": 694.14,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_short",
+     "ref_level": 695.71,
+     "entry": 695.09,
+     "stop": 695.71,
+     "target": 688.89,
+     "risk_ps": 0.62,
+     "shares": 57,
+     "notional": 39620.13,
+     "exit_time": "09:45",
+     "exit_price": 695.71,
+     "exit_reason": "stop",
+     "gross_pnl": -35.34,
+     "costs": 9.93,
+     "net_pnl": -45.27,
+     "r_net": -1.281,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "PGEN",
+     "gap_pct": -22.77
+    },
+    {
+     "symbol": "CAPR",
+     "gap_pct": 7.84
+    },
+    {
+     "symbol": "BILI",
+     "gap_pct": 5.28
+    },
+    {
+     "symbol": "XPEV",
+     "gap_pct": 5.2
+    },
+    {
+     "symbol": "NXT",
+     "gap_pct": 5.14
+    },
+    {
+     "symbol": "EQNR",
+     "gap_pct": -5.01
+    },
+    {
+     "symbol": "SSL",
+     "gap_pct": -4.99
+    },
+    {
+     "symbol": "FOXA",
+     "gap_pct": 4.95
+    },
+    {
+     "symbol": "RIVN",
+     "gap_pct": 4.85
+    },
+    {
+     "symbol": "LITE",
+     "gap_pct": -4.54
+    },
+    {
+     "symbol": "UAL",
+     "gap_pct": 4.53
+    },
+    {
+     "symbol": "GFI",
+     "gap_pct": 4.53
+    },
+    {
+     "symbol": "KC",
+     "gap_pct": 4.5
+    },
+    {
+     "symbol": "RUN",
+     "gap_pct": 4.41
+    },
+    {
+     "symbol": "VG",
+     "gap_pct": -4.26
+    },
+    {
+     "symbol": "RIG",
+     "gap_pct": -4.18
+    },
+    {
+     "symbol": "HMY",
+     "gap_pct": 4.15
+    },
+    {
+     "symbol": "BABA",
+     "gap_pct": 4.02
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "J",
+     "symbol": "PGEN",
+     "setups": "short Gap -22.8% RV30 9.9x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 9.89,
+     "signal": "gap_short",
+     "ref_level": 5.36,
+     "entry": 5.07,
+     "stop": 5.36,
+     "target": null,
+     "risk_ps": 0.29,
+     "shares": 344,
+     "notional": 1744.08,
+     "exit_time": "13:00",
+     "exit_price": 5.36,
+     "exit_reason": "stop",
+     "gross_pnl": -99.76,
+     "costs": 5.23,
+     "net_pnl": -104.99,
+     "r_net": -1.052,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "J",
+     "symbol": "CAPR",
+     "setups": "long Gap +7.8% RV30 3.2x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.16,
+     "signal": "gap_long",
+     "ref_level": 6.67,
+     "entry": 7.08,
+     "stop": 6.67,
+     "target": null,
+     "risk_ps": 0.41,
+     "shares": 243,
+     "notional": 1720.44,
+     "exit_time": "16:00",
+     "exit_price": 7.23,
+     "exit_reason": "flat",
+     "gross_pnl": 36.45,
+     "costs": 4.17,
+     "net_pnl": 32.28,
+     "r_net": 0.324,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "J",
+     "symbol": "RIVN",
+     "setups": "long Gap +4.9% RV30 3.5x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.46,
+     "signal": "gap_long",
+     "ref_level": 12.65,
+     "entry": 13.02,
+     "stop": 12.65,
+     "target": null,
+     "risk_ps": 0.37,
+     "shares": 270,
+     "notional": 3515.4,
+     "exit_time": "16:00",
+     "exit_price": 13.19,
+     "exit_reason": "flat",
+     "gross_pnl": 46.44,
+     "costs": 6.24,
+     "net_pnl": 40.2,
+     "r_net": 0.402,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "BILI",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "XPEV",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "NXT",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "EQNR",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "SSL",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "FOXA",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "LITE",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "UAL",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "GFI",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "KC",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "RUN",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "VG",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "RIG",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "HMY",
+     "why": "Volumen 2.4x"
+    },
+    {
+     "symbol": "BABA",
+     "why": "Volumen 1.7x"
+    }
+   ]
   }
  }
 }

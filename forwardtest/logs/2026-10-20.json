@@ -1766,6 +1766,164 @@
      "data_note": "Hebel 1.79x (Tagesvola 1.11 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": 0.192,
+   "taken": [
+    {
+     "date": "2026-10-20",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.19%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 768.13,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.27,
+     "shares": 43,
+     "notional": 33029.59,
+     "exit_time": "16:00",
+     "exit_price": 769.02,
+     "exit_reason": "flat",
+     "gross_pnl": 38.27,
+     "costs": 8.61,
+     "net_pnl": 29.66,
+     "r_net": 0.543,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-10-20",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "short",
+     "dollar_vol_prev": null,
+     "or_high": 715.52,
+     "or_low": 713.01,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_short",
+     "ref_level": 715.52,
+     "entry": 713.74,
+     "stop": 715.52,
+     "target": 695.94,
+     "risk_ps": 1.78,
+     "shares": 56,
+     "notional": 39969.44,
+     "exit_time": "10:00",
+     "exit_price": 715.52,
+     "exit_reason": "stop",
+     "gross_pnl": -99.68,
+     "costs": 10.0,
+     "net_pnl": -109.68,
+     "r_net": -1.1,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "BRZE",
+     "gap_pct": 51.56
+    },
+    {
+     "symbol": "KVYO",
+     "gap_pct": 7.99
+    },
+    {
+     "symbol": "GM",
+     "gap_pct": -6.68
+    },
+    {
+     "symbol": "SMR",
+     "gap_pct": -5.45
+    },
+    {
+     "symbol": "AEHR",
+     "gap_pct": -4.39
+    },
+    {
+     "symbol": "SLS",
+     "gap_pct": -4.19
+    },
+    {
+     "symbol": "CIFR",
+     "gap_pct": -4.14
+    },
+    {
+     "symbol": "AAOI",
+     "gap_pct": -4.09
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-20",
+     "variant": "J",
+     "symbol": "KVYO",
+     "setups": "long Gap +8.0% RV30 12.3x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 12.26,
+     "signal": "gap_long",
+     "ref_level": 18.6,
+     "entry": 19.4,
+     "stop": 18.6,
+     "target": null,
+     "risk_ps": 0.8,
+     "shares": 124,
+     "notional": 2405.6,
+     "exit_time": "16:00",
+     "exit_price": 19.59,
+     "exit_reason": "flat",
+     "gross_pnl": 23.56,
+     "costs": 4.42,
+     "net_pnl": 19.14,
+     "r_net": 0.193,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "BRZE",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "GM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SMR",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "AEHR",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "SLS",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "CIFR",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "AAOI",
+     "why": "Volumen 0.9x"
+    }
+   ]
   }
  }
 }

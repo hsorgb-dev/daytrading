@@ -1821,6 +1821,291 @@
      "data_note": "Hebel 1.16x (Tagesvola 1.64 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": 0.228,
+   "taken": [
+    {
+     "date": "2026-11-03",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.23%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 754.49,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.68,
+     "shares": 33,
+     "notional": 24898.17,
+     "exit_time": "16:00",
+     "exit_price": 754.41,
+     "exit_reason": "flat",
+     "gross_pnl": -2.64,
+     "costs": 6.98,
+     "net_pnl": -9.62,
+     "r_net": -0.174,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-11-03",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 685.63,
+     "or_low": 683.18,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 683.18,
+     "entry": 685.5,
+     "stop": 683.18,
+     "target": 708.7,
+     "risk_ps": 2.32,
+     "shares": 43,
+     "notional": 29476.5,
+     "exit_time": "16:00",
+     "exit_price": 685.34,
+     "exit_reason": "flat",
+     "gross_pnl": -6.88,
+     "costs": 7.89,
+     "net_pnl": -14.77,
+     "r_net": -0.148,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "BLZE",
+     "gap_pct": 30.68
+    },
+    {
+     "symbol": "SUPN",
+     "gap_pct": -21.86
+    },
+    {
+     "symbol": "DT",
+     "gap_pct": -16.56
+    },
+    {
+     "symbol": "GPK",
+     "gap_pct": 14.36
+    },
+    {
+     "symbol": "CLRO",
+     "gap_pct": -13.45
+    },
+    {
+     "symbol": "SHOP",
+     "gap_pct": -12.67
+    },
+    {
+     "symbol": "AEHR",
+     "gap_pct": 10.8
+    },
+    {
+     "symbol": "WAY",
+     "gap_pct": -9.63
+    },
+    {
+     "symbol": "FISV",
+     "gap_pct": 8.86
+    },
+    {
+     "symbol": "BE",
+     "gap_pct": 7.17
+    },
+    {
+     "symbol": "CMPS",
+     "gap_pct": 7.02
+    },
+    {
+     "symbol": "PLTR",
+     "gap_pct": -5.7
+    },
+    {
+     "symbol": "MXL",
+     "gap_pct": 4.63
+    },
+    {
+     "symbol": "ALOY",
+     "gap_pct": 4.42
+    },
+    {
+     "symbol": "AMKR",
+     "gap_pct": 4.41
+    },
+    {
+     "symbol": "SHAZ",
+     "gap_pct": 4.34
+    },
+    {
+     "symbol": "JD",
+     "gap_pct": 4.22
+    },
+    {
+     "symbol": "NVTS",
+     "gap_pct": 4.16
+    },
+    {
+     "symbol": "KDP",
+     "gap_pct": -4.1
+    },
+    {
+     "symbol": "SHLS",
+     "gap_pct": 4.08
+    },
+    {
+     "symbol": "YSS",
+     "gap_pct": 4.01
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-03",
+     "variant": "J",
+     "symbol": "AEHR",
+     "setups": "long Gap +10.8% RV30 5.9x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 5.94,
+     "signal": "gap_long",
+     "ref_level": 54.01,
+     "entry": 62.56,
+     "stop": 54.01,
+     "target": null,
+     "risk_ps": 8.55,
+     "shares": 11,
+     "notional": 688.16,
+     "exit_time": "16:00",
+     "exit_price": 65.04,
+     "exit_reason": "flat",
+     "gross_pnl": 27.28,
+     "costs": 2.7,
+     "net_pnl": 24.58,
+     "r_net": 0.261,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-03",
+     "variant": "J",
+     "symbol": "KDP",
+     "setups": "short Gap -4.1% RV30 3.7x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.75,
+     "signal": "gap_short",
+     "ref_level": 35.78,
+     "entry": 34.64,
+     "stop": 35.78,
+     "target": null,
+     "risk_ps": 1.14,
+     "shares": 87,
+     "notional": 3013.68,
+     "exit_time": "16:00",
+     "exit_price": 34.72,
+     "exit_reason": "flat",
+     "gross_pnl": -7.39,
+     "costs": 5.02,
+     "net_pnl": -12.41,
+     "r_net": -0.125,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "BLZE",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SUPN",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "DT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "GPK",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CLRO",
+     "why": "zu wenig Historie"
+    },
+    {
+     "symbol": "SHOP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "WAY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "FISV",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "BE",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "CMPS",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PLTR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "MXL",
+     "why": "Volumen 0.7x"
+    },
+    {
+     "symbol": "ALOY",
+     "why": "Volumen 2.8x"
+    },
+    {
+     "symbol": "AMKR",
+     "why": "Volumen 0.5x"
+    },
+    {
+     "symbol": "SHAZ",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "JD",
+     "why": "Volumen 2.5x"
+    },
+    {
+     "symbol": "NVTS",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "SHLS",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "YSS",
+     "why": "Volumen 0.6x"
+    }
+   ]
   }
  }
 }

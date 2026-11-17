@@ -1522,6 +1522,202 @@
      "data_note": "Hebel 1.47x (Tagesvola 1.30 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": -0.396,
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "short erste 30 Min -0.40%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_short",
+     "ref_level": null,
+     "entry": 760.5,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.4,
+     "shares": 39,
+     "notional": 29659.5,
+     "exit_time": "16:00",
+     "exit_price": 759.91,
+     "exit_reason": "flat",
+     "gross_pnl": 23.01,
+     "costs": 7.93,
+     "net_pnl": 15.08,
+     "r_net": 0.276,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 703.87,
+     "or_low": 701.37,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 701.37,
+     "entry": 702.38,
+     "stop": 701.37,
+     "target": 712.48,
+     "risk_ps": 1.01,
+     "shares": 56,
+     "notional": 39333.28,
+     "exit_time": "09:40",
+     "exit_price": 701.37,
+     "exit_reason": "stop",
+     "gross_pnl": -56.56,
+     "costs": 9.86,
+     "net_pnl": -66.42,
+     "r_net": -1.174,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "CRDO",
+     "gap_pct": -7.08
+    },
+    {
+     "symbol": "BE",
+     "gap_pct": -6.78
+    },
+    {
+     "symbol": "DECK",
+     "gap_pct": -5.68
+    },
+    {
+     "symbol": "RITM",
+     "gap_pct": 5.18
+    },
+    {
+     "symbol": "TMUS",
+     "gap_pct": -5.16
+    },
+    {
+     "symbol": "INFY",
+     "gap_pct": -4.61
+    },
+    {
+     "symbol": "T",
+     "gap_pct": -4.4
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "J",
+     "symbol": "CRDO",
+     "setups": "short Gap -7.1% RV30 3.0x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.02,
+     "signal": "gap_short",
+     "ref_level": 152.07,
+     "entry": 148.13,
+     "stop": 152.07,
+     "target": null,
+     "risk_ps": 3.94,
+     "shares": 25,
+     "notional": 3703.25,
+     "exit_time": "10:35",
+     "exit_price": 152.07,
+     "exit_reason": "stop",
+     "gross_pnl": -98.5,
+     "costs": 5.75,
+     "net_pnl": -104.25,
+     "r_net": -1.058,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "J",
+     "symbol": "BE",
+     "setups": "short Gap -6.8% RV30 4.2x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 4.23,
+     "signal": "gap_short",
+     "ref_level": 206.0,
+     "entry": 191.66,
+     "stop": 206.0,
+     "target": null,
+     "risk_ps": 14.34,
+     "shares": 6,
+     "notional": 1149.96,
+     "exit_time": "16:00",
+     "exit_price": 193.12,
+     "exit_reason": "flat",
+     "gross_pnl": -8.76,
+     "costs": 3.15,
+     "net_pnl": -11.91,
+     "r_net": -0.138,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "J",
+     "symbol": "RITM",
+     "setups": "long Gap +5.2% RV30 5.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 5.1,
+     "signal": "gap_long",
+     "ref_level": 8.99,
+     "entry": 9.25,
+     "stop": 8.99,
+     "target": null,
+     "risk_ps": 0.26,
+     "shares": 384,
+     "notional": 3552.0,
+     "exit_time": "16:00",
+     "exit_price": 9.39,
+     "exit_reason": "flat",
+     "gross_pnl": 53.76,
+     "costs": 7.42,
+     "net_pnl": 46.34,
+     "r_net": 0.464,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "DECK",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TMUS",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "INFY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "T",
+     "why": "Volumen 1.7x"
+    }
+   ]
   }
  }
 }

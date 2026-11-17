@@ -864,7 +864,216 @@ def run_spy_momentum(day, data, symbols, spark, cfg, vcfg, vname):
     return trades, day_row, {"shares": n, "daily_vol_pct": round(100 * vol, 3), "prior_close": pc, "taken": trades}
 
 
-SPECIAL = {"sip_orb": run_sip_orb, "spy_momentum": run_spy_momentum}
+def _daily_vol(dcl, look):
+    rets = [dcl[i] / dcl[i - 1] - 1 for i in range(len(dcl) - look, len(dcl))]
+    mu = sum(rets) / look
+    return math.sqrt(sum((r - mu) ** 2 for r in rets) / (look - 1))
+
+
+def _row(day, vname, sym, setups, entry, stop, target, risk, n, exit_t, px, reason, g, c, net, note,
+         signal, ref=None, oh=None, ol=None, trig_t=None, vx=None):
+    return {"date": day.isoformat(), "variant": vname, "symbol": sym, "setups": setups, "dollar_vol_prev": None,
+            "or_high": oh, "or_low": ol, "trigger_time": trig_t, "volume_x": vx, "signal": signal,
+            "ref_level": ref, "entry": entry, "stop": stop, "target": target, "risk_ps": risk, "shares": n,
+            "notional": round(n * entry, 2), "exit_time": label(exit_t), "exit_price": round(px, 2),
+            "exit_reason": reason, "gross_pnl": g, "costs": c, "net_pnl": net,
+            "r_net": round(net / (n * risk), 3), "data_note": note}
+
+
+def run_last_half_hour(day, data, symbols, spark, cfg, vcfg, vname):
+    """H: market intraday momentum (Gao, Han, Li, Zhou 2018). The return from the prior close to
+    10:00 sets the direction of one trade in the last half hour: in at the close of the bar ending
+    30 minutes before the close, out at the close. No stop. Size like G: capital x min(4, 2 % /
+    14-day daily volatility). R uses the typical half-hour move (daily vol / sqrt(13)) as risk."""
+    sym, look = vcfg.get("symbol", "SPY"), vcfg.get("lookback", 14)
+    ch, dch = data.chart(sym, "60d", "5m"), data.chart(sym, "6mo", "1d")
+    none = ([], {"watchlist": 1, "with_data": 0, "triggers": 0, "taken": 0, "skipped": 0}, {"note": ""})
+    if "error" in ch or "error" in dch:
+        none[2]["note"] = "%s-Daten fehlen" % sym
+        return none
+    bars = day_bars(ch, day)
+    drows = _ohlcv_days(dch)
+    dcl = [drows[d][3] for d in sorted(drows) if d < day]
+    s = scan.session(day)
+    open_dt = datetime.datetime.combine(day, s[0])
+    close_dt = datetime.datetime.combine(day, s[1])
+    k_sig = 5                                                     # bar ending 10:00
+    k_in = int((close_dt - open_dt).total_seconds()) // 300 - 7   # bar ending 30 min before the close
+    k_out = max(bars) if bars else None
+    if len(dcl) < look + 1 or k_sig not in bars or k_in not in bars or k_out is None or k_out <= k_in:
+        none[2]["note"] = "zu wenig Historie oder Bars fehlen"
+        return none
+    r1 = bars[k_sig]["c"] / dcl[-1] - 1
+    side = 1 if r1 > 0 else -1 if r1 < 0 else 0
+    if not side:
+        return ([], dict(none[1], with_data=1), {"first_half_hour_pct": 0.0})
+    vol = _daily_vol(dcl, look)
+    entry = round(bars[k_in]["c"], 2)
+    n = int(cfg["capital"] * min(vcfg.get("max_leverage", 4), vcfg.get("target_vol", 0.02) / vol) // entry)
+    if n < 1:
+        return ([], dict(none[1], with_data=1, triggers=1, skipped=1), {"note": "0 Stueck"})
+    risk = max(round(entry * vol / math.sqrt(13), 2), 0.01)
+    px = bars[k_out]["c"]
+    costs = dict(cfg["costs"], **(vcfg.get("costs") or {}))
+    g, c, net = book(entry, px, n, side, "flat", costs)
+    row = _row(day, vname, sym, "%s erste 30 Min %+.2f%%" % ("long" if side > 0 else "short", 100 * r1),
+               entry, None, None, risk, n, bars[k_out]["end"], px, "flat", g, c, net,
+               "kein Stop; R = Ergebnis / typische 30-Min-Bewegung", "ihm_long" if side > 0 else "ihm_short",
+               trig_t=label(bars[k_in]["end"]))
+    return [row], {"watchlist": 1, "with_data": 1, "triggers": 1, "taken": 1, "skipped": 0}, \
+        {"first_half_hour_pct": round(100 * r1, 3), "taken": [row]}
+
+
+def _sim_from(bars, k_first, stop, target, side, flat_dt):
+    """Exit for a position opened before bar k_first: gap through the stop fills at the open, a
+    stop and a target in the same bar count as stop (conservative), else the close."""
+    last = None
+    for k in sorted(bars):
+        if k < k_first:
+            continue
+        b = bars[k]
+        if b["start"] >= flat_dt:
+            break
+        last = b
+        if (b["o"] <= stop) if side > 0 else (b["o"] >= stop):
+            return b["o"], "stop_gap", b["end"]
+        if (b["l"] <= stop) if side > 0 else (b["h"] >= stop):
+            return stop, "stop", b["end"]
+        if target is not None and ((b["h"] >= target) if side > 0 else (b["l"] <= target)):
+            return target, "target", b["end"]
+        if b["end"] >= flat_dt:
+            return b["c"], "flat", b["end"]
+    return (last["c"], "flat", last["end"]) if last else (None, "", None)
+
+
+def run_etf_orb(day, data, symbols, spark, cfg, vcfg, vname):
+    """I: 5-minute ORB on QQQ (Zarattini & Aziz 2023). Green first 5-minute bar: long at the
+    open of the second bar; red: short; doji: nothing. Stop at the low (long) / high (short) of
+    the first bar, target 10R, else out at the close. 1 % of capital at risk, at most 4x capital."""
+    sym = vcfg.get("symbol", "QQQ")
+    ch = data.chart(sym, "60d", "5m")
+    none = ([], {"watchlist": 1, "with_data": 0, "triggers": 0, "taken": 0, "skipped": 0}, {"note": ""})
+    bars = day_bars(ch, day) if "error" not in ch else {}
+    if 0 not in bars or 1 not in bars:
+        none[2]["note"] = "%s-Bars fehlen" % sym
+        return none
+    b0 = bars[0]
+    side = 1 if b0["c"] > b0["o"] else -1 if b0["c"] < b0["o"] else 0
+    base = {"watchlist": 1, "with_data": 1, "triggers": 0, "taken": 0, "skipped": 0}
+    if not side:
+        return [], base, {"note": "Doji"}
+    entry = round(bars[1]["o"], 2)
+    stop = round(b0["l"] if side > 0 else b0["h"], 2)
+    risk = round(side * (entry - stop), 2)
+    if risk <= 0:
+        return [], dict(base, triggers=1, skipped=1), {"note": "Stop nicht hinter Einstieg"}
+    target = round(entry + side * vcfg.get("target_r", 10) * risk, 2)
+    cap = cfg["capital"]
+    n = min(int(cap * vcfg.get("risk_pct", 1.0) / 100.0 // risk), int(cap * vcfg.get("leverage", 4) // entry))
+    if n < 1:
+        return [], dict(base, triggers=1, skipped=1), {"note": "0 Stueck"}
+    flat_dt = datetime.datetime.combine(day, scan.session(day)[1])
+    px, reason, exit_t = _sim_from(bars, 1, stop, target, side, flat_dt)
+    costs = dict(cfg["costs"], **(vcfg.get("costs") or {}))
+    g, c, net = book(entry, px, n, side, reason, costs)
+    row = _row(day, vname, sym, "long" if side > 0 else "short", entry, stop, target, risk, n, exit_t, px, reason,
+               g, c, net, "5-Min-Bars", "etf_orb_long" if side > 0 else "etf_orb_short",
+               ref=stop, oh=round(b0["h"], 2), ol=round(b0["l"], 2), trig_t=label(bars[1]["start"]))
+    return [row], dict(base, triggers=1, taken=1), {"taken": [row]}
+
+
+def run_gap_continuation(day, data, symbols, spark, cfg, vcfg, vname):
+    """J: gap continuation as a stand-in for earnings gaps. Universe as F (price > 5 $, 14-day
+    average volume >= 1M). Gap = open / prior close - 1, at least 4 % either way. Volume of the
+    first 30 minutes >= 3x its 14-day average (the sign of a real catalyst). Confirmation: the
+    10:00 close is beyond the open in the gap's direction. Entry at that close, stop at the low
+    (long) / high (short) of the first 30 minutes, out at the close. 1 % risk, at most 4x capital,
+    order >= min_order_usd. Not yet: a check of the earnings filing (needs a SEC contact)."""
+    look, gap_min = vcfg.get("lookback", 14), vcfg.get("min_gap_pct", 4.0) / 100.0
+    cands = []
+    for sym in symbols:
+        sp = spark.get(sym)
+        if not sp:
+            continue
+        closes = [c for c in (sp.get("c") or []) if c is not None]
+        if not closes or max(closes[-look - 1:]) <= vcfg.get("min_price", 5):
+            continue
+        ch = data.chart(sym, "6mo", "1d")
+        if "error" in ch:
+            continue
+        rows = _ohlcv_days(ch)
+        ds = [d for d in sorted(rows) if d < day]
+        if day not in rows or len(ds) < look or ds[-1] != prev_trading_day(day):
+            continue
+        pc = rows[ds[-1]][3]
+        if pc <= vcfg.get("min_price", 5) or sum(rows[d][4] for d in ds[-look:]) / look < vcfg.get("min_avg_volume", 1e6):
+            continue
+        gap = rows[day][0] / pc - 1
+        if abs(gap) >= gap_min:
+            cands.append((abs(gap), sym, gap))
+    cands.sort(key=lambda x: (-x[0], x[1]))
+    s = scan.session(day)
+    flat_dt = datetime.datetime.combine(day, s[1])
+    k_conf = 5  # bar ending 10:00
+    trigs, skipped = [], []
+    for _, sym, gap in cands:
+        ch = data.chart(sym, "60d", "5m")
+        if "error" in ch:
+            continue
+        bars = day_bars(ch, day)
+        if any(k not in bars for k in range(k_conf + 1)):
+            skipped.append({"symbol": sym, "why": "Bars fehlen"})
+            continue
+        vol30 = sum(bars[k]["v"] for k in range(k_conf + 1))
+        prior = [d for d in sorted({et_date(ts) for ts in ch.get("t") or []}) if d < day][-look:]
+        pv = []
+        for d in prior:
+            pb = day_bars(ch, d)
+            if all(k in pb for k in range(k_conf + 1)):
+                pv.append(sum(pb[k]["v"] for k in range(k_conf + 1)))
+        if len(pv) < look // 2 or not sum(pv):
+            skipped.append({"symbol": sym, "why": "zu wenig Historie"})
+            continue
+        rv = vol30 / (sum(pv) / len(pv))
+        if rv < vcfg.get("min_rel_volume", 3.0):
+            skipped.append({"symbol": sym, "why": "Volumen %.1fx" % rv})
+            continue
+        side = 1 if gap > 0 else -1
+        o, c10 = bars[0]["o"], bars[k_conf]["c"]
+        if side * (c10 - o) <= 0:
+            skipped.append({"symbol": sym, "why": "keine Bestaetigung bis 10:00"})
+            continue
+        lo = min(bars[k]["l"] for k in range(k_conf + 1))
+        hi = max(bars[k]["h"] for k in range(k_conf + 1))
+        trigs.append((sym, side, gap, rv, round(c10, 2), round(lo if side > 0 else hi, 2), bars))
+    cap = cfg["capital"]
+    risk_usd = cap * vcfg.get("risk_pct", 1.0) / 100.0
+    used, trades = 0.0, []
+    for sym, side, gap, rv, entry, stop, bars in trigs:
+        risk = round(side * (entry - stop), 2)
+        if risk <= 0:
+            continue
+        n = min(int(risk_usd // risk + 1e-9), int(max(cap * vcfg.get("leverage", 4) - used, 0) // entry))
+        if n < 1 or n * entry < cfg["min_order_usd"]:
+            skipped.append({"symbol": sym, "why": "Hebel-Limit oder Order unter Minimum"})
+            continue
+        px, reason, exit_t = _sim_from(bars, k_conf + 1, stop, None, side, flat_dt)
+        g, c, net = book(entry, px, n, side, reason, cfg["costs"])
+        trades.append(_row(day, vname, sym, "%s Gap %+.1f%% RV30 %.1fx" % ("long" if side > 0 else "short",
+                                                                         100 * gap, rv),
+                           entry, stop, None, risk, n, exit_t, px, reason, g, c, net,
+                           "Gap-Proxy, ohne Earnings-Nachweis", "gap_long" if side > 0 else "gap_short",
+                           ref=stop, trig_t="10:00", vx=round(rv, 2)))
+        used += n * entry  # all positions open at 10:00 and run to the close at the latest
+    return trades, {"watchlist": len(cands), "with_data": len(cands), "triggers": len(trigs),
+                    "taken": len(trades), "skipped": len(skipped)}, \
+        {"gaps": [{"symbol": x[1], "gap_pct": round(100 * x[2], 2)} for x in cands], "taken": trades,
+         "skipped": skipped}
+
+
+SPECIAL = {"sip_orb": run_sip_orb, "spy_momentum": run_spy_momentum,
+           "last_half_hour": run_last_half_hour, "etf_orb": run_etf_orb,
+           "gap_continuation": run_gap_continuation}
 
 
 SCALED = ("capital", "max_loss_per_trade", "max_daily_loss", "max_order_usd")

@@ -1486,6 +1486,281 @@
      "data_note": "Hebel 0.76x (Tagesvola 2.52 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": -0.36,
+   "taken": [
+    {
+     "date": "2026-11-13",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "short erste 30 Min -0.36%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_short",
+     "ref_level": null,
+     "entry": 752.91,
+     "stop": null,
+     "target": null,
+     "risk_ps": 3.4,
+     "shares": 16,
+     "notional": 12046.56,
+     "exit_time": "16:00",
+     "exit_price": 754.25,
+     "exit_reason": "flat",
+     "gross_pnl": -21.44,
+     "costs": 4.41,
+     "net_pnl": -25.85,
+     "r_net": -0.475,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-11-13",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "short",
+     "dollar_vol_prev": null,
+     "or_high": 688.75,
+     "or_low": 686.21,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_short",
+     "ref_level": 688.75,
+     "entry": 686.4,
+     "stop": 688.75,
+     "target": 662.9,
+     "risk_ps": 2.35,
+     "shares": 42,
+     "notional": 28828.8,
+     "exit_time": "16:00",
+     "exit_price": 679.9,
+     "exit_reason": "flat",
+     "gross_pnl": 273.0,
+     "costs": 7.74,
+     "net_pnl": 265.26,
+     "r_net": 2.688,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "CADL",
+     "gap_pct": -36.53
+    },
+    {
+     "symbol": "VIR",
+     "gap_pct": -13.71
+    },
+    {
+     "symbol": "HAWK",
+     "gap_pct": 13.5
+    },
+    {
+     "symbol": "OMH",
+     "gap_pct": -13.44
+    },
+    {
+     "symbol": "YSS",
+     "gap_pct": -11.82
+    },
+    {
+     "symbol": "CBRS",
+     "gap_pct": 11.2
+    },
+    {
+     "symbol": "SLS",
+     "gap_pct": 8.22
+    },
+    {
+     "symbol": "KEP",
+     "gap_pct": -8.18
+    },
+    {
+     "symbol": "WSE",
+     "gap_pct": 7.23
+    },
+    {
+     "symbol": "EQPT",
+     "gap_pct": 6.35
+    },
+    {
+     "symbol": "STNE",
+     "gap_pct": -5.18
+    },
+    {
+     "symbol": "FLO",
+     "gap_pct": -5.16
+    },
+    {
+     "symbol": "NU",
+     "gap_pct": 4.48
+    },
+    {
+     "symbol": "SSMR",
+     "gap_pct": -4.22
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-13",
+     "variant": "J",
+     "symbol": "VIR",
+     "setups": "short Gap -13.7% RV30 13.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 13.05,
+     "signal": "gap_short",
+     "ref_level": 10.7,
+     "entry": 10.11,
+     "stop": 10.7,
+     "target": null,
+     "risk_ps": 0.59,
+     "shares": 169,
+     "notional": 1708.59,
+     "exit_time": "16:00",
+     "exit_price": 9.95,
+     "exit_reason": "flat",
+     "gross_pnl": 26.2,
+     "costs": 3.7,
+     "net_pnl": 22.5,
+     "r_net": 0.226,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-13",
+     "variant": "J",
+     "symbol": "HAWK",
+     "setups": "long Gap +13.5% RV30 10.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 10.06,
+     "signal": "gap_long",
+     "ref_level": 16.06,
+     "entry": 16.81,
+     "stop": 16.06,
+     "target": null,
+     "risk_ps": 0.75,
+     "shares": 133,
+     "notional": 2235.73,
+     "exit_time": "16:00",
+     "exit_price": 18.19,
+     "exit_reason": "flat",
+     "gross_pnl": 183.54,
+     "costs": 4.33,
+     "net_pnl": 179.21,
+     "r_net": 1.797,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-13",
+     "variant": "J",
+     "symbol": "YSS",
+     "setups": "short Gap -11.8% RV30 8.2x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 8.21,
+     "signal": "gap_short",
+     "ref_level": 6.12,
+     "entry": 5.36,
+     "stop": 6.12,
+     "target": null,
+     "risk_ps": 0.76,
+     "shares": 131,
+     "notional": 702.16,
+     "exit_time": "16:00",
+     "exit_price": 5.77,
+     "exit_reason": "flat",
+     "gross_pnl": -53.71,
+     "costs": 2.73,
+     "net_pnl": -56.44,
+     "r_net": -0.567,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-13",
+     "variant": "J",
+     "symbol": "CBRS",
+     "setups": "long Gap +11.2% RV30 6.5x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 6.45,
+     "signal": "gap_long",
+     "ref_level": 105.2,
+     "entry": 108.72,
+     "stop": 105.2,
+     "target": null,
+     "risk_ps": 3.52,
+     "shares": 28,
+     "notional": 3044.16,
+     "exit_time": "10:25",
+     "exit_price": 105.2,
+     "exit_reason": "stop",
+     "gross_pnl": -98.56,
+     "costs": 4.99,
+     "net_pnl": -103.55,
+     "r_net": -1.051,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "CADL",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "OMH",
+     "why": "zu wenig Historie"
+    },
+    {
+     "symbol": "SLS",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "KEP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "WSE",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "EQPT",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "STNE",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "FLO",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "NU",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "SSMR",
+     "why": "Volumen 0.7x"
+    }
+   ]
   }
  }
 }

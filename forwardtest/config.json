@@ -59,7 +59,16 @@
            "max_leverage": 4, "band_mult": 1.5, "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"},
     "GQ": {"label": "Regeln von G auf QQQ (Nasdaq-100-ETF) statt SPY",
            "strategy": "spy_momentum", "symbol": "QQQ", "lookback": 14, "first_check": "10:00", "target_vol": 0.02,
-           "max_leverage": 4, "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"}
+           "max_leverage": 4, "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"},
+    "H": {"label": "Market Intraday Momentum (Gao/Han/Li/Zhou 2018): Richtung der ersten halben Stunde (Vortagesschluss bis 10:00) bestimmt einen SPY-Trade 15:30-16:00, kein Stop, Groesse wie G",
+          "strategy": "last_half_hour", "symbol": "SPY", "lookback": 14, "target_vol": 0.02, "max_leverage": 4,
+          "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"},
+    "I": {"label": "5-Min-ORB auf QQQ (Zarattini/Aziz 2023): Richtung der ersten 5-Min-Kerze, Einstieg 9:35, Stop am anderen Ende der Kerze, Ziel 10R, sonst 16:00; 1 % Risiko, Hebel bis 4x",
+          "strategy": "etf_orb", "symbol": "QQQ", "target_r": 10, "risk_pct": 1.0, "leverage": 4,
+          "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"},
+    "J": {"label": "Gap-Continuation (Earnings-Proxy): Gap >= 4 %, Volumen der ersten 30 Min >= 3x Schnitt, 10:00 in Gap-Richtung bestaetigt; Stop am Extrem der ersten 30 Min, Ausstieg 16:00; 1 % Risiko, Hebel bis 4x",
+          "strategy": "gap_continuation", "lookback": 14, "min_price": 5, "min_avg_volume": 1000000,
+          "min_gap_pct": 4.0, "min_rel_volume": 3.0, "risk_pct": 1.0, "leverage": 4, "added": "2026-11-17"}
   },
   "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
 }

@@ -1601,6 +1601,250 @@
      "data_note": "Hebel 1.50x (Tagesvola 1.30 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": 0.112,
+   "taken": [
+    {
+     "date": "2026-10-27",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.11%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 770.15,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.4,
+     "shares": 39,
+     "notional": 30035.85,
+     "exit_time": "16:00",
+     "exit_price": 769.72,
+     "exit_reason": "flat",
+     "gross_pnl": -16.77,
+     "costs": 8.01,
+     "net_pnl": -24.78,
+     "r_net": -0.454,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-10-27",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 716.77,
+     "or_low": 714.61,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 714.61,
+     "entry": 716.65,
+     "stop": 714.61,
+     "target": 737.05,
+     "risk_ps": 2.04,
+     "shares": 49,
+     "notional": 35115.85,
+     "exit_time": "09:55",
+     "exit_price": 714.61,
+     "exit_reason": "stop",
+     "gross_pnl": -99.96,
+     "costs": 9.01,
+     "net_pnl": -108.97,
+     "r_net": -1.09,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "SOFI",
+     "gap_pct": 10.51
+    },
+    {
+     "symbol": "FER",
+     "gap_pct": 7.93
+    },
+    {
+     "symbol": "CLS",
+     "gap_pct": 7.16
+    },
+    {
+     "symbol": "LPTH",
+     "gap_pct": 7.0
+    },
+    {
+     "symbol": "GLXY",
+     "gap_pct": 6.19
+    },
+    {
+     "symbol": "SHW",
+     "gap_pct": -5.82
+    },
+    {
+     "symbol": "BRUN",
+     "gap_pct": 5.35
+    },
+    {
+     "symbol": "BE",
+     "gap_pct": 5.0
+    },
+    {
+     "symbol": "AMKR",
+     "gap_pct": 4.81
+    },
+    {
+     "symbol": "FCEL",
+     "gap_pct": 4.62
+    },
+    {
+     "symbol": "SHAZ",
+     "gap_pct": 4.26
+    },
+    {
+     "symbol": "JCI",
+     "gap_pct": 4.14
+    },
+    {
+     "symbol": "CRML",
+     "gap_pct": 4.08
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-27",
+     "variant": "J",
+     "symbol": "SOFI",
+     "setups": "long Gap +10.5% RV30 6.8x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 6.84,
+     "signal": "gap_long",
+     "ref_level": 15.67,
+     "entry": 16.1,
+     "stop": 15.67,
+     "target": null,
+     "risk_ps": 0.43,
+     "shares": 232,
+     "notional": 3735.2,
+     "exit_time": "16:00",
+     "exit_price": 16.4,
+     "exit_reason": "flat",
+     "gross_pnl": 68.44,
+     "costs": 6.09,
+     "net_pnl": 62.35,
+     "r_net": 0.625,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-27",
+     "variant": "J",
+     "symbol": "CLS",
+     "setups": "long Gap +7.2% RV30 7.2x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 7.23,
+     "signal": "gap_long",
+     "ref_level": 261.5,
+     "entry": 274.77,
+     "stop": 261.5,
+     "target": null,
+     "risk_ps": 13.27,
+     "shares": 7,
+     "notional": 1923.39,
+     "exit_time": "16:00",
+     "exit_price": 276.33,
+     "exit_reason": "flat",
+     "gross_pnl": 10.92,
+     "costs": 3.93,
+     "net_pnl": 6.99,
+     "r_net": 0.075,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-27",
+     "variant": "J",
+     "symbol": "AMKR",
+     "setups": "long Gap +4.8% RV30 3.4x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.36,
+     "signal": "gap_long",
+     "ref_level": 37.36,
+     "entry": 38.74,
+     "stop": 37.36,
+     "target": null,
+     "risk_ps": 1.38,
+     "shares": 72,
+     "notional": 2789.28,
+     "exit_time": "16:00",
+     "exit_price": 39.96,
+     "exit_reason": "flat",
+     "gross_pnl": 87.84,
+     "costs": 4.83,
+     "net_pnl": 83.01,
+     "r_net": 0.835,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "FER",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "LPTH",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "GLXY",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "SHW",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "BRUN",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "BE",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "FCEL",
+     "why": "Volumen 0.7x"
+    },
+    {
+     "symbol": "SHAZ",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "JCI",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "CRML",
+     "why": "Volumen 1.2x"
+    }
+   ]
   }
  }
 }

@@ -1869,6 +1869,298 @@
      "data_note": "Hebel 1.56x (Tagesvola 1.25 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": 0.378,
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.38%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 765.4,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.36,
+     "shares": 40,
+     "notional": 30616.0,
+     "exit_time": "16:00",
+     "exit_price": 765.22,
+     "exit_reason": "flat",
+     "gross_pnl": -7.0,
+     "costs": 8.12,
+     "net_pnl": -15.12,
+     "r_net": -0.278,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 707.93,
+     "or_low": 705.58,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 705.58,
+     "entry": 707.45,
+     "stop": 705.58,
+     "target": 726.15,
+     "risk_ps": 1.87,
+     "shares": 53,
+     "notional": 37494.85,
+     "exit_time": "16:00",
+     "exit_price": 712.12,
+     "exit_reason": "flat",
+     "gross_pnl": 247.51,
+     "costs": 9.52,
+     "net_pnl": 237.99,
+     "r_net": 2.401,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "XP",
+     "gap_pct": -52.17
+    },
+    {
+     "symbol": "STNE",
+     "gap_pct": -37.8
+    },
+    {
+     "symbol": "PAGS",
+     "gap_pct": -32.26
+    },
+    {
+     "symbol": "NU",
+     "gap_pct": -22.89
+    },
+    {
+     "symbol": "ITUB",
+     "gap_pct": -22.75
+    },
+    {
+     "symbol": "UGP",
+     "gap_pct": -19.38
+    },
+    {
+     "symbol": "PBR.A",
+     "gap_pct": -17.55
+    },
+    {
+     "symbol": "PBR",
+     "gap_pct": -17.01
+    },
+    {
+     "symbol": "VIV",
+     "gap_pct": -15.82
+    },
+    {
+     "symbol": "DLO",
+     "gap_pct": -8.37
+    },
+    {
+     "symbol": "MRNA",
+     "gap_pct": -6.59
+    },
+    {
+     "symbol": "USDE",
+     "gap_pct": -5.45
+    },
+    {
+     "symbol": "EQT",
+     "gap_pct": -5.21
+    },
+    {
+     "symbol": "CADL",
+     "gap_pct": 5.11
+    },
+    {
+     "symbol": "JBS",
+     "gap_pct": -4.99
+    },
+    {
+     "symbol": "CRWV",
+     "gap_pct": -4.19
+    },
+    {
+     "symbol": "CRCL",
+     "gap_pct": -4.13
+    },
+    {
+     "symbol": "TRU",
+     "gap_pct": -4.12
+    },
+    {
+     "symbol": "ASST",
+     "gap_pct": -4.0
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "J",
+     "symbol": "ITUB",
+     "setups": "short Gap -22.8% RV30 8.2x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 8.23,
+     "signal": "gap_short",
+     "ref_level": 7.79,
+     "entry": 7.42,
+     "stop": 7.79,
+     "target": null,
+     "risk_ps": 0.37,
+     "shares": 270,
+     "notional": 2003.4,
+     "exit_time": "16:00",
+     "exit_price": 7.69,
+     "exit_reason": "flat",
+     "gross_pnl": -72.9,
+     "costs": 4.74,
+     "net_pnl": -77.64,
+     "r_net": -0.777,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-26",
+     "variant": "J",
+     "symbol": "PBR.A",
+     "setups": "short Gap -17.6% RV30 5.7x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 5.69,
+     "signal": "gap_short",
+     "ref_level": 20.05,
+     "entry": 19.39,
+     "stop": 20.05,
+     "target": null,
+     "risk_ps": 0.66,
+     "shares": 151,
+     "notional": 2927.89,
+     "exit_time": "15:30",
+     "exit_price": 20.05,
+     "exit_reason": "stop",
+     "gross_pnl": -99.66,
+     "costs": 4.98,
+     "net_pnl": -104.64,
+     "r_net": -1.05,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-26",
+     "variant": "J",
+     "symbol": "VIV",
+     "setups": "short Gap -15.8% RV30 12.6x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 12.58,
+     "signal": "gap_short",
+     "ref_level": 11.11,
+     "entry": 10.79,
+     "stop": 11.11,
+     "target": null,
+     "risk_ps": 0.32,
+     "shares": 312,
+     "notional": 3366.48,
+     "exit_time": "11:20",
+     "exit_price": 11.11,
+     "exit_reason": "stop",
+     "gross_pnl": -99.84,
+     "costs": 6.54,
+     "net_pnl": -106.38,
+     "r_net": -1.066,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "XP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "STNE",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PAGS",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "NU",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "UGP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PBR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "DLO",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "MRNA",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "USDE",
+     "why": "Volumen 0.2x"
+    },
+    {
+     "symbol": "EQT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CADL",
+     "why": "Volumen 0.6x"
+    },
+    {
+     "symbol": "JBS",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "CRWV",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "CRCL",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "TRU",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "ASST",
+     "why": "Volumen 0.9x"
+    }
+   ]
   }
  }
 }

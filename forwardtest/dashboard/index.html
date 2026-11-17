@@ -36,10 +36,10 @@
 <div class="ft">
   <header id="kopf">
     <h1 class="ft-title">Day Trader Forward-Test</h1>
-    <p class="ft-sub">Paper-Test von elf Intraday-Varianten, Tag für Tag nach US-Börsenschluss nachgespielt. Start mit 10.000 $ je Variante, 1 % Risiko vom aktuellen Kontostand je Trade, Gewinne und Verluste werden reinvestiert, Kosten abgezogen. Keine echten Orders. Alle Kennzahlen zählen ab dem gemeinsamen Vorwärts-Start am 17.11.2026; die nachgerechneten Tage davor stehen unten als Referenz.</p>
+    <p class="ft-sub">Paper-Test von 14 Intraday-Varianten, Tag für Tag nach US-Börsenschluss nachgespielt. Start mit 10.000 $ je Variante, 1 % Risiko vom aktuellen Kontostand je Trade, Gewinne und Verluste werden reinvestiert, Kosten abgezogen. Keine echten Orders. Alle Kennzahlen zählen ab dem gemeinsamen Vorwärts-Start am 17.11.2026; die nachgerechneten Tage davor stehen unten als Referenz.</p>
   </header>
 
-  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Variante C2: <b data-draw="leadC2">—</b>. Variante C3: <b data-draw="leadC3">—</b>. Variante F: <b data-draw="leadF">—</b>. Variante G: <b data-draw="leadG">—</b>. Variante G2: <b data-draw="leadG2">—</b>. Variante GQ: <b data-draw="leadGQ">—</b>. Stand: <span data-draw="stand">—</span>.</p>
+  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Variante C2: <b data-draw="leadC2">—</b>. Variante C3: <b data-draw="leadC3">—</b>. Variante F: <b data-draw="leadF">—</b>. Variante G: <b data-draw="leadG">—</b>. Variante G2: <b data-draw="leadG2">—</b>. Variante GQ: <b data-draw="leadGQ">—</b>. Variante H: <b data-draw="leadH">—</b>. Variante I: <b data-draw="leadI">—</b>. Variante J: <b data-draw="leadJ">—</b>. Stand: <span data-draw="stand">—</span>.</p>
 
   <div class="ft-cols" id="kennzahlen">
     <section class="ft-card" id="karte-a">
@@ -185,11 +185,50 @@
       </div>
       <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-GQ-txt">—</span><div class="ft-bar"><div data-draw="prog-GQ"></div></div></div>
     </section>
+    <section class="ft-card" id="karte-h">
+      <h3>H · SPY letzte halbe Stunde</h3>
+      <p class="ft-cap">Studie Gao/Han/Li/Zhou 2018: Richtung der ersten halben Stunde (Vortagesschluss bis 10:00) bestimmt einen SPY-Trade von 15:30 bis 16:00, ohne Stop, Größe wie G</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-H-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=H">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-H-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=H">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-H-trades" data-source="kpis" data-field="trades" data-where="variant=H">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-H-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=H">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-H-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=H">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-H-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=H">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-H-txt">—</span><div class="ft-bar"><div data-draw="prog-H"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-i">
+      <h3>I · QQQ 5-Min-ORB</h3>
+      <p class="ft-cap">Studie Zarattini/Aziz 2023: Richtung der ersten 5-Min-Kerze, Einstieg 9:35, Stop am anderen Ende der Kerze, Ziel 10R, sonst 16:00; 1 % Risiko, Hebel bis 4×</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-I-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=I">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-I-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=I">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-I-trades" data-source="kpis" data-field="trades" data-where="variant=I">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-I-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=I">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-I-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=I">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-I-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=I">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-I-txt">—</span><div class="ft-bar"><div data-draw="prog-I"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-j">
+      <h3>J · Gap-Continuation</h3>
+      <p class="ft-cap">Earnings-Ersatz: Gap ≥ 4 %, Volumen der ersten 30 Minuten ≥ 3× Schnitt, um 10:00 in Gap-Richtung bestätigt; Stop am Extrem der ersten 30 Minuten, Ausstieg 16:00; long und short</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-J-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=J">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-J-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=J">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-J-trades" data-source="kpis" data-field="trades" data-where="variant=J">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-J-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=J">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-J-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=J">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-J-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=J">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-J-txt">—</span><div class="ft-bar"><div data-draw="prog-J"></div></div></div>
+    </section>
   </div>
 
   <section class="ft-card" id="equity">
     <h2>Equity-Verlauf (Start 10.000 $ am 17.11.2026)</h2>
-    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span><span><i data-draw="legC3"></i>C3 · VWAP Trailing</span><span><i data-draw="legF"></i>F · Stocks in Play</span><span><i data-draw="legG"></i>G · SPY-Momentum</span><span><i data-draw="legG2"></i>G2 · SPY breit</span><span><i data-draw="legGQ"></i>GQ · QQQ</span></div>
+    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span><span><i data-draw="legC3"></i>C3 · VWAP Trailing</span><span><i data-draw="legF"></i>F · Stocks in Play</span><span><i data-draw="legG"></i>G · SPY-Momentum</span><span><i data-draw="legG2"></i>G2 · SPY breit</span><span><i data-draw="legGQ"></i>GQ · QQQ</span><span><i data-draw="legH"></i>H · SPY 15:30</span><span><i data-draw="legI"></i>I · QQQ-ORB</span><span><i data-draw="legJ"></i>J · Gap</span></div>
     <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
     <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
   </section>
@@ -211,7 +250,7 @@
 
   <section class="ft-card" id="trades">
     <div class="ft-row"><h2>Trades</h2>
-      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option><option value="C2">Nur C2</option><option value="C3">Nur C3</option><option value="F">Nur F</option><option value="G">Nur G</option><option value="G2">Nur G2</option><option value="GQ">Nur GQ</option></select>
+      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option><option value="C2">Nur C2</option><option value="C3">Nur C3</option><option value="F">Nur F</option><option value="G">Nur G</option><option value="G2">Nur G2</option><option value="GQ">Nur GQ</option><option value="H">Nur H</option><option value="I">Nur I</option><option value="J">Nur J</option></select>
     </div>
     <div class="ft-wrap"><table data-source="trades" data-row-key="date,variant,symbol">
       <thead><tr><th data-field="date">Datum</th><th data-field="variant">Var.</th><th data-field="symbol">Titel</th><th data-field="setups">Setup</th><th data-field="trigger_time">Einstieg ET</th><th data-field="entry">Kurs</th><th data-field="stop">Stop</th><th data-field="target">Ziel</th><th data-field="shares">Stück</th><th data-field="exit_reason">Ausstieg</th><th data-field="exit_time">um</th><th data-field="net_pnl">Netto $</th><th data-field="r_net">R netto</th><th data-field="tm_target_pct">TM Ziel %</th></tr></thead>
@@ -242,18 +281,19 @@
       <li>Variante C3 (ab 17.11.2026, ohne Backfill): wie C2, plus Trailing-Stop. Sobald der Trade +1R erreicht, folgt der Stop dem bisherigen Hoch im Abstand 1,5R, nur nach oben und wirksam ab dem nächsten Bar. Auch C3 ist aus der Auswertung der ersten 20 Tage abgeleitet, es zählt nur der Vorwärts-Teil.</li>
       <li>Varianten F und G (seit 17.11.2026, Regeln aus zwei veröffentlichten Studien, Backfill ab 20.10.): handeln long und short und haben eigene Positionsgrößen mit bis zu 4× Hebel. Das bräuchte in der Praxis ein Margin-Konto; für Daytrading mit US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital. F wählt eigene Titel (nicht die Watchlist von A–E) und rechnet Einstieg und Stop auf 1-Minuten-Bars, weil der Stop nur Cent vom Einstieg entfernt liegt. G handelt nur SPY, mit 0,01 % Slippage statt 0,05 %. R ist bei G wenig aussagekräftig, weil der Abstand zum ersten Stop oft nur Cent beträgt; G besser nach Netto-$ und Drawdown beurteilen.</li>
       <li>Varianten G2 und GQ (seit 17.11.2026, Backfill ab 20.10.): G2 nutzt die 1,5-fach breitere Noise Area, die in der Studie die höhere Sharpe Ratio hatte. GQ wendet die Regeln von G unverändert auf QQQ an, damit sich schneller eine Stichprobe aufbaut. Sonst wie G.</li>
+      <li>Varianten H, I und J (seit 17.11.2026, Backfill ab 20.10.): H (SPY, letzte halbe Stunde) hat keinen Stop; R misst das Ergebnis in typischen 30-Minuten-Bewegungen und ist kaum aussagekräftig. I (QQQ-ORB) nutzt den Hebel oft fast voll aus, weil der Stop eng ist. J nutzt Gap und Volumen als Ersatz für einen Earnings-Anlass; ein echter Nachweis über die SEC-Meldung zu Quartalszahlen bräuchte eine Kontaktangabe für die SEC.</li>
       <li>Entscheidung frühestens nach 60 Trades ab dem gemeinsamen Vorwärts-Start am 17.11.2026: weiter nur bei R netto je Risiko-$ über +0,2 und kleinerem Drawdown als CIM.</li>
     </ul>
   </details>
 </div>
 
 <script>
-  window.ftVariants = ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ'];
+  window.ftVariants = ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ', 'H', 'I', 'J'];
   dash.calc('kpis', {
     title: 'Kennzahlen je Variante',
     description: 'Summen und Quoten über alle Trades einer Variante ab dem Vorwärts-Start am 17.11.2026. R netto = Netto-Ergebnis geteilt durch das geplante Risiko aller Trades (Stück × Abstand zum Stop). Drawdown aus der täglichen Equity.',
     inputs: ['trades', 'days'],
-    fn: (trades, days) => ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ'].map((variant) => {
+    fn: (trades, days) => ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ', 'H', 'I', 'J'].map((variant) => {
       const start = '2026-11-17';
       trades = trades.filter((r) => r.date >= start);
       days = days.filter((d) => d.date >= start);
@@ -291,7 +331,7 @@
     inputs: ['days'],
     fn: (days) => {
       const out = [];
-      ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ'].forEach((variant) => {
+      ['A', 'B', 'C', 'D', 'E', 'C2', 'C3', 'F', 'G', 'G2', 'GQ', 'H', 'I', 'J'].forEach((variant) => {
         let eq = 10000;
         days.filter((d) => d.variant === variant && d.date >= '2026-11-17').sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
           eq += d.net_pnl;
@@ -457,7 +497,7 @@
     title: 'Backfill 20.10.–16.11.2026 je Variante',
     description: 'Nachgerechnete Tage vor dem Vorwärts-Start am 17.11.2026, nur als Referenz. Sie zählen nicht für die Entscheidung.',
     inputs: ['trades'],
-    fn: (trades) => ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'G2', 'GQ'].map((variant) => {
+    fn: (trades) => ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'G2', 'GQ', 'H', 'I', 'J'].map((variant) => {
       const t = trades.filter((r) => r.variant === variant && r.date < '2026-11-17');
       const net = t.reduce((s, r) => s + r.net_pnl, 0);
       const risk = t.reduce((s, r) => s + r.shares * r.risk_ps, 0);

@@ -69,7 +69,20 @@ Studien regelgetreu um. Sie handeln long und short und haben eigene Größenrege
 **G2** ist G mit 1,5-fach breiter Noise Area (VM 1,5, laut Studie höhere Sharpe Ratio),
 **GQ** sind die Regeln von G unverändert auf QQQ. Beide mit Backfill ab 20.10.
 
-F und G bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
+**Varianten H, I, J** (seit 17.11.2026, Backfill ab 20.10.):
+
+- **H, Market Intraday Momentum** (Gao/Han/Li/Zhou 2018): Rendite vom Vortagesschluss bis
+  10:00 bestimmt die Richtung eines SPY-Trades von 15:30 bis 16:00. Kein Stop, Größe wie G.
+  R misst das Ergebnis in typischen 30-Minuten-Bewegungen (Tagesvola ÷ √13).
+- **I, 5-Min-ORB auf QQQ** (Zarattini/Aziz 2023): grüne erste 5-Min-Kerze long, rote short,
+  Einstieg zum Open des zweiten Bars, Stop am anderen Ende der ersten Kerze, Ziel 10R, sonst
+  16:00. 1 % Risiko, bis 4× Hebel.
+- **J, Gap-Continuation** (Earnings-Ersatz): Gap ≥ 4 %, Volumen 9:30–10:00 ≥ 3× des
+  14-Tage-Schnitts, um 10:00 in Gap-Richtung bestätigt. Einstieg 10:00, Stop am Extrem der
+  ersten 30 Minuten, Ausstieg 16:00. Ein Nachweis über die SEC-Meldung (8-K, Punkt 2.02) ist
+  vorbereitet, braucht aber eine SEC-Kontaktangabe im Absender.
+
+F, G, I und J bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
 US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital.
 
 **Gemeinsamer Vorwärts-Start am 17.11.2026, mit Reinvestieren.** Ab diesem Tag startet

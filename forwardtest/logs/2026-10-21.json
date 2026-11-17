@@ -1537,6 +1537,388 @@
      "data_note": "Hebel 1.81x (Tagesvola 1.10 %)"
     }
    ]
+  },
+  "H": {
+   "first_half_hour_pct": 0.208,
+   "taken": [
+    {
+     "date": "2026-10-21",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.21%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 773.23,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.28,
+     "shares": 43,
+     "notional": 33248.89,
+     "exit_time": "16:00",
+     "exit_price": 773.13,
+     "exit_reason": "flat",
+     "gross_pnl": -4.3,
+     "costs": 8.65,
+     "net_pnl": -12.95,
+     "r_net": -0.235,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-10-21",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 723.07,
+     "or_low": 721.04,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 721.04,
+     "entry": 722.39,
+     "stop": 721.04,
+     "target": 735.89,
+     "risk_ps": 1.35,
+     "shares": 55,
+     "notional": 39731.45,
+     "exit_time": "09:40",
+     "exit_price": 721.04,
+     "exit_reason": "stop",
+     "gross_pnl": -74.25,
+     "costs": 9.94,
+     "net_pnl": -84.19,
+     "r_net": -1.134,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "SMCI",
+     "gap_pct": 12.17
+    },
+    {
+     "symbol": "USDE",
+     "gap_pct": 11.62
+    },
+    {
+     "symbol": "ROIV",
+     "gap_pct": 9.25
+    },
+    {
+     "symbol": "SPCX",
+     "gap_pct": 8.64
+    },
+    {
+     "symbol": "DUOT",
+     "gap_pct": 8.62
+    },
+    {
+     "symbol": "ISRG",
+     "gap_pct": -8.11
+    },
+    {
+     "symbol": "FPS",
+     "gap_pct": 7.74
+    },
+    {
+     "symbol": "DELL",
+     "gap_pct": 7.68
+    },
+    {
+     "symbol": "CRDO",
+     "gap_pct": 7.33
+    },
+    {
+     "symbol": "SEI",
+     "gap_pct": 6.87
+    },
+    {
+     "symbol": "AMKR",
+     "gap_pct": 6.71
+    },
+    {
+     "symbol": "NFLX",
+     "gap_pct": -6.61
+    },
+    {
+     "symbol": "T",
+     "gap_pct": -6.53
+    },
+    {
+     "symbol": "VRT",
+     "gap_pct": 6.4
+    },
+    {
+     "symbol": "PM",
+     "gap_pct": -6.38
+    },
+    {
+     "symbol": "HUT",
+     "gap_pct": 6.03
+    },
+    {
+     "symbol": "WULF",
+     "gap_pct": 5.75
+    },
+    {
+     "symbol": "BE",
+     "gap_pct": 5.71
+    },
+    {
+     "symbol": "AAOI",
+     "gap_pct": 5.45
+    },
+    {
+     "symbol": "AEHR",
+     "gap_pct": 5.08
+    },
+    {
+     "symbol": "CIFR",
+     "gap_pct": 5.07
+    },
+    {
+     "symbol": "ALOY",
+     "gap_pct": 5.05
+    },
+    {
+     "symbol": "FLY",
+     "gap_pct": 5.03
+    },
+    {
+     "symbol": "LITE",
+     "gap_pct": 4.94
+    },
+    {
+     "symbol": "STX",
+     "gap_pct": 4.91
+    },
+    {
+     "symbol": "AXTI",
+     "gap_pct": 4.89
+    },
+    {
+     "symbol": "MARA",
+     "gap_pct": 4.81
+    },
+    {
+     "symbol": "HPE",
+     "gap_pct": 4.56
+    },
+    {
+     "symbol": "SHAZ",
+     "gap_pct": 4.56
+    },
+    {
+     "symbol": "APLD",
+     "gap_pct": 4.5
+    },
+    {
+     "symbol": "BRUN",
+     "gap_pct": 4.49
+    },
+    {
+     "symbol": "TTMI",
+     "gap_pct": 4.45
+    },
+    {
+     "symbol": "WDC",
+     "gap_pct": 4.37
+    },
+    {
+     "symbol": "GLXY",
+     "gap_pct": 4.31
+    },
+    {
+     "symbol": "LUNR",
+     "gap_pct": 4.27
+    },
+    {
+     "symbol": "ALM",
+     "gap_pct": 4.21
+    },
+    {
+     "symbol": "UMAC",
+     "gap_pct": 4.15
+    },
+    {
+     "symbol": "ZM",
+     "gap_pct": 4.15
+    },
+    {
+     "symbol": "FRVO",
+     "gap_pct": 4.09
+    }
+   ],
+   "taken": [],
+   "skipped": [
+    {
+     "symbol": "SMCI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "USDE",
+     "why": "Volumen 0.5x"
+    },
+    {
+     "symbol": "ROIV",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SPCX",
+     "why": "Volumen 3.0x"
+    },
+    {
+     "symbol": "DUOT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "ISRG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "FPS",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "DELL",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "CRDO",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "SEI",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "AMKR",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "NFLX",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "T",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "VRT",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "PM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "HUT",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "WULF",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "BE",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "AAOI",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "AEHR",
+     "why": "Volumen 0.6x"
+    },
+    {
+     "symbol": "CIFR",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "ALOY",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "FLY",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "LITE",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "STX",
+     "why": "Volumen 0.7x"
+    },
+    {
+     "symbol": "AXTI",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "MARA",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "HPE",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "SHAZ",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "APLD",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "BRUN",
+     "why": "Volumen 0.7x"
+    },
+    {
+     "symbol": "TTMI",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "WDC",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "GLXY",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "LUNR",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "ALM",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "UMAC",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "ZM",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "FRVO",
+     "why": "Volumen 0.7x"
+    }
+   ]
   }
  }
 }

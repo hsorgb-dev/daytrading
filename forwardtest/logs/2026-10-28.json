@@ -1494,6 +1494,354 @@
    "daily_vol_pct": 1.379,
    "prior_close": 721.25,
    "taken": []
+  },
+  "H": {
+   "first_half_hour_pct": 0.12,
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "H",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.12%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 770.79,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.45,
+     "shares": 38,
+     "notional": 29290.02,
+     "exit_time": "16:00",
+     "exit_price": 772.35,
+     "exit_reason": "flat",
+     "gross_pnl": 59.28,
+     "costs": 7.86,
+     "net_pnl": 51.42,
+     "r_net": 0.933,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I": {
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "I",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 724.73,
+     "or_low": 723.17,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 723.17,
+     "entry": 724.16,
+     "stop": 723.17,
+     "target": 734.06,
+     "risk_ps": 0.99,
+     "shares": 55,
+     "notional": 39828.8,
+     "exit_time": "09:40",
+     "exit_price": 723.17,
+     "exit_reason": "stop",
+     "gross_pnl": -54.45,
+     "costs": 9.96,
+     "net_pnl": -64.41,
+     "r_net": -1.183,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J": {
+   "gaps": [
+    {
+     "symbol": "ENPH",
+     "gap_pct": -19.86
+    },
+    {
+     "symbol": "VRT",
+     "gap_pct": 16.51
+    },
+    {
+     "symbol": "WEN",
+     "gap_pct": 14.5
+    },
+    {
+     "symbol": "ULCC",
+     "gap_pct": 14.29
+    },
+    {
+     "symbol": "PUMP",
+     "gap_pct": 9.39
+    },
+    {
+     "symbol": "SEDG",
+     "gap_pct": -8.89
+    },
+    {
+     "symbol": "SKHY",
+     "gap_pct": 8.53
+    },
+    {
+     "symbol": "FLEX",
+     "gap_pct": 7.38
+    },
+    {
+     "symbol": "BSX",
+     "gap_pct": -6.9
+    },
+    {
+     "symbol": "IP",
+     "gap_pct": -6.68
+    },
+    {
+     "symbol": "GSK",
+     "gap_pct": -6.46
+    },
+    {
+     "symbol": "NXPI",
+     "gap_pct": -6.06
+    },
+    {
+     "symbol": "APH",
+     "gap_pct": 5.97
+    },
+    {
+     "symbol": "SW",
+     "gap_pct": -5.85
+    },
+    {
+     "symbol": "HOOD",
+     "gap_pct": -5.64
+    },
+    {
+     "symbol": "FPS",
+     "gap_pct": 5.52
+    },
+    {
+     "symbol": "FRO",
+     "gap_pct": 5.5
+    },
+    {
+     "symbol": "TTMI",
+     "gap_pct": 5.24
+    },
+    {
+     "symbol": "WHR",
+     "gap_pct": -4.96
+    },
+    {
+     "symbol": "INIO",
+     "gap_pct": 4.89
+    },
+    {
+     "symbol": "DB",
+     "gap_pct": 4.79
+    },
+    {
+     "symbol": "AVTR",
+     "gap_pct": -4.2
+    },
+    {
+     "symbol": "TRMD",
+     "gap_pct": 4.19
+    },
+    {
+     "symbol": "RUN",
+     "gap_pct": -4.12
+    },
+    {
+     "symbol": "SHAZ",
+     "gap_pct": 4.08
+    },
+    {
+     "symbol": "ADT",
+     "gap_pct": 4.08
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "J",
+     "symbol": "WEN",
+     "setups": "long Gap +14.5% RV30 30.0x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 30.01,
+     "signal": "gap_long",
+     "ref_level": 7.01,
+     "entry": 7.11,
+     "stop": 7.01,
+     "target": null,
+     "risk_ps": 0.1,
+     "shares": 999,
+     "notional": 7102.89,
+     "exit_time": "10:35",
+     "exit_price": 7.01,
+     "exit_reason": "stop",
+     "gross_pnl": -99.9,
+     "costs": 17.04,
+     "net_pnl": -116.94,
+     "r_net": -1.171,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "J",
+     "symbol": "BSX",
+     "setups": "short Gap -6.9% RV30 10.6x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 10.55,
+     "signal": "gap_short",
+     "ref_level": 42.2,
+     "entry": 40.94,
+     "stop": 42.2,
+     "target": null,
+     "risk_ps": 1.26,
+     "shares": 79,
+     "notional": 3234.26,
+     "exit_time": "10:55",
+     "exit_price": 42.2,
+     "exit_reason": "stop",
+     "gross_pnl": -99.54,
+     "costs": 5.28,
+     "net_pnl": -104.82,
+     "r_net": -1.053,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "J",
+     "symbol": "ADT",
+     "setups": "long Gap +4.1% RV30 12.6x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 12.59,
+     "signal": "gap_long",
+     "ref_level": 7.01,
+     "entry": 7.36,
+     "stop": 7.01,
+     "target": null,
+     "risk_ps": 0.35,
+     "shares": 285,
+     "notional": 2097.6,
+     "exit_time": "16:00",
+     "exit_price": 7.41,
+     "exit_reason": "flat",
+     "gross_pnl": 15.67,
+     "costs": 4.96,
+     "net_pnl": 10.72,
+     "r_net": 0.107,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "ENPH",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "VRT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "ULCC",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PUMP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SEDG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SKHY",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "FLEX",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "IP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "GSK",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "NXPI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "APH",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SW",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "HOOD",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "FPS",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "FRO",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "TTMI",
+     "why": "Volumen 0.5x"
+    },
+    {
+     "symbol": "WHR",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "INIO",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "DB",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "AVTR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TRMD",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "RUN",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "SHAZ",
+     "why": "Volumen 1.1x"
+    }
+   ]
   }
  }
 }
