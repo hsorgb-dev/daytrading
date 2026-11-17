@@ -39,7 +39,7 @@
     <p class="ft-sub">Paper-Test der ORB-Strategie (A, B) und dreier weiterer Intraday-Strategien (C, D, E, seit 17.11.2026 mit Backfill ab 20.10.), Tag für Tag nach US-Börsenschluss nachgespielt. 10.000 $ je Variante, 1 % Risiko je Trade, Kosten abgezogen. Keine echten Orders.</p>
   </header>
 
-  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Variante C2: <b data-draw="leadC2">—</b>. Stand: <span data-draw="stand">—</span>.</p>
+  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Variante C2: <b data-draw="leadC2">—</b>. Variante C3: <b data-draw="leadC3">—</b>. Stand: <span data-draw="stand">—</span>.</p>
 
   <div class="ft-cols" id="kennzahlen">
     <section class="ft-card" id="karte-a">
@@ -120,11 +120,24 @@
       </div>
       <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-C2-txt">—</span><div class="ft-bar"><div data-draw="prog-C2"></div></div></div>
     </section>
+    <section class="ft-card" id="karte-c3">
+      <h3>C3 · VWAP-Pullback, Trailing-Stop</h3>
+      <p class="ft-cap">wie C2, plus Trailing-Stop: ab +1R folgt der Stop dem Hoch im Abstand 1,5R, nur nach oben. Läuft erst ab 17.11.2026, ohne Backfill</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-C3-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=C3">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-C3-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=C3">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-C3-trades" data-source="kpis" data-field="trades" data-where="variant=C3">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-C3-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=C3">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-C3-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=C3">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-C3-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=C3">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-C3-txt">—</span><div class="ft-bar"><div data-draw="prog-C3"></div></div></div>
+    </section>
   </div>
 
   <section class="ft-card" id="equity">
     <h2>Equity-Verlauf (Start 10.000 $)</h2>
-    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span></div>
+    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span><span><i data-draw="legC3"></i>C3 · VWAP Trailing</span></div>
     <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
     <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
   </section>
@@ -146,7 +159,7 @@
 
   <section class="ft-card" id="trades">
     <div class="ft-row"><h2>Trades</h2>
-      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option><option value="C2">Nur C2</option></select>
+      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option><option value="C2">Nur C2</option><option value="C3">Nur C3</option></select>
     </div>
     <div class="ft-wrap"><table data-source="trades" data-row-key="date,variant,symbol">
       <thead><tr><th data-field="date">Datum</th><th data-field="variant">Var.</th><th data-field="symbol">Titel</th><th data-field="setups">Setup</th><th data-field="trigger_time">Einstieg ET</th><th data-field="entry">Kurs</th><th data-field="stop">Stop</th><th data-field="target">Ziel</th><th data-field="shares">Stück</th><th data-field="exit_reason">Ausstieg</th><th data-field="exit_time">um</th><th data-field="net_pnl">Netto $</th><th data-field="r_net">R netto</th><th data-field="tm_target_pct">TM Ziel %</th></tr></thead>
@@ -165,18 +178,19 @@
       <li>Grenzen: Fills sind simuliert, echte Breakout-Slippage ist oft schlechter. Yahoo-Daten sind inoffiziell. Die ersten 20 Tage sind ein Backfill mit einem kleinen Look-ahead im Universum-Vorfilter.</li>
       <li>Varianten C, D, E (seit 17.11.2026, gleiche Watchlist, Größe, Limits, Kosten und Simulation wie A, nur Long): C kauft im Aufwärtstag den ersten grünen Bar, der vom VWAP abprallt. D kauft nach einem Schluss unter dem unteren Bollinger-Band (20, 2,5σ) mit RSI(2) unter 5, sobald ein Bar über dem Hoch des Setup-Bars schließt; das Ziel ist das Mittelband, Trades mit CRV unter 1 entfallen. E kauft den ersten Schluss über dem Vortageshoch mit Volumen ≥ 1,5× oder die Rückeroberung des Vortagestiefs nach einem Sweep. Signale, die schon vor dem Einstiegsfenster bestätigt waren, verfallen. Ihr Backfill nutzt dieselben Watchlists wie A und B.</li>
       <li>Variante C2 (ab 17.11.2026, ohne Backfill): Einstieg wie C, Stop 1,5× so weit vom Einstieg bei gleichem $-Risiko (also weniger Stück), kein festes Ziel, Glattstellung 15:55 ET. Abgeleitet aus der Auswertung der ersten 20 Tage, deshalb zählt nur der Vorwärts-Teil. Die Time Machine braucht ein Ziel und läuft für C2 nicht.</li>
+      <li>Variante C3 (ab 17.11.2026, ohne Backfill): wie C2, plus Trailing-Stop. Sobald der Trade +1R erreicht, folgt der Stop dem bisherigen Hoch im Abstand 1,5R, nur nach oben und wirksam ab dem nächsten Bar. Auch C3 ist aus der Auswertung der ersten 20 Tage abgeleitet, es zählt nur der Vorwärts-Teil.</li>
       <li>Entscheidung frühestens nach 60 Trades: weiter nur bei R netto je Risiko-$ über +0,2 und kleinerem Drawdown als CIM.</li>
     </ul>
   </details>
 </div>
 
 <script>
-  window.ftVariants = ['A', 'B', 'C', 'D', 'E', 'C2'];
+  window.ftVariants = ['A', 'B', 'C', 'D', 'E', 'C2', 'C3'];
   dash.calc('kpis', {
     title: 'Kennzahlen je Variante',
     description: 'Summen und Quoten über alle Trades einer Variante. R netto = Netto-Ergebnis geteilt durch das geplante Risiko aller Trades (Stück × Abstand zum Stop). Drawdown aus der täglichen Equity.',
     inputs: ['trades', 'days'],
-    fn: (trades, days) => ['A', 'B', 'C', 'D', 'E', 'C2'].map((variant) => {
+    fn: (trades, days) => ['A', 'B', 'C', 'D', 'E', 'C2', 'C3'].map((variant) => {
       const t = trades.filter((r) => r.variant === variant);
       const n = t.length;
       const net = t.reduce((s, r) => s + r.net_pnl, 0);
@@ -196,7 +210,7 @@
         win_rate: n ? wins.length / n : null,
         profit_factor: gl > 0 ? Math.round(100 * gw / gl) / 100 : null,
         max_dd: Math.round(dd * 100) / 100,
-        pct_target: share('target'), pct_stop: share('stop'), pct_flat: share('flat'),
+        pct_target: share('target'), pct_stop: share('stop'), pct_trail: share('trail'), pct_flat: share('flat'),
         tm_target_avg: tm.length ? avg(tm, 'tm_target_pct') / 100 : null,
         tm_stop_avg: tm.length ? avg(tm, 'tm_stop_pct') / 100 : null,
         days: days.filter((d) => d.variant === variant).length,
@@ -211,7 +225,7 @@
     inputs: ['days'],
     fn: (days) => {
       const out = [];
-      ['A', 'B', 'C', 'D', 'E', 'C2'].forEach((variant) => {
+      ['A', 'B', 'C', 'D', 'E', 'C2', 'C3'].forEach((variant) => {
         let eq = 10000;
         days.filter((d) => d.variant === variant).sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
           eq += d.net_pnl;
@@ -312,7 +326,7 @@
     const k = dash.data('kpis');
     el.replaceChildren();
     if (k.status !== 'ok' || !k.data) { el.textContent = '—'; return; }
-    const cats = [['pct_target', 'Ziel 2R'], ['pct_stop', 'Stop'], ['pct_flat', 'Glattstellung 15:55']];
+    const cats = [['pct_target', 'Ziel'], ['pct_stop', 'Stop'], ['pct_trail', 'Trailing-Stop'], ['pct_flat', 'Glattstellung 15:55']];
     const W = el.clientWidth || 400, rowH = 20, m = { t: 6, r: 44, l: 130 };
     const nv = k.data.length;
     const H = m.t + cats.length * (rowH * nv + 10);
@@ -355,7 +369,7 @@
     if (d.status !== 'ok') return;
     const rows = d.data.filter((r) => !window.ftFilter || r.variant === window.ftFilter)
       .slice().sort((a, b) => (a.date + a.trigger_time < b.date + b.trigger_time ? 1 : -1));
-    const reason = { target: 'Ziel', stop: 'Stop', stop_gap: 'Stop (Gap)', flat: 'Glatt' };
+    const reason = { target: 'Ziel', stop: 'Stop', stop_gap: 'Stop (Gap)', trail: 'Trailing', trail_gap: 'Trailing (Gap)', flat: 'Glatt' };
     rows.forEach((r) => {
       const tr = document.createElement('tr');
       tr.setAttribute('data-key', [r.date, r.variant, r.symbol].map(encodeURIComponent).join(','));

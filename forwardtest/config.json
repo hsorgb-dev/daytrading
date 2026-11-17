@@ -42,7 +42,11 @@
     "C2": {"label": "wie C, aber Stop 1,5x so weit (gleiches $-Risiko) und kein festes Ziel: halten bis Stop oder 15:55",
            "strategy": "vwap_pullback", "no_entries_before": "10:00", "no_entries_after": "15:00",
            "touch_pct": 0.1, "min_stretch_pct": 0.5, "stop_buffer_pct": 0.05, "stop_mult": 1.5, "no_target": true,
-           "added": "2026-11-17", "forward_from": "2026-11-17"}
+           "added": "2026-11-17", "forward_from": "2026-11-17"},
+    "C3": {"label": "wie C2, plus Trailing-Stop: ab +1R folgt der Stop dem Hoch im Abstand 1,5R (nur nach oben)",
+           "strategy": "vwap_pullback", "no_entries_before": "10:00", "no_entries_after": "15:00",
+           "touch_pct": 0.1, "min_stretch_pct": 0.5, "stop_buffer_pct": 0.05, "stop_mult": 1.5, "no_target": true,
+           "trail_r": 1.5, "trail_after_r": 1.0, "added": "2026-11-17", "forward_from": "2026-11-17"}
   },
   "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
 }

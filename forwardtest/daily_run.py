@@ -19,6 +19,8 @@ Ablauf je Tag D (nur Daten, die zum jeweiligen Zeitpunkt bekannt waren):
      (Bollinger 20/2,5 + RSI(2)), E Vortages-Hoch/-Tief (PDH-Ausbruch / PDL-Sweep).
      Sie bringen ihren eigenen Stop mit (D auch das Ziel: SMA20). Details: find_*().
      Variante C2 = C mit Stop 1,5x so weit (stop_mult) und ohne Ziel (no_target);
+     Variante C3 = C2 plus Trailing-Stop (trail_r, trail_after_r): ab +1R folgt der
+     Stop dem Hoch im Abstand 1,5R, nur nach oben, wirksam ab dem naechsten Bar.
      forward_from verhindert einen Backfill vor ihrem Start.
   3. Plan wie trader-exit: Stop Range-Mitte (abgerundet), Ziel 2R, flat 15:55.
   4. Groesse wie trader-budget: min(max. Verlust / Risiko, Positionslimit,
@@ -474,13 +476,16 @@ def size(plan, cfg, cash_free):
     return n, ""
 
 
-def simulate(plan, trig, bars, day, cfg):
+def simulate(plan, trig, bars, day, cfg, vcfg=None):
+    vcfg = vcfg or {}
+    trail, trail_after = vcfg.get("trail_r"), vcfg.get("trail_after_r", 0.0)
     s = scan.session(day)
     close_dt = datetime.datetime.combine(day, s[1])
     flat = datetime.datetime.combine(day, hhmm(cfg["flat_by"]))
     if s[1] != scan.CLOSE:
         flat = min(flat, close_dt - datetime.timedelta(minutes=5))
     stop, target = plan["stop"], plan["target"]
+    hi = None
     last = None
     for k in sorted(bars):
         if k <= trig["slot"]:
@@ -489,16 +494,21 @@ def simulate(plan, trig, bars, day, cfg):
         if b["start"] >= flat:
             break
         last = b
+        trailed = stop > plan["stop"]
         if b["o"] <= stop:
-            return b["o"], "stop_gap", b["end"], ""
+            return b["o"], "trail_gap" if trailed else "stop_gap", b["end"], ""
         if b["l"] <= stop:
-            return stop, "stop", b["end"], ""
+            return stop, "trail" if trailed else "stop", b["end"], ""
         if target is not None and b["o"] >= target:
             return target, "target", b["end"], ""  # limit order: no better fill assumed
         if target is not None and b["h"] >= target:
             return target, "target", b["end"], ""
         if b["end"] >= flat:
             return b["c"], "flat", b["end"], ""
+        if trail:  # trailing stop: moves up after this bar, never down, active from +trail_after R
+            hi = b["h"] if hi is None else max(hi, b["h"])
+            if hi >= plan["entry"] + trail_after * plan["risk"]:
+                stop = max(stop, floor_cent(hi - trail * plan["risk"]))
     if last is None:
         return plan["entry"], "flat", trig["time"], "keine Bars nach Einstieg"
     note = "" if last["end"] >= flat else "Bars enden vor flat_by (%s)" % label(last["end"])
@@ -593,7 +603,7 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
             if not n:
                 skipped.append({"symbol": sym, "time": label(trig["time"]), "why": why})
                 continue
-            px, reason, exit_t, note = simulate(plan, trig, bars_by[sym], day, cfg)
+            px, reason, exit_t, note = simulate(plan, trig, bars_by[sym], day, cfg, vcfg)
             c = cfg["costs"]
             slip = c["slippage_pct"] / 100.0
             fill_in = plan["entry"] * (1 + slip)

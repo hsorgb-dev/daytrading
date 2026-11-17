@@ -46,6 +46,10 @@ abgeleitet (bei C griffen 43 % der Stops im ersten Bar, Gewinner liefen oft übe
 Deshalb läuft sie nur vorwärts (`forward_from` in `config.json`). Die Time Machine braucht
 ein Ziel und läuft für C2 nicht.
 
+**Variante C3** (ab 17.11.2026, ohne Backfill) ist C2 plus Trailing-Stop: Sobald der
+Trade +1R erreicht, folgt der Stop dem bisherigen Hoch im Abstand 1,5R (nur nach oben,
+wirksam ab dem nächsten Bar). Ausstiegsgrund im Journal: `trail` bzw. `trail_gap`.
+
 Alle Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.
 
 Das Regelwerk in `config.json` ist ab Start eingefroren (C–E ab 17.11.2026). Neue Ideen kommen als
