@@ -72,7 +72,7 @@
 
   <section class="ft-card" id="equity">
     <h2>Equity-Verlauf (Start 10.000 $)</h2>
-    <div class="ft-legend"><span><i style="background: var(--cds-chart-series-1, currentColor)" data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span></div>
+    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span></div>
     <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
     <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
   </section>
@@ -111,7 +111,7 @@
       <li>Größe: kleinster Wert aus 100 $ max. Verlust ÷ Risiko je Aktie, 75 % Positionslimit, 8.000 $ max. Order und freiem Cash nach 10 % Puffer. Bei engen Stops bremst oft das Cash, nicht das Risiko.</li>
       <li>Kosten: 0,05 % Slippage auf Einstieg, Stop und Glattstellung, Kommission 0,005 $ je Aktie, mindestens 1 $ je Seite.</li>
       <li>Grenzen: Fills sind simuliert, echte Breakout-Slippage ist oft schlechter. Yahoo-Daten sind inoffiziell. Die ersten 20 Tage sind ein Backfill mit einem kleinen Look-ahead im Universum-Vorfilter.</li>
-      <li>Entscheidung frühestens nach 60 Trades: weiter nur bei Ø R netto über +0,2 und kleinerem Drawdown als CIM.</li>
+      <li>Entscheidung frühestens nach 60 Trades: weiter nur bei R netto je Risiko-$ über +0,2 und kleinerem Drawdown als CIM.</li>
     </ul>
   </details>
 </div>
