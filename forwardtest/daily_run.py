@@ -5,6 +5,7 @@
     python3 forwardtest/daily_run.py --date 2026-11-16  # ein bestimmter Tag
     python3 forwardtest/daily_run.py --backfill 20      # die letzten 20 Handelstage
     python3 forwardtest/daily_run.py --backfill 20 --no-tm   # ohne Time Machine (schneller)
+    python3 forwardtest/daily_run.py --backfill 20 --variants C,D,E  # nur diese Varianten nachrechnen
 
 Ablauf je Tag D (nur Daten, die zum jeweiligen Zeitpunkt bekannt waren):
   1. Watchlist vor dem Open: Tages-Setups des Scanners (20-Tage-Hoch, Bull Flag,
@@ -14,6 +15,9 @@ Ablauf je Tag D (nur Daten, die zum jeweiligen Zeitpunkt bekannt waren):
   2. ORB auf 5-Minuten-Bars von D: Range 9:30-9:45, Trigger = erster Schlusskurs
      ueber dem Range-Hoch zwischen 9:45 und 15:30. Variante B zusaetzlich:
      Trigger-Volumen >= 1,5x Range-Schnitt und SPY ueber seinem Tagesopen.
+     Varianten C-E (gleiche Watchlist, nur Long): C VWAP-Pullback, D Mean Reversion
+     (Bollinger 20/2,5 + RSI(2)), E Vortages-Hoch/-Tief (PDH-Ausbruch / PDL-Sweep).
+     Sie bringen ihren eigenen Stop mit (D auch das Ziel: SMA20). Details: find_*().
   3. Plan wie trader-exit: Stop Range-Mitte (abgerundet), Ziel 2R, flat 15:55.
   4. Groesse wie trader-budget: min(max. Verlust / Risiko, Positionslimit,
      max. Order, freies Cash). Max. 3 Einstiege am Tag, chronologisch.
@@ -54,7 +58,7 @@ def _load(folder, name):
 scan = _load("trader-scanner", "scan")
 
 TRADE_COLS = ["date", "variant", "symbol", "setups", "dollar_vol_prev", "or_high", "or_low", "trigger_time",
-              "volume_x", "entry", "stop", "target", "risk_ps", "shares", "notional", "exit_time", "exit_price",
+              "volume_x", "signal", "ref_level", "entry", "stop", "target", "risk_ps", "shares", "notional", "exit_time", "exit_price",
               "exit_reason", "gross_pnl", "costs", "net_pnl", "r_net", "tm_target_pct", "tm_stop_pct",
               "tm_neither_pct", "tm_avg_r", "tm_hist_avg_r", "tm_verdict", "data_note"]
 DAY_COLS = ["date", "variant", "watchlist", "with_data", "triggers", "taken", "skipped", "spy_open", "spy_close",
@@ -258,19 +262,193 @@ def find_trigger(bars, day, cfg, vcfg, spy):
             if sb is None or spy_open is None or sb["c"] <= spy_open:
                 continue
         return {"slot": k, "time": b["end"], "price": round(b["c"], 2), "or_high": round(oh, 2),
-                "or_low": round(ol, 2), "volume_x": round(vx, 2) if vx else None}, ""
+                "or_low": round(ol, 2), "volume_x": round(vx, 2) if vx else None, "signal": "orb"}, ""
     return None, "kein Trigger"
+
+
+# ---------------------------------------------------------------- further strategies (variants C, D, E)
+# All long only, on the same watchlist, same sizing, limits, costs and simulation as A/B.
+# A trigger of these carries its own "stop" (and for D its own "target"); see make_plan.
+
+def entry_window(day, cfg, vcfg):
+    s = scan.session(day)
+    close_dt = datetime.datetime.combine(day, s[1])
+    before = datetime.datetime.combine(day, hhmm(vcfg.get("no_entries_before", cfg["no_entries_before"])))
+    after = datetime.datetime.combine(day, hhmm(vcfg.get("no_entries_after", cfg["no_entries_after"])))
+    if s[1] != scan.CLOSE:
+        after = min(after, close_dt - datetime.timedelta(minutes=30))
+    return before, after
+
+
+def _seq(prev_bars, bars):
+    """Prior session + today as one 5-minute series; today's bars marked."""
+    seq = [dict(prev_bars[k], today=False) for k in sorted(prev_bars or {})]
+    return seq + [dict(bars[k], today=True) for k in sorted(bars)]
+
+
+def _vol_x(seq, i, n=20):
+    prior = [b["v"] for b in seq[max(0, i - n):i]]
+    if len(prior) < n or not sum(prior):
+        return None
+    return seq[i]["v"] / (sum(prior) / float(len(prior)))
+
+
+def _trig(b, price, stop, signal, ref, vx, target=None):
+    t = {"slot": b["slot"], "time": b["end"], "price": round(price, 2), "or_high": None, "or_low": None,
+         "volume_x": round(vx, 2) if vx else None, "signal": signal,
+         "ref_level": round(ref, 2) if ref is not None else None, "stop": stop}
+    if target is not None:
+        t["target"] = target
+    return t
+
+
+def find_vwap_pullback(bars, prev_bars, day, cfg, vcfg):
+    """C: in an up day (above the day's open, high of day stretched away from VWAP) the first
+    5-minute bar that dips to VWAP from above and closes green above it. Stop below the bar
+    low / VWAP, target 2R."""
+    if 0 not in bars:
+        return None, "Eroeffnungs-Bar fehlt"
+    before, after = entry_window(day, cfg, vcfg)
+    seq = _seq(prev_bars, bars)
+    day_open = bars[0]["o"]
+    touch = vcfg.get("touch_pct", 0.1) / 100.0
+    stretch_min = vcfg.get("min_stretch_pct", 0.5) / 100.0
+    buf = vcfg.get("stop_buffer_pct", 0.05) / 100.0
+    pv = vol = 0.0
+    hod = prev_c = prev_vwap = None
+    for i, b in enumerate(seq):
+        if not b["today"]:
+            continue
+        pv += (b["h"] + b["l"] + b["c"]) / 3.0 * b["v"]
+        vol += b["v"]
+        vwap = pv / vol if vol else None
+        if (vwap and hod is not None and prev_vwap and before <= b["end"] <= after
+                and prev_c > prev_vwap                       # was trading above VWAP
+                and hod >= vwap * (1 + stretch_min)          # had moved away from it: up day
+                and b["l"] <= vwap * (1 + touch)             # pulled back to it
+                and b["c"] > vwap and b["c"] > b["o"]        # held it, green bar
+                and b["c"] > day_open):
+            stop = floor_cent(min(b["l"], vwap) * (1 - buf))
+            return _trig(b, b["c"], stop, "vwap_pullback", vwap, _vol_x(seq, i)), ""
+        hod = b["h"] if hod is None else max(hod, b["h"])
+        prev_c, prev_vwap = b["c"], vwap
+    return None, "kein Trigger"
+
+
+def _rsi(closes, n):
+    """Wilder RSI, list aligned with closes (None until defined)."""
+    out = [None] * len(closes)
+    if len(closes) <= n:
+        return out
+    ch = [closes[i] - closes[i - 1] for i in range(1, len(closes))]
+    g = sum(max(x, 0) for x in ch[:n]) / n
+    lo = sum(max(-x, 0) for x in ch[:n]) / n
+    for i in range(n, len(closes)):
+        if i > n:
+            x = ch[i - 1]
+            g = (g * (n - 1) + max(x, 0)) / n
+            lo = (lo * (n - 1) + max(-x, 0)) / n
+        out[i] = 100.0 if lo == 0 else 100.0 - 100.0 / (1 + g / lo)
+    return out
+
+
+def find_mean_reversion(bars, prev_bars, day, cfg, vcfg):
+    """D: a 5-minute close below the lower Bollinger band (20, 2.5 sigma) with RSI(2) < 5, then
+    within 3 bars a close above that setup bar's high. Stop below the lowest low since the
+    setup, target the middle band (SMA20) at entry. Indicators run across the prior session."""
+    before, after = entry_window(day, cfg, vcfg)
+    seq = _seq(prev_bars, bars)
+    n, m = vcfg.get("bb_period", 20), vcfg.get("bb_std", 2.5)
+    rsi_max, confirm = vcfg.get("rsi_max", 5), vcfg.get("confirm_bars", 3)
+    buf = vcfg.get("stop_buffer_pct", 0.05) / 100.0
+    closes = [b["c"] for b in seq]
+    rsi = _rsi(closes, vcfg.get("rsi_period", 2))
+    setup = None
+    for i, b in enumerate(seq):
+        if i < n - 1 or not b["today"]:
+            continue
+        win = closes[i - n + 1:i + 1]
+        sma = sum(win) / n
+        sd = math.sqrt(sum((x - sma) ** 2 for x in win) / n)
+        if setup and i - setup[0] > confirm:
+            setup = None
+        if setup and b["c"] > setup[1]:
+            if not before <= b["end"] <= after:
+                setup = None  # confirmed outside the entry window: signal used up
+                continue
+            low = min(x["l"] for x in seq[setup[0]:i + 1])
+            stop = floor_cent(low * (1 - buf))
+            return _trig(b, b["c"], stop, "bb_rsi2", sma, _vol_x(seq, i), target=r2(sma)), ""
+        if sd and b["c"] < sma - m * sd and rsi[i] is not None and rsi[i] < rsi_max:
+            setup = (i, b["h"])
+    return None, "kein Trigger"
+
+
+def find_pdh_pdl(bars, prev_bars, day, cfg, vcfg):
+    """E: prior-day levels of the regular session. Whichever comes first:
+    - PDH breakout: day opened below PDH, a 5-minute close crosses above PDH with volume
+      >= 1.5x the last 20 bars. Stop below the breakout bar's low.
+    - PDL sweep reversal: day opened above PDL, price trades below PDL and within 6 bars
+      a close is back above PDL. Stop below the sweep low.
+    Target 2R for both. Long only."""
+    if not prev_bars:
+        return None, "Vortages-Bars fehlen"
+    if 0 not in bars:
+        return None, "Eroeffnungs-Bar fehlt"
+    before, after = entry_window(day, cfg, vcfg)
+    pdh = max(b["h"] for b in prev_bars.values())
+    pdl = min(b["l"] for b in prev_bars.values())
+    seq = _seq(prev_bars, bars)
+    day_open = bars[0]["o"]
+    vmin, max_bars = vcfg.get("breakout_volume_x", 1.5), vcfg.get("sweep_max_bars", 6)
+    buf = vcfg.get("stop_buffer_pct", 0.05) / 100.0
+    sweep = None  # (index, lowest low)
+    prev_c = None
+    for i, b in enumerate(seq):
+        if not b["today"]:
+            continue
+        ok = before <= b["end"] <= after
+        vx = _vol_x(seq, i)
+        if day_open < pdh and ok and b["c"] > pdh and (prev_c is None or prev_c <= pdh) and vx and vx >= vmin:
+            return _trig(b, b["c"], floor_cent(b["l"] * (1 - buf)), "pdh_breakout", pdh, vx), ""
+        if day_open > pdl:
+            if sweep and i - sweep[0] > max_bars:
+                sweep = None
+            if b["l"] < pdl:
+                sweep = (sweep[0], min(sweep[1], b["l"])) if sweep else (i, b["l"])
+            if sweep and b["c"] > pdl:
+                if ok:
+                    return _trig(b, b["c"], floor_cent(sweep[1] * (1 - buf)), "pdl_reclaim", pdl, vx), ""
+                sweep = None  # reclaimed outside the entry window: signal used up
+        prev_c = b["c"]
+    return None, "kein Trigger"
+
+
+STRATEGIES = {"vwap_pullback": find_vwap_pullback, "mean_reversion": find_mean_reversion,
+              "pdh_pdl": find_pdh_pdl}
+
+
+def find_any_trigger(bars, prev_bars, day, cfg, vcfg, spy):
+    strat = vcfg.get("strategy", "orb")
+    if strat == "orb":
+        return find_trigger(bars, day, cfg, vcfg, spy)
+    return STRATEGIES[strat](bars, prev_bars, day, cfg, vcfg)
 
 
 def make_plan(trig, cfg):
     entry = trig["price"]
-    stop = floor_cent((trig["or_high"] + trig["or_low"]) / 2.0)
+    if trig.get("stop") is not None:
+        stop = trig["stop"]
+    else:
+        stop = floor_cent((trig["or_high"] + trig["or_low"]) / 2.0)
     risk = round(entry - stop, 2)
     if risk <= 0:
         return None, "Stop nicht unter Einstieg"
     if risk < entry * cfg["min_risk_pct"] / 100.0:
         return None, "Stop zu eng"
-    target = r2(entry + cfg["target_r"] * risk)
+    target = trig["target"] if trig.get("target") is not None else r2(entry + cfg["target_r"] * risk)
+    if target <= entry:
+        return None, "Ziel nicht ueber Einstieg"
     if (target - entry) / risk < cfg["min_reward_risk"] - 1e-9:
         return None, "CRV unter Minimum"
     return {"entry": entry, "stop": stop, "target": target, "risk": risk}, ""
@@ -355,11 +533,16 @@ def tm_fields(doc):
             "tm_hist_avg_r": hist.get("avg_R_net"), "tm_verdict": (doc.get("verdict") or "")[:200]}
 
 
-def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache):
-    log("%s: Watchlist ..." % day.isoformat())
-    wl, n_cands = build_watchlist(day, symbols, spark, data, cfg)
+def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
+    if frozen:
+        log("%s: Watchlist aus dem Log (eingefroren) ..." % day.isoformat())
+        wl, n_cands = frozen["watchlist"], frozen.get("setup_candidates")
+    else:
+        log("%s: Watchlist ..." % day.isoformat())
+        wl, n_cands = build_watchlist(day, symbols, spark, data, cfg)
     spy = day_bars(data.chart("SPY", "60d", "5m"), day)
-    bars_by = {}
+    prev = prev_trading_day(day)
+    bars_by, prev_by = {}, {}
     missing = []
     for w in wl:
         ch = data.chart(w["symbol"], "60d", "5m")
@@ -367,6 +550,7 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache):
         if not b:
             missing.append(w["symbol"])
         bars_by[w["symbol"]] = b
+        prev_by[w["symbol"]] = day_bars(ch, prev) if "error" not in ch else {}
     trades, days, detail = [], [], {"date": day.isoformat(), "setup_candidates": n_cands,
                                     "watchlist": wl, "missing_5m": missing, "variants": {}}
     spy_o = spy[0]["o"] if 0 in spy else None
@@ -377,7 +561,7 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache):
             b = bars_by[w["symbol"]]
             if not b:
                 continue
-            trig, why = find_trigger(b, day, cfg, vcfg, spy)
+            trig, why = find_any_trigger(b, prev_by[w["symbol"]], day, cfg, vcfg, spy)
             if trig:
                 cands.append((trig["time"], -w["dollar_vol_prev"], w, trig))
         cands.sort(key=lambda x: (x[0], x[1]))
@@ -411,7 +595,8 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache):
             costs = gross - net
             row = {"date": day.isoformat(), "variant": vname, "symbol": sym, "setups": "+".join(w["setups"]),
                    "dollar_vol_prev": w["dollar_vol_prev"], "or_high": trig["or_high"], "or_low": trig["or_low"],
-                   "trigger_time": label(trig["time"]), "volume_x": trig["volume_x"], "entry": plan["entry"],
+                   "trigger_time": label(trig["time"]), "volume_x": trig["volume_x"],
+                   "signal": trig.get("signal"), "ref_level": trig.get("ref_level"), "entry": plan["entry"],
                    "stop": plan["stop"], "target": plan["target"], "risk_ps": plan["risk"], "shares": n,
                    "notional": round(n * plan["entry"], 2), "exit_time": label(exit_t), "exit_price": round(px, 2),
                    "exit_reason": reason, "gross_pnl": round(gross, 2), "costs": round(costs, 2),
@@ -435,7 +620,8 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache):
                      "net_pnl": round(sum(t["net_pnl"] for t in taken), 2),
                      "note": ("5m-Daten fehlen: " + ",".join(missing)) if missing else ""})
         detail["variants"][vname] = {"triggers": [{"symbol": x[2]["symbol"], "time": label(x[0]),
-                                                   "price": x[3]["price"]} for x in cands],
+                                                   "price": x[3]["price"], "signal": x[3].get("signal")}
+                                                  for x in cands],
                                      "taken": taken, "skipped": skipped}
     return trades, days, detail
 
@@ -458,8 +644,8 @@ def write_csv(path, cols, rows):
             w.writerow({k: ("" if r.get(k) is None else r.get(k)) for k in cols})
 
 
-def merge(path, cols, new_rows, dates, sort_key):
-    keep = [r for r in read_csv(path) if r["date"] not in dates]
+def merge(path, cols, new_rows, dates, sort_key, variants=None):
+    keep = [r for r in read_csv(path) if r["date"] not in dates or (variants and r["variant"] not in variants)]
     rows = keep + new_rows
     rows.sort(key=sort_key)
     write_csv(path, cols, rows)
@@ -473,10 +659,20 @@ def main(argv=None):
     p.add_argument("--config", default=os.path.join(HERE, "config.json"))
     p.add_argument("--cache", help="Cache-Ordner (Default forwardtest/.cache/<heute>)")
     p.add_argument("--limit-universe", type=int, help="nur fuer Tests: erste N Symbole")
+    p.add_argument("--variants", help="nur diese Varianten neu rechnen, z.B. C,D,E. Andere Varianten im "
+                   "Journal bleiben unberuehrt; liegt fuer den Tag ein Log vor, wird dessen Watchlist genutzt")
     a = p.parse_args(argv)
 
     with open(a.config, encoding="utf-8") as fh:
         cfg = json.load(fh)
+    only = None
+    if a.variants:
+        only = {v.strip() for v in a.variants.split(",") if v.strip()}
+        unknown = only - set(cfg["variants"])
+        if unknown:
+            log("Unbekannte Variante(n): %s" % ",".join(sorted(unknown)))
+            return 1
+        cfg["variants"] = {k: v for k, v in cfg["variants"].items() if k in only}
     now = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
     end = datetime.date.fromisoformat(a.date) if a.date else last_completed_session(now)
     if not scan.trading_day(end)[0]:
@@ -504,20 +700,29 @@ def main(argv=None):
                                                                pre["prefilter_min_volume"]))
     all_trades, all_days, tm_cache = [], [], {}
     for d in days:
-        tr, dy, detail = run_day(d, data, symbols, sp, cfg, not a.no_tm and cfg["timemachine"]["enabled"], tm_cache)
+        log_path = os.path.join(HERE, "logs", d.isoformat() + ".json")
+        old = None
+        if only and os.path.exists(log_path):
+            with open(log_path, encoding="utf-8") as fh:
+                old = json.load(fh)
+        tr, dy, detail = run_day(d, data, symbols, sp, cfg, not a.no_tm and cfg["timemachine"]["enabled"], tm_cache,
+                                 frozen=old)
         all_trades += tr
         all_days += dy
+        if old:
+            old.setdefault("variants", {}).update(detail["variants"])
+            detail = old
         os.makedirs(os.path.join(HERE, "logs"), exist_ok=True)
-        with open(os.path.join(HERE, "logs", d.isoformat() + ".json"), "w", encoding="utf-8") as fh:
+        with open(log_path, "w", encoding="utf-8") as fh:
             json.dump(detail, fh, indent=1, default=str)
         for v in dy:
             log("  %s %s: Watchlist %d, Trigger %d, Trades %d, netto %+.2f" % (
                 d, v["variant"], v["watchlist"], v["triggers"], v["taken"], v["net_pnl"]))
     dates = {d.isoformat() for d in days}
     merge(os.path.join(HERE, "journal", "trades.csv"), TRADE_COLS, all_trades, dates,
-          lambda r: (r["date"], r["variant"], r["trigger_time"], r["symbol"]))
+          lambda r: (r["date"], r["variant"], r["trigger_time"], r["symbol"]), only)
     merge(os.path.join(HERE, "journal", "days.csv"), DAY_COLS, all_days, dates,
-          lambda r: (r["date"], r["variant"]))
+          lambda r: (r["date"], r["variant"]), only)
     log("Fertig in %.0f s: %d Tage, %d Trades." % (time.time() - t0, len(days), len(all_trades)))
     return 0
 

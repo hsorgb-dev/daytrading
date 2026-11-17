@@ -525,6 +525,462 @@
    "triggers": [],
    "taken": [],
    "skipped": []
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "NVDA",
+     "time": "10:00",
+     "price": 193.41,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "INTC",
+     "time": "10:00",
+     "price": 56.25,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NBIS",
+     "time": "10:00",
+     "price": 132.58,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "LITE",
+     "time": "10:00",
+     "price": 553.85,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "IREN",
+     "time": "10:00",
+     "price": 21.55,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AMD",
+     "time": "10:15",
+     "price": 449.5,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "HOOD",
+     "time": "10:15",
+     "price": 80.25,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "U",
+     "time": "10:20",
+     "price": 51.19,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "11:00",
+     "price": 287.87,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COHR",
+     "time": "11:25",
+     "price": 192.67,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "11:35",
+     "price": 287.05,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "12:25",
+     "price": 161.56,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COST",
+     "time": "14:20",
+     "price": 1057.34,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-06",
+     "variant": "C",
+     "symbol": "NVDA",
+     "setups": "oversold",
+     "dollar_vol_prev": 55592810348,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.59,
+     "signal": "vwap_pullback",
+     "ref_level": 192.55,
+     "entry": 193.41,
+     "stop": 192.05,
+     "target": 196.13,
+     "risk_ps": 1.36,
+     "shares": 38,
+     "notional": 7349.58,
+     "exit_time": "10:10",
+     "exit_price": 192.05,
+     "exit_reason": "stop",
+     "gross_pnl": -51.68,
+     "costs": 9.32,
+     "net_pnl": -61.0,
+     "r_net": -1.18,
+     "data_note": "",
+     "tm_target_pct": 16.5,
+     "tm_stop_pct": 64.3,
+     "tm_neither_pct": 19.2,
+     "tm_avg_r": -0.257,
+     "tm_hist_avg_r": -0.325,
+     "tm_verdict": "Leans toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 20 % (target first 16.5 % vs stop first 64.3 %)."
+    },
+    {
+     "date": "2026-11-06",
+     "variant": "C",
+     "symbol": "INTC",
+     "setups": "oversold",
+     "dollar_vol_prev": 14122704750,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.49,
+     "signal": "vwap_pullback",
+     "ref_level": 55.63,
+     "entry": 56.25,
+     "stop": 55.51,
+     "target": 57.73,
+     "risk_ps": 0.74,
+     "shares": 29,
+     "notional": 1631.25,
+     "exit_time": "10:10",
+     "exit_price": 55.51,
+     "exit_reason": "stop",
+     "gross_pnl": -21.46,
+     "costs": 3.62,
+     "net_pnl": -25.08,
+     "r_net": -1.169,
+     "data_note": "",
+     "tm_target_pct": 22.7,
+     "tm_stop_pct": 56.4,
+     "tm_neither_pct": 20.9,
+     "tm_avg_r": -0.044,
+     "tm_hist_avg_r": 0.142,
+     "tm_verdict": "No clear lean, within the noise of 52 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 29 % (target first 22.7 % vs stop first 56.4 %)."
+    },
+    {
+     "date": "2026-11-06",
+     "variant": "C",
+     "symbol": "AMD",
+     "setups": "oversold",
+     "dollar_vol_prev": 28808404125,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:15",
+     "volume_x": 0.69,
+     "signal": "vwap_pullback",
+     "ref_level": 447.17,
+     "entry": 449.5,
+     "stop": 444.87,
+     "target": 458.76,
+     "risk_ps": 4.63,
+     "shares": 16,
+     "notional": 7192.0,
+     "exit_time": "10:20",
+     "exit_price": 444.87,
+     "exit_reason": "stop",
+     "gross_pnl": -74.08,
+     "costs": 9.15,
+     "net_pnl": -83.23,
+     "r_net": -1.124,
+     "data_note": "",
+     "tm_target_pct": 15.5,
+     "tm_stop_pct": 61.8,
+     "tm_neither_pct": 22.7,
+     "tm_avg_r": -0.195,
+     "tm_hist_avg_r": 0.058,
+     "tm_verdict": "No clear lean, within the noise of 17 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 20 % (target first 15.5 % vs stop first 61.8 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "NBIS",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "LITE",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "IREN",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "HOOD",
+     "time": "10:15",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "U",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "11:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COHR",
+     "time": "11:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "11:35",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "12:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COST",
+     "time": "14:20",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "AMD",
+     "time": "13:00",
+     "price": 438.11,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "MRVL",
+     "time": "13:00",
+     "price": 137.04,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "NBIS",
+     "time": "13:00",
+     "price": 125.97,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "DELL",
+     "time": "13:00",
+     "price": 328.95,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "13:00",
+     "price": 44.39,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "IREN",
+     "time": "13:00",
+     "price": 20.85,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "U",
+     "time": "14:40",
+     "price": 52.22,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-06",
+     "variant": "D",
+     "symbol": "DELL",
+     "setups": "oversold",
+     "dollar_vol_prev": 4508646931,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "13:00",
+     "volume_x": 1.47,
+     "signal": "bb_rsi2",
+     "ref_level": 332.98,
+     "entry": 328.95,
+     "stop": 324.93,
+     "target": 332.98,
+     "risk_ps": 4.02,
+     "shares": 22,
+     "notional": 7236.9,
+     "exit_time": "15:15",
+     "exit_price": 332.98,
+     "exit_reason": "target",
+     "gross_pnl": 88.66,
+     "costs": 5.62,
+     "net_pnl": 83.04,
+     "r_net": 0.939,
+     "data_note": "",
+     "tm_target_pct": 21.0,
+     "tm_stop_pct": 30.3,
+     "tm_neither_pct": 48.7,
+     "tm_avg_r": -0.155,
+     "tm_hist_avg_r": -0.234,
+     "tm_verdict": "No clear lean, within the noise of 20 days: at 1R after costs the target has to come first in 50 % of the replays that hit one side; it did in 41 % (target first 21.0 % vs stop first 30.3 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "AMD",
+     "time": "13:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "MRVL",
+     "time": "13:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "NBIS",
+     "time": "13:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "13:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "IREN",
+     "time": "13:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "U",
+     "time": "14:40",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "NOW",
+     "time": "09:45",
+     "price": 101.86,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "WDC",
+     "time": "10:50",
+     "price": 266.58,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "STX",
+     "time": "10:50",
+     "price": 463.41,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "INTC",
+     "time": "13:55",
+     "price": 56.99,
+     "signal": "pdh_breakout"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-06",
+     "variant": "E",
+     "symbol": "NOW",
+     "setups": "oversold",
+     "dollar_vol_prev": 2566973859,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 0.71,
+     "signal": "pdl_reclaim",
+     "ref_level": 101.8,
+     "entry": 101.86,
+     "stop": 100.49,
+     "target": 104.6,
+     "risk_ps": 1.37,
+     "shares": 72,
+     "notional": 7333.92,
+     "exit_time": "15:55",
+     "exit_price": 101.59,
+     "exit_reason": "flat",
+     "gross_pnl": -19.44,
+     "costs": 9.32,
+     "net_pnl": -28.76,
+     "r_net": -0.292,
+     "data_note": "",
+     "tm_target_pct": 14.0,
+     "tm_stop_pct": 56.8,
+     "tm_neither_pct": 29.2,
+     "tm_avg_r": -0.185,
+     "tm_hist_avg_r": -0.004,
+     "tm_verdict": "Leans toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 20 % (target first 14.0 % vs stop first 56.8 %)."
+    },
+    {
+     "date": "2026-11-06",
+     "variant": "E",
+     "symbol": "WDC",
+     "setups": "oversold",
+     "dollar_vol_prev": 4910850012,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:50",
+     "volume_x": 0.32,
+     "signal": "pdl_reclaim",
+     "ref_level": 265.0,
+     "entry": 266.58,
+     "stop": 258.49,
+     "target": 282.76,
+     "risk_ps": 8.09,
+     "shares": 6,
+     "notional": 1599.48,
+     "exit_time": "15:55",
+     "exit_price": 264.32,
+     "exit_reason": "flat",
+     "gross_pnl": -13.56,
+     "costs": 3.59,
+     "net_pnl": -17.15,
+     "r_net": -0.353,
+     "data_note": "",
+     "tm_target_pct": 0.0,
+     "tm_stop_pct": 14.4,
+     "tm_neither_pct": 85.6,
+     "tm_avg_r": -0.139,
+     "tm_hist_avg_r": -0.137,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 14.4 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "STX",
+     "time": "10:50",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "INTC",
+     "time": "13:55",
+     "why": "Order unter Minimum"
+    }
+   ]
   }
  }
 }

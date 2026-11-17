@@ -510,6 +510,450 @@
    "triggers": [],
    "taken": [],
    "skipped": []
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "INTC",
+     "time": "10:00",
+     "price": 60.79,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "ORCL",
+     "time": "10:00",
+     "price": 125.27,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SKHY",
+     "time": "10:00",
+     "price": 137.48,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:00",
+     "price": 386.05,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "RKLB",
+     "time": "10:00",
+     "price": 65.66,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:10",
+     "price": 1447.68,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COST",
+     "time": "10:15",
+     "price": 1098.66,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "TSM",
+     "time": "10:20",
+     "price": 406.05,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:25",
+     "price": 157.66,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "BE",
+     "time": "10:40",
+     "price": 199.69,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "MPWR",
+     "time": "10:55",
+     "price": 1443.88,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "TSLA",
+     "time": "11:25",
+     "price": 392.36,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "ADI",
+     "time": "11:50",
+     "price": 410.14,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NOW",
+     "time": "11:50",
+     "price": 101.47,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NXPI",
+     "time": "12:50",
+     "price": 267.72,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-12",
+     "variant": "C",
+     "symbol": "INTC",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 8324431250,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 1.05,
+     "signal": "vwap_pullback",
+     "ref_level": 60.47,
+     "entry": 60.79,
+     "stop": 60.18,
+     "target": 62.01,
+     "risk_ps": 0.61,
+     "shares": 123,
+     "notional": 7477.17,
+     "exit_time": "10:10",
+     "exit_price": 60.18,
+     "exit_reason": "stop",
+     "gross_pnl": -75.03,
+     "costs": 9.44,
+     "net_pnl": -84.47,
+     "r_net": -1.126,
+     "data_note": "",
+     "tm_target_pct": 30.9,
+     "tm_stop_pct": 62.7,
+     "tm_neither_pct": 6.3,
+     "tm_avg_r": -0.01,
+     "tm_hist_avg_r": -0.041,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 33 % (target first 30.9 % vs stop first 62.7 %)."
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "C",
+     "symbol": "ORCL",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 4980656345,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.62,
+     "signal": "vwap_pullback",
+     "ref_level": 124.82,
+     "entry": 125.27,
+     "stop": 124.64,
+     "target": 126.53,
+     "risk_ps": 0.63,
+     "shares": 12,
+     "notional": 1503.24,
+     "exit_time": "10:05",
+     "exit_price": 124.64,
+     "exit_reason": "stop",
+     "gross_pnl": -7.56,
+     "costs": 3.5,
+     "net_pnl": -11.06,
+     "r_net": -1.463,
+     "data_note": "",
+     "tm_target_pct": 32.5,
+     "tm_stop_pct": 67.4,
+     "tm_neither_pct": 0.1,
+     "tm_avg_r": -0.056,
+     "tm_hist_avg_r": 0.094,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 33 % (target first 32.5 % vs stop first 67.4 %)."
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "C",
+     "symbol": "LLY",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2691613056,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:10",
+     "volume_x": 1.12,
+     "signal": "vwap_pullback",
+     "ref_level": 1444.63,
+     "entry": 1447.68,
+     "stop": 1442.73,
+     "target": 1457.58,
+     "risk_ps": 4.95,
+     "shares": 5,
+     "notional": 7238.4,
+     "exit_time": "10:15",
+     "exit_price": 1442.73,
+     "exit_reason": "stop",
+     "gross_pnl": -24.75,
+     "costs": 9.23,
+     "net_pnl": -33.98,
+     "r_net": -1.373,
+     "data_note": "",
+     "tm_target_pct": 34.1,
+     "tm_stop_pct": 65.7,
+     "tm_neither_pct": 0.2,
+     "tm_avg_r": 0.022,
+     "tm_hist_avg_r": -0.327,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 34 % (target first 34.1 % vs stop first 65.7 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "SKHY",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "RKLB",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "COST",
+     "time": "10:15",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "TSM",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BE",
+     "time": "10:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MPWR",
+     "time": "10:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "TSLA",
+     "time": "11:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ADI",
+     "time": "11:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NOW",
+     "time": "11:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NXPI",
+     "time": "12:50",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "NXPI",
+     "time": "10:20",
+     "price": 267.01,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "PEP",
+     "time": "15:20",
+     "price": 142.76,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [],
+   "skipped": [
+    {
+     "symbol": "NXPI",
+     "time": "10:20",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "PEP",
+     "time": "15:20",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "HUM",
+     "time": "09:50",
+     "price": 439.71,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "GE",
+     "time": "10:10",
+     "price": 337.15,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "TTWO",
+     "time": "11:00",
+     "price": 225.34,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "MCD",
+     "time": "12:50",
+     "price": 274.53,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "NOW",
+     "time": "15:20",
+     "price": 100.52,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "TSLA",
+     "time": "15:25",
+     "price": 398.75,
+     "signal": "pdh_breakout"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-12",
+     "variant": "E",
+     "symbol": "HUM",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1115864256,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:50",
+     "volume_x": 0.37,
+     "signal": "pdl_reclaim",
+     "ref_level": 439.23,
+     "entry": 439.71,
+     "stop": 436.78,
+     "target": 445.57,
+     "risk_ps": 2.93,
+     "shares": 17,
+     "notional": 7475.07,
+     "exit_time": "10:15",
+     "exit_price": 436.78,
+     "exit_reason": "stop",
+     "gross_pnl": -49.81,
+     "costs": 9.45,
+     "net_pnl": -59.26,
+     "r_net": -1.19,
+     "data_note": "",
+     "tm_target_pct": 29.3,
+     "tm_stop_pct": 69.6,
+     "tm_neither_pct": 1.1,
+     "tm_avg_r": -0.118,
+     "tm_hist_avg_r": -0.076,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 30 % (target first 29.3 % vs stop first 69.6 %)."
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "E",
+     "symbol": "GE",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1161168450,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:10",
+     "volume_x": 0.87,
+     "signal": "pdl_reclaim",
+     "ref_level": 336.78,
+     "entry": 337.15,
+     "stop": 335.62,
+     "target": 340.21,
+     "risk_ps": 1.53,
+     "shares": 4,
+     "notional": 1348.6,
+     "exit_time": "10:50",
+     "exit_price": 340.21,
+     "exit_reason": "target",
+     "gross_pnl": 12.24,
+     "costs": 2.67,
+     "net_pnl": 9.57,
+     "r_net": 1.563,
+     "data_note": "",
+     "tm_target_pct": 35.0,
+     "tm_stop_pct": 60.6,
+     "tm_neither_pct": 4.4,
+     "tm_avg_r": 0.104,
+     "tm_hist_avg_r": 0.285,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 37 % (target first 35.0 % vs stop first 60.6 %)."
+    },
+    {
+     "date": "2026-11-12",
+     "variant": "E",
+     "symbol": "TTWO",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1228649314,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "11:00",
+     "volume_x": 0.53,
+     "signal": "pdl_reclaim",
+     "ref_level": 225.21,
+     "entry": 225.34,
+     "stop": 223.15,
+     "target": 229.72,
+     "risk_ps": 2.19,
+     "shares": 33,
+     "notional": 7436.22,
+     "exit_time": "13:40",
+     "exit_price": 229.72,
+     "exit_reason": "target",
+     "gross_pnl": 144.54,
+     "costs": 5.72,
+     "net_pnl": 138.82,
+     "r_net": 1.921,
+     "data_note": "",
+     "tm_target_pct": 10.0,
+     "tm_stop_pct": 37.4,
+     "tm_neither_pct": 52.6,
+     "tm_avg_r": -0.04,
+     "tm_hist_avg_r": -0.036,
+     "tm_verdict": "No clear lean, within the noise of 22 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 21 % (target first 10.0 % vs stop first 37.4 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "MCD",
+     "time": "12:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NOW",
+     "time": "15:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "TSLA",
+     "time": "15:25",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }

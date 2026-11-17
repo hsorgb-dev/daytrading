@@ -758,6 +758,465 @@
      "why": "0 Stueck (Cash/Limit)"
     }
    ]
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "CCI",
+     "time": "10:05",
+     "price": 88.11,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "HWM",
+     "time": "10:05",
+     "price": 188.55,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GE",
+     "time": "10:10",
+     "price": 287.77,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AMT",
+     "time": "10:10",
+     "price": 190.35,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "FIX",
+     "time": "10:10",
+     "price": 1227.82,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:10",
+     "price": 51.29,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "IREN",
+     "time": "10:10",
+     "price": 24.41,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "XOM",
+     "time": "10:15",
+     "price": 183.16,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GEV",
+     "time": "10:20",
+     "price": 836.01,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:20",
+     "price": 383.4,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "CAT",
+     "time": "10:20",
+     "price": 689.0,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:20",
+     "price": 149.38,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "VRT",
+     "time": "10:20",
+     "price": 198.41,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COHR",
+     "time": "10:20",
+     "price": 213.9,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "TXN",
+     "time": "10:50",
+     "price": 288.93,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "ISRG",
+     "time": "10:50",
+     "price": 455.7,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "IBM",
+     "time": "11:10",
+     "price": 254.8,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COP",
+     "time": "11:25",
+     "price": 150.64,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "CVX",
+     "time": "11:30",
+     "price": 232.63,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "CRWD",
+     "time": "12:15",
+     "price": 260.3,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "C",
+     "symbol": "CCI",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1489180958,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 0.72,
+     "signal": "vwap_pullback",
+     "ref_level": 88.08,
+     "entry": 88.11,
+     "stop": 87.97,
+     "target": 88.39,
+     "risk_ps": 0.14,
+     "shares": 85,
+     "notional": 7489.35,
+     "exit_time": "10:15",
+     "exit_price": 88.39,
+     "exit_reason": "target",
+     "gross_pnl": 23.8,
+     "costs": 5.74,
+     "net_pnl": 18.06,
+     "r_net": 1.517,
+     "data_note": "",
+     "tm_target_pct": 30.1,
+     "tm_stop_pct": 69.9,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": -0.243,
+     "tm_hist_avg_r": -0.382,
+     "tm_verdict": "Leans toward the stop: at 2R after costs the target has to come first in 38 % of the replays that hit one side; it did in 30 % (target first 30.1 % vs stop first 69.9 %)."
+    },
+    {
+     "date": "2026-10-26",
+     "variant": "C",
+     "symbol": "HWM",
+     "setups": "oversold",
+     "dollar_vol_prev": 1122506011,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 0.61,
+     "signal": "vwap_pullback",
+     "ref_level": 187.15,
+     "entry": 188.55,
+     "stop": 187.05,
+     "target": 191.55,
+     "risk_ps": 1.5,
+     "shares": 8,
+     "notional": 1508.4,
+     "exit_time": "10:45",
+     "exit_price": 191.55,
+     "exit_reason": "target",
+     "gross_pnl": 24.0,
+     "costs": 2.75,
+     "net_pnl": 21.25,
+     "r_net": 1.77,
+     "data_note": "",
+     "tm_target_pct": 22.0,
+     "tm_stop_pct": 57.8,
+     "tm_neither_pct": 20.2,
+     "tm_avg_r": -0.048,
+     "tm_hist_avg_r": -0.039,
+     "tm_verdict": "No clear lean, within the noise of 43 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 28 % (target first 22.0 % vs stop first 57.8 %)."
+    },
+    {
+     "date": "2026-10-26",
+     "variant": "C",
+     "symbol": "XOM",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2110157894,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:15",
+     "volume_x": 0.95,
+     "signal": "vwap_pullback",
+     "ref_level": 183.0,
+     "entry": 183.16,
+     "stop": 182.9,
+     "target": 183.68,
+     "risk_ps": 0.26,
+     "shares": 40,
+     "notional": 7326.4,
+     "exit_time": "10:20",
+     "exit_price": 182.9,
+     "exit_reason": "stop",
+     "gross_pnl": -10.4,
+     "costs": 9.32,
+     "net_pnl": -19.72,
+     "r_net": -1.896,
+     "data_note": "",
+     "tm_target_pct": 34.9,
+     "tm_stop_pct": 65.1,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": -0.029,
+     "tm_hist_avg_r": -0.358,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 36 % of the replays that hit one side; it did in 35 % (target first 34.9 % vs stop first 65.1 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "GE",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "AMT",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "FIX",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "IREN",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GEV",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CAT",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "VRT",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COHR",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "TXN",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ISRG",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "IBM",
+     "time": "11:10",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COP",
+     "time": "11:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CVX",
+     "time": "11:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CRWD",
+     "time": "12:15",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "COP",
+     "time": "09:45",
+     "price": 150.95,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "09:50",
+     "price": 53.32,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "SLB",
+     "time": "09:55",
+     "price": 52.3,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "LRCX",
+     "time": "13:00",
+     "price": 238.31,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "AMT",
+     "time": "13:05",
+     "price": 190.0,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [],
+   "skipped": [
+    {
+     "symbol": "COP",
+     "time": "09:45",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "09:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "SLB",
+     "time": "09:55",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "LRCX",
+     "time": "13:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "AMT",
+     "time": "13:05",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "SPOT",
+     "time": "09:45",
+     "price": 572.66,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "CAT",
+     "time": "10:05",
+     "price": 684.07,
+     "signal": "pdl_reclaim"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "E",
+     "symbol": "SPOT",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1447872353,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 0.46,
+     "signal": "pdl_reclaim",
+     "ref_level": 571.94,
+     "entry": 572.66,
+     "stop": 570.27,
+     "target": 577.44,
+     "risk_ps": 2.39,
+     "shares": 13,
+     "notional": 7444.58,
+     "exit_time": "09:50",
+     "exit_price": 570.27,
+     "exit_reason": "stop",
+     "gross_pnl": -31.07,
+     "costs": 9.43,
+     "net_pnl": -40.5,
+     "r_net": -1.303,
+     "data_note": "",
+     "tm_target_pct": 34.8,
+     "tm_stop_pct": 65.1,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": 0.037,
+     "tm_hist_avg_r": -0.031,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 35 % (target first 34.8 % vs stop first 65.1 %)."
+    },
+    {
+     "date": "2026-10-26",
+     "variant": "E",
+     "symbol": "CAT",
+     "setups": "oversold",
+     "dollar_vol_prev": 2072816400,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 0.92,
+     "signal": "pdl_reclaim",
+     "ref_level": 681.23,
+     "entry": 684.07,
+     "stop": 679.27,
+     "target": 693.67,
+     "risk_ps": 4.8,
+     "shares": 10,
+     "notional": 6840.7,
+     "exit_time": "11:05",
+     "exit_price": 693.67,
+     "exit_reason": "target",
+     "gross_pnl": 96.0,
+     "costs": 5.42,
+     "net_pnl": 90.58,
+     "r_net": 1.887,
+     "data_note": "",
+     "tm_target_pct": 24.6,
+     "tm_stop_pct": 58.1,
+     "tm_neither_pct": 17.3,
+     "tm_avg_r": -0.006,
+     "tm_hist_avg_r": -0.123,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 30 % (target first 24.6 % vs stop first 58.1 %)."
+    }
+   ],
+   "skipped": []
   }
  }
 }

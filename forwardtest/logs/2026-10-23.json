@@ -527,6 +527,551 @@
     }
    ],
    "skipped": []
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "IREN",
+     "time": "10:00",
+     "price": 26.0,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "VRT",
+     "time": "10:05",
+     "price": 191.63,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "LRCX",
+     "time": "10:10",
+     "price": 227.3,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:10",
+     "price": 376.77,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:40",
+     "price": 148.67,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:50",
+     "price": 251.35,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NOW",
+     "time": "11:00",
+     "price": 156.57,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "12:05",
+     "price": 55.23,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COHR",
+     "time": "12:30",
+     "price": 212.49,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SHOP",
+     "time": "12:35",
+     "price": 168.99,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "C",
+     "symbol": "IREN",
+     "setups": "oversold",
+     "dollar_vol_prev": 1702815474,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.87,
+     "signal": "vwap_pullback",
+     "ref_level": 25.75,
+     "entry": 26.0,
+     "stop": 25.69,
+     "target": 26.62,
+     "risk_ps": 0.31,
+     "shares": 288,
+     "notional": 7488.0,
+     "exit_time": "10:15",
+     "exit_price": 25.69,
+     "exit_reason": "stop",
+     "gross_pnl": -89.28,
+     "costs": 10.32,
+     "net_pnl": -99.6,
+     "r_net": -1.116,
+     "data_note": "",
+     "tm_target_pct": 32.8,
+     "tm_stop_pct": 63.3,
+     "tm_neither_pct": 3.9,
+     "tm_avg_r": -0.025,
+     "tm_hist_avg_r": -0.368,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 34 % (target first 32.8 % vs stop first 63.3 %)."
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "C",
+     "symbol": "VRT",
+     "setups": "oversold",
+     "dollar_vol_prev": 1649645147,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 0.69,
+     "signal": "vwap_pullback",
+     "ref_level": 190.63,
+     "entry": 191.63,
+     "stop": 190.46,
+     "target": 193.97,
+     "risk_ps": 1.17,
+     "shares": 7,
+     "notional": 1341.41,
+     "exit_time": "10:40",
+     "exit_price": 193.97,
+     "exit_reason": "target",
+     "gross_pnl": 16.38,
+     "costs": 2.67,
+     "net_pnl": 13.71,
+     "r_net": 1.674,
+     "data_note": "",
+     "tm_target_pct": 35.0,
+     "tm_stop_pct": 64.3,
+     "tm_neither_pct": 0.7,
+     "tm_avg_r": 0.043,
+     "tm_hist_avg_r": -0.079,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 35 % (target first 35.0 % vs stop first 64.3 %)."
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "C",
+     "symbol": "KLAC",
+     "setups": "oversold",
+     "dollar_vol_prev": 3066097719,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:40",
+     "volume_x": 0.36,
+     "signal": "vwap_pullback",
+     "ref_level": 147.36,
+     "entry": 148.67,
+     "stop": 147.21,
+     "target": 151.59,
+     "risk_ps": 1.46,
+     "shares": 50,
+     "notional": 7433.5,
+     "exit_time": "13:00",
+     "exit_price": 147.21,
+     "exit_reason": "stop",
+     "gross_pnl": -73.0,
+     "costs": 9.4,
+     "net_pnl": -82.4,
+     "r_net": -1.129,
+     "data_note": "",
+     "tm_target_pct": 18.7,
+     "tm_stop_pct": 46.2,
+     "tm_neither_pct": 35.1,
+     "tm_avg_r": 0.088,
+     "tm_hist_avg_r": 0.043,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 29 % (target first 18.7 % vs stop first 46.2 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "LRCX",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NOW",
+     "time": "11:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "12:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COHR",
+     "time": "12:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SHOP",
+     "time": "12:35",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "CAT",
+     "time": "09:45",
+     "price": 689.49,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "VRT",
+     "time": "09:45",
+     "price": 192.04,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "CRM",
+     "time": "09:55",
+     "price": 246.19,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "ADBE",
+     "time": "09:55",
+     "price": 269.1,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "INTU",
+     "time": "09:55",
+     "price": 350.5,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "LRCX",
+     "time": "14:50",
+     "price": 230.14,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "D",
+     "symbol": "CAT",
+     "setups": "oversold",
+     "dollar_vol_prev": 2176570537,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 1.19,
+     "signal": "bb_rsi2",
+     "ref_level": 699.62,
+     "entry": 689.49,
+     "stop": 682.65,
+     "target": 699.62,
+     "risk_ps": 6.84,
+     "shares": 10,
+     "notional": 6894.9,
+     "exit_time": "10:00",
+     "exit_price": 682.65,
+     "exit_reason": "stop",
+     "gross_pnl": -68.4,
+     "costs": 8.86,
+     "net_pnl": -77.26,
+     "r_net": -1.13,
+     "data_note": "",
+     "tm_target_pct": 25.8,
+     "tm_stop_pct": 53.0,
+     "tm_neither_pct": 21.3,
+     "tm_avg_r": -0.099,
+     "tm_hist_avg_r": -0.176,
+     "tm_verdict": "No clear lean, within the noise of 42 days: at 1.48R after costs the target has to come first in 40 % of the replays that hit one side; it did in 33 % (target first 25.8 % vs stop first 53.0 %)."
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "D",
+     "symbol": "INTU",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1708914451,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:55",
+     "volume_x": 0.62,
+     "signal": "bb_rsi2",
+     "ref_level": 354.66,
+     "entry": 350.5,
+     "stop": 347.57,
+     "target": 354.66,
+     "risk_ps": 2.93,
+     "shares": 6,
+     "notional": 2103.0,
+     "exit_time": "10:20",
+     "exit_price": 347.57,
+     "exit_reason": "stop",
+     "gross_pnl": -17.58,
+     "costs": 4.09,
+     "net_pnl": -21.67,
+     "r_net": -1.233,
+     "data_note": "",
+     "tm_target_pct": 33.3,
+     "tm_stop_pct": 62.0,
+     "tm_neither_pct": 4.7,
+     "tm_avg_r": -0.141,
+     "tm_hist_avg_r": 0.196,
+     "tm_verdict": "No clear lean, within the noise of 42 days: at 1.42R after costs the target has to come first in 42 % of the replays that hit one side; it did in 35 % (target first 33.3 % vs stop first 62.0 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "VRT",
+     "time": "09:45",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "CRM",
+     "time": "09:55",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "ADBE",
+     "time": "09:55",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "LRCX",
+     "time": "14:50",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "MA",
+     "time": "09:50",
+     "price": 624.35,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "CRM",
+     "time": "09:50",
+     "price": 243.63,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "10:00",
+     "price": 376.15,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:00",
+     "price": 146.65,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:05",
+     "price": 1283.89,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "V",
+     "time": "10:30",
+     "price": 407.77,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "10:40",
+     "price": 54.93,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "PG",
+     "time": "10:55",
+     "price": 161.59,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "13:15",
+     "price": 542.08,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "UNH",
+     "time": "14:05",
+     "price": 417.32,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "LMT",
+     "time": "15:15",
+     "price": 608.16,
+     "signal": "pdh_breakout"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "E",
+     "symbol": "MA",
+     "setups": "breakout_20d+bull_flag",
+     "dollar_vol_prev": 2556395501,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:50",
+     "volume_x": 1.09,
+     "signal": "pdl_reclaim",
+     "ref_level": 623.88,
+     "entry": 624.35,
+     "stop": 623.3,
+     "target": 626.45,
+     "risk_ps": 1.05,
+     "shares": 12,
+     "notional": 7492.2,
+     "exit_time": "09:55",
+     "exit_price": 626.45,
+     "exit_reason": "target",
+     "gross_pnl": 25.2,
+     "costs": 5.75,
+     "net_pnl": 19.45,
+     "r_net": 1.544,
+     "data_note": "",
+     "tm_target_pct": 37.0,
+     "tm_stop_pct": 63.0,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": 0.084,
+     "tm_hist_avg_r": -0.338,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 37 % (target first 37.0 % vs stop first 63.0 %)."
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "E",
+     "symbol": "CRM",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2438149912,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:50",
+     "volume_x": 0.73,
+     "signal": "pdl_reclaim",
+     "ref_level": 242.7,
+     "entry": 243.63,
+     "stop": 242.17,
+     "target": 246.55,
+     "risk_ps": 1.46,
+     "shares": 6,
+     "notional": 1461.78,
+     "exit_time": "10:00",
+     "exit_price": 246.55,
+     "exit_reason": "target",
+     "gross_pnl": 17.52,
+     "costs": 2.73,
+     "net_pnl": 14.79,
+     "r_net": 1.688,
+     "data_note": "",
+     "tm_target_pct": 24.9,
+     "tm_stop_pct": 73.1,
+     "tm_neither_pct": 2.0,
+     "tm_avg_r": -0.24,
+     "tm_hist_avg_r": -0.349,
+     "tm_verdict": "No clear lean, within the noise of 42 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 24.9 % vs stop first 73.1 %)."
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "E",
+     "symbol": "AMAT",
+     "setups": "oversold",
+     "dollar_vol_prev": 4890427005,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.4,
+     "signal": "pdl_reclaim",
+     "ref_level": 375.2,
+     "entry": 376.15,
+     "stop": 373.28,
+     "target": 381.89,
+     "risk_ps": 2.87,
+     "shares": 19,
+     "notional": 7146.85,
+     "exit_time": "10:45",
+     "exit_price": 381.89,
+     "exit_reason": "target",
+     "gross_pnl": 109.06,
+     "costs": 5.57,
+     "net_pnl": 103.49,
+     "r_net": 1.898,
+     "data_note": "",
+     "tm_target_pct": 25.9,
+     "tm_stop_pct": 65.2,
+     "tm_neither_pct": 8.9,
+     "tm_avg_r": -0.091,
+     "tm_hist_avg_r": -0.335,
+     "tm_verdict": "No clear lean, within the noise of 42 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 28 % (target first 25.9 % vs stop first 65.2 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "KLAC",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "V",
+     "time": "10:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "10:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "PG",
+     "time": "10:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "13:15",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "UNH",
+     "time": "14:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "LMT",
+     "time": "15:15",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }

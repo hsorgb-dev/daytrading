@@ -10,7 +10,7 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 NUM = {"dollar_vol_prev", "or_high", "or_low", "volume_x", "entry", "stop", "target", "risk_ps", "shares", "notional",
-       "exit_price", "gross_pnl", "costs", "net_pnl", "r_net", "tm_target_pct", "tm_stop_pct", "tm_neither_pct",
+       "ref_level", "exit_price", "gross_pnl", "costs", "net_pnl", "r_net", "tm_target_pct", "tm_stop_pct", "tm_neither_pct",
        "tm_avg_r", "tm_hist_avg_r", "watchlist", "with_data", "triggers", "taken", "skipped", "spy_open",
        "spy_close"}
 

@@ -29,7 +29,16 @@
   },
   "variants": {
     "A": {"label": "Original: Tages-Setup-Watchlist -> ORB, Stop Range-Mitte, Ziel 2R"},
-    "B": {"label": "A + Volumen >= 1,5x Range-Schnitt + SPY ueber Tagesopen", "min_volume_x": 1.5, "spy_above_open": true}
+    "B": {"label": "A + Volumen >= 1,5x Range-Schnitt + SPY ueber Tagesopen", "min_volume_x": 1.5, "spy_above_open": true},
+    "C": {"label": "VWAP-Pullback: Aufwaertstag, erster gruener Bar am VWAP, Stop unter Bar-Tief/VWAP, Ziel 2R",
+          "strategy": "vwap_pullback", "no_entries_before": "10:00", "no_entries_after": "15:00",
+          "touch_pct": 0.1, "min_stretch_pct": 0.5, "stop_buffer_pct": 0.05, "added": "2026-11-17"},
+    "D": {"label": "Mean Reversion: Schluss unter Bollinger 20/2,5 + RSI(2) < 5, Bestaetigung ueber Setup-Hoch, Ziel SMA20",
+          "strategy": "mean_reversion", "bb_period": 20, "bb_std": 2.5, "rsi_period": 2, "rsi_max": 5,
+          "confirm_bars": 3, "stop_buffer_pct": 0.05, "added": "2026-11-17"},
+    "E": {"label": "Vortages-Hoch/-Tief: PDH-Ausbruch mit Volumen >= 1,5x oder PDL-Sweep mit Rueckeroberung, Ziel 2R",
+          "strategy": "pdh_pdl", "breakout_volume_x": 1.5, "sweep_max_bars": 6, "stop_buffer_pct": 0.05,
+          "added": "2026-11-17"}
   },
   "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
 }

@@ -6,7 +6,7 @@ Kein Broker, keine echten Orders.
 
 ## Wie es läuft
 
-Eine geplante Aufgabe läuft Mo–Fr um 22:30 MEZ (nach US-Börsenschluss) und
+Eine geplante Aufgabe läuft Mo–Fr um 22:40 MEZ (nach US-Börsenschluss) und
 führt `python3 forwardtest/daily_run.py` aus. Das Skript spielt den Handelstag
 regelgetreu nach. Es nutzt dabei nur Daten, die zum jeweiligen Zeitpunkt
 bekannt waren, und schreibt ins Journal. Danach wird das Journal committet und
@@ -24,9 +24,24 @@ das Dashboard aktualisiert.
 
 **Variante A** ist das Original. **Variante B** ist A plus zwei Filter:
 Trigger-Volumen ≥ 1,5× Range-Schnitt und SPY über seinem Tagesopen.
-Beide Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.
 
-Das Regelwerk in `config.json` ist ab Start eingefroren. Neue Ideen kommen als
+Seit 17.11.2026 laufen drei weitere klassische Intraday-Strategien mit. Sie nutzen
+dieselbe Watchlist, Größe, Limits, Kosten und Simulation wie A, sind nur Long und
+bringen ihren eigenen Stop mit:
+
+| Variante | Strategie | Einstieg | Stop | Ziel |
+|---|---|---|---|---|
+| C | VWAP-Pullback | 10:00–15:00 ET: Bar taucht an den VWAP (≤ +0,1 %), schließt grün darüber; Vor-Bar über VWAP, Tageshoch ≥ 0,5 % über VWAP, Kurs über Tagesopen | min(Bar-Tief, VWAP) − 0,05 % | 2R |
+| D | Mean Reversion | 5-Min-Schluss unter Bollinger 20/2,5σ und RSI(2) < 5, dann innerhalb von 3 Bars Schluss über dem Setup-Hoch (Indikatoren laufen über den Vortag) | tiefstes Tief seit Setup − 0,05 % | SMA20 (Trade entfällt bei CRV < 1) |
+| E | Vortages-Hoch/-Tief | PDH-Ausbruch: erster Schluss über PDH mit Volumen ≥ 1,5× der letzten 20 Bars (Open unter PDH). Oder PDL-Sweep: Tief unter PDL, innerhalb von 6 Bars Schluss zurück darüber (Open über PDL) | Bar-Tief bzw. Sweep-Tief − 0,05 % | 2R |
+
+Signale, die vor 9:45 (bzw. 10:00) schon bestätigt waren, verfallen. Der Backfill von
+C–E für 20.10.–16.11. lief mit `--variants C,D,E` und nutzt die in `logs/` festgehaltenen
+Watchlists von A/B; A und B blieben dabei unverändert.
+
+Alle Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.
+
+Das Regelwerk in `config.json` ist ab Start eingefroren (C–E ab 17.11.2026). Neue Ideen kommen als
 weitere Variante dazu, nicht als Änderung an A oder B.
 
 ## Dateien

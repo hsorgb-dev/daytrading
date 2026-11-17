@@ -610,6 +610,501 @@
     }
    ],
    "skipped": []
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "HOOD",
+     "time": "10:00",
+     "price": 86.32,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "TMUS",
+     "time": "10:00",
+     "price": 156.63,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SBUX",
+     "time": "10:00",
+     "price": 104.75,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "10:05",
+     "price": 285.88,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "10:05",
+     "price": 284.21,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:05",
+     "price": 107.65,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "RDDT",
+     "time": "10:05",
+     "price": 93.59,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "APP",
+     "time": "10:05",
+     "price": 234.83,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GPN",
+     "time": "10:05",
+     "price": 98.5,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "WMT",
+     "time": "10:25",
+     "price": 125.44,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:30",
+     "price": 1408.44,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "MCD",
+     "time": "10:35",
+     "price": 263.4,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:50",
+     "price": 258.26,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SPOT",
+     "time": "11:25",
+     "price": 595.33,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AMGN",
+     "time": "12:05",
+     "price": 464.16,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "VRTX",
+     "time": "12:20",
+     "price": 564.55,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "C",
+     "symbol": "HOOD",
+     "setups": "oversold",
+     "dollar_vol_prev": 2361013642,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.52,
+     "signal": "vwap_pullback",
+     "ref_level": 85.99,
+     "entry": 86.32,
+     "stop": 85.94,
+     "target": 87.08,
+     "risk_ps": 0.38,
+     "shares": 86,
+     "notional": 7423.52,
+     "exit_time": "10:15",
+     "exit_price": 87.08,
+     "exit_reason": "target",
+     "gross_pnl": 65.36,
+     "costs": 5.71,
+     "net_pnl": 59.65,
+     "r_net": 1.825,
+     "data_note": "",
+     "tm_target_pct": 36.3,
+     "tm_stop_pct": 63.7,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": 0.037,
+     "tm_hist_avg_r": 0.064,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 36 % (target first 36.3 % vs stop first 63.7 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "C",
+     "symbol": "TMUS",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 1798324760,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.85,
+     "signal": "vwap_pullback",
+     "ref_level": 155.78,
+     "entry": 156.63,
+     "stop": 155.6,
+     "target": 158.69,
+     "risk_ps": 1.03,
+     "shares": 10,
+     "notional": 1566.3,
+     "exit_time": "11:30",
+     "exit_price": 158.69,
+     "exit_reason": "target",
+     "gross_pnl": 20.6,
+     "costs": 2.78,
+     "net_pnl": 17.82,
+     "r_net": 1.73,
+     "data_note": "",
+     "tm_target_pct": 23.4,
+     "tm_stop_pct": 61.7,
+     "tm_neither_pct": 14.9,
+     "tm_avg_r": -0.112,
+     "tm_hist_avg_r": -0.064,
+     "tm_verdict": "No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 27 % (target first 23.4 % vs stop first 61.7 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "C",
+     "symbol": "WMT",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 3676818658,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:25",
+     "volume_x": 0.39,
+     "signal": "vwap_pullback",
+     "ref_level": 125.21,
+     "entry": 125.44,
+     "stop": 125.14,
+     "target": 126.04,
+     "risk_ps": 0.3,
+     "shares": 59,
+     "notional": 7400.96,
+     "exit_time": "11:25",
+     "exit_price": 126.04,
+     "exit_reason": "target",
+     "gross_pnl": 35.4,
+     "costs": 5.7,
+     "net_pnl": 29.7,
+     "r_net": 1.678,
+     "data_note": "",
+     "tm_target_pct": 46.7,
+     "tm_stop_pct": 51.7,
+     "tm_neither_pct": 1.6,
+     "tm_avg_r": 0.358,
+     "tm_hist_avg_r": -0.04,
+     "tm_verdict": "No clear lean, within the noise of 17 days: at 2R after costs the target has to come first in 36 % of the replays that hit one side; it did in 47 % (target first 46.7 % vs stop first 51.7 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "SBUX",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "RDDT",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "APP",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GPN",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MCD",
+     "time": "10:35",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SPOT",
+     "time": "11:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "AMGN",
+     "time": "12:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "VRTX",
+     "time": "12:20",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "CVX",
+     "time": "09:45",
+     "price": 231.6,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "VRTX",
+     "time": "11:35",
+     "price": 561.97,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "D",
+     "symbol": "CVX",
+     "setups": "breakout_20d+bull_flag",
+     "dollar_vol_prev": 2593852463,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 1.12,
+     "signal": "bb_rsi2",
+     "ref_level": 234.53,
+     "entry": 231.6,
+     "stop": 229.53,
+     "target": 234.53,
+     "risk_ps": 2.07,
+     "shares": 32,
+     "notional": 7411.2,
+     "exit_time": "12:55",
+     "exit_price": 229.53,
+     "exit_reason": "stop",
+     "gross_pnl": -66.24,
+     "costs": 9.38,
+     "net_pnl": -75.62,
+     "r_net": -1.142,
+     "data_note": "",
+     "tm_target_pct": 18.4,
+     "tm_stop_pct": 36.1,
+     "tm_neither_pct": 45.5,
+     "tm_avg_r": -0.018,
+     "tm_hist_avg_r": -0.035,
+     "tm_verdict": "No clear lean, within the noise of 48 days: at 1.42R after costs the target has to come first in 42 % of the replays that hit one side; it did in 34 % (target first 18.4 % vs stop first 36.1 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "VRTX",
+     "time": "11:35",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "GILD",
+     "time": "10:00",
+     "price": 170.33,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "MO",
+     "time": "10:10",
+     "price": 77.59,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "TER",
+     "time": "11:30",
+     "price": 266.66,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "VRTX",
+     "time": "13:30",
+     "price": 551.07,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "TMUS",
+     "time": "14:30",
+     "price": 159.04,
+     "signal": "pdh_breakout"
+    },
+    {
+     "symbol": "BAC",
+     "time": "14:55",
+     "price": 49.79,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "IBM",
+     "time": "15:25",
+     "price": 255.08,
+     "signal": "pdl_reclaim"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "E",
+     "symbol": "GILD",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1950070120,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 1.3,
+     "signal": "pdl_reclaim",
+     "ref_level": 169.0,
+     "entry": 170.33,
+     "stop": 168.66,
+     "target": 173.67,
+     "risk_ps": 1.67,
+     "shares": 44,
+     "notional": 7494.52,
+     "exit_time": "10:15",
+     "exit_price": 168.61,
+     "exit_reason": "stop_gap",
+     "gross_pnl": -75.68,
+     "costs": 9.46,
+     "net_pnl": -85.14,
+     "r_net": -1.159,
+     "data_note": "",
+     "tm_target_pct": 9.2,
+     "tm_stop_pct": 36.2,
+     "tm_neither_pct": 54.6,
+     "tm_avg_r": 0.063,
+     "tm_hist_avg_r": 0.157,
+     "tm_verdict": "No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 20 % (target first 9.2 % vs stop first 36.2 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "E",
+     "symbol": "MO",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1600879061,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:10",
+     "volume_x": 0.88,
+     "signal": "pdl_reclaim",
+     "ref_level": 77.57,
+     "entry": 77.59,
+     "stop": 77.51,
+     "target": 77.75,
+     "risk_ps": 0.08,
+     "shares": 19,
+     "notional": 1474.21,
+     "exit_time": "10:15",
+     "exit_price": 77.51,
+     "exit_reason": "stop",
+     "gross_pnl": -1.52,
+     "costs": 3.47,
+     "net_pnl": -4.99,
+     "r_net": -3.285,
+     "data_note": "",
+     "tm_target_pct": 37.2,
+     "tm_stop_pct": 62.8,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": -0.133,
+     "tm_hist_avg_r": -0.375,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 42 % of the replays that hit one side; it did in 37 % (target first 37.2 % vs stop first 62.8 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "E",
+     "symbol": "TER",
+     "setups": "oversold",
+     "dollar_vol_prev": 2365151669,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "11:30",
+     "volume_x": 0.79,
+     "signal": "pdl_reclaim",
+     "ref_level": 266.39,
+     "entry": 266.66,
+     "stop": 266.14,
+     "target": 267.7,
+     "risk_ps": 0.52,
+     "shares": 28,
+     "notional": 7466.48,
+     "exit_time": "11:35",
+     "exit_price": 267.7,
+     "exit_reason": "target",
+     "gross_pnl": 29.12,
+     "costs": 5.73,
+     "net_pnl": 23.39,
+     "r_net": 1.606,
+     "data_note": "",
+     "tm_target_pct": 29.6,
+     "tm_stop_pct": 70.4,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": -0.15,
+     "tm_hist_avg_r": -0.201,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 30 % (target first 29.6 % vs stop first 70.4 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "VRTX",
+     "time": "13:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "TMUS",
+     "time": "14:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BAC",
+     "time": "14:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "IBM",
+     "time": "15:25",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }

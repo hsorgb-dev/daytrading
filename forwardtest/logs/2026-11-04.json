@@ -560,6 +560,429 @@
     }
    ],
    "skipped": []
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "DIS",
+     "time": "10:00",
+     "price": 118.69,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "FISV",
+     "time": "10:05",
+     "price": 61.39,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "VRSN",
+     "time": "10:05",
+     "price": 318.9,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "INTC",
+     "time": "10:10",
+     "price": 59.47,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "RKT",
+     "time": "10:10",
+     "price": 14.82,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "MCHP",
+     "time": "10:15",
+     "price": 78.72,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:40",
+     "price": 51.17,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:50",
+     "price": 111.76,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "HOOD",
+     "time": "11:05",
+     "price": 86.32,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "11:50",
+     "price": 292.13,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "11:50",
+     "price": 290.21,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SPOT",
+     "time": "12:05",
+     "price": 627.68,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-04",
+     "variant": "C",
+     "symbol": "DIS",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1320902752,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.94,
+     "signal": "vwap_pullback",
+     "ref_level": 118.05,
+     "entry": 118.69,
+     "stop": 117.99,
+     "target": 120.09,
+     "risk_ps": 0.7,
+     "shares": 63,
+     "notional": 7477.47,
+     "exit_time": "15:55",
+     "exit_price": 119.07,
+     "exit_reason": "flat",
+     "gross_pnl": 24.25,
+     "costs": 9.49,
+     "net_pnl": 14.77,
+     "r_net": 0.335,
+     "data_note": "",
+     "tm_target_pct": 17.0,
+     "tm_stop_pct": 48.2,
+     "tm_neither_pct": 34.8,
+     "tm_avg_r": -0.01,
+     "tm_hist_avg_r": -0.063,
+     "tm_verdict": "No clear lean, within the noise of 50 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 26 % (target first 17.0 % vs stop first 48.2 %)."
+    },
+    {
+     "date": "2026-11-04",
+     "variant": "C",
+     "symbol": "FISV",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1123779549,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 1.48,
+     "signal": "vwap_pullback",
+     "ref_level": 60.69,
+     "entry": 61.39,
+     "stop": 60.59,
+     "target": 62.99,
+     "risk_ps": 0.8,
+     "shares": 24,
+     "notional": 1473.36,
+     "exit_time": "15:55",
+     "exit_price": 62.34,
+     "exit_reason": "flat",
+     "gross_pnl": 22.8,
+     "costs": 3.48,
+     "net_pnl": 19.32,
+     "r_net": 1.006,
+     "data_note": "",
+     "tm_target_pct": 10.9,
+     "tm_stop_pct": 30.0,
+     "tm_neither_pct": 59.2,
+     "tm_avg_r": 0.106,
+     "tm_hist_avg_r": 0.255,
+     "tm_verdict": "No clear lean, within the noise of 50 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 27 % (target first 10.9 % vs stop first 30.0 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "VRSN",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "INTC",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "RKT",
+     "time": "10:10",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "MCHP",
+     "time": "10:15",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:40",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:50",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "HOOD",
+     "time": "11:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "11:50",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "11:50",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "SPOT",
+     "time": "12:05",
+     "why": "0 Stueck (Cash/Limit)"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "SNDK",
+     "time": "09:45",
+     "price": 1109.3,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "RKT",
+     "time": "14:30",
+     "price": 14.94,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-04",
+     "variant": "D",
+     "symbol": "RKT",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 992759500,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "14:30",
+     "volume_x": 0.95,
+     "signal": "bb_rsi2",
+     "ref_level": 14.99,
+     "entry": 14.94,
+     "stop": 14.91,
+     "target": 14.99,
+     "risk_ps": 0.03,
+     "shares": 502,
+     "notional": 7499.88,
+     "exit_time": "14:50",
+     "exit_price": 14.91,
+     "exit_reason": "stop",
+     "gross_pnl": -15.06,
+     "costs": 12.51,
+     "net_pnl": -27.57,
+     "r_net": -1.831,
+     "data_note": "",
+     "tm_target_pct": 32.1,
+     "tm_stop_pct": 67.9,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": -0.812,
+     "tm_hist_avg_r": -0.58,
+     "tm_verdict": "Strongly toward the stop: at 1.67R after costs the target has to come first in 63 % of the replays that hit one side; it did in 32 % (target first 32.1 % vs stop first 67.9 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "SNDK",
+     "time": "09:45",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "HOOD",
+     "time": "09:45",
+     "price": 86.13,
+     "signal": "pdh_breakout"
+    },
+    {
+     "symbol": "WMB",
+     "time": "09:50",
+     "price": 69.25,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "IREN",
+     "time": "10:00",
+     "price": 22.23,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "COIN",
+     "time": "10:10",
+     "price": 151.0,
+     "signal": "pdh_breakout"
+    },
+    {
+     "symbol": "MPWR",
+     "time": "10:40",
+     "price": 1279.04,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "REGN",
+     "time": "10:50",
+     "price": 957.03,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "DT",
+     "time": "11:00",
+     "price": 45.71,
+     "signal": "pdl_reclaim"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-04",
+     "variant": "E",
+     "symbol": "HOOD",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 1183489276,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 1.5,
+     "signal": "pdh_breakout",
+     "ref_level": 85.76,
+     "entry": 86.13,
+     "stop": 84.53,
+     "target": 89.33,
+     "risk_ps": 1.6,
+     "shares": 62,
+     "notional": 5340.06,
+     "exit_time": "15:55",
+     "exit_price": 87.39,
+     "exit_reason": "flat",
+     "gross_pnl": 78.12,
+     "costs": 7.38,
+     "net_pnl": 70.74,
+     "r_net": 0.713,
+     "data_note": "",
+     "tm_target_pct": 14.3,
+     "tm_stop_pct": 44.1,
+     "tm_neither_pct": 41.6,
+     "tm_avg_r": -0.043,
+     "tm_hist_avg_r": -0.18,
+     "tm_verdict": "No clear lean, within the noise of 50 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 14.3 % vs stop first 44.1 %)."
+    },
+    {
+     "date": "2026-11-04",
+     "variant": "E",
+     "symbol": "WMB",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 847036621,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:50",
+     "volume_x": 1.74,
+     "signal": "pdl_reclaim",
+     "ref_level": 69.07,
+     "entry": 69.25,
+     "stop": 68.96,
+     "target": 69.83,
+     "risk_ps": 0.29,
+     "shares": 52,
+     "notional": 3601.0,
+     "exit_time": "09:55",
+     "exit_price": 68.96,
+     "exit_reason": "stop",
+     "gross_pnl": -15.08,
+     "costs": 5.59,
+     "net_pnl": -20.67,
+     "r_net": -1.371,
+     "data_note": "",
+     "tm_target_pct": 38.2,
+     "tm_stop_pct": 60.8,
+     "tm_neither_pct": 1.0,
+     "tm_avg_r": 0.09,
+     "tm_hist_avg_r": 0.004,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 36 % of the replays that hit one side; it did in 39 % (target first 38.2 % vs stop first 60.8 %)."
+    },
+    {
+     "date": "2026-11-04",
+     "variant": "E",
+     "symbol": "IREN",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 1340469100,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 1.23,
+     "signal": "pdl_reclaim",
+     "ref_level": 22.22,
+     "entry": 22.23,
+     "stop": 22.03,
+     "target": 22.63,
+     "risk_ps": 0.2,
+     "shares": 164,
+     "notional": 3645.72,
+     "exit_time": "10:35",
+     "exit_price": 22.03,
+     "exit_reason": "stop",
+     "gross_pnl": -32.8,
+     "costs": 5.63,
+     "net_pnl": -38.43,
+     "r_net": -1.172,
+     "data_note": "",
+     "tm_target_pct": 35.7,
+     "tm_stop_pct": 63.9,
+     "tm_neither_pct": 0.3,
+     "tm_avg_r": -0.024,
+     "tm_hist_avg_r": -0.338,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 37 % of the replays that hit one side; it did in 36 % (target first 35.7 % vs stop first 63.9 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "COIN",
+     "time": "10:10",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MPWR",
+     "time": "10:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "REGN",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "DT",
+     "time": "11:00",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }

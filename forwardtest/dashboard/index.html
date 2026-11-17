@@ -19,7 +19,7 @@
   .ft-chart { position: relative; min-height: 260px; }
   .ft-chart svg text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); }
   .ft-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: 6px 8px; font-size: var(--cds-font-size-caption); white-space: nowrap; }
-  .ft-legend { display: flex; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-sm); }
+  .ft-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-sm); }
   .ft-legend i { display: inline-block; width: 10px; height: 3px; vertical-align: middle; margin-right: 4px; }
   .ft-wrap { overflow-x: auto; }
   .ft table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
@@ -36,10 +36,10 @@
 <div class="ft">
   <header id="kopf">
     <h1 class="ft-title">Day Trader Forward-Test</h1>
-    <p class="ft-sub">Paper-Test der ORB-Strategie, Tag für Tag nach US-Börsenschluss nachgespielt. 10.000 $ je Variante, 1 % Risiko je Trade, Kosten abgezogen. Keine echten Orders.</p>
+    <p class="ft-sub">Paper-Test der ORB-Strategie (A, B) und dreier weiterer Intraday-Strategien (C, D, E, seit 17.11.2026 mit Backfill ab 20.10.), Tag für Tag nach US-Börsenschluss nachgespielt. 10.000 $ je Variante, 1 % Risiko je Trade, Kosten abgezogen. Keine echten Orders.</p>
   </header>
 
-  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Stand: <span data-draw="stand">—</span>.</p>
+  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Stand: <span data-draw="stand">—</span>.</p>
 
   <div class="ft-cols" id="kennzahlen">
     <section class="ft-card" id="karte-a">
@@ -68,11 +68,50 @@
       </div>
       <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-B-txt">—</span><div class="ft-bar"><div data-draw="prog-B"></div></div></div>
     </section>
+    <section class="ft-card" id="karte-c">
+      <h3>C · VWAP-Pullback</h3>
+      <p class="ft-cap">Aufwärtstag, erster grüner 5-Min-Bar am VWAP (10:00–15:00 ET), Stop unter Bar-Tief bzw. VWAP, Ziel 2R</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-C-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=C">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-C-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=C">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-C-trades" data-source="kpis" data-field="trades" data-where="variant=C">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-C-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=C">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-C-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=C">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-C-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=C">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-C-txt">—</span><div class="ft-bar"><div data-draw="prog-C"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-d">
+      <h3>D · Mean Reversion</h3>
+      <p class="ft-cap">Schluss unter Bollinger-Band 20/2,5σ mit RSI(2) unter 5, Bestätigung über dem Setup-Hoch, Ziel Mittelband (SMA20)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-D-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=D">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-D-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=D">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-D-trades" data-source="kpis" data-field="trades" data-where="variant=D">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-D-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=D">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-D-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=D">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-D-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=D">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-D-txt">—</span><div class="ft-bar"><div data-draw="prog-D"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-e">
+      <h3>E · Vortages-Hoch/-Tief</h3>
+      <p class="ft-cap">PDH-Ausbruch mit Volumen ≥ 1,5× oder PDL-Sweep mit Rückeroberung, Stop unter Bar- bzw. Sweep-Tief, Ziel 2R</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-E-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=E">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-E-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=E">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-E-trades" data-source="kpis" data-field="trades" data-where="variant=E">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-E-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=E">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-E-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=E">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-E-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=E">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-E-txt">—</span><div class="ft-bar"><div data-draw="prog-E"></div></div></div>
+    </section>
   </div>
 
   <section class="ft-card" id="equity">
     <h2>Equity-Verlauf (Start 10.000 $)</h2>
-    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span></div>
+    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span></div>
     <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
     <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
   </section>
@@ -94,7 +133,7 @@
 
   <section class="ft-card" id="trades">
     <div class="ft-row"><h2>Trades</h2>
-      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Beide Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option></select>
+      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option></select>
     </div>
     <div class="ft-wrap"><table data-source="trades" data-row-key="date,variant,symbol">
       <thead><tr><th data-field="date">Datum</th><th data-field="variant">Var.</th><th data-field="symbol">Titel</th><th data-field="setups">Setup</th><th data-field="trigger_time">Einstieg ET</th><th data-field="entry">Kurs</th><th data-field="stop">Stop</th><th data-field="target">Ziel</th><th data-field="shares">Stück</th><th data-field="exit_reason">Ausstieg</th><th data-field="exit_time">um</th><th data-field="net_pnl">Netto $</th><th data-field="r_net">R netto</th><th data-field="tm_target_pct">TM Ziel %</th></tr></thead>
@@ -111,17 +150,19 @@
       <li>Größe: kleinster Wert aus 100 $ max. Verlust ÷ Risiko je Aktie, 75 % Positionslimit, 8.000 $ max. Order und freiem Cash nach 10 % Puffer. Bei engen Stops bremst oft das Cash, nicht das Risiko.</li>
       <li>Kosten: 0,05 % Slippage auf Einstieg, Stop und Glattstellung, Kommission 0,005 $ je Aktie, mindestens 1 $ je Seite.</li>
       <li>Grenzen: Fills sind simuliert, echte Breakout-Slippage ist oft schlechter. Yahoo-Daten sind inoffiziell. Die ersten 20 Tage sind ein Backfill mit einem kleinen Look-ahead im Universum-Vorfilter.</li>
+      <li>Varianten C, D, E (seit 17.11.2026, gleiche Watchlist, Größe, Limits, Kosten und Simulation wie A, nur Long): C kauft im Aufwärtstag den ersten grünen Bar, der vom VWAP abprallt. D kauft nach einem Schluss unter dem unteren Bollinger-Band (20, 2,5σ) mit RSI(2) unter 5, sobald ein Bar über dem Hoch des Setup-Bars schließt; das Ziel ist das Mittelband, Trades mit CRV unter 1 entfallen. E kauft den ersten Schluss über dem Vortageshoch mit Volumen ≥ 1,5× oder die Rückeroberung des Vortagestiefs nach einem Sweep. Signale, die schon vor dem Einstiegsfenster bestätigt waren, verfallen. Ihr Backfill nutzt dieselben Watchlists wie A und B.</li>
       <li>Entscheidung frühestens nach 60 Trades: weiter nur bei R netto je Risiko-$ über +0,2 und kleinerem Drawdown als CIM.</li>
     </ul>
   </details>
 </div>
 
 <script>
+  window.ftVariants = ['A', 'B', 'C', 'D', 'E'];
   dash.calc('kpis', {
     title: 'Kennzahlen je Variante',
     description: 'Summen und Quoten über alle Trades einer Variante. R netto = Netto-Ergebnis geteilt durch das geplante Risiko aller Trades (Stück × Abstand zum Stop). Drawdown aus der täglichen Equity.',
     inputs: ['trades', 'days'],
-    fn: (trades, days) => ['A', 'B'].map((variant) => {
+    fn: (trades, days) => ['A', 'B', 'C', 'D', 'E'].map((variant) => {
       const t = trades.filter((r) => r.variant === variant);
       const n = t.length;
       const net = t.reduce((s, r) => s + r.net_pnl, 0);
@@ -156,7 +197,7 @@
     inputs: ['days'],
     fn: (days) => {
       const out = [];
-      ['A', 'B'].forEach((variant) => {
+      ['A', 'B', 'C', 'D', 'E'].forEach((variant) => {
         let eq = 10000;
         days.filter((d) => d.variant === variant).sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
           eq += d.net_pnl;
@@ -179,7 +220,8 @@
   };
 
   const kpiFields = { net_pnl: 'usd', avg_r: 'r', trades: 'int', win_rate: 'pct', profit_factor: 'num', max_dd: 'usd' };
-  ['A', 'B'].forEach((v) => {
+  window.ftVariants.forEach((v, vi) => {
+    dash.draw('leg' + v, (el) => { el.style.background = dash.colors[vi]; });
     Object.entries(kpiFields).forEach(([f, kind]) => {
       dash.draw('kpi-' + v + '-' + f, (el) => {
         const r = window.ftRow(v);
@@ -209,8 +251,6 @@
     const r = window.ftRow('A');
     el.textContent = r && r.last_date ? d3.utcFormat('%d.%m.%Y')(new Date(r.last_date + 'T00:00:00Z')) : '—';
   });
-  dash.draw('legA', (el) => { el.style.background = dash.colors[0]; });
-  dash.draw('legB', (el) => { el.style.background = dash.colors[1]; });
 
   dash.draw('equity-chart', (el) => {
     const d = dash.data('equity');
@@ -224,14 +264,14 @@
     const pad = Math.max(50, (ext[1] - ext[0]) * 0.1);
     const y = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).nice().range([H - m.b, m.t]);
     const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
-      .attr('role', 'img').attr('aria-label', 'Equity je Handelstag für Variante A und B, Start 10.000 Dollar');
+      .attr('role', 'img').attr('aria-label', 'Equity je Handelstag für die Varianten A bis E, Start 10.000 Dollar');
     svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 110))).tickFormat(d3.utcFormat('%d.%m.')))
       .call((g) => g.selectAll('line,path').style('stroke', 'var(--cds-chart-axis)'));
     svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat((v) => d3.format(',')(v).replace(/,/g, '.')))
       .call((g) => g.select('.domain').remove()).call((g) => g.selectAll('line').style('stroke', 'var(--cds-chart-grid)'));
     svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(10000)).attr('y2', y(10000)).style('stroke', 'var(--cds-chart-reference)').style('stroke-dasharray', '3 3');
     const tip = d3.select(el).append('div').attr('class', 'ft-tip').style('display', 'none');
-    ['A', 'B'].forEach((v, i) => {
+    window.ftVariants.forEach((v, i) => {
       const s = rows.filter((r) => r.variant === v);
       svg.append('path').datum(s).attr('fill', 'none').style('stroke', dash.colors[i]).attr('stroke-width', 2)
         .attr('d', d3.line().x((r) => x(r.t)).y((r) => y(r.equity)));
@@ -243,9 +283,13 @@
         const [px] = d3.pointer(ev);
         const t = x.invert(px);
         const dt = dates.reduce((a, b) => Math.abs(new Date(b + 'T00:00:00Z') - t) < Math.abs(new Date(a + 'T00:00:00Z') - t) ? b : a);
-        const a = rows.find((r) => r.date === dt && r.variant === 'A'), b = rows.find((r) => r.date === dt && r.variant === 'B');
-        tip.style('display', null).style('left', Math.min(px + 12, W - 170) + 'px').style('top', '8px')
-          .text(d3.utcFormat('%d.%m.%Y')(new Date(dt + 'T00:00:00Z')) + ' · A ' + (a ? d3.format(',.0f')(a.equity).replace(/,/g, '.') : '–') + ' $ · B ' + (b ? d3.format(',.0f')(b.equity).replace(/,/g, '.') : '–') + ' $');
+        tip.selectAll('*').remove();
+        tip.append('div').text(d3.utcFormat('%d.%m.%Y')(new Date(dt + 'T00:00:00Z')));
+        window.ftVariants.forEach((v) => {
+          const r = rows.find((q) => q.date === dt && q.variant === v);
+          tip.append('div').text(v + ' ' + (r ? d3.format(',.0f')(r.equity).replace(/,/g, '.') + ' $' : '–'));
+        });
+        tip.style('display', null).style('left', Math.min(px + 12, W - 120) + 'px').style('top', '8px');
       })
       .on('pointerleave', () => tip.style('display', 'none'));
   });
@@ -255,14 +299,15 @@
     el.replaceChildren();
     if (k.status !== 'ok' || !k.data) { el.textContent = '—'; return; }
     const cats = [['pct_target', 'Ziel 2R'], ['pct_stop', 'Stop'], ['pct_flat', 'Glattstellung 15:55']];
-    const W = el.clientWidth || 400, rowH = 26, m = { t: 6, r: 44, l: 130 };
-    const H = m.t + cats.length * (rowH * 2 + 8);
+    const W = el.clientWidth || 400, rowH = 20, m = { t: 6, r: 44, l: 130 };
+    const nv = k.data.length;
+    const H = m.t + cats.length * (rowH * nv + 10);
     const x = d3.scaleLinear().domain([0, 1]).range([m.l, W - m.r]);
     const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
-      .attr('role', 'img').attr('aria-label', 'Anteil der Trades nach Ausstiegsgrund, Variante A und B');
+      .attr('role', 'img').attr('aria-label', 'Anteil der Trades nach Ausstiegsgrund, Varianten A bis E');
     cats.forEach(([f, lab], ci) => {
-      const y0 = m.t + ci * (rowH * 2 + 8);
-      svg.append('text').attr('x', 0).attr('y', y0 + rowH).attr('dy', '0.35em').text(lab);
+      const y0 = m.t + ci * (rowH * nv + 10);
+      svg.append('text').attr('x', 0).attr('y', y0 + rowH * nv / 2).attr('dy', '0.35em').text(lab);
       k.data.forEach((r, vi) => {
         const v = r[f] || 0, y = y0 + vi * rowH + 3;
         svg.append('rect').attr('x', m.l).attr('y', y).attr('height', rowH - 6).attr('width', Math.max(1, x(v) - m.l)).style('fill', dash.colors[vi]);

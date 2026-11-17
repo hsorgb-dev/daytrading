@@ -476,6 +476,534 @@
    "triggers": [],
    "taken": [],
    "skipped": []
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "MCD",
+     "time": "10:10",
+     "price": 277.24,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "COST",
+     "time": "10:30",
+     "price": 1114.32,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "U",
+     "time": "10:45",
+     "price": 52.81,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "PEP",
+     "time": "10:50",
+     "price": 147.51,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "NVDA",
+     "time": "11:30",
+     "price": 159.76,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "PG",
+     "time": "12:20",
+     "price": 172.93,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "ABNB",
+     "time": "12:40",
+     "price": 186.18,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "CB",
+     "time": "13:05",
+     "price": 381.14,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "KDP",
+     "time": "13:30",
+     "price": 36.72,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SO",
+     "time": "14:25",
+     "price": 94.4,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-16",
+     "variant": "C",
+     "symbol": "MCD",
+     "setups": "bull_flag",
+     "dollar_vol_prev": 1270181497,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:10",
+     "volume_x": 0.92,
+     "signal": "vwap_pullback",
+     "ref_level": 276.2,
+     "entry": 277.24,
+     "stop": 276.06,
+     "target": 279.6,
+     "risk_ps": 1.18,
+     "shares": 27,
+     "notional": 7485.48,
+     "exit_time": "10:45",
+     "exit_price": 276.06,
+     "exit_reason": "stop",
+     "gross_pnl": -31.86,
+     "costs": 9.47,
+     "net_pnl": -41.33,
+     "r_net": -1.297,
+     "data_note": "",
+     "tm_target_pct": 22.1,
+     "tm_stop_pct": 65.0,
+     "tm_neither_pct": 12.9,
+     "tm_avg_r": -0.15,
+     "tm_hist_avg_r": -0.077,
+     "tm_verdict": "No clear lean, within the noise of 18 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 22.1 % vs stop first 65.0 %)."
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "C",
+     "symbol": "COST",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2073148088,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:30",
+     "volume_x": 1.45,
+     "signal": "vwap_pullback",
+     "ref_level": 1111.09,
+     "entry": 1114.32,
+     "stop": 1110.53,
+     "target": 1121.9,
+     "risk_ps": 3.79,
+     "shares": 1,
+     "notional": 1114.32,
+     "exit_time": "10:45",
+     "exit_price": 1110.53,
+     "exit_reason": "stop",
+     "gross_pnl": -3.79,
+     "costs": 3.11,
+     "net_pnl": -6.9,
+     "r_net": -1.821,
+     "data_note": "",
+     "tm_target_pct": 34.8,
+     "tm_stop_pct": 53.3,
+     "tm_neither_pct": 11.9,
+     "tm_avg_r": 0.244,
+     "tm_hist_avg_r": -0.015,
+     "tm_verdict": "No clear lean, within the noise of 18 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 39 % (target first 34.8 % vs stop first 53.3 %)."
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "C",
+     "symbol": "U",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 647624890,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:45",
+     "volume_x": 0.38,
+     "signal": "vwap_pullback",
+     "ref_level": 52.5,
+     "entry": 52.81,
+     "stop": 52.46,
+     "target": 53.51,
+     "risk_ps": 0.35,
+     "shares": 142,
+     "notional": 7499.02,
+     "exit_time": "11:20",
+     "exit_price": 53.51,
+     "exit_reason": "target",
+     "gross_pnl": 99.4,
+     "costs": 5.75,
+     "net_pnl": 93.65,
+     "r_net": 1.884,
+     "data_note": "",
+     "tm_target_pct": 30.9,
+     "tm_stop_pct": 66.1,
+     "tm_neither_pct": 3.0,
+     "tm_avg_r": -0.085,
+     "tm_hist_avg_r": 0.054,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 32 % (target first 30.9 % vs stop first 66.1 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "PEP",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NVDA",
+     "time": "11:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "PG",
+     "time": "12:20",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ABNB",
+     "time": "12:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CB",
+     "time": "13:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "KDP",
+     "time": "13:30",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SO",
+     "time": "14:25",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "CBRS",
+     "time": "09:45",
+     "price": 102.14,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "LOW",
+     "time": "10:00",
+     "price": 226.81,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "AAPL",
+     "time": "13:50",
+     "price": 352.87,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "GE",
+     "time": "13:50",
+     "price": 326.44,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "NOW",
+     "time": "13:50",
+     "price": 100.78,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "13:55",
+     "price": 591.77,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "COST",
+     "time": "14:00",
+     "price": 1110.4,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "LLY",
+     "time": "15:00",
+     "price": 1437.15,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-16",
+     "variant": "D",
+     "symbol": "CBRS",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 4008843477,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 1.42,
+     "signal": "bb_rsi2",
+     "ref_level": 107.77,
+     "entry": 102.14,
+     "stop": 99.38,
+     "target": 107.77,
+     "risk_ps": 2.76,
+     "shares": 36,
+     "notional": 3677.04,
+     "exit_time": "09:55",
+     "exit_price": 99.38,
+     "exit_reason": "stop",
+     "gross_pnl": -99.36,
+     "costs": 5.63,
+     "net_pnl": -104.99,
+     "r_net": -1.057,
+     "data_note": "",
+     "tm_target_pct": 14.3,
+     "tm_stop_pct": 47.7,
+     "tm_neither_pct": 38.1,
+     "tm_avg_r": -0.046,
+     "tm_hist_avg_r": -0.221,
+     "tm_verdict": "No clear lean, within the noise of 58 days: at 2.04R after costs the target has to come first in 33 % of the replays that hit one side; it did in 23 % (target first 14.3 % vs stop first 47.7 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "LOW",
+     "time": "10:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "AAPL",
+     "time": "13:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "GE",
+     "time": "13:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "NOW",
+     "time": "13:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "13:55",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "COST",
+     "time": "14:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "LLY",
+     "time": "15:00",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "CBRS",
+     "time": "09:45",
+     "price": 102.14,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "NOW",
+     "time": "09:45",
+     "price": 99.9,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "09:55",
+     "price": 592.72,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "MOD",
+     "time": "10:00",
+     "price": 132.24,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:00",
+     "price": 50.56,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "NVDA",
+     "time": "10:40",
+     "price": 158.67,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "META",
+     "time": "10:40",
+     "price": 625.86,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "GE",
+     "time": "11:35",
+     "price": 328.21,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "ABNB",
+     "time": "12:50",
+     "price": 187.22,
+     "signal": "pdh_breakout"
+    },
+    {
+     "symbol": "ALNY",
+     "time": "15:15",
+     "price": 159.46,
+     "signal": "pdl_reclaim"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-16",
+     "variant": "E",
+     "symbol": "CBRS",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 4008843477,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 1.42,
+     "signal": "pdl_reclaim",
+     "ref_level": 101.18,
+     "entry": 102.14,
+     "stop": 99.0,
+     "target": 108.42,
+     "risk_ps": 3.14,
+     "shares": 31,
+     "notional": 3166.34,
+     "exit_time": "09:55",
+     "exit_price": 99.0,
+     "exit_reason": "stop",
+     "gross_pnl": -97.34,
+     "costs": 5.12,
+     "net_pnl": -102.46,
+     "r_net": -1.053,
+     "data_note": "",
+     "tm_target_pct": 10.6,
+     "tm_stop_pct": 41.4,
+     "tm_neither_pct": 48.1,
+     "tm_avg_r": -0.049,
+     "tm_hist_avg_r": -0.215,
+     "tm_verdict": "No clear lean, within the noise of 58 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 20 % (target first 10.6 % vs stop first 41.4 %)."
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "E",
+     "symbol": "NOW",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 866241550,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 1.06,
+     "signal": "pdl_reclaim",
+     "ref_level": 99.7,
+     "entry": 99.9,
+     "stop": 98.83,
+     "target": 102.04,
+     "risk_ps": 1.07,
+     "shares": 58,
+     "notional": 5794.2,
+     "exit_time": "15:55",
+     "exit_price": 99.61,
+     "exit_reason": "flat",
+     "gross_pnl": -17.11,
+     "costs": 7.79,
+     "net_pnl": -24.9,
+     "r_net": -0.401,
+     "data_note": "",
+     "tm_target_pct": 21.2,
+     "tm_stop_pct": 62.4,
+     "tm_neither_pct": 16.4,
+     "tm_avg_r": -0.142,
+     "tm_hist_avg_r": -0.028,
+     "tm_verdict": "No clear lean, within the noise of 58 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 21.2 % vs stop first 62.4 %)."
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "E",
+     "symbol": "BRK.B",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2825596288,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:55",
+     "volume_x": 1.51,
+     "signal": "pdl_reclaim",
+     "ref_level": 590.19,
+     "entry": 592.72,
+     "stop": 588.25,
+     "target": 601.66,
+     "risk_ps": 4.47,
+     "shares": 5,
+     "notional": 2963.6,
+     "exit_time": "15:55",
+     "exit_price": 593.72,
+     "exit_reason": "flat",
+     "gross_pnl": 5.0,
+     "costs": 4.97,
+     "net_pnl": 0.03,
+     "r_net": 0.002,
+     "data_note": "",
+     "tm_target_pct": 7.9,
+     "tm_stop_pct": 7.7,
+     "tm_neither_pct": 84.4,
+     "tm_avg_r": 0.502,
+     "tm_hist_avg_r": 0.189,
+     "tm_verdict": "No clear lean, within the noise of 15 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 51 % (target first 7.9 % vs stop first 7.7 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "MOD",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NVDA",
+     "time": "10:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "META",
+     "time": "10:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GE",
+     "time": "11:35",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ABNB",
+     "time": "12:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ALNY",
+     "time": "15:15",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }

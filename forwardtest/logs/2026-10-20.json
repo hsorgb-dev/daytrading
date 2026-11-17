@@ -726,6 +726,523 @@
      "why": "0 Stueck (Cash/Limit)"
     }
    ]
+  },
+  "C": {
+   "triggers": [
+    {
+     "symbol": "UNH",
+     "time": "10:00",
+     "price": 415.17,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "ISRG",
+     "time": "10:05",
+     "price": 435.26,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:25",
+     "price": 239.4,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "ACN",
+     "time": "10:50",
+     "price": 241.26,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "HD",
+     "time": "10:55",
+     "price": 316.32,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SYK",
+     "time": "10:55",
+     "price": 303.36,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "AXP",
+     "time": "11:40",
+     "price": 321.19,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SKHY",
+     "time": "11:50",
+     "price": 139.74,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SCHW",
+     "time": "11:55",
+     "price": 90.82,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "CAT",
+     "time": "12:25",
+     "price": 725.18,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "BA",
+     "time": "12:50",
+     "price": 191.27,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "13:05",
+     "price": 194.48,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "BAC",
+     "time": "13:10",
+     "price": 50.87,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "VRT",
+     "time": "14:00",
+     "price": 203.9,
+     "signal": "vwap_pullback"
+    },
+    {
+     "symbol": "SNDK",
+     "time": "15:00",
+     "price": 1372.94,
+     "signal": "vwap_pullback"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-20",
+     "variant": "C",
+     "symbol": "UNH",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2033138696,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 0.91,
+     "signal": "vwap_pullback",
+     "ref_level": 413.8,
+     "entry": 415.17,
+     "stop": 413.57,
+     "target": 418.37,
+     "risk_ps": 1.6,
+     "shares": 18,
+     "notional": 7473.06,
+     "exit_time": "10:50",
+     "exit_price": 418.37,
+     "exit_reason": "target",
+     "gross_pnl": 57.6,
+     "costs": 5.74,
+     "net_pnl": 51.86,
+     "r_net": 1.801,
+     "data_note": "",
+     "tm_target_pct": 29.7,
+     "tm_stop_pct": 69.0,
+     "tm_neither_pct": 1.4,
+     "tm_avg_r": -0.105,
+     "tm_hist_avg_r": -0.201,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 30 % (target first 29.7 % vs stop first 69.0 %)."
+    },
+    {
+     "date": "2026-10-20",
+     "variant": "C",
+     "symbol": "ISRG",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1096032017,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 0.5,
+     "signal": "vwap_pullback",
+     "ref_level": 434.21,
+     "entry": 435.26,
+     "stop": 433.94,
+     "target": 437.9,
+     "risk_ps": 1.32,
+     "shares": 3,
+     "notional": 1305.78,
+     "exit_time": "10:10",
+     "exit_price": 433.94,
+     "exit_reason": "stop",
+     "gross_pnl": -3.96,
+     "costs": 3.3,
+     "net_pnl": -7.26,
+     "r_net": -1.834,
+     "data_note": "",
+     "tm_target_pct": 31.1,
+     "tm_stop_pct": 68.9,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": -0.087,
+     "tm_hist_avg_r": 0.374,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 31 % (target first 31.1 % vs stop first 68.9 %)."
+    },
+    {
+     "date": "2026-10-20",
+     "variant": "C",
+     "symbol": "IBM",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1159871171,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:25",
+     "volume_x": 0.47,
+     "signal": "vwap_pullback",
+     "ref_level": 238.91,
+     "entry": 239.4,
+     "stop": 238.63,
+     "target": 240.94,
+     "risk_ps": 0.77,
+     "shares": 6,
+     "notional": 1436.4,
+     "exit_time": "10:50",
+     "exit_price": 240.94,
+     "exit_reason": "target",
+     "gross_pnl": 9.24,
+     "costs": 2.72,
+     "net_pnl": 6.52,
+     "r_net": 1.412,
+     "data_note": "",
+     "tm_target_pct": 31.8,
+     "tm_stop_pct": 67.8,
+     "tm_neither_pct": 0.5,
+     "tm_avg_r": -0.068,
+     "tm_hist_avg_r": -0.247,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 32 % (target first 31.8 % vs stop first 67.8 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "ACN",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "HD",
+     "time": "10:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SYK",
+     "time": "10:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "AXP",
+     "time": "11:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SKHY",
+     "time": "11:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SCHW",
+     "time": "11:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CAT",
+     "time": "12:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BA",
+     "time": "12:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "13:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BAC",
+     "time": "13:10",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "VRT",
+     "time": "14:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "SNDK",
+     "time": "15:00",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "D": {
+   "triggers": [
+    {
+     "symbol": "AMZN",
+     "time": "09:50",
+     "price": 262.07,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "SNDK",
+     "time": "09:50",
+     "price": 1354.84,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "09:50",
+     "price": 192.24,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "CBRS",
+     "time": "09:50",
+     "price": 119.32,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "AMAT",
+     "time": "09:55",
+     "price": 404.24,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "VRT",
+     "time": "10:00",
+     "price": 201.28,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "SKHY",
+     "time": "14:55",
+     "price": 140.01,
+     "signal": "bb_rsi2"
+    },
+    {
+     "symbol": "SYK",
+     "time": "15:15",
+     "price": 303.3,
+     "signal": "bb_rsi2"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-20",
+     "variant": "D",
+     "symbol": "AMAT",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 2788616334,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:55",
+     "volume_x": 0.5,
+     "signal": "bb_rsi2",
+     "ref_level": 412.28,
+     "entry": 404.24,
+     "stop": 398.82,
+     "target": 412.28,
+     "risk_ps": 5.42,
+     "shares": 18,
+     "notional": 7276.32,
+     "exit_time": "10:35",
+     "exit_price": 412.28,
+     "exit_reason": "target",
+     "gross_pnl": 144.72,
+     "costs": 5.64,
+     "net_pnl": 139.08,
+     "r_net": 1.426,
+     "data_note": "",
+     "tm_target_pct": 22.6,
+     "tm_stop_pct": 43.2,
+     "tm_neither_pct": 34.3,
+     "tm_avg_r": 0.001,
+     "tm_hist_avg_r": -0.17,
+     "tm_verdict": "No clear lean, within the noise of 39 days: at 1.48R after costs the target has to come first in 40 % of the replays that hit one side; it did in 34 % (target first 22.6 % vs stop first 43.2 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "AMZN",
+     "time": "09:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "SNDK",
+     "time": "09:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "PLTR",
+     "time": "09:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "CBRS",
+     "time": "09:50",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "VRT",
+     "time": "10:00",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "SKHY",
+     "time": "14:55",
+     "why": "CRV unter Minimum"
+    },
+    {
+     "symbol": "SYK",
+     "time": "15:15",
+     "why": "CRV unter Minimum"
+    }
+   ]
+  },
+  "E": {
+   "triggers": [
+    {
+     "symbol": "MPC",
+     "time": "09:45",
+     "price": 471.44,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "CLF",
+     "time": "09:50",
+     "price": 13.0,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "STX",
+     "time": "10:05",
+     "price": 659.84,
+     "signal": "pdl_reclaim"
+    },
+    {
+     "symbol": "WDC",
+     "time": "10:20",
+     "price": 356.31,
+     "signal": "pdh_breakout"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-20",
+     "variant": "E",
+     "symbol": "MPC",
+     "setups": "bull_flag",
+     "dollar_vol_prev": 912279576,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:45",
+     "volume_x": 0.82,
+     "signal": "pdl_reclaim",
+     "ref_level": 470.68,
+     "entry": 471.44,
+     "stop": 469.42,
+     "target": 475.48,
+     "risk_ps": 2.02,
+     "shares": 15,
+     "notional": 7071.6,
+     "exit_time": "09:50",
+     "exit_price": 469.42,
+     "exit_reason": "stop",
+     "gross_pnl": -30.3,
+     "costs": 9.06,
+     "net_pnl": -39.36,
+     "r_net": -1.299,
+     "data_note": "",
+     "tm_target_pct": 36.5,
+     "tm_stop_pct": 63.5,
+     "tm_neither_pct": 0.0,
+     "tm_avg_r": 0.085,
+     "tm_hist_avg_r": 0.203,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 37 % (target first 36.5 % vs stop first 63.5 %)."
+    },
+    {
+     "date": "2026-10-20",
+     "variant": "E",
+     "symbol": "CLF",
+     "setups": "breakout_20d+reclaim_ma20",
+     "dollar_vol_prev": 1246420294,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "09:50",
+     "volume_x": 0.76,
+     "signal": "pdl_reclaim",
+     "ref_level": 12.94,
+     "entry": 13.0,
+     "stop": 12.91,
+     "target": 13.18,
+     "risk_ps": 0.09,
+     "shares": 576,
+     "notional": 7488.0,
+     "exit_time": "09:55",
+     "exit_price": 13.18,
+     "exit_reason": "target",
+     "gross_pnl": 103.68,
+     "costs": 9.5,
+     "net_pnl": 94.18,
+     "r_net": 1.817,
+     "data_note": "",
+     "tm_target_pct": 39.4,
+     "tm_stop_pct": 60.5,
+     "tm_neither_pct": 0.1,
+     "tm_avg_r": -0.039,
+     "tm_hist_avg_r": 0.121,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 41 % of the replays that hit one side; it did in 39 % (target first 39.4 % vs stop first 60.5 %)."
+    },
+    {
+     "date": "2026-10-20",
+     "variant": "E",
+     "symbol": "STX",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 2727427184,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:05",
+     "volume_x": 1.12,
+     "signal": "pdl_reclaim",
+     "ref_level": 654.52,
+     "entry": 659.84,
+     "stop": 642.09,
+     "target": 695.34,
+     "risk_ps": 17.75,
+     "shares": 5,
+     "notional": 3299.2,
+     "exit_time": "15:55",
+     "exit_price": 675.92,
+     "exit_reason": "flat",
+     "gross_pnl": 80.42,
+     "costs": 5.34,
+     "net_pnl": 75.09,
+     "r_net": 0.846,
+     "data_note": "",
+     "tm_target_pct": 3.4,
+     "tm_stop_pct": 23.2,
+     "tm_neither_pct": 73.4,
+     "tm_avg_r": 0.117,
+     "tm_hist_avg_r": -0.165,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 13 % (target first 3.4 % vs stop first 23.2 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "WDC",
+     "time": "10:20",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }
