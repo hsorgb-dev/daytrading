@@ -39,6 +39,13 @@ Signale, die vor 9:45 (bzw. 10:00) schon bestätigt waren, verfallen. Der Backfi
 C–E für 20.10.–16.11. lief mit `--variants C,D,E` und nutzt die in `logs/` festgehaltenen
 Watchlists von A/B; A und B blieben dabei unverändert.
 
+**Variante C2** (ab 17.11.2026, ohne Backfill) nimmt dieselben Einstiege wie C, setzt den
+Stop 1,5× so weit vom Einstieg (gleiches $-Risiko, also weniger Stück) und hat kein festes
+Ziel: Sie hält bis zum Stop oder bis 15:55. Sie ist aus der Auswertung der ersten 20 Tage
+abgeleitet (bei C griffen 43 % der Stops im ersten Bar, Gewinner liefen oft über 3R).
+Deshalb läuft sie nur vorwärts (`forward_from` in `config.json`). Die Time Machine braucht
+ein Ziel und läuft für C2 nicht.
+
 Alle Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.
 
 Das Regelwerk in `config.json` ist ab Start eingefroren (C–E ab 17.11.2026). Neue Ideen kommen als

@@ -18,6 +18,8 @@ Ablauf je Tag D (nur Daten, die zum jeweiligen Zeitpunkt bekannt waren):
      Varianten C-E (gleiche Watchlist, nur Long): C VWAP-Pullback, D Mean Reversion
      (Bollinger 20/2,5 + RSI(2)), E Vortages-Hoch/-Tief (PDH-Ausbruch / PDL-Sweep).
      Sie bringen ihren eigenen Stop mit (D auch das Ziel: SMA20). Details: find_*().
+     Variante C2 = C mit Stop 1,5x so weit (stop_mult) und ohne Ziel (no_target);
+     forward_from verhindert einen Backfill vor ihrem Start.
   3. Plan wie trader-exit: Stop Range-Mitte (abgerundet), Ziel 2R, flat 15:55.
   4. Groesse wie trader-budget: min(max. Verlust / Risiko, Positionslimit,
      max. Order, freies Cash). Max. 3 Einstiege am Tag, chronologisch.
@@ -435,17 +437,22 @@ def find_any_trigger(bars, prev_bars, day, cfg, vcfg, spy):
     return STRATEGIES[strat](bars, prev_bars, day, cfg, vcfg)
 
 
-def make_plan(trig, cfg):
+def make_plan(trig, cfg, vcfg=None):
+    vcfg = vcfg or {}
     entry = trig["price"]
     if trig.get("stop") is not None:
         stop = trig["stop"]
     else:
         stop = floor_cent((trig["or_high"] + trig["or_low"]) / 2.0)
+    if vcfg.get("stop_mult"):  # wider stop, same $ risk (fewer shares)
+        stop = floor_cent(entry - vcfg["stop_mult"] * (entry - stop))
     risk = round(entry - stop, 2)
     if risk <= 0:
         return None, "Stop nicht unter Einstieg"
     if risk < entry * cfg["min_risk_pct"] / 100.0:
         return None, "Stop zu eng"
+    if vcfg.get("no_target"):  # hold until stop or flat_by
+        return {"entry": entry, "stop": stop, "target": None, "risk": risk}, ""
     target = trig["target"] if trig.get("target") is not None else r2(entry + cfg["target_r"] * risk)
     if target <= entry:
         return None, "Ziel nicht ueber Einstieg"
@@ -486,9 +493,9 @@ def simulate(plan, trig, bars, day, cfg):
             return b["o"], "stop_gap", b["end"], ""
         if b["l"] <= stop:
             return stop, "stop", b["end"], ""
-        if b["o"] >= target:
+        if target is not None and b["o"] >= target:
             return target, "target", b["end"], ""  # limit order: no better fill assumed
-        if b["h"] >= target:
+        if target is not None and b["h"] >= target:
             return target, "target", b["end"], ""
         if b["end"] >= flat:
             return b["c"], "flat", b["end"], ""
@@ -556,6 +563,8 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
     spy_o = spy[0]["o"] if 0 in spy else None
     spy_c = spy[max(spy)]["c"] if spy else None
     for vname, vcfg in sorted(cfg["variants"].items()):
+        if vcfg.get("forward_from") and day.isoformat() < vcfg["forward_from"]:
+            continue  # forward-only variant: no backfill before its start
         cands = []
         for w in wl:
             b = bars_by[w["symbol"]]
@@ -571,7 +580,7 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
             if len(taken) >= cfg["max_trades_per_day"]:
                 skipped.append({"symbol": sym, "time": label(trig["time"]), "why": "max. Trades/Tag erreicht"})
                 continue
-            plan, why = make_plan(trig, cfg)
+            plan, why = make_plan(trig, cfg, vcfg)
             if not plan:
                 skipped.append({"symbol": sym, "time": label(trig["time"]), "why": why})
                 continue
@@ -601,7 +610,9 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None):
                    "notional": round(n * plan["entry"], 2), "exit_time": label(exit_t), "exit_price": round(px, 2),
                    "exit_reason": reason, "gross_pnl": round(gross, 2), "costs": round(costs, 2),
                    "net_pnl": round(net, 2), "r_net": round(net / (n * plan["risk"]), 3), "data_note": note}
-            if use_tm:
+            if use_tm and plan["target"] is None:
+                row["data_note"] = (note + "; TM: ohne festes Ziel nicht anwendbar").strip("; ")
+            elif use_tm:
                 key = (sym, day.isoformat(), plan["entry"], plan["stop"], plan["target"], label(trig["time"]))
                 if key not in tm_cache:
                     log("  Time Machine %s %s ..." % (sym, label(trig["time"])))

@@ -38,7 +38,11 @@
           "confirm_bars": 3, "stop_buffer_pct": 0.05, "added": "2026-11-17"},
     "E": {"label": "Vortages-Hoch/-Tief: PDH-Ausbruch mit Volumen >= 1,5x oder PDL-Sweep mit Rueckeroberung, Ziel 2R",
           "strategy": "pdh_pdl", "breakout_volume_x": 1.5, "sweep_max_bars": 6, "stop_buffer_pct": 0.05,
-          "added": "2026-11-17"}
+          "added": "2026-11-17"},
+    "C2": {"label": "wie C, aber Stop 1,5x so weit (gleiches $-Risiko) und kein festes Ziel: halten bis Stop oder 15:55",
+           "strategy": "vwap_pullback", "no_entries_before": "10:00", "no_entries_after": "15:00",
+           "touch_pct": 0.1, "min_stretch_pct": 0.5, "stop_buffer_pct": 0.05, "stop_mult": 1.5, "no_target": true,
+           "added": "2026-11-17", "forward_from": "2026-11-17"}
   },
   "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
 }
