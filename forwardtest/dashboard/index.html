@@ -1,0 +1,316 @@
+<meta name="dash-one-writer">
+<style>
+  .ft { font-family: var(--font-anthropic-sans); color: var(--color-fg); display: flex; flex-direction: column; gap: var(--cds-gap-lg); }
+  .ft-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; }
+  .ft-sub { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 4px 0 0; }
+  .ft-lead { font-size: var(--cds-font-size-body); margin: 0; line-height: 1.5; }
+  .ft h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0 0 var(--cds-gap-sm); }
+  .ft-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--cds-gap-md); }
+  .ft-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+  .ft-card h3 { margin: 0 0 2px; font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); }
+  .ft-card .ft-cap { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0 0 var(--cds-gap-md); }
+  .ft-kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--cds-gap-md) var(--cds-gap-sm); }
+  .ft-kpi .ft-k { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .ft-kpi .ft-v { font-family: var(--font-anthropic-serif); font-size: 1.6rem; font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .ft-good { color: var(--color-ok); } .ft-bad { color: var(--color-bad); }
+  .ft-prog { margin-top: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .ft-bar { height: 6px; background: var(--color-border-line); border-radius: 3px; overflow: hidden; margin-top: 4px; }
+  .ft-bar > div { height: 100%; background: var(--cds-chart-reference); }
+  .ft-chart { position: relative; min-height: 260px; }
+  .ft-chart svg text { fill: var(--cds-text-secondary); font-size: var(--cds-font-size-caption); }
+  .ft-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); box-shadow: var(--cds-shadow-popover); border-radius: var(--cds-radius); padding: 6px 8px; font-size: var(--cds-font-size-caption); white-space: nowrap; }
+  .ft-legend { display: flex; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-bottom: var(--cds-gap-sm); }
+  .ft-legend i { display: inline-block; width: 10px; height: 3px; vertical-align: middle; margin-right: 4px; }
+  .ft-wrap { overflow-x: auto; }
+  .ft table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .ft th, .ft td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .ft th:nth-child(-n+4), .ft td:nth-child(-n+4) { text-align: left; }
+  .ft th { color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+  .ft-row { display: flex; justify-content: space-between; align-items: baseline; gap: var(--cds-gap-md); flex-wrap: wrap; }
+  .ft-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: var(--cds-gap-sm) 0 0; }
+  .ft-tm th:nth-child(-n+4), .ft-tm td:nth-child(-n+4) { text-align: right; } .ft-tm th:first-child, .ft-tm td:first-child { text-align: left; }
+  .ft details { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .ft details li { margin: 3px 0; }
+</style>
+
+<div class="ft">
+  <header id="kopf">
+    <h1 class="ft-title">Day Trader Forward-Test</h1>
+    <p class="ft-sub">Paper-Test der ORB-Strategie, Tag für Tag nach US-Börsenschluss nachgespielt. 10.000 $ je Variante, 1 % Risiko je Trade, Kosten abgezogen. Keine echten Orders.</p>
+  </header>
+
+  <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Stand: <span data-draw="stand">—</span>.</p>
+
+  <div class="ft-cols" id="kennzahlen">
+    <section class="ft-card" id="karte-a">
+      <h3>A · Original</h3>
+      <p class="ft-cap">Tages-Setup-Watchlist → Opening-Range-Breakout, Stop Range-Mitte, Ziel 2R</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-A-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=A">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-A-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=A">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-A-trades" data-source="kpis" data-field="trades" data-where="variant=A">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-A-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=A">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-A-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=A">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-A-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=A">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-A-txt">—</span><div class="ft-bar"><div data-draw="prog-A"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-b">
+      <h3>B · mit Filtern</h3>
+      <p class="ft-cap">wie A, plus Trigger-Volumen ≥ 1,5× Range-Schnitt und SPY über Tagesopen</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-B-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=B">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-B-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=B">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-B-trades" data-source="kpis" data-field="trades" data-where="variant=B">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-B-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=B">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-B-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=B">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-B-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=B">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-B-txt">—</span><div class="ft-bar"><div data-draw="prog-B"></div></div></div>
+    </section>
+  </div>
+
+  <section class="ft-card" id="equity">
+    <h2>Equity-Verlauf (Start 10.000 $)</h2>
+    <div class="ft-legend"><span><i style="background: var(--cds-chart-series-1, currentColor)" data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span></div>
+    <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
+    <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
+  </section>
+
+  <div class="ft-cols" id="analyse">
+    <section class="ft-card" id="ausstiege">
+      <h2>Wie die Trades enden</h2>
+      <div class="ft-chart" style="min-height:180px" data-draw="exit-chart" data-source="kpis"></div>
+    </section>
+    <section class="ft-card ft-tm" id="timemachine">
+      <h2>Time Machine: Prognose vs. Ergebnis</h2>
+      <p class="ft-cap">Anteil der Trades, die das Ziel erreicht haben, gegen die vorher simulierte Ziel-Wahrscheinlichkeit</p>
+      <div class="ft-wrap"><table data-source="kpis" data-row-key="variant">
+        <thead><tr><th data-field="variant">Variante</th><th data-field="tm_target_avg">TM: Ziel zuerst</th><th data-field="pct_target">Ist: Ziel</th><th data-field="tm_stop_avg">TM: Stop zuerst</th><th data-field="pct_stop">Ist: Stop</th></tr></thead>
+        <tbody data-draw="tm-table"></tbody>
+      </table></div>
+    </section>
+  </div>
+
+  <section class="ft-card" id="trades">
+    <div class="ft-row"><h2>Trades</h2>
+      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Beide Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option></select>
+    </div>
+    <div class="ft-wrap"><table data-source="trades" data-row-key="date,variant,symbol">
+      <thead><tr><th data-field="date">Datum</th><th data-field="variant">Var.</th><th data-field="symbol">Titel</th><th data-field="setups">Setup</th><th data-field="trigger_time">Einstieg ET</th><th data-field="entry">Kurs</th><th data-field="stop">Stop</th><th data-field="target">Ziel</th><th data-field="shares">Stück</th><th data-field="exit_reason">Ausstieg</th><th data-field="exit_time">um</th><th data-field="net_pnl">Netto $</th><th data-field="r_net">R netto</th><th data-field="tm_target_pct">TM Ziel %</th></tr></thead>
+      <tbody data-draw="trade-rows"></tbody>
+    </table></div>
+  </section>
+
+  <details id="regelwerk">
+    <summary>Regelwerk und Grenzen des Tests</summary>
+    <ul>
+      <li>Watchlist vor dem Open: Tages-Setups des Scanners (20-Tage-Hoch, Bull Flag, MA20-Rückeroberung, Oversold, Oversold Bounce) auf Schlusskursen bis zum Vortag; Vortag Kurs ≥ 5 $ und Volumen ≥ 1 Mio.; die 30 Titel mit dem höchsten Dollar-Volumen.</li>
+      <li>Einstieg: erster 5-Min-Schlusskurs über dem Hoch der Range 9:30–9:45 ET, zwischen 9:45 und 15:30 ET; maximal 3 Einstiege am Tag in zeitlicher Reihenfolge.</li>
+      <li>Ausstieg: Stop an der Range-Mitte, Ziel 2R, sonst Glattstellung 15:55 ET. Stop und Ziel im selben Bar zählen als Stop; ein Gap durch den Stop füllt zum Open.</li>
+      <li>Größe: kleinster Wert aus 100 $ max. Verlust ÷ Risiko je Aktie, 75 % Positionslimit, 8.000 $ max. Order und freiem Cash nach 10 % Puffer. Bei engen Stops bremst oft das Cash, nicht das Risiko.</li>
+      <li>Kosten: 0,05 % Slippage auf Einstieg, Stop und Glattstellung, Kommission 0,005 $ je Aktie, mindestens 1 $ je Seite.</li>
+      <li>Grenzen: Fills sind simuliert, echte Breakout-Slippage ist oft schlechter. Yahoo-Daten sind inoffiziell. Die ersten 20 Tage sind ein Backfill mit einem kleinen Look-ahead im Universum-Vorfilter.</li>
+      <li>Entscheidung frühestens nach 60 Trades: weiter nur bei Ø R netto über +0,2 und kleinerem Drawdown als CIM.</li>
+    </ul>
+  </details>
+</div>
+
+<script>
+  dash.calc('kpis', {
+    title: 'Kennzahlen je Variante',
+    description: 'Summen und Quoten über alle Trades einer Variante. R netto = Netto-Ergebnis geteilt durch das geplante Risiko aller Trades (Stück × Abstand zum Stop). Drawdown aus der täglichen Equity.',
+    inputs: ['trades', 'days'],
+    fn: (trades, days) => ['A', 'B'].map((variant) => {
+      const t = trades.filter((r) => r.variant === variant);
+      const n = t.length;
+      const net = t.reduce((s, r) => s + r.net_pnl, 0);
+      const wins = t.filter((r) => r.net_pnl > 0);
+      const gw = wins.reduce((s, r) => s + r.net_pnl, 0);
+      const gl = -t.filter((r) => r.net_pnl < 0).reduce((s, r) => s + r.net_pnl, 0);
+      let eq = 0, peak = 0, dd = 0;
+      days.filter((d) => d.variant === variant).sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
+        eq += d.net_pnl; peak = Math.max(peak, eq); dd = Math.min(dd, eq - peak);
+      });
+      const share = (reason) => n ? t.filter((r) => r.exit_reason.startsWith(reason)).length / n : null;
+      const tm = t.filter((r) => r.tm_target_pct != null);
+      const avg = (a, k) => a.length ? a.reduce((s, r) => s + r[k], 0) / a.length : null;
+      return {
+        variant, trades: n, net_pnl: Math.round(net * 100) / 100,
+        avg_r: n ? Math.round(1000 * net / t.reduce((s, r) => s + r.shares * r.risk_ps, 0)) / 1000 : null,
+        win_rate: n ? wins.length / n : null,
+        profit_factor: gl > 0 ? Math.round(100 * gw / gl) / 100 : null,
+        max_dd: Math.round(dd * 100) / 100,
+        pct_target: share('target'), pct_stop: share('stop'), pct_flat: share('flat'),
+        tm_target_avg: tm.length ? avg(tm, 'tm_target_pct') / 100 : null,
+        tm_stop_avg: tm.length ? avg(tm, 'tm_stop_pct') / 100 : null,
+        days: days.filter((d) => d.variant === variant).length,
+        last_date: days.length ? days.map((d) => d.date).sort().slice(-1)[0] : null,
+      };
+    }),
+  });
+
+  dash.calc('equity', {
+    title: 'Equity je Handelstag',
+    description: '10.000 $ plus kumuliertes Netto-Ergebnis je Variante nach jedem Handelstag.',
+    inputs: ['days'],
+    fn: (days) => {
+      const out = [];
+      ['A', 'B'].forEach((variant) => {
+        let eq = 10000;
+        days.filter((d) => d.variant === variant).sort((a, b) => a.date < b.date ? -1 : 1).forEach((d) => {
+          eq += d.net_pnl;
+          out.push({ date: d.date, variant, equity: Math.round(eq * 100) / 100 });
+        });
+      });
+      return out;
+    },
+  });
+
+  window.ftFmt = {
+    usd: (v) => (v < 0 ? '−' : v > 0 ? '+' : '') + d3.format(',.0f')(Math.abs(v)).replace(/,/g, '.') + ' $',
+    r: (v) => (v < 0 ? '−' : v > 0 ? '+' : '') + d3.format('.2f')(Math.abs(v)).replace('.', ',') + ' R',
+    pct: (v) => d3.format('.0f')(v * 100) + ' %',
+    num: (v) => d3.format('.2f')(v).replace('.', ','),
+  };
+  window.ftRow = (v) => {
+    const k = dash.data('kpis');
+    return k.status === 'ok' && k.data ? k.data.find((r) => r.variant === v) : null;
+  };
+
+  const kpiFields = { net_pnl: 'usd', avg_r: 'r', trades: 'int', win_rate: 'pct', profit_factor: 'num', max_dd: 'usd' };
+  ['A', 'B'].forEach((v) => {
+    Object.entries(kpiFields).forEach(([f, kind]) => {
+      dash.draw('kpi-' + v + '-' + f, (el) => {
+        const r = window.ftRow(v);
+        el.classList.remove('ft-good', 'ft-bad');
+        if (!r || r[f] == null) { el.textContent = '—'; return; }
+        const x = r[f];
+        el.textContent = kind === 'int' ? String(x) : kind === 'usd' ? window.ftFmt.usd(x) : kind === 'r' ? window.ftFmt.r(x) : kind === 'pct' ? window.ftFmt.pct(x) : window.ftFmt.num(x);
+        if (f === 'net_pnl' || f === 'avg_r') { if (x > 0) el.classList.add('ft-good'); else if (x < 0) el.classList.add('ft-bad'); }
+      });
+    });
+    dash.draw('prog-' + v, (el) => {
+      const r = window.ftRow(v);
+      el.style.width = r ? Math.min(100, 100 * r.trades / 60) + '%' : '0%';
+    });
+    dash.draw('prog-' + v + '-txt', (el) => {
+      const r = window.ftRow(v);
+      el.textContent = r ? r.trades + ' von 60 (' + r.days + ' Handelstage)' : '—';
+    });
+    dash.draw('lead' + v, (el) => {
+      const r = window.ftRow(v);
+      if (!r) { el.textContent = '—'; return; }
+      if (!r.trades) { el.textContent = 'noch keine Trades'; return; }
+      el.textContent = r.trades + ' Trades, ' + window.ftFmt.r(r.avg_r) + ' je eingesetztem Risiko, ' + window.ftFmt.usd(r.net_pnl) + ' netto';
+    });
+  });
+  dash.draw('stand', (el) => {
+    const r = window.ftRow('A');
+    el.textContent = r && r.last_date ? d3.utcFormat('%d.%m.%Y')(new Date(r.last_date + 'T00:00:00Z')) : '—';
+  });
+  dash.draw('legA', (el) => { el.style.background = dash.colors[0]; });
+  dash.draw('legB', (el) => { el.style.background = dash.colors[1]; });
+
+  dash.draw('equity-chart', (el) => {
+    const d = dash.data('equity');
+    el.replaceChildren();
+    if (d.status === 'error') { el.textContent = 'Konnte nicht geladen werden'; return; }
+    if (d.status !== 'ok' || !d.data || !d.data.length) { el.textContent = '—'; return; }
+    const rows = d.data.map((r) => ({ ...r, t: new Date(r.date + 'T00:00:00Z') }));
+    const W = el.clientWidth || 600, H = 260, m = { t: 10, r: 16, b: 26, l: 56 };
+    const x = d3.scaleUtc().domain(d3.extent(rows, (r) => r.t)).range([m.l, W - m.r]);
+    const ext = d3.extent(rows.map((r) => r.equity).concat([10000]));
+    const pad = Math.max(50, (ext[1] - ext[0]) * 0.1);
+    const y = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).nice().range([H - m.b, m.t]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', 'Equity je Handelstag für Variante A und B, Start 10.000 Dollar');
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 110))).tickFormat(d3.utcFormat('%d.%m.')))
+      .call((g) => g.selectAll('line,path').style('stroke', 'var(--cds-chart-axis)'));
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat((v) => d3.format(',')(v).replace(/,/g, '.')))
+      .call((g) => g.select('.domain').remove()).call((g) => g.selectAll('line').style('stroke', 'var(--cds-chart-grid)'));
+    svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(10000)).attr('y2', y(10000)).style('stroke', 'var(--cds-chart-reference)').style('stroke-dasharray', '3 3');
+    const tip = d3.select(el).append('div').attr('class', 'ft-tip').style('display', 'none');
+    ['A', 'B'].forEach((v, i) => {
+      const s = rows.filter((r) => r.variant === v);
+      svg.append('path').datum(s).attr('fill', 'none').style('stroke', dash.colors[i]).attr('stroke-width', 2)
+        .attr('d', d3.line().x((r) => x(r.t)).y((r) => y(r.equity)));
+      svg.selectAll(null).data(s).join('circle').attr('cx', (r) => x(r.t)).attr('cy', (r) => y(r.equity)).attr('r', 3).style('fill', dash.colors[i]);
+    });
+    const dates = Array.from(new Set(rows.map((r) => r.date))).sort();
+    svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('pointermove', (ev) => {
+        const [px] = d3.pointer(ev);
+        const t = x.invert(px);
+        const dt = dates.reduce((a, b) => Math.abs(new Date(b + 'T00:00:00Z') - t) < Math.abs(new Date(a + 'T00:00:00Z') - t) ? b : a);
+        const a = rows.find((r) => r.date === dt && r.variant === 'A'), b = rows.find((r) => r.date === dt && r.variant === 'B');
+        tip.style('display', null).style('left', Math.min(px + 12, W - 170) + 'px').style('top', '8px')
+          .text(d3.utcFormat('%d.%m.%Y')(new Date(dt + 'T00:00:00Z')) + ' · A ' + (a ? d3.format(',.0f')(a.equity).replace(/,/g, '.') : '–') + ' $ · B ' + (b ? d3.format(',.0f')(b.equity).replace(/,/g, '.') : '–') + ' $');
+      })
+      .on('pointerleave', () => tip.style('display', 'none'));
+  });
+
+  dash.draw('exit-chart', (el) => {
+    const k = dash.data('kpis');
+    el.replaceChildren();
+    if (k.status !== 'ok' || !k.data) { el.textContent = '—'; return; }
+    const cats = [['pct_target', 'Ziel 2R'], ['pct_stop', 'Stop'], ['pct_flat', 'Glattstellung 15:55']];
+    const W = el.clientWidth || 400, rowH = 26, m = { t: 6, r: 44, l: 130 };
+    const H = m.t + cats.length * (rowH * 2 + 8);
+    const x = d3.scaleLinear().domain([0, 1]).range([m.l, W - m.r]);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('role', 'img').attr('aria-label', 'Anteil der Trades nach Ausstiegsgrund, Variante A und B');
+    cats.forEach(([f, lab], ci) => {
+      const y0 = m.t + ci * (rowH * 2 + 8);
+      svg.append('text').attr('x', 0).attr('y', y0 + rowH).attr('dy', '0.35em').text(lab);
+      k.data.forEach((r, vi) => {
+        const v = r[f] || 0, y = y0 + vi * rowH + 3;
+        svg.append('rect').attr('x', m.l).attr('y', y).attr('height', rowH - 6).attr('width', Math.max(1, x(v) - m.l)).style('fill', dash.colors[vi]);
+        svg.append('text').attr('x', x(v) + 4).attr('y', y + (rowH - 6) / 2).attr('dy', '0.35em').text(r.variant + ' ' + (r[f] == null ? '–' : window.ftFmt.pct(v)));
+      });
+    });
+  });
+
+  dash.draw('tm-table', (tb) => {
+    const k = dash.data('kpis');
+    tb.replaceChildren();
+    if (k.status !== 'ok' || !k.data) return;
+    k.data.forEach((r) => {
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-key', r.variant);
+      const cells = [r.variant, r.tm_target_avg, r.pct_target, r.tm_stop_avg, r.pct_stop];
+      cells.forEach((c, i) => {
+        const td = document.createElement('td');
+        td.textContent = i === 0 ? c : c == null ? '–' : window.ftFmt.pct(c);
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  });
+
+  window.ftFilter = '';
+  document.querySelectorAll('#trade-filter').forEach((s) => s.addEventListener('change', () => { window.ftFilter = s.value; dash.draw('trade-rows'); }));
+  dash.draw('trade-rows', (tb) => {
+    const d = dash.data('trades');
+    tb.replaceChildren();
+    if (d.status !== 'ok') return;
+    const rows = d.data.filter((r) => !window.ftFilter || r.variant === window.ftFilter)
+      .slice().sort((a, b) => (a.date + a.trigger_time < b.date + b.trigger_time ? 1 : -1));
+    const reason = { target: 'Ziel', stop: 'Stop', stop_gap: 'Stop (Gap)', flat: 'Glatt' };
+    rows.forEach((r) => {
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-key', [r.date, r.variant, r.symbol].map(encodeURIComponent).join(','));
+      const vals = [d3.utcFormat('%d.%m.')(new Date(r.date + 'T00:00:00Z')), r.variant, r.symbol, (r.setups || '').replace(/_/g, ' ').replace(/\+/g, ', '),
+        r.trigger_time, window.ftFmt.num(r.entry), window.ftFmt.num(r.stop), window.ftFmt.num(r.target), String(r.shares),
+        reason[r.exit_reason] || r.exit_reason, r.exit_time, window.ftFmt.usd(r.net_pnl), window.ftFmt.r(r.r_net),
+        r.tm_target_pct == null ? '–' : d3.format('.0f')(r.tm_target_pct)];
+      vals.forEach((v, i) => {
+        const td = document.createElement('td');
+        td.textContent = v;
+        if (i === 11 || i === 12) td.className = r.net_pnl > 0 ? 'ft-good' : r.net_pnl < 0 ? 'ft-bad' : '';
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  });
+</script>

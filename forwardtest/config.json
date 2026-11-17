@@ -1,0 +1,35 @@
+{
+  "_note": "Regelwerk des Paper-Forward-Tests. Waehrend der Testphase NICHT aendern (eingefroren ab Start). Neue Ideen als eigene Variante.",
+  "capital": 10000,
+  "cash_buffer_pct": 10,
+  "max_loss_per_trade": 100,
+  "max_daily_loss": 300,
+  "max_trades_per_day": 3,
+  "max_position_pct": 75,
+  "max_order_usd": 8000,
+  "min_order_usd": 500,
+  "min_reward_risk": 1.0,
+  "target_r": 2.0,
+  "stop_rule": "or_mid",
+  "or_minutes": 15,
+  "no_entries_before": "09:45",
+  "no_entries_after": "15:30",
+  "flat_by": "15:55",
+  "min_risk_pct": 0.05,
+  "watchlist": {
+    "size": 30,
+    "min_price": 5,
+    "min_volume": 1000000,
+    "prefilter_min_volume": 300000
+  },
+  "costs": {
+    "slippage_pct": 0.05,
+    "commission_per_share": 0.005,
+    "commission_min": 1.0
+  },
+  "variants": {
+    "A": {"label": "Original: Tages-Setup-Watchlist -> ORB, Stop Range-Mitte, Ziel 2R"},
+    "B": {"label": "A + Volumen >= 1,5x Range-Schnitt + SPY ueber Tagesopen", "min_volume_x": 1.5, "spy_above_open": true}
+  },
+  "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
+}

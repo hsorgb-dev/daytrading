@@ -1,0 +1,530 @@
+{
+ "date": "2026-11-06",
+ "setup_candidates": 594,
+ "watchlist": [
+  {
+   "symbol": "NVDA",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 181.6,
+   "volume_prev": 306127800,
+   "dollar_vol_prev": 55592810348
+  },
+  {
+   "symbol": "MU",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 656.39,
+   "volume_prev": 77872700,
+   "dollar_vol_prev": 51114862694
+  },
+  {
+   "symbol": "AMD",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 404.4,
+   "volume_prev": 71237400,
+   "dollar_vol_prev": 28808404125
+  },
+  {
+   "symbol": "SNDK",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 806.43,
+   "volume_prev": 30722600,
+   "dollar_vol_prev": 24775626093
+  },
+  {
+   "symbol": "TSM",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 353.1,
+   "volume_prev": 43030700,
+   "dollar_vol_prev": 15194140433
+  },
+  {
+   "symbol": "GOOGL",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 282.57,
+   "volume_prev": 53412800,
+   "dollar_vol_prev": 15092855287
+  },
+  {
+   "symbol": "INTC",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 52.25,
+   "volume_prev": 270291000,
+   "dollar_vol_prev": 14122704750
+  },
+  {
+   "symbol": "GOOG",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 281.74,
+   "volume_prev": 41149900,
+   "dollar_vol_prev": 11593572424
+  },
+  {
+   "symbol": "MRVL",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 133.55,
+   "volume_prev": 66645300,
+   "dollar_vol_prev": 8900480018
+  },
+  {
+   "symbol": "APP",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 356.1,
+   "volume_prev": 22224300,
+   "dollar_vol_prev": 7914073366
+  },
+  {
+   "symbol": "PLTR",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 154.99,
+   "volume_prev": 50014300,
+   "dollar_vol_prev": 7751716632
+  },
+  {
+   "symbol": "LRCX",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 185.2,
+   "volume_prev": 31453300,
+   "dollar_vol_prev": 5825151064
+  },
+  {
+   "symbol": "NBIS",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 120.37,
+   "volume_prev": 48254800,
+   "dollar_vol_prev": 5808430409
+  },
+  {
+   "symbol": "ASML",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 1356.65,
+   "volume_prev": 4012400,
+   "dollar_vol_prev": 5443422558
+  },
+  {
+   "symbol": "AMAT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 319.25,
+   "volume_prev": 17048700,
+   "dollar_vol_prev": 5442797475
+  },
+  {
+   "symbol": "LITE",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 509.7,
+   "volume_prev": 10038000,
+   "dollar_vol_prev": 5116368723
+  },
+  {
+   "symbol": "COST",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1065.59,
+   "volume_prev": 4732800,
+   "dollar_vol_prev": 5043224190
+  },
+  {
+   "symbol": "WDC",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 267.63,
+   "volume_prev": 18349400,
+   "dollar_vol_prev": 4910850012
+  },
+  {
+   "symbol": "DELL",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 316.91,
+   "volume_prev": 14226900,
+   "dollar_vol_prev": 4508646931
+  },
+  {
+   "symbol": "STX",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 466.53,
+   "volume_prev": 9660100,
+   "dollar_vol_prev": 4506726441
+  },
+  {
+   "symbol": "KLAC",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 129.8,
+   "volume_prev": 34579300,
+   "dollar_vol_prev": 4488393246
+  },
+  {
+   "symbol": "CRWV",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 43.66,
+   "volume_prev": 85279600,
+   "dollar_vol_prev": 3723307323
+  },
+  {
+   "symbol": "CAT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 553.64,
+   "volume_prev": 6518300,
+   "dollar_vol_prev": 3608791707
+  },
+  {
+   "symbol": "COHR",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 169.76,
+   "volume_prev": 17277200,
+   "dollar_vol_prev": 2932977377
+  },
+  {
+   "symbol": "ARM",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 166.72,
+   "volume_prev": 15412700,
+   "dollar_vol_prev": 2569605363
+  },
+  {
+   "symbol": "NOW",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 102.36,
+   "volume_prev": 25077900,
+   "dollar_vol_prev": 2566973859
+  },
+  {
+   "symbol": "HOOD",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 78.39,
+   "volume_prev": 32403600,
+   "dollar_vol_prev": 2540118184
+  },
+  {
+   "symbol": "U",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 48.8,
+   "volume_prev": 50967900,
+   "dollar_vol_prev": 2487233481
+  },
+  {
+   "symbol": "TER",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 212.74,
+   "volume_prev": 11087700,
+   "dollar_vol_prev": 2358797359
+  },
+  {
+   "symbol": "IREN",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 18.03,
+   "volume_prev": 130226700,
+   "dollar_vol_prev": 2347987490
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "MU",
+     "time": "09:50",
+     "price": 718.31
+    },
+    {
+     "symbol": "AMD",
+     "time": "09:50",
+     "price": 456.69
+    },
+    {
+     "symbol": "SNDK",
+     "time": "09:50",
+     "price": 899.84
+    },
+    {
+     "symbol": "PLTR",
+     "time": "09:50",
+     "price": 163.43
+    },
+    {
+     "symbol": "NBIS",
+     "time": "09:50",
+     "price": 135.64
+    },
+    {
+     "symbol": "LITE",
+     "time": "09:50",
+     "price": 555.79
+    },
+    {
+     "symbol": "KLAC",
+     "time": "09:50",
+     "price": 141.9
+    },
+    {
+     "symbol": "CRWV",
+     "time": "09:50",
+     "price": 47.35
+    },
+    {
+     "symbol": "COHR",
+     "time": "09:50",
+     "price": 191.15
+    },
+    {
+     "symbol": "HOOD",
+     "time": "09:50",
+     "price": 81.48
+    },
+    {
+     "symbol": "IREN",
+     "time": "09:50",
+     "price": 22.12
+    },
+    {
+     "symbol": "APP",
+     "time": "09:55",
+     "price": 373.47
+    },
+    {
+     "symbol": "COST",
+     "time": "09:55",
+     "price": 1056.39
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:55",
+     "price": 102.71
+    },
+    {
+     "symbol": "U",
+     "time": "11:55",
+     "price": 52.58
+    },
+    {
+     "symbol": "INTC",
+     "time": "13:50",
+     "price": 56.65
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-06",
+     "variant": "A",
+     "symbol": "MU",
+     "setups": "oversold",
+     "dollar_vol_prev": 51114862694,
+     "or_high": 717.7,
+     "or_low": 688.67,
+     "trigger_time": "09:50",
+     "volume_x": 0.5,
+     "entry": 718.31,
+     "stop": 703.18,
+     "target": 748.57,
+     "risk_ps": 15.13,
+     "shares": 6,
+     "notional": 4309.86,
+     "exit_time": "10:15",
+     "exit_price": 703.18,
+     "exit_reason": "stop",
+     "gross_pnl": -90.78,
+     "costs": 6.26,
+     "net_pnl": -97.04,
+     "r_net": -1.069,
+     "data_note": "",
+     "tm_target_pct": 6.0,
+     "tm_stop_pct": 36.2,
+     "tm_neither_pct": 57.8,
+     "tm_avg_r": -0.08,
+     "tm_hist_avg_r": -0.017,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 6.0 % vs stop first 36.2 %)."
+    },
+    {
+     "date": "2026-11-06",
+     "variant": "A",
+     "symbol": "AMD",
+     "setups": "oversold",
+     "dollar_vol_prev": 28808404125,
+     "or_high": 453.64,
+     "or_low": 433.93,
+     "trigger_time": "09:50",
+     "volume_x": 0.56,
+     "entry": 456.69,
+     "stop": 443.78,
+     "target": 482.51,
+     "risk_ps": 12.91,
+     "shares": 7,
+     "notional": 3196.83,
+     "exit_time": "10:30",
+     "exit_price": 443.78,
+     "exit_reason": "stop",
+     "gross_pnl": -90.37,
+     "costs": 5.15,
+     "net_pnl": -95.52,
+     "r_net": -1.057,
+     "data_note": "",
+     "tm_target_pct": 1.1,
+     "tm_stop_pct": 19.7,
+     "tm_neither_pct": 79.2,
+     "tm_avg_r": -0.042,
+     "tm_hist_avg_r": -0.009,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 1.1 % vs stop first 19.7 %)."
+    },
+    {
+     "date": "2026-11-06",
+     "variant": "A",
+     "symbol": "SNDK",
+     "setups": "oversold",
+     "dollar_vol_prev": 24775626093,
+     "or_high": 898.64,
+     "or_low": 847.58,
+     "trigger_time": "09:50",
+     "volume_x": 0.43,
+     "entry": 899.84,
+     "stop": 873.11,
+     "target": 953.3,
+     "risk_ps": 26.73,
+     "shares": 1,
+     "notional": 899.84,
+     "exit_time": "10:00",
+     "exit_price": 873.11,
+     "exit_reason": "stop",
+     "gross_pnl": -26.73,
+     "costs": 2.89,
+     "net_pnl": -29.62,
+     "r_net": -1.108,
+     "data_note": "",
+     "tm_target_pct": 3.2,
+     "tm_stop_pct": 32.5,
+     "tm_neither_pct": 64.2,
+     "tm_avg_r": -0.118,
+     "tm_hist_avg_r": 0.008,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 9 % (target first 3.2 % vs stop first 32.5 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "PLTR",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NBIS",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "LITE",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CRWV",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COHR",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "HOOD",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "IREN",
+     "time": "09:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "APP",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "COST",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "U",
+     "time": "11:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "INTC",
+     "time": "13:50",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [],
+   "taken": [],
+   "skipped": []
+  }
+ }
+}

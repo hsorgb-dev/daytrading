@@ -1,0 +1,481 @@
+{
+ "date": "2026-11-16",
+ "setup_candidates": 509,
+ "watchlist": [
+  {
+   "symbol": "NVDA",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 162.85,
+   "volume_prev": 365796600,
+   "dollar_vol_prev": 59569978543
+  },
+  {
+   "symbol": "AAPL",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 356.27,
+   "volume_prev": 40027500,
+   "dollar_vol_prev": 14260596985
+  },
+  {
+   "symbol": "META",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 641.69,
+   "volume_prev": 15151000,
+   "dollar_vol_prev": 9722245227
+  },
+  {
+   "symbol": "CBRS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 108.72,
+   "volume_prev": 36873100,
+   "dollar_vol_prev": 4008843477
+  },
+  {
+   "symbol": "LLY",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1443.5,
+   "volume_prev": 2081600,
+   "dollar_vol_prev": 3004789600
+  },
+  {
+   "symbol": "BRK.B",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 592.94,
+   "volume_prev": 4765400,
+   "dollar_vol_prev": 2825596288
+  },
+  {
+   "symbol": "KDP",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 36.34,
+   "volume_prev": 60349900,
+   "dollar_vol_prev": 2193115375
+  },
+  {
+   "symbol": "COST",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1106.21,
+   "volume_prev": 1874100,
+   "dollar_vol_prev": 2073148088
+  },
+  {
+   "symbol": "SO",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 93.59,
+   "volume_prev": 22081900,
+   "dollar_vol_prev": 2066644940
+  },
+  {
+   "symbol": "NU",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 13.22,
+   "volume_prev": 152617300,
+   "dollar_vol_prev": 2017600747
+  },
+  {
+   "symbol": "JNJ",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 285.75,
+   "volume_prev": 6282000,
+   "dollar_vol_prev": 1795081500
+  },
+  {
+   "symbol": "KO",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 99.25,
+   "volume_prev": 18037700,
+   "dollar_vol_prev": 1790241725
+  },
+  {
+   "symbol": "APP",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 409.1,
+   "volume_prev": 3429200,
+   "dollar_vol_prev": 1402885741
+  },
+  {
+   "symbol": "MCD",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 271.97,
+   "volume_prev": 4670300,
+   "dollar_vol_prev": 1270181497
+  },
+  {
+   "symbol": "PG",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 169.8,
+   "volume_prev": 6943100,
+   "dollar_vol_prev": 1178938401
+  },
+  {
+   "symbol": "PEP",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 145.44,
+   "volume_prev": 7912000,
+   "dollar_vol_prev": 1150721299
+  },
+  {
+   "symbol": "MOD",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 135.66,
+   "volume_prev": 8426000,
+   "dollar_vol_prev": 1143071191
+  },
+  {
+   "symbol": "GE",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 331.81,
+   "volume_prev": 3375000,
+   "dollar_vol_prev": 1119858742
+  },
+  {
+   "symbol": "REGN",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 955.47,
+   "volume_prev": 1165700,
+   "dollar_vol_prev": 1113791345
+  },
+  {
+   "symbol": "BAC",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 51.02,
+   "volume_prev": 20008100,
+   "dollar_vol_prev": 1020813271
+  },
+  {
+   "symbol": "ABBV",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 295.03,
+   "volume_prev": 3261200,
+   "dollar_vol_prev": 962151832
+  },
+  {
+   "symbol": "XEL",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 81.61,
+   "volume_prev": 11719800,
+   "dollar_vol_prev": 956452885
+  },
+  {
+   "symbol": "ABNB",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 186.78,
+   "volume_prev": 4972500,
+   "dollar_vol_prev": 928763544
+  },
+  {
+   "symbol": "NOW",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 102.25,
+   "volume_prev": 8471800,
+   "dollar_vol_prev": 866241550
+  },
+  {
+   "symbol": "FCUV",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "close_prev": 7.08,
+   "volume_prev": 117440800,
+   "dollar_vol_prev": 831480855
+  },
+  {
+   "symbol": "LOW",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 227.73,
+   "volume_prev": 3200500,
+   "dollar_vol_prev": 728849851
+  },
+  {
+   "symbol": "HUM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 450.0,
+   "volume_prev": 1499100,
+   "dollar_vol_prev": 674595000
+  },
+  {
+   "symbol": "U",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 52.81,
+   "volume_prev": 12263300,
+   "dollar_vol_prev": 647624890
+  },
+  {
+   "symbol": "ALNY",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 165.04,
+   "volume_prev": 3589500,
+   "dollar_vol_prev": 592411056
+  },
+  {
+   "symbol": "CB",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 375.74,
+   "volume_prev": 1516400,
+   "dollar_vol_prev": 569772121
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "SO",
+     "time": "09:50",
+     "price": 94.47
+    },
+    {
+     "symbol": "KDP",
+     "time": "10:05",
+     "price": 36.81
+    },
+    {
+     "symbol": "PEP",
+     "time": "10:05",
+     "price": 147.51
+    },
+    {
+     "symbol": "ABNB",
+     "time": "10:05",
+     "price": 185.09
+    },
+    {
+     "symbol": "CB",
+     "time": "10:15",
+     "price": 382.58
+    },
+    {
+     "symbol": "PG",
+     "time": "10:20",
+     "price": 173.35
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "10:35",
+     "price": 595.45
+    },
+    {
+     "symbol": "U",
+     "time": "11:20",
+     "price": 53.6
+    },
+    {
+     "symbol": "APP",
+     "time": "11:55",
+     "price": 416.67
+    },
+    {
+     "symbol": "CBRS",
+     "time": "12:55",
+     "price": 103.51
+    },
+    {
+     "symbol": "HUM",
+     "time": "15:10",
+     "price": 461.14
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-16",
+     "variant": "A",
+     "symbol": "SO",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 2066644940,
+     "or_high": 94.44,
+     "or_low": 93.15,
+     "trigger_time": "09:50",
+     "volume_x": 0.61,
+     "entry": 94.47,
+     "stop": 93.79,
+     "target": 95.83,
+     "risk_ps": 0.68,
+     "shares": 79,
+     "notional": 7463.13,
+     "exit_time": "11:30",
+     "exit_price": 93.79,
+     "exit_reason": "stop",
+     "gross_pnl": -53.72,
+     "costs": 9.44,
+     "net_pnl": -63.16,
+     "r_net": -1.176,
+     "data_note": "",
+     "tm_target_pct": 12.9,
+     "tm_stop_pct": 29.8,
+     "tm_neither_pct": 57.3,
+     "tm_avg_r": 0.197,
+     "tm_hist_avg_r": 0.169,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 30 % (target first 12.9 % vs stop first 29.8 %)."
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "A",
+     "symbol": "KDP",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 2193115375,
+     "or_high": 36.78,
+     "or_low": 36.48,
+     "trigger_time": "10:05",
+     "volume_x": 0.99,
+     "entry": 36.81,
+     "stop": 36.63,
+     "target": 37.17,
+     "risk_ps": 0.18,
+     "shares": 41,
+     "notional": 1509.21,
+     "exit_time": "11:55",
+     "exit_price": 36.63,
+     "exit_reason": "stop",
+     "gross_pnl": -7.38,
+     "costs": 3.51,
+     "net_pnl": -10.89,
+     "r_net": -1.475,
+     "data_note": "",
+     "tm_target_pct": 41.7,
+     "tm_stop_pct": 54.2,
+     "tm_neither_pct": 4.2,
+     "tm_avg_r": 0.202,
+     "tm_hist_avg_r": -0.033,
+     "tm_verdict": "No clear lean, within the noise of 17 days: at 2R after costs the target has to come first in 37 % of the replays that hit one side; it did in 43 % (target first 41.7 % vs stop first 54.2 %)."
+    },
+    {
+     "date": "2026-11-16",
+     "variant": "A",
+     "symbol": "APP",
+     "setups": "bull_flag",
+     "dollar_vol_prev": 1402885741,
+     "or_high": 416.64,
+     "or_low": 404.78,
+     "trigger_time": "11:55",
+     "volume_x": 0.54,
+     "entry": 416.67,
+     "stop": 410.71,
+     "target": 428.59,
+     "risk_ps": 5.96,
+     "shares": 16,
+     "notional": 6666.72,
+     "exit_time": "14:35",
+     "exit_price": 410.71,
+     "exit_reason": "stop",
+     "gross_pnl": -95.36,
+     "costs": 8.62,
+     "net_pnl": -103.98,
+     "r_net": -1.09,
+     "data_note": "",
+     "tm_target_pct": 5.2,
+     "tm_stop_pct": 32.2,
+     "tm_neither_pct": 62.6,
+     "tm_avg_r": -0.039,
+     "tm_hist_avg_r": 0.021,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 5.2 % vs stop first 32.2 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "PEP",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "ABNB",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "CB",
+     "time": "10:15",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "PG",
+     "time": "10:20",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "10:35",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "U",
+     "time": "11:20",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "CBRS",
+     "time": "12:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "HUM",
+     "time": "15:10",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [],
+   "taken": [],
+   "skipped": []
+  }
+ }
+}

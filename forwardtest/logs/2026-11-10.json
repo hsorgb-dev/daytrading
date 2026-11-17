@@ -1,0 +1,553 @@
+{
+ "date": "2026-11-10",
+ "setup_candidates": 1107,
+ "watchlist": [
+  {
+   "symbol": "NVDA",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 178.67,
+   "volume_prev": 462719300,
+   "dollar_vol_prev": 82674056484
+  },
+  {
+   "symbol": "AAPL",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "close_prev": 350.69,
+   "volume_prev": 48753100,
+   "dollar_vol_prev": 17097224758
+  },
+  {
+   "symbol": "MSFT",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 545.18,
+   "volume_prev": 25337400,
+   "dollar_vol_prev": 13813443546
+  },
+  {
+   "symbol": "AMZN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 266.93,
+   "volume_prev": 51523200,
+   "dollar_vol_prev": 13753087399
+  },
+  {
+   "symbol": "SNDK",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 886.51,
+   "volume_prev": 13983800,
+   "dollar_vol_prev": 12396778675
+  },
+  {
+   "symbol": "GOOGL",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 288.15,
+   "volume_prev": 36497900,
+   "dollar_vol_prev": 10516869662
+  },
+  {
+   "symbol": "INTC",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 59.37,
+   "volume_prev": 147250200,
+   "dollar_vol_prev": 8742244217
+  },
+  {
+   "symbol": "GOOG",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 286.01,
+   "volume_prev": 24040000,
+   "dollar_vol_prev": 6875680635
+  },
+  {
+   "symbol": "LLY",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 1411.95,
+   "volume_prev": 4029800,
+   "dollar_vol_prev": 5689875913
+  },
+  {
+   "symbol": "MRVL",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 154.6,
+   "volume_prev": 33768200,
+   "dollar_vol_prev": 5220563926
+  },
+  {
+   "symbol": "LITE",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 596.16,
+   "volume_prev": 6075000,
+   "dollar_vol_prev": 3621671837
+  },
+  {
+   "symbol": "COHR",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 225.19,
+   "volume_prev": 15015900,
+   "dollar_vol_prev": 3381430558
+  },
+  {
+   "symbol": "MRNA",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 269.0,
+   "volume_prev": 12357400,
+   "dollar_vol_prev": 3324140600
+  },
+  {
+   "symbol": "APP",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 410.0,
+   "volume_prev": 7516600,
+   "dollar_vol_prev": 3081806000
+  },
+  {
+   "symbol": "STX",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 506.14,
+   "volume_prev": 6064100,
+   "dollar_vol_prev": 3069283663
+  },
+  {
+   "symbol": "TXN",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 295.73,
+   "volume_prev": 10278700,
+   "dollar_vol_prev": 3039720064
+  },
+  {
+   "symbol": "WDC",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 289.78,
+   "volume_prev": 8417000,
+   "dollar_vol_prev": 2439078250
+  },
+  {
+   "symbol": "JPM",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 342.08,
+   "volume_prev": 7055800,
+   "dollar_vol_prev": 2413647969
+  },
+  {
+   "symbol": "COST",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1066.18,
+   "volume_prev": 2206300,
+   "dollar_vol_prev": 2352313053
+  },
+  {
+   "symbol": "DELL",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 346.31,
+   "volume_prev": 6725600,
+   "dollar_vol_prev": 2329142520
+  },
+  {
+   "symbol": "MPWR",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "close_prev": 1388.05,
+   "volume_prev": 1667600,
+   "dollar_vol_prev": 2314712261
+  },
+  {
+   "symbol": "CAT",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 598.88,
+   "volume_prev": 3734200,
+   "dollar_vol_prev": 2236337714
+  },
+  {
+   "symbol": "ANET",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 186.17,
+   "volume_prev": 10937700,
+   "dollar_vol_prev": 2036271589
+  },
+  {
+   "symbol": "CEG",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 276.09,
+   "volume_prev": 7331500,
+   "dollar_vol_prev": 2024153808
+  },
+  {
+   "symbol": "CSCO",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 98.65,
+   "volume_prev": 20355800,
+   "dollar_vol_prev": 2008099701
+  },
+  {
+   "symbol": "GS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 906.22,
+   "volume_prev": 2165600,
+   "dollar_vol_prev": 1962509969
+  },
+  {
+   "symbol": "JNJ",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 282.11,
+   "volume_prev": 6899500,
+   "dollar_vol_prev": 1946417844
+  },
+  {
+   "symbol": "RKLB",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 58.86,
+   "volume_prev": 31996800,
+   "dollar_vol_prev": 1883331668
+  },
+  {
+   "symbol": "MS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 187.1,
+   "volume_prev": 8828000,
+   "dollar_vol_prev": 1651718854
+  },
+  {
+   "symbol": "TMO",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 721.63,
+   "volume_prev": 2273900,
+   "dollar_vol_prev": 1640914468
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "SNDK",
+     "time": "09:55",
+     "price": 883.63
+    },
+    {
+     "symbol": "INTC",
+     "time": "09:55",
+     "price": 59.46
+    },
+    {
+     "symbol": "MRVL",
+     "time": "09:55",
+     "price": 155.82
+    },
+    {
+     "symbol": "LITE",
+     "time": "09:55",
+     "price": 602.03
+    },
+    {
+     "symbol": "STX",
+     "time": "09:55",
+     "price": 501.13
+    },
+    {
+     "symbol": "WDC",
+     "time": "09:55",
+     "price": 290.74
+    },
+    {
+     "symbol": "DELL",
+     "time": "09:55",
+     "price": 341.24
+    },
+    {
+     "symbol": "ANET",
+     "time": "09:55",
+     "price": 189.14
+    },
+    {
+     "symbol": "CSCO",
+     "time": "09:55",
+     "price": 97.86
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "10:00",
+     "price": 291.06
+    },
+    {
+     "symbol": "GOOG",
+     "time": "10:00",
+     "price": 288.57
+    },
+    {
+     "symbol": "TXN",
+     "time": "10:00",
+     "price": 296.35
+    },
+    {
+     "symbol": "MPWR",
+     "time": "10:00",
+     "price": 1378.77
+    },
+    {
+     "symbol": "CAT",
+     "time": "10:00",
+     "price": 584.18
+    },
+    {
+     "symbol": "RKLB",
+     "time": "10:00",
+     "price": 58.51
+    },
+    {
+     "symbol": "AMZN",
+     "time": "10:05",
+     "price": 272.39
+    },
+    {
+     "symbol": "GS",
+     "time": "10:05",
+     "price": 914.72
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:25",
+     "price": 1422.17
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-10",
+     "variant": "A",
+     "symbol": "SNDK",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 12396778675,
+     "or_high": 865.78,
+     "or_low": 839.41,
+     "trigger_time": "09:55",
+     "volume_x": 0.48,
+     "entry": 883.63,
+     "stop": 852.59,
+     "target": 945.71,
+     "risk_ps": 31.04,
+     "shares": 3,
+     "notional": 2650.89,
+     "exit_time": "10:50",
+     "exit_price": 852.59,
+     "exit_reason": "stop",
+     "gross_pnl": -93.12,
+     "costs": 4.6,
+     "net_pnl": -97.72,
+     "r_net": -1.049,
+     "data_note": "",
+     "tm_target_pct": 1.3,
+     "tm_stop_pct": 26.2,
+     "tm_neither_pct": 72.5,
+     "tm_avg_r": -0.133,
+     "tm_hist_avg_r": -0.032,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 1.3 % vs stop first 26.2 %)."
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "A",
+     "symbol": "INTC",
+     "setups": "oversold+oversold_bounce",
+     "dollar_vol_prev": 8742244217,
+     "or_high": 58.86,
+     "or_low": 57.58,
+     "trigger_time": "09:55",
+     "volume_x": 0.55,
+     "entry": 59.46,
+     "stop": 58.22,
+     "target": 61.94,
+     "risk_ps": 1.24,
+     "shares": 80,
+     "notional": 4756.8,
+     "exit_time": "10:50",
+     "exit_price": 58.22,
+     "exit_reason": "stop",
+     "gross_pnl": -99.2,
+     "costs": 6.71,
+     "net_pnl": -105.91,
+     "r_net": -1.068,
+     "data_note": "",
+     "tm_target_pct": 9.5,
+     "tm_stop_pct": 38.2,
+     "tm_neither_pct": 52.3,
+     "tm_avg_r": -0.027,
+     "tm_hist_avg_r": 0.102,
+     "tm_verdict": "No clear lean, within the noise of 55 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 20 % (target first 9.5 % vs stop first 38.2 %)."
+    },
+    {
+     "date": "2026-11-10",
+     "variant": "A",
+     "symbol": "MRVL",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 5220563926,
+     "or_high": 153.66,
+     "or_low": 147.79,
+     "trigger_time": "09:55",
+     "volume_x": 0.43,
+     "entry": 155.82,
+     "stop": 150.72,
+     "target": 166.02,
+     "risk_ps": 5.1,
+     "shares": 10,
+     "notional": 1558.2,
+     "exit_time": "12:40",
+     "exit_price": 150.72,
+     "exit_reason": "stop",
+     "gross_pnl": -51.0,
+     "costs": 3.53,
+     "net_pnl": -54.53,
+     "r_net": -1.069,
+     "data_note": "",
+     "tm_target_pct": 1.2,
+     "tm_stop_pct": 26.0,
+     "tm_neither_pct": 72.8,
+     "tm_avg_r": -0.068,
+     "tm_hist_avg_r": -0.157,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 1.2 % vs stop first 26.0 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "LITE",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "STX",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "WDC",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "DELL",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ANET",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CSCO",
+     "time": "09:55",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "TXN",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MPWR",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CAT",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "RKLB",
+     "time": "10:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "AMZN",
+     "time": "10:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GS",
+     "time": "10:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "LLY",
+     "time": "10:25",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [],
+   "taken": [],
+   "skipped": []
+  }
+ }
+}

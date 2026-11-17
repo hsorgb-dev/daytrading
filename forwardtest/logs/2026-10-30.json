@@ -1,0 +1,472 @@
+{
+ "date": "2026-10-30",
+ "setup_candidates": 1099,
+ "watchlist": [
+  {
+   "symbol": "GOOGL",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 283.82,
+   "volume_prev": 139738300,
+   "dollar_vol_prev": 39660525329
+  },
+  {
+   "symbol": "GOOG",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 282.32,
+   "volume_prev": 93133900,
+   "dollar_vol_prev": 26293563330
+  },
+  {
+   "symbol": "AAPL",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 348.91,
+   "volume_prev": 42582100,
+   "dollar_vol_prev": 14857320667
+  },
+  {
+   "symbol": "NOW",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 109.67,
+   "volume_prev": 76427200,
+   "dollar_vol_prev": 8381770884
+  },
+  {
+   "symbol": "LLY",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1373.7,
+   "volume_prev": 4373500,
+   "dollar_vol_prev": 6007876736
+  },
+  {
+   "symbol": "CAT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 647.39,
+   "volume_prev": 8167200,
+   "dollar_vol_prev": 5287363728
+  },
+  {
+   "symbol": "V",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 410.54,
+   "volume_prev": 7693000,
+   "dollar_vol_prev": 3158284286
+  },
+  {
+   "symbol": "BA",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 172.65,
+   "volume_prev": 16756300,
+   "dollar_vol_prev": 2892975093
+  },
+  {
+   "symbol": "MA",
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "close_prev": 635.7,
+   "volume_prev": 4440900,
+   "dollar_vol_prev": 2823080184
+  },
+  {
+   "symbol": "FTNT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 139.1,
+   "volume_prev": 17361100,
+   "dollar_vol_prev": 2414929116
+  },
+  {
+   "symbol": "RTX",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 199.4,
+   "volume_prev": 11709400,
+   "dollar_vol_prev": 2334854289
+  },
+  {
+   "symbol": "ALNY",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 174.0,
+   "volume_prev": 11800000,
+   "dollar_vol_prev": 2053200000
+  },
+  {
+   "symbol": "JPM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 343.58,
+   "volume_prev": 5806400,
+   "dollar_vol_prev": 1994962834
+  },
+  {
+   "symbol": "MRK",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 146.33,
+   "volume_prev": 13447600,
+   "dollar_vol_prev": 1967787333
+  },
+  {
+   "symbol": "WMT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 121.25,
+   "volume_prev": 16048300,
+   "dollar_vol_prev": 1945856375
+  },
+  {
+   "symbol": "GE",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 313.05,
+   "volume_prev": 5821600,
+   "dollar_vol_prev": 1822451809
+  },
+  {
+   "symbol": "TXN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 312.94,
+   "volume_prev": 5662000,
+   "dollar_vol_prev": 1771866294
+  },
+  {
+   "symbol": "BAC",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 51.14,
+   "volume_prev": 32437300,
+   "dollar_vol_prev": 1658843502
+  },
+  {
+   "symbol": "JNJ",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 275.2,
+   "volume_prev": 6023600,
+   "dollar_vol_prev": 1657694794
+  },
+  {
+   "symbol": "ADT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 9.87,
+   "volume_prev": 163862300,
+   "dollar_vol_prev": 1617320882
+  },
+  {
+   "symbol": "NXPI",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 266.0,
+   "volume_prev": 5983200,
+   "dollar_vol_prev": 1591531200
+  },
+  {
+   "symbol": "CVNA",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "close_prev": 68.31,
+   "volume_prev": 23229800,
+   "dollar_vol_prev": 1586827581
+  },
+  {
+   "symbol": "UNH",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 410.91,
+   "volume_prev": 3795900,
+   "dollar_vol_prev": 1559773283
+  },
+  {
+   "symbol": "QCOM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 185.41,
+   "volume_prev": 8225100,
+   "dollar_vol_prev": 1525015821
+  },
+  {
+   "symbol": "LNG",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 318.94,
+   "volume_prev": 4713800,
+   "dollar_vol_prev": 1503419384
+  },
+  {
+   "symbol": "GILD",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 165.61,
+   "volume_prev": 8431600,
+   "dollar_vol_prev": 1396357281
+  },
+  {
+   "symbol": "GS",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 927.73,
+   "volume_prev": 1485500,
+   "dollar_vol_prev": 1378142886
+  },
+  {
+   "symbol": "AMGN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 460.73,
+   "volume_prev": 2978500,
+   "dollar_vol_prev": 1372284338
+  },
+  {
+   "symbol": "ADI",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 433.28,
+   "volume_prev": 3155900,
+   "dollar_vol_prev": 1367388348
+  },
+  {
+   "symbol": "CMG",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 31.28,
+   "volume_prev": 42481900,
+   "dollar_vol_prev": 1328833861
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "CAT",
+     "time": "09:55",
+     "price": 634.41
+    },
+    {
+     "symbol": "FTNT",
+     "time": "09:55",
+     "price": 138.37
+    },
+    {
+     "symbol": "LNG",
+     "time": "09:55",
+     "price": 328.18
+    },
+    {
+     "symbol": "CMG",
+     "time": "10:00",
+     "price": 32.27
+    },
+    {
+     "symbol": "BA",
+     "time": "10:05",
+     "price": 173.05
+    },
+    {
+     "symbol": "AAPL",
+     "time": "10:45",
+     "price": 348.82
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "11:10",
+     "price": 282.49
+    },
+    {
+     "symbol": "GOOG",
+     "time": "11:10",
+     "price": 280.87
+    },
+    {
+     "symbol": "WMT",
+     "time": "12:15",
+     "price": 123.98
+    },
+    {
+     "symbol": "CVNA",
+     "time": "12:20",
+     "price": 68.93
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-30",
+     "variant": "A",
+     "symbol": "CAT",
+     "setups": "oversold",
+     "dollar_vol_prev": 5287363728,
+     "or_high": 634.24,
+     "or_low": 621.85,
+     "trigger_time": "09:55",
+     "volume_x": 0.22,
+     "entry": 634.41,
+     "stop": 628.04,
+     "target": 647.15,
+     "risk_ps": 6.37,
+     "shares": 11,
+     "notional": 6978.51,
+     "exit_time": "12:50",
+     "exit_price": 628.04,
+     "exit_reason": "stop",
+     "gross_pnl": -70.07,
+     "costs": 8.94,
+     "net_pnl": -79.01,
+     "r_net": -1.128,
+     "data_note": "",
+     "tm_target_pct": 15.2,
+     "tm_stop_pct": 45.9,
+     "tm_neither_pct": 38.9,
+     "tm_avg_r": 0.008,
+     "tm_hist_avg_r": -0.152,
+     "tm_verdict": "No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 25 % (target first 15.2 % vs stop first 45.9 %)."
+    },
+    {
+     "date": "2026-10-30",
+     "variant": "A",
+     "symbol": "FTNT",
+     "setups": "oversold",
+     "dollar_vol_prev": 2414929116,
+     "or_high": 137.72,
+     "or_low": 134.93,
+     "trigger_time": "09:55",
+     "volume_x": 0.47,
+     "entry": 138.37,
+     "stop": 136.32,
+     "target": 142.47,
+     "risk_ps": 2.05,
+     "shares": 14,
+     "notional": 1937.18,
+     "exit_time": "10:00",
+     "exit_price": 136.32,
+     "exit_reason": "stop",
+     "gross_pnl": -28.7,
+     "costs": 3.92,
+     "net_pnl": -32.62,
+     "r_net": -1.137,
+     "data_note": "",
+     "tm_target_pct": 11.4,
+     "tm_stop_pct": 34.2,
+     "tm_neither_pct": 54.3,
+     "tm_avg_r": 0.138,
+     "tm_hist_avg_r": 0.293,
+     "tm_verdict": "No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 11.4 % vs stop first 34.2 %)."
+    },
+    {
+     "date": "2026-10-30",
+     "variant": "A",
+     "symbol": "CMG",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 1328833861,
+     "or_high": 32.22,
+     "or_low": 31.49,
+     "trigger_time": "10:00",
+     "volume_x": 0.96,
+     "entry": 32.27,
+     "stop": 31.85,
+     "target": 33.11,
+     "risk_ps": 0.42,
+     "shares": 62,
+     "notional": 2000.74,
+     "exit_time": "10:40",
+     "exit_price": 31.85,
+     "exit_reason": "stop",
+     "gross_pnl": -26.04,
+     "costs": 3.99,
+     "net_pnl": -30.03,
+     "r_net": -1.153,
+     "data_note": "",
+     "tm_target_pct": 9.1,
+     "tm_stop_pct": 35.8,
+     "tm_neither_pct": 55.1,
+     "tm_avg_r": -0.064,
+     "tm_hist_avg_r": 0.096,
+     "tm_verdict": "No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 20 % (target first 9.1 % vs stop first 35.8 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "LNG",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "BA",
+     "time": "10:05",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "AAPL",
+     "time": "10:45",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "11:10",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "11:10",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "WMT",
+     "time": "12:15",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "CVNA",
+     "time": "12:20",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [],
+   "taken": [],
+   "skipped": []
+  }
+ }
+}

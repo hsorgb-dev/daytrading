@@ -1,0 +1,565 @@
+{
+ "date": "2026-11-04",
+ "setup_candidates": 634,
+ "watchlist": [
+  {
+   "symbol": "GOOGL",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 280.03,
+   "volume_prev": 34974500,
+   "dollar_vol_prev": 9793909192
+  },
+  {
+   "symbol": "SNDK",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 1126.52,
+   "volume_prev": 8550400,
+   "dollar_vol_prev": 9632196775
+  },
+  {
+   "symbol": "INTC",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 60.55,
+   "volume_prev": 149052100,
+   "dollar_vol_prev": 9025104541
+  },
+  {
+   "symbol": "MRVL",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 171.97,
+   "volume_prev": 39412100,
+   "dollar_vol_prev": 6777698885
+  },
+  {
+   "symbol": "GOOG",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 278.27,
+   "volume_prev": 23372300,
+   "dollar_vol_prev": 6503809664
+  },
+  {
+   "symbol": "BRK.B",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 557.07,
+   "volume_prev": 5520700,
+   "dollar_vol_prev": 3075416389
+  },
+  {
+   "symbol": "GEV",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 918.2,
+   "volume_prev": 3137800,
+   "dollar_vol_prev": 2881127998
+  },
+  {
+   "symbol": "BAC",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 49.66,
+   "volume_prev": 50455300,
+   "dollar_vol_prev": 2505610190
+  },
+  {
+   "symbol": "CAT",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 623.94,
+   "volume_prev": 3512000,
+   "dollar_vol_prev": 2191277289
+  },
+  {
+   "symbol": "CVS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 91.41,
+   "volume_prev": 19630000,
+   "dollar_vol_prev": 1794378372
+  },
+  {
+   "symbol": "MPWR",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 1328.3,
+   "volume_prev": 1309500,
+   "dollar_vol_prev": 1739408914
+  },
+  {
+   "symbol": "GE",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 320.67,
+   "volume_prev": 5423000,
+   "dollar_vol_prev": 1738993483
+  },
+  {
+   "symbol": "NOW",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 109.16,
+   "volume_prev": 14610800,
+   "dollar_vol_prev": 1594914982
+  },
+  {
+   "symbol": "COIN",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 145.45,
+   "volume_prev": 10675800,
+   "dollar_vol_prev": 1552795077
+  },
+  {
+   "symbol": "IREN",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 24.46,
+   "volume_prev": 54802500,
+   "dollar_vol_prev": 1340469100
+  },
+  {
+   "symbol": "DIS",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 114.18,
+   "volume_prev": 11568600,
+   "dollar_vol_prev": 1320902752
+  },
+  {
+   "symbol": "APH",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 84.19,
+   "volume_prev": 15649900,
+   "dollar_vol_prev": 1317565119
+  },
+  {
+   "symbol": "HOOD",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 85.68,
+   "volume_prev": 13812900,
+   "dollar_vol_prev": 1183489276
+  },
+  {
+   "symbol": "APP",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 245.51,
+   "volume_prev": 4798400,
+   "dollar_vol_prev": 1178055158
+  },
+  {
+   "symbol": "REGN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 973.36,
+   "volume_prev": 1198600,
+   "dollar_vol_prev": 1166669278
+  },
+  {
+   "symbol": "FISV",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 58.4,
+   "volume_prev": 19242800,
+   "dollar_vol_prev": 1123779549
+  },
+  {
+   "symbol": "DT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 47.03,
+   "volume_prev": 22649400,
+   "dollar_vol_prev": 1065201254
+  },
+  {
+   "symbol": "SPOT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 600.09,
+   "volume_prev": 1663600,
+   "dollar_vol_prev": 998309769
+  },
+  {
+   "symbol": "RKT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 13.81,
+   "volume_prev": 71887000,
+   "dollar_vol_prev": 992759500
+  },
+  {
+   "symbol": "TER",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 269.35,
+   "volume_prev": 3456000,
+   "dollar_vol_prev": 930873621
+  },
+  {
+   "symbol": "CBRS",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 97.82,
+   "volume_prev": 9495400,
+   "dollar_vol_prev": 928840025
+  },
+  {
+   "symbol": "MCHP",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 77.9,
+   "volume_prev": 11627500,
+   "dollar_vol_prev": 905782268
+  },
+  {
+   "symbol": "RTX",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 203.82,
+   "volume_prev": 4434700,
+   "dollar_vol_prev": 903880586
+  },
+  {
+   "symbol": "VRSN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 313.88,
+   "volume_prev": 2766400,
+   "dollar_vol_prev": 868317646
+  },
+  {
+   "symbol": "WMB",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 72.47,
+   "volume_prev": 11688100,
+   "dollar_vol_prev": 847036621
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "COIN",
+     "time": "09:50",
+     "price": 149.09
+    },
+    {
+     "symbol": "HOOD",
+     "time": "09:50",
+     "price": 86.35
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "09:55",
+     "price": 290.4
+    },
+    {
+     "symbol": "GOOG",
+     "time": "09:55",
+     "price": 288.57
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "09:55",
+     "price": 568.0
+    },
+    {
+     "symbol": "SPOT",
+     "time": "09:55",
+     "price": 626.04
+    },
+    {
+     "symbol": "VRSN",
+     "time": "09:55",
+     "price": 318.23
+    },
+    {
+     "symbol": "APP",
+     "time": "10:00",
+     "price": 261.0
+    },
+    {
+     "symbol": "DIS",
+     "time": "10:05",
+     "price": 118.91
+    },
+    {
+     "symbol": "FISV",
+     "time": "10:05",
+     "price": 61.39
+    },
+    {
+     "symbol": "RKT",
+     "time": "10:10",
+     "price": 14.82
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:25",
+     "price": 112.23
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:55",
+     "price": 51.38
+    },
+    {
+     "symbol": "GE",
+     "time": "11:50",
+     "price": 332.46
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-04",
+     "variant": "A",
+     "symbol": "COIN",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 1552795077,
+     "or_high": 148.5,
+     "or_low": 141.88,
+     "trigger_time": "09:50",
+     "volume_x": 0.3,
+     "entry": 149.09,
+     "stop": 145.19,
+     "target": 156.89,
+     "risk_ps": 3.9,
+     "shares": 25,
+     "notional": 3727.25,
+     "exit_time": "15:55",
+     "exit_price": 151.24,
+     "exit_reason": "flat",
+     "gross_pnl": 53.63,
+     "costs": 5.75,
+     "net_pnl": 47.87,
+     "r_net": 0.491,
+     "data_note": "",
+     "tm_target_pct": 6.5,
+     "tm_stop_pct": 34.6,
+     "tm_neither_pct": 58.9,
+     "tm_avg_r": -0.054,
+     "tm_hist_avg_r": 0.072,
+     "tm_verdict": "No clear lean, within the noise of 51 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 16 % (target first 6.5 % vs stop first 34.6 %)."
+    },
+    {
+     "date": "2026-11-04",
+     "variant": "A",
+     "symbol": "HOOD",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 1183489276,
+     "or_high": 86.14,
+     "or_low": 83.46,
+     "trigger_time": "09:50",
+     "volume_x": 0.56,
+     "entry": 86.35,
+     "stop": 84.8,
+     "target": 89.45,
+     "risk_ps": 1.55,
+     "shares": 61,
+     "notional": 5267.35,
+     "exit_time": "15:55",
+     "exit_price": 87.39,
+     "exit_reason": "flat",
+     "gross_pnl": 63.44,
+     "costs": 7.3,
+     "net_pnl": 56.14,
+     "r_net": 0.594,
+     "data_note": "",
+     "tm_target_pct": 13.6,
+     "tm_stop_pct": 45.7,
+     "tm_neither_pct": 40.7,
+     "tm_avg_r": -0.081,
+     "tm_hist_avg_r": -0.3,
+     "tm_verdict": "No clear lean, within the noise of 51 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 23 % (target first 13.6 % vs stop first 45.7 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "GOOGL",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GOOG",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "SPOT",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "VRSN",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "APP",
+     "time": "10:00",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "DIS",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "FISV",
+     "time": "10:05",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "RKT",
+     "time": "10:10",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:25",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "BAC",
+     "time": "10:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GE",
+     "time": "11:50",
+     "why": "0 Stueck (Cash/Limit)"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [
+    {
+     "symbol": "VRSN",
+     "time": "10:00",
+     "price": 318.13
+    },
+    {
+     "symbol": "APP",
+     "time": "10:25",
+     "price": 267.17
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-04",
+     "variant": "B",
+     "symbol": "VRSN",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 868317646,
+     "or_high": 317.91,
+     "or_low": 311.47,
+     "trigger_time": "10:00",
+     "volume_x": 4.37,
+     "entry": 318.13,
+     "stop": 314.69,
+     "target": 325.01,
+     "risk_ps": 3.44,
+     "shares": 23,
+     "notional": 7316.99,
+     "exit_time": "15:55",
+     "exit_price": 317.83,
+     "exit_reason": "flat",
+     "gross_pnl": -6.9,
+     "costs": 9.31,
+     "net_pnl": -16.21,
+     "r_net": -0.205,
+     "data_note": "",
+     "tm_target_pct": 13.3,
+     "tm_stop_pct": 40.4,
+     "tm_neither_pct": 46.3,
+     "tm_avg_r": 0.089,
+     "tm_hist_avg_r": 0.038,
+     "tm_verdict": "No clear lean, within the noise of 27 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 13.3 % vs stop first 40.4 %)."
+    },
+    {
+     "date": "2026-11-04",
+     "variant": "B",
+     "symbol": "APP",
+     "setups": "oversold_bounce",
+     "dollar_vol_prev": 1178055158,
+     "or_high": 260.65,
+     "or_low": 249.85,
+     "trigger_time": "10:25",
+     "volume_x": 1.69,
+     "entry": 267.17,
+     "stop": 255.25,
+     "target": 291.01,
+     "risk_ps": 11.92,
+     "shares": 6,
+     "notional": 1603.02,
+     "exit_time": "15:55",
+     "exit_price": 272.57,
+     "exit_reason": "flat",
+     "gross_pnl": 32.4,
+     "costs": 3.62,
+     "net_pnl": 28.78,
+     "r_net": 0.402,
+     "data_note": "",
+     "tm_target_pct": 0.0,
+     "tm_stop_pct": 1.5,
+     "tm_neither_pct": 98.5,
+     "tm_avg_r": -0.031,
+     "tm_hist_avg_r": -0.021,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 1.5 %)."
+    }
+   ],
+   "skipped": []
+  }
+ }
+}

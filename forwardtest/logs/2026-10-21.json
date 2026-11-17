@@ -1,0 +1,637 @@
+{
+ "date": "2026-10-21",
+ "setup_candidates": 1121,
+ "watchlist": [
+  {
+   "symbol": "TSLA",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 373.71,
+   "volume_prev": 32123300,
+   "dollar_vol_prev": 12004798169
+  },
+  {
+   "symbol": "AMZN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 262.63,
+   "volume_prev": 34927200,
+   "dollar_vol_prev": 9172930707
+  },
+  {
+   "symbol": "CRWV",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "close_prev": 62.13,
+   "volume_prev": 94778100,
+   "dollar_vol_prev": 5888563454
+  },
+  {
+   "symbol": "MRNA",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 242.08,
+   "volume_prev": 16858900,
+   "dollar_vol_prev": 4081202543
+  },
+  {
+   "symbol": "LLY",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1283.66,
+   "volume_prev": 2966500,
+   "dollar_vol_prev": 3807977491
+  },
+  {
+   "symbol": "BRZE",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 45.57,
+   "volume_prev": 64612000,
+   "dollar_vol_prev": 2944368820
+  },
+  {
+   "symbol": "BRK.B",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 539.82,
+   "volume_prev": 5311100,
+   "dollar_vol_prev": 2867038041
+  },
+  {
+   "symbol": "UNH",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 419.26,
+   "volume_prev": 6811200,
+   "dollar_vol_prev": 2855663779
+  },
+  {
+   "symbol": "AMAT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 404.98,
+   "volume_prev": 6856500,
+   "dollar_vol_prev": 2776745445
+  },
+  {
+   "symbol": "V",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 406.57,
+   "volume_prev": 6704500,
+   "dollar_vol_prev": 2725848614
+  },
+  {
+   "symbol": "BAC",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "close_prev": 50.64,
+   "volume_prev": 43642400,
+   "dollar_vol_prev": 2210051109
+  },
+  {
+   "symbol": "JPM",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 335.26,
+   "volume_prev": 6157500,
+   "dollar_vol_prev": 2064363510
+  },
+  {
+   "symbol": "KLAC",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 161.74,
+   "volume_prev": 12670100,
+   "dollar_vol_prev": 2049262044
+  },
+  {
+   "symbol": "IREN",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 26.62,
+   "volume_prev": 73361900,
+   "dollar_vol_prev": 1952893840
+  },
+  {
+   "symbol": "CAT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 725.24,
+   "volume_prev": 2654200,
+   "dollar_vol_prev": 1924931982
+  },
+  {
+   "symbol": "MA",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 620.42,
+   "volume_prev": 2995100,
+   "dollar_vol_prev": 1858219891
+  },
+  {
+   "symbol": "CVX",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 225.71,
+   "volume_prev": 8011900,
+   "dollar_vol_prev": 1808366003
+  },
+  {
+   "symbol": "NOW",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 149.54,
+   "volume_prev": 10796700,
+   "dollar_vol_prev": 1614538446
+  },
+  {
+   "symbol": "ACN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 239.12,
+   "volume_prev": 6688000,
+   "dollar_vol_prev": 1599234527
+  },
+  {
+   "symbol": "SE",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 80.43,
+   "volume_prev": 18920000,
+   "dollar_vol_prev": 1521735606
+  },
+  {
+   "symbol": "ISRG",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 438.0,
+   "volume_prev": 3436400,
+   "dollar_vol_prev": 1505143200
+  },
+  {
+   "symbol": "ABBV",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 289.08,
+   "volume_prev": 5175000,
+   "dollar_vol_prev": 1495988931
+  },
+  {
+   "symbol": "MRK",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 148.3,
+   "volume_prev": 9923600,
+   "dollar_vol_prev": 1471669910
+  },
+  {
+   "symbol": "HLT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 359.29,
+   "volume_prev": 4052900,
+   "dollar_vol_prev": 1456166476
+  },
+  {
+   "symbol": "IBM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 241.92,
+   "volume_prev": 5746300,
+   "dollar_vol_prev": 1390144885
+  },
+  {
+   "symbol": "VRT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 203.56,
+   "volume_prev": 6804100,
+   "dollar_vol_prev": 1385042579
+  },
+  {
+   "symbol": "PEP",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 134.02,
+   "volume_prev": 9972500,
+   "dollar_vol_prev": 1336514493
+  },
+  {
+   "symbol": "MMM",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "close_prev": 171.37,
+   "volume_prev": 7680700,
+   "dollar_vol_prev": 1316241521
+  },
+  {
+   "symbol": "WFC",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 82.2,
+   "volume_prev": 15840800,
+   "dollar_vol_prev": 1302113712
+  },
+  {
+   "symbol": "HD",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 315.11,
+   "volume_prev": 4016200,
+   "dollar_vol_prev": 1265544723
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "TSLA",
+     "time": "09:50",
+     "price": 387.55
+    },
+    {
+     "symbol": "MRNA",
+     "time": "09:50",
+     "price": 247.32
+    },
+    {
+     "symbol": "BRK.B",
+     "time": "09:50",
+     "price": 542.68
+    },
+    {
+     "symbol": "ACN",
+     "time": "09:55",
+     "price": 240.84
+    },
+    {
+     "symbol": "MRK",
+     "time": "09:55",
+     "price": 148.96
+    },
+    {
+     "symbol": "IBM",
+     "time": "09:55",
+     "price": 244.8
+    },
+    {
+     "symbol": "PEP",
+     "time": "10:00",
+     "price": 134.41
+    },
+    {
+     "symbol": "CVX",
+     "time": "10:10",
+     "price": 226.77
+    },
+    {
+     "symbol": "HLT",
+     "time": "10:15",
+     "price": 360.89
+    },
+    {
+     "symbol": "V",
+     "time": "10:40",
+     "price": 407.89
+    },
+    {
+     "symbol": "MA",
+     "time": "10:45",
+     "price": 622.75
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:50",
+     "price": 164.43
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:50",
+     "price": 152.93
+    },
+    {
+     "symbol": "ISRG",
+     "time": "11:25",
+     "price": 429.38
+    },
+    {
+     "symbol": "AMZN",
+     "time": "12:40",
+     "price": 263.36
+    },
+    {
+     "symbol": "IREN",
+     "time": "14:00",
+     "price": 28.25
+    },
+    {
+     "symbol": "MMM",
+     "time": "14:00",
+     "price": 172.82
+    },
+    {
+     "symbol": "BRZE",
+     "time": "14:10",
+     "price": 45.57
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-21",
+     "variant": "A",
+     "symbol": "TSLA",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 12004798169,
+     "or_high": 386.68,
+     "or_low": 380.51,
+     "trigger_time": "09:50",
+     "volume_x": 0.76,
+     "entry": 387.55,
+     "stop": 383.59,
+     "target": 395.47,
+     "risk_ps": 3.96,
+     "shares": 19,
+     "notional": 7363.45,
+     "exit_time": "10:40",
+     "exit_price": 383.59,
+     "exit_reason": "stop",
+     "gross_pnl": -75.24,
+     "costs": 9.33,
+     "net_pnl": -84.57,
+     "r_net": -1.124,
+     "data_note": "",
+     "tm_target_pct": 18.3,
+     "tm_stop_pct": 45.5,
+     "tm_neither_pct": 36.2,
+     "tm_avg_r": 0.057,
+     "tm_hist_avg_r": -0.117,
+     "tm_verdict": "Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 29 % (target first 18.3 % vs stop first 45.5 %)."
+    },
+    {
+     "date": "2026-10-21",
+     "variant": "A",
+     "symbol": "MRNA",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 4081202543,
+     "or_high": 247.31,
+     "or_low": 239.55,
+     "trigger_time": "09:50",
+     "volume_x": 0.74,
+     "entry": 247.32,
+     "stop": 243.43,
+     "target": 255.1,
+     "risk_ps": 3.89,
+     "shares": 6,
+     "notional": 1483.92,
+     "exit_time": "10:05",
+     "exit_price": 243.43,
+     "exit_reason": "stop",
+     "gross_pnl": -23.34,
+     "costs": 3.47,
+     "net_pnl": -26.81,
+     "r_net": -1.149,
+     "data_note": "",
+     "tm_target_pct": 38.8,
+     "tm_stop_pct": 55.3,
+     "tm_neither_pct": 6.0,
+     "tm_avg_r": 0.251,
+     "tm_hist_avg_r": 0.344,
+     "tm_verdict": "No clear lean, within the noise of 41 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 41 % (target first 38.8 % vs stop first 55.3 %)."
+    },
+    {
+     "date": "2026-10-21",
+     "variant": "A",
+     "symbol": "CVX",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1808366003,
+     "or_high": 226.46,
+     "or_low": 224.69,
+     "trigger_time": "10:10",
+     "volume_x": 0.73,
+     "entry": 226.77,
+     "stop": 225.57,
+     "target": 229.17,
+     "risk_ps": 1.2,
+     "shares": 7,
+     "notional": 1587.39,
+     "exit_time": "12:40",
+     "exit_price": 225.57,
+     "exit_reason": "stop",
+     "gross_pnl": -8.4,
+     "costs": 3.58,
+     "net_pnl": -11.98,
+     "r_net": -1.427,
+     "data_note": "",
+     "tm_target_pct": 18.2,
+     "tm_stop_pct": 53.9,
+     "tm_neither_pct": 27.9,
+     "tm_avg_r": -0.06,
+     "tm_hist_avg_r": -0.01,
+     "tm_verdict": "No clear lean, within the noise of 41 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 18.2 % vs stop first 53.9 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "BRK.B",
+     "time": "09:50",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "ACN",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "MRK",
+     "time": "09:55",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "IBM",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "PEP",
+     "time": "10:00",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "HLT",
+     "time": "10:15",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "V",
+     "time": "10:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MA",
+     "time": "10:45",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "KLAC",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:50",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "ISRG",
+     "time": "11:25",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "AMZN",
+     "time": "12:40",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "IREN",
+     "time": "14:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MMM",
+     "time": "14:00",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "BRZE",
+     "time": "14:10",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [
+    {
+     "symbol": "BRK.B",
+     "time": "11:25",
+     "price": 542.57
+    },
+    {
+     "symbol": "HLT",
+     "time": "12:40",
+     "price": 363.92
+    },
+    {
+     "symbol": "PEP",
+     "time": "13:30",
+     "price": 134.85
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-21",
+     "variant": "B",
+     "symbol": "BRK.B",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2867038041,
+     "or_high": 542.33,
+     "or_low": 539.2,
+     "trigger_time": "11:25",
+     "volume_x": 2.95,
+     "entry": 542.57,
+     "stop": 540.76,
+     "target": 546.19,
+     "risk_ps": 1.81,
+     "shares": 13,
+     "notional": 7053.41,
+     "exit_time": "15:55",
+     "exit_price": 542.1,
+     "exit_reason": "flat",
+     "gross_pnl": -6.05,
+     "costs": 9.05,
+     "net_pnl": -15.1,
+     "r_net": -0.642,
+     "data_note": "",
+     "tm_target_pct": 13.5,
+     "tm_stop_pct": 40.1,
+     "tm_neither_pct": 46.5,
+     "tm_avg_r": 0.059,
+     "tm_hist_avg_r": -0.209,
+     "tm_verdict": "No clear lean, within the noise of 23 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 13.5 % vs stop first 40.1 %)."
+    },
+    {
+     "date": "2026-10-21",
+     "variant": "B",
+     "symbol": "HLT",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1456166476,
+     "or_high": 360.0,
+     "or_low": 356.58,
+     "trigger_time": "12:40",
+     "volume_x": 1.56,
+     "entry": 363.92,
+     "stop": 358.29,
+     "target": 375.18,
+     "risk_ps": 5.63,
+     "shares": 5,
+     "notional": 1819.6,
+     "exit_time": "15:55",
+     "exit_price": 363.14,
+     "exit_reason": "flat",
+     "gross_pnl": -3.9,
+     "costs": 3.82,
+     "net_pnl": -7.72,
+     "r_net": -0.274,
+     "data_note": "",
+     "tm_target_pct": 0.0,
+     "tm_stop_pct": 0.2,
+     "tm_neither_pct": 99.8,
+     "tm_avg_r": 0.037,
+     "tm_hist_avg_r": 0.075,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 0 % (target first 0.0 % vs stop first 0.2 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "PEP",
+     "time": "13:30",
+     "why": "0 Stueck (Cash/Limit)"
+    }
+   ]
+  }
+ }
+}

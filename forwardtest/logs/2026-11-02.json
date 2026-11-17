@@ -1,0 +1,615 @@
+{
+ "date": "2026-11-02",
+ "setup_candidates": 670,
+ "watchlist": [
+  {
+   "symbol": "INTC",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 65.76,
+   "volume_prev": 455599400,
+   "dollar_vol_prev": 29960217517
+  },
+  {
+   "symbol": "GOOGL",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 279.84,
+   "volume_prev": 65695000,
+   "dollar_vol_prev": 18384088559
+  },
+  {
+   "symbol": "GOOG",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 278.22,
+   "volume_prev": 45116500,
+   "dollar_vol_prev": 12552312685
+  },
+  {
+   "symbol": "LLY",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 1417.54,
+   "volume_prev": 5247800,
+   "dollar_vol_prev": 7438966617
+  },
+  {
+   "symbol": "XOM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 187.25,
+   "volume_prev": 21825700,
+   "dollar_vol_prev": 4086862325
+  },
+  {
+   "symbol": "NOW",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 105.12,
+   "volume_prev": 35233500,
+   "dollar_vol_prev": 3703745617
+  },
+  {
+   "symbol": "WMT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 123.51,
+   "volume_prev": 29769400,
+   "dollar_vol_prev": 3676818658
+  },
+  {
+   "symbol": "CAT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 622.75,
+   "volume_prev": 5300400,
+   "dollar_vol_prev": 3300824100
+  },
+  {
+   "symbol": "RDDT",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 91.73,
+   "volume_prev": 33411600,
+   "dollar_vol_prev": 3064846180
+  },
+  {
+   "symbol": "MA",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 638.01,
+   "volume_prev": 4517400,
+   "dollar_vol_prev": 2882146418
+  },
+  {
+   "symbol": "REGN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 927.89,
+   "volume_prev": 2870600,
+   "dollar_vol_prev": 2663601076
+  },
+  {
+   "symbol": "CVX",
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "close_prev": 235.52,
+   "volume_prev": 11013300,
+   "dollar_vol_prev": 2593852463
+  },
+  {
+   "symbol": "TER",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 274.37,
+   "volume_prev": 8620300,
+   "dollar_vol_prev": 2365151669
+  },
+  {
+   "symbol": "HOOD",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 84.99,
+   "volume_prev": 27779900,
+   "dollar_vol_prev": 2361013642
+  },
+  {
+   "symbol": "BAC",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 50.01,
+   "volume_prev": 43074700,
+   "dollar_vol_prev": 2154165675
+  },
+  {
+   "symbol": "APP",
+   "setups": [
+    "oversold"
+   ],
+   "close_prev": 228.5,
+   "volume_prev": 9141800,
+   "dollar_vol_prev": 2088901300
+  },
+  {
+   "symbol": "ABBV",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 294.89,
+   "volume_prev": 6897400,
+   "dollar_vol_prev": 2033974387
+  },
+  {
+   "symbol": "NEE",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 83.71,
+   "volume_prev": 23507500,
+   "dollar_vol_prev": 1967812803
+  },
+  {
+   "symbol": "GILD",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 170.68,
+   "volume_prev": 11425300,
+   "dollar_vol_prev": 1950070120
+  },
+  {
+   "symbol": "SPOT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 593.44,
+   "volume_prev": 3233300,
+   "dollar_vol_prev": 1918769560
+  },
+  {
+   "symbol": "TMUS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "close_prev": 156.44,
+   "volume_prev": 11495300,
+   "dollar_vol_prev": 1798324760
+  },
+  {
+   "symbol": "UNH",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 406.97,
+   "volume_prev": 4298400,
+   "dollar_vol_prev": 1749319853
+  },
+  {
+   "symbol": "VRTX",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 558.88,
+   "volume_prev": 3030000,
+   "dollar_vol_prev": 1693406415
+  },
+  {
+   "symbol": "MCD",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 258.12,
+   "volume_prev": 6526400,
+   "dollar_vol_prev": 1684594336
+  },
+  {
+   "symbol": "GPN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 96.84,
+   "volume_prev": 16726200,
+   "dollar_vol_prev": 1619765147
+  },
+  {
+   "symbol": "LIN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 514.24,
+   "volume_prev": 3116800,
+   "dollar_vol_prev": 1602783202
+  },
+  {
+   "symbol": "MO",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 78.03,
+   "volume_prev": 20516200,
+   "dollar_vol_prev": 1600879061
+  },
+  {
+   "symbol": "AMGN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "close_prev": 466.01,
+   "volume_prev": 3290400,
+   "dollar_vol_prev": 1533359336
+  },
+  {
+   "symbol": "IBM",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 257.81,
+   "volume_prev": 5738100,
+   "dollar_vol_prev": 1479339547
+  },
+  {
+   "symbol": "SBUX",
+   "setups": [
+    "bull_flag"
+   ],
+   "close_prev": 103.67,
+   "volume_prev": 14217600,
+   "dollar_vol_prev": 1473938566
+  }
+ ],
+ "missing_5m": [],
+ "variants": {
+  "A": {
+   "triggers": [
+    {
+     "symbol": "GOOG",
+     "time": "09:50",
+     "price": 284.67
+    },
+    {
+     "symbol": "MA",
+     "time": "09:50",
+     "price": 651.49
+    },
+    {
+     "symbol": "APP",
+     "time": "09:50",
+     "price": 236.55
+    },
+    {
+     "symbol": "SPOT",
+     "time": "09:50",
+     "price": 591.97
+    },
+    {
+     "symbol": "WMT",
+     "time": "09:55",
+     "price": 125.9
+    },
+    {
+     "symbol": "REGN",
+     "time": "09:55",
+     "price": 961.02
+    },
+    {
+     "symbol": "GPN",
+     "time": "09:55",
+     "price": 98.79
+    },
+    {
+     "symbol": "TMUS",
+     "time": "10:00",
+     "price": 156.63
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:10",
+     "price": 108.32
+    },
+    {
+     "symbol": "RDDT",
+     "time": "10:10",
+     "price": 94.86
+    },
+    {
+     "symbol": "HOOD",
+     "time": "10:10",
+     "price": 86.74
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "10:15",
+     "price": 286.62
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:20",
+     "price": 258.32
+    },
+    {
+     "symbol": "NEE",
+     "time": "10:50",
+     "price": 83.89
+    },
+    {
+     "symbol": "LIN",
+     "time": "11:55",
+     "price": 520.57
+    },
+    {
+     "symbol": "LLY",
+     "time": "13:10",
+     "price": 1413.23
+    },
+    {
+     "symbol": "MCD",
+     "time": "13:35",
+     "price": 263.98
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "A",
+     "symbol": "GOOG",
+     "setups": "oversold",
+     "dollar_vol_prev": 12552312685,
+     "or_high": 284.55,
+     "or_low": 280.44,
+     "trigger_time": "09:50",
+     "volume_x": 0.46,
+     "entry": 284.67,
+     "stop": 282.49,
+     "target": 289.03,
+     "risk_ps": 2.18,
+     "shares": 26,
+     "notional": 7401.42,
+     "exit_time": "11:00",
+     "exit_price": 282.49,
+     "exit_reason": "stop",
+     "gross_pnl": -56.68,
+     "costs": 9.37,
+     "net_pnl": -66.05,
+     "r_net": -1.165,
+     "data_note": "",
+     "tm_target_pct": 10.3,
+     "tm_stop_pct": 53.8,
+     "tm_neither_pct": 35.9,
+     "tm_avg_r": -0.182,
+     "tm_hist_avg_r": -0.338,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 16 % (target first 10.3 % vs stop first 53.8 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "A",
+     "symbol": "MA",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2882146418,
+     "or_high": 650.81,
+     "or_low": 641.25,
+     "trigger_time": "09:50",
+     "volume_x": 0.67,
+     "entry": 651.49,
+     "stop": 646.03,
+     "target": 662.41,
+     "risk_ps": 5.46,
+     "shares": 2,
+     "notional": 1302.98,
+     "exit_time": "15:55",
+     "exit_price": 658.26,
+     "exit_reason": "flat",
+     "gross_pnl": 13.53,
+     "costs": 3.31,
+     "net_pnl": 10.22,
+     "r_net": 0.936,
+     "data_note": "",
+     "tm_target_pct": 3.6,
+     "tm_stop_pct": 29.4,
+     "tm_neither_pct": 66.9,
+     "tm_avg_r": 0.009,
+     "tm_hist_avg_r": 0.015,
+     "tm_verdict": "Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 11 % (target first 3.6 % vs stop first 29.4 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "A",
+     "symbol": "LIN",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1602783202,
+     "or_high": 520.54,
+     "or_low": 517.13,
+     "trigger_time": "11:55",
+     "volume_x": 0.33,
+     "entry": 520.57,
+     "stop": 518.83,
+     "target": 524.05,
+     "risk_ps": 1.74,
+     "shares": 14,
+     "notional": 7287.98,
+     "exit_time": "12:55",
+     "exit_price": 518.83,
+     "exit_reason": "stop",
+     "gross_pnl": -24.36,
+     "costs": 9.28,
+     "net_pnl": -33.64,
+     "r_net": -1.381,
+     "data_note": "",
+     "tm_target_pct": 16.4,
+     "tm_stop_pct": 49.0,
+     "tm_neither_pct": 34.6,
+     "tm_avg_r": -0.008,
+     "tm_hist_avg_r": -0.151,
+     "tm_verdict": "No clear lean, within the noise of 23 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 16.4 % vs stop first 49.0 %)."
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "APP",
+     "time": "09:50",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "SPOT",
+     "time": "09:50",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "WMT",
+     "time": "09:55",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "REGN",
+     "time": "09:55",
+     "why": "0 Stueck (Cash/Limit)"
+    },
+    {
+     "symbol": "GPN",
+     "time": "09:55",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "TMUS",
+     "time": "10:00",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "NOW",
+     "time": "10:10",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "RDDT",
+     "time": "10:10",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "HOOD",
+     "time": "10:10",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "GOOGL",
+     "time": "10:15",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "IBM",
+     "time": "10:20",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "NEE",
+     "time": "10:50",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "LLY",
+     "time": "13:10",
+     "why": "max. Trades/Tag erreicht"
+    },
+    {
+     "symbol": "MCD",
+     "time": "13:35",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
+  },
+  "B": {
+   "triggers": [
+    {
+     "symbol": "GPN",
+     "time": "09:55",
+     "price": 98.79
+    },
+    {
+     "symbol": "IBM",
+     "time": "11:30",
+     "price": 259.48
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-02",
+     "variant": "B",
+     "symbol": "GPN",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1619765147,
+     "or_high": 98.47,
+     "or_low": 96.02,
+     "trigger_time": "09:55",
+     "volume_x": 1.59,
+     "entry": 98.79,
+     "stop": 97.24,
+     "target": 101.89,
+     "risk_ps": 1.55,
+     "shares": 64,
+     "notional": 6322.56,
+     "exit_time": "15:55",
+     "exit_price": 99.25,
+     "exit_reason": "flat",
+     "gross_pnl": 29.44,
+     "costs": 8.34,
+     "net_pnl": 21.1,
+     "r_net": 0.213,
+     "data_note": "",
+     "tm_target_pct": 6.9,
+     "tm_stop_pct": 28.6,
+     "tm_neither_pct": 64.5,
+     "tm_avg_r": 0.032,
+     "tm_hist_avg_r": 0.029,
+     "tm_verdict": "No clear lean, within the noise of 49 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 19 % (target first 6.9 % vs stop first 28.6 %)."
+    },
+    {
+     "date": "2026-11-02",
+     "variant": "B",
+     "symbol": "IBM",
+     "setups": "bull_flag",
+     "dollar_vol_prev": 1479339547,
+     "or_high": 258.23,
+     "or_low": 256.0,
+     "trigger_time": "11:30",
+     "volume_x": 14.35,
+     "entry": 259.48,
+     "stop": 257.11,
+     "target": 264.22,
+     "risk_ps": 2.37,
+     "shares": 10,
+     "notional": 2594.8,
+     "exit_time": "13:50",
+     "exit_price": 257.11,
+     "exit_reason": "stop",
+     "gross_pnl": -23.7,
+     "costs": 4.58,
+     "net_pnl": -28.28,
+     "r_net": -1.193,
+     "data_note": "",
+     "tm_target_pct": 8.9,
+     "tm_stop_pct": 22.8,
+     "tm_neither_pct": 68.2,
+     "tm_avg_r": 0.204,
+     "tm_hist_avg_r": -0.008,
+     "tm_verdict": "No clear lean, within the noise of 22 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 28 % (target first 8.9 % vs stop first 22.8 %)."
+    }
+   ],
+   "skipped": []
+  }
+ }
+}
