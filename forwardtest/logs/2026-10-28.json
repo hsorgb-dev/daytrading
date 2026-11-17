@@ -1482,6 +1482,18 @@
    "daily_vol_pct": 0.68,
    "prior_close": 769.6599731445312,
    "taken": []
+  },
+  "G2": {
+   "shares": 38,
+   "daily_vol_pct": 0.68,
+   "prior_close": 769.6599731445312,
+   "taken": []
+  },
+  "GQ": {
+   "shares": 20,
+   "daily_vol_pct": 1.379,
+   "prior_close": 721.25,
+   "taken": []
   }
  }
 }

@@ -66,7 +66,10 @@ Studien regelgetreu um. Sie handeln long und short und haben eigene Größenrege
   max(Band, VWAP) bzw. min(Band, VWAP), zu denselben Zeiten geprüft, Umkehr möglich. Ausstieg
   16:00. Größe Kapital × min(4, 2 % ÷ Tagesvolatilität 14 Tage). Slippage 0,01 %.
 
-Beide bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
+**G2** ist G mit 1,5-fach breiter Noise Area (VM 1,5, laut Studie höhere Sharpe Ratio),
+**GQ** sind die Regeln von G unverändert auf QQQ. Beide mit Backfill ab 20.10.
+
+F und G bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
 US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital.
 
 Alle Varianten laufen mit eigenem Kapital von 10.000 $, Sizing auf fester Basis.

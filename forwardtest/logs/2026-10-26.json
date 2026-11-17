@@ -1774,6 +1774,101 @@
      "data_note": "Hebel 3.05x (Tagesvola 0.64 %)"
     }
    ]
+  },
+  "G2": {
+   "shares": 40,
+   "daily_vol_pct": 0.642,
+   "prior_close": 759.969970703125,
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "G2",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 764.63,
+     "or_low": 757.6,
+     "trigger_time": "10:30",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 764.63,
+     "entry": 764.78,
+     "stop": 764.63,
+     "target": null,
+     "risk_ps": 0.15,
+     "shares": 40,
+     "notional": 30591.2,
+     "exit_time": "12:00",
+     "exit_price": 765.22,
+     "exit_reason": "trail",
+     "gross_pnl": 17.6,
+     "costs": 8.12,
+     "net_pnl": 9.48,
+     "r_net": 1.58,
+     "data_note": "Hebel 3.05x (Tagesvola 0.64 %)"
+    },
+    {
+     "date": "2026-10-26",
+     "variant": "G2",
+     "symbol": "SPY",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 765.28,
+     "or_low": 756.95,
+     "trigger_time": "12:30",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 765.28,
+     "entry": 765.59,
+     "stop": 765.31,
+     "target": null,
+     "risk_ps": 0.28,
+     "shares": 40,
+     "notional": 30623.6,
+     "exit_time": "13:00",
+     "exit_price": 765.45,
+     "exit_reason": "trail",
+     "gross_pnl": -5.6,
+     "costs": 8.12,
+     "net_pnl": -13.72,
+     "r_net": -1.225,
+     "data_note": "Hebel 3.05x (Tagesvola 0.64 %)"
+    }
+   ]
+  },
+  "GQ": {
+   "shares": 22,
+   "daily_vol_pct": 1.25,
+   "prior_close": 704.4000244140625,
+   "taken": [
+    {
+     "date": "2026-10-26",
+     "variant": "GQ",
+     "symbol": "QQQ",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 709.62,
+     "or_low": 701.85,
+     "trigger_time": "10:30",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 709.62,
+     "entry": 709.9,
+     "stop": 709.62,
+     "target": null,
+     "risk_ps": 0.27,
+     "shares": 22,
+     "notional": 15617.8,
+     "exit_time": "16:00",
+     "exit_price": 712.12,
+     "exit_reason": "flat",
+     "gross_pnl": 48.84,
+     "costs": 5.13,
+     "net_pnl": 43.71,
+     "r_net": 7.359,
+     "data_note": "Hebel 1.56x (Tagesvola 1.25 %)"
+    }
+   ]
   }
  }
 }

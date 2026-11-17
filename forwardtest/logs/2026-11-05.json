@@ -1314,6 +1314,74 @@
      "data_note": "Hebel 2.14x (Tagesvola 0.91 %)"
     }
    ]
+  },
+  "G2": {
+   "shares": 28,
+   "daily_vol_pct": 0.908,
+   "prior_close": 766.8099975585938,
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "G2",
+     "symbol": "SPY",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 768.54,
+     "or_low": 763.75,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 763.75,
+     "entry": 754.13,
+     "stop": 758.0,
+     "target": null,
+     "risk_ps": 3.87,
+     "shares": 28,
+     "notional": 21115.64,
+     "exit_time": "16:00",
+     "exit_price": 733.13,
+     "exit_reason": "flat",
+     "gross_pnl": 588.0,
+     "costs": 6.16,
+     "net_pnl": 581.84,
+     "r_net": 5.37,
+     "data_note": "Hebel 2.14x (Tagesvola 0.91 %)"
+    }
+   ]
+  },
+  "GQ": {
+   "shares": 17,
+   "daily_vol_pct": 1.658,
+   "prior_close": 691.9500122070312,
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "GQ",
+     "symbol": "QQQ",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 693.86,
+     "or_low": 679.38,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 679.38,
+     "entry": 666.83,
+     "stop": 673.04,
+     "target": null,
+     "risk_ps": 6.21,
+     "shares": 17,
+     "notional": 11336.11,
+     "exit_time": "16:00",
+     "exit_price": 648.06,
+     "exit_reason": "flat",
+     "gross_pnl": 319.09,
+     "costs": 4.24,
+     "net_pnl": 314.85,
+     "r_net": 2.982,
+     "data_note": "Hebel 1.16x (Tagesvola 1.66 %)"
+    }
+   ]
   }
  }
 }

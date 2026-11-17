@@ -776,7 +776,8 @@ def run_spy_momentum(day, data, symbols, spark, cfg, vcfg, vname):
     times; a stop can reverse into the other side. Flat at the 16:00 close.
     Size: capital * min(4, 2 % / 14-day daily volatility of SPY) / open, fixed for the day.
     Our choices: 5-minute bars (paper: 1-minute); no entry if the price is already beyond VWAP
-    against the trade (the stop would sit on the wrong side)."""
+    against the trade (the stop would sit on the wrong side).
+    Options: symbol (e.g. QQQ), band_mult (the paper's VM; 1.5 = its higher-Sharpe setting)."""
     sym = vcfg.get("symbol", "SPY")
     look = vcfg.get("lookback", 14)
     ch = data.chart(sym, "60d", "5m")
@@ -836,7 +837,8 @@ def run_spy_momentum(day, data, symbols, spark, cfg, vcfg, vname):
         if len(mv) < look // 2:
             continue
         sig = sum(mv) / len(mv)
-        ub, lb = max(o, pc) * (1 + sig), min(o, pc) * (1 - sig)
+        vm = vcfg.get("band_mult", 1.0)  # paper: VM, base model 1.0 (1.5 gave a higher Sharpe there)
+        ub, lb = max(o, pc) * (1 + vm * sig), min(o, pc) * (1 - vm * sig)
         px, vw = bars[k]["c"], vwap[k]
         if pos:
             stop = max(ub, vw) if pos["side"] > 0 else min(lb, vw)
