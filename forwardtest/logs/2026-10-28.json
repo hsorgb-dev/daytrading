@@ -1842,6 +1842,46 @@
      "why": "Volumen 1.1x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 234,
+   "leaders": [
+    "ABSI",
+    "AI",
+    "ASAN",
+    "ASST",
+    "AZTA",
+    "CAI",
+    "CDNA",
+    "CERT",
+    "FIGS",
+    "FIVN",
+    "FROG",
+    "GRAL",
+    "ILMN",
+    "IOVA",
+    "KSS",
+    "KVYO",
+    "MANE",
+    "NTSK",
+    "OKTA",
+    "PLSE",
+    "QLYS",
+    "RPD",
+    "SAIL",
+    "TENB",
+    "VIR",
+    "VSTM"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

@@ -1919,6 +1919,44 @@
      "why": "Volumen 0.7x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 218,
+   "leaders": [
+    "APPN",
+    "ASAN",
+    "CAI",
+    "CDNA",
+    "CERT",
+    "CLF",
+    "CVI",
+    "FIGS",
+    "HTFL",
+    "IOVA",
+    "KOD",
+    "LIFE",
+    "MAZE",
+    "MNDY",
+    "MRNA",
+    "NTSK",
+    "PRCH",
+    "RSKD",
+    "SLN",
+    "SNAP",
+    "VSTM",
+    "WIX",
+    "XERS",
+    "ZETA"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

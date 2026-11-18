@@ -2771,6 +2771,51 @@
      "why": "Hebel-Limit oder Order unter Minimum"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 223,
+   "leaders": [
+    "ASAN",
+    "BHC",
+    "BLMN",
+    "BMI",
+    "CERT",
+    "FIGS",
+    "GKOS",
+    "GRAL",
+    "IBTA",
+    "IRON",
+    "KD",
+    "KOD",
+    "MRNA",
+    "PRCH",
+    "REAL",
+    "REPL",
+    "SDGR",
+    "SG",
+    "SMPL",
+    "TDOC",
+    "TEM",
+    "TRAX",
+    "VRDN",
+    "VSTM",
+    "VYX",
+    "WGO",
+    "WING",
+    "WIX",
+    "XMTR",
+    "XNCR",
+    "ZS"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

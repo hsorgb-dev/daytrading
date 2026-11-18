@@ -2190,6 +2190,85 @@
      "why": "Volumen 0.8x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 184,
+   "leaders": [
+    "AMPL",
+    "ARHS",
+    "BETA",
+    "BHC",
+    "CDNA",
+    "CERT",
+    "CYRX",
+    "DNA",
+    "DXC",
+    "ENOV",
+    "ETON",
+    "FIGS",
+    "GKOS",
+    "GMAB",
+    "HTFL",
+    "IRON",
+    "KD",
+    "KOD",
+    "KSS",
+    "LEGN",
+    "MANE",
+    "MRNA",
+    "OMH",
+    "PAR",
+    "PLSE",
+    "REAL",
+    "REPL",
+    "SDGR",
+    "SG",
+    "SIBN",
+    "TDOC",
+    "TEM",
+    "TRAX",
+    "ULCC",
+    "VIA",
+    "VRDN",
+    "VYX",
+    "WGO",
+    "WING",
+    "XERS",
+    "XNCR"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [
+    {
+     "symbol": "DXC",
+     "entry": 15.31,
+     "stop": 14.9,
+     "ema9": 14.97,
+     "ret63_pct": 40.4
+    },
+    {
+     "symbol": "HTFL",
+     "entry": 55.8,
+     "stop": 54.5,
+     "ema9": 55.18,
+     "ret63_pct": 91.8
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "DXC",
+     "why": "Marktfilter QQQ EMA9 <= EMA21"
+    },
+    {
+     "symbol": "HTFL",
+     "why": "Marktfilter QQQ EMA9 <= EMA21"
+    }
+   ],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

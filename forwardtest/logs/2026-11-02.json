@@ -1840,6 +1840,40 @@
      "why": "Volumen 1.7x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 198,
+   "leaders": [
+    "ASAN",
+    "AZTA",
+    "CDNA",
+    "CERT",
+    "GMAB",
+    "GRAL",
+    "HTFL",
+    "KOD",
+    "LIFE",
+    "MRNA",
+    "REAL",
+    "REPL",
+    "RPD",
+    "SDGR",
+    "TDOC",
+    "TEM",
+    "TRAX",
+    "VSTM",
+    "WIX",
+    "ZS"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

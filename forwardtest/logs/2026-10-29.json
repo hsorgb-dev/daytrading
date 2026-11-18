@@ -2236,6 +2236,56 @@
      "why": "Hebel-Limit oder Order unter Minimum"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 223,
+   "leaders": [
+    "ABCL",
+    "ABSI",
+    "AI",
+    "ALMR",
+    "APPN",
+    "ASAN",
+    "ASST",
+    "AZTA",
+    "CAI",
+    "CDNA",
+    "CERT",
+    "DNA",
+    "DXC",
+    "FIGS",
+    "FIVN",
+    "FTRE",
+    "GMAB",
+    "GRAL",
+    "HTFL",
+    "ILMN",
+    "IOVA",
+    "KOD",
+    "KVYO",
+    "MANE",
+    "MRNA",
+    "NTSK",
+    "OKTA",
+    "PRME",
+    "REPL",
+    "RPD",
+    "SAIL",
+    "SDGR",
+    "SG",
+    "VIR",
+    "VSTM",
+    "WIX"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

@@ -68,7 +68,14 @@
           "costs": {"slippage_pct": 0.01}, "added": "2026-11-17"},
     "J": {"label": "Gap-Continuation (Earnings-Proxy): Gap >= 4 %, Volumen der ersten 30 Min >= 3x Schnitt, 10:00 in Gap-Richtung bestaetigt; Stop am Extrem der ersten 30 Min, Ausstieg 16:00; 1 % Risiko, Hebel bis 4x",
           "strategy": "gap_continuation", "lookback": 14, "min_price": 5, "min_avg_volume": 1000000,
-          "min_gap_pct": 4.0, "min_rel_volume": 3.0, "risk_pct": 1.0, "leverage": 4, "added": "2026-11-17"}
+          "min_gap_pct": 4.0, "min_rel_volume": 3.0, "risk_pct": 1.0, "leverage": 4, "added": "2026-11-17"},
+    "L": {"label": "Luk-Pullback-Swing (Regeln nach rootchunhe/martin-luk-backtesting): Leader (ADR >= 5 %, 20-Tage-$-Volumen >= 20 Mio., +30 % in 1 oder 3 Monaten, EMA 9>21>50, ueber AVWAP vom 250-Tage-Hoch), Tief taucht an die EMA9 und Schluss erobert sie zurueck (gruen, obere 60 %); Einstieg zum Schluss, Stop Tagestief (2-5 %, max. 1/2 ADR); 0,5 % Risiko, max. 30 %/Position, max. 100 % brutto, max. 5 Positionen; 15 % bei 3R, Rest nach Schluss unter EMA9 zum naechsten Open, max. 15 Tage; QQQ-Filter EMA9>EMA21. Haelt ueber Nacht",
+          "strategy": "luk_pullback", "own_account": true, "backfill_from": "2026-10-20",
+          "min_price": 5.0, "min_dollar_volume": 20000000, "min_adr": 0.05, "min_run_up": 0.30,
+          "min_close_position": 0.40, "min_stop_width": 0.02, "max_stop_width": 0.05, "max_stop_width_adr": 0.5,
+          "risk_pct": 0.5, "max_position_pct": 30.0, "max_gross": 1.0, "max_positions": 5, "min_order_usd": 500.0,
+          "partial_at_r": 3.0, "partial_fraction": 0.15, "exit_ema": 9, "max_hold_days": 15,
+          "added": "2026-11-18"}
   },
   "timemachine": {"enabled": true, "replays": 10000, "seed": 19}
 }

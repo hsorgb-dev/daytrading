@@ -2530,6 +2530,58 @@
      "why": "Volumen 0.8x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 181,
+   "leaders": [
+    "ALGT",
+    "ALMR",
+    "AMLX",
+    "APPN",
+    "AXGN",
+    "AZTA",
+    "BETA",
+    "BHVN",
+    "BOBS",
+    "CNXC",
+    "DXC",
+    "ENOV",
+    "ETON",
+    "EWTX",
+    "FIGS",
+    "GKOS",
+    "HTFL",
+    "IRON",
+    "KD",
+    "MANE",
+    "MAZE",
+    "ORKA",
+    "PAR",
+    "PEPG",
+    "PRCH",
+    "REAL",
+    "SIBN",
+    "TDOC",
+    "TEM",
+    "TGTX",
+    "VIA",
+    "VRDN",
+    "VSTM",
+    "VYX",
+    "WGO",
+    "WING",
+    "XERS",
+    "XNCR"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

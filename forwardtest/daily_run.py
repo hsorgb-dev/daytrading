@@ -65,6 +65,7 @@ def _load(folder, name):
 
 
 scan = _load("trader-scanner", "scan")
+luk = _load("forwardtest", "luk")
 
 TRADE_COLS = ["date", "variant", "symbol", "setups", "dollar_vol_prev", "or_high", "or_low", "trigger_time",
               "volume_x", "signal", "ref_level", "entry", "stop", "target", "risk_ps", "shares", "notional", "exit_time", "exit_price",
@@ -1071,9 +1072,180 @@ def run_gap_continuation(day, data, symbols, spark, cfg, vcfg, vname):
          "skipped": skipped}
 
 
+# ---------------------------------------------------------------- L: Luk pullback swing (positions held overnight)
+
+def _luk_daily(data, sym, cache_key="luk"):
+    """(rows, features) of a 2-year daily chart, kept per run. Features at bar i use bars <= i only."""
+    key = (cache_key, sym)
+    if key not in data.mem:
+        ch = data.chart(sym, "2y", "1d")
+        if "error" in ch:
+            data.mem[key] = (None, None, {})
+        else:
+            od = _ohlcv_days(ch)
+            rows = [(d,) + od[d] for d in sorted(od) if od[d][3] > 0]
+            data.mem[key] = (rows, luk.features(rows), {r[0]: i for i, r in enumerate(rows)})
+    return data.mem[key]
+
+
+def _luk_candidates(day, symbols, spark, P):
+    """Cheap pre-check on the spark closes up to D-1: price and a 1- or 3-month run-up."""
+    out = []
+    for sym in symbols:
+        s = spark.get(sym)
+        if not s:
+            continue
+        rows = daily_rows(s)
+        c = [rows[d][0] for d in sorted(rows) if d < day]
+        if len(c) < 64 or c[-1] < P["min_price"]:
+            continue
+        if c[-1] / c[-22] - 1 >= P["min_run_up"] or c[-1] / c[-64] - 1 >= P["min_run_up"]:
+            out.append(sym)
+    return out
+
+
+def luk_day(day, state, data, symbols, spark, P, costs, account, seg_end):
+    """One day of L on `state` (changed in place). Returns closed trades, entries, skipped, detail."""
+    cands = _luk_candidates(day, symbols, spark, P)
+    held = sorted(state["positions"])
+    qrows, qf, qix = _luk_daily(data, "QQQ")
+    mkt = bool(qrows) and luk.market_ok(qrows, qf, day)
+    leaders, sigs, missing = [], [], []
+    for sym in sorted(set(cands) | set(held)):
+        rows, f, ix = _luk_daily(data, sym)
+        if not rows or day not in ix:
+            if sym in held:
+                missing.append(sym)
+            continue
+        i = ix[day]
+        if sym in cands and i >= 1 and luk.leader(rows, f, i - 1, P):
+            leaders.append(sym)
+            s = luk.signal(rows, f, i, P)
+            if s:
+                s["symbol"] = sym
+                s["date"] = day.isoformat()
+                sigs.append(s)
+    bars, ema = {}, {}
+    for sym in held:
+        rows, f, ix = _luk_daily(data, sym)
+        if rows and day in ix:
+            r = rows[ix[day]]
+            bars[sym] = r[1:5]
+            ema[sym] = f["ema%d" % P["exit_ema"]][ix[day]] if P["exit_ema"] else None
+    closed, entries, skipped, _ = luk.step(state, day.isoformat(), bars, sigs, mkt, ema, P, costs, account=account)
+    if seg_end:
+        closes = {}
+        for sym in state["positions"]:
+            rows, f, ix = _luk_daily(data, sym)
+            if rows and day in ix:
+                closes[sym] = rows[ix[day]][4]
+        closed += luk.close_all(state, day.isoformat(), closes, costs)
+    detail = {"pre_candidates": len(cands), "leaders": leaders, "market_ok": mkt, "missing_daily": missing,
+              "signals": [{"symbol": s["symbol"], "entry": round(s["entry"], 2), "stop": round(s["stop"], 2),
+                           "ema9": round(s["level"], 2), "ret63_pct": round(100 * s["ret63"], 1)} for s in sigs],
+              "skipped": skipped}
+    return closed, entries, skipped, detail
+
+
+def _luk_states_path():
+    return os.path.join(HERE, "journal", "luk_state.json")
+
+
+def run_luk(day, data, symbols, spark, cfg, vcfg, vname):
+    """L: Luk pullback swing on daily bars (rules in forwardtest/luk.py). Positions stay open over night, so
+    the account state of each day is kept in journal/luk_state.json. Two segments: the backfill from
+    `backfill_from` until the day before reinvest.from with a fixed sizing basis (open positions are closed
+    at the close of its last day), and the forward segment from reinvest.from, sized on the account value.
+    A trade is booked on the day it is closed; days.csv carries the realized result of the day."""
+    P = luk.params(vcfg)
+    costs = dict(cfg["costs"], **(vcfg.get("costs") or {}))
+    base = float(cfg["capital"])
+    fw = (cfg.get("reinvest") or {}).get("from") or "9999-12-31"
+    bf = vcfg.get("backfill_from", fw)
+    iso = day.isoformat()
+    empty = {"watchlist": 0, "with_data": 0, "triggers": 0, "taken": 0, "skipped": 0}
+    if iso < bf:
+        return [], empty, {"note": "vor dem Backfill-Start von L"}
+    seg_start = fw if iso >= fw else bf
+    fixed = iso < fw
+    first_fw = datetime.date.fromisoformat(fw)
+    seg_end = fixed and day == prev_trading_day(first_fw)
+    path = _luk_states_path()
+    states = {}
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as fh:
+            states = json.load(fh)
+    mine = states.setdefault(vname, {})
+    note = ""
+    if iso == seg_start:
+        state = luk.new_state(base)
+    else:
+        prev = prev_trading_day(day)
+        if prev.isoformat() in mine:
+            state = json.loads(json.dumps(mine[prev.isoformat()]))
+        else:  # no state for the day before: replay the segment (results of those days are not journaled)
+            d = datetime.date.fromisoformat(seg_start)
+            state = luk.new_state(base)
+            while d < day:
+                if scan.trading_day(d)[0]:
+                    luk_day(d, state, data, symbols, spark, P, costs, base if fixed else None, False)
+                    mine[d.isoformat()] = json.loads(json.dumps(state))
+                d += datetime.timedelta(days=1)
+            note = "Zustand ab %s nachgerechnet (Vortage nicht im Journal)" % seg_start
+    closed, entries, skipped, det = luk_day(day, state, data, symbols, spark, P, costs,
+                                            base if fixed else None, seg_end)
+    mine[iso] = state
+    for k in sorted(mine)[:-40]:
+        del mine[k]
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(states, fh, indent=1, sort_keys=True)
+    rows = []
+    for t in closed:
+        part = t["partial"]
+        dn = "Swing %d Handelstage" % t["hold_days"]
+        if part:
+            dn += "; Teilverkauf %d Stk. bei %.2f am %s" % (part[0][1], part[0][2], part[0][0])
+        if fixed:
+            dn += "; Backfill, feste Basis"
+        exit_t = {"open": "09:30", "close": "16:00"}.get(t["how"], "intraday")
+        rows.append({"date": iso, "variant": vname, "symbol": t["symbol"],
+                     "setups": "Pullback 9 EMA, Einstieg %s" % t["entry_date"],
+                     "dollar_vol_prev": round(t["advd"]) if t.get("advd") else None, "or_high": None, "or_low": None,
+                     "trigger_time": "15:55", "volume_x": None, "signal": "luk_pullback",
+                     "ref_level": round(t["level"], 2), "entry": round(t["entry"], 2), "stop": round(t["stop"], 2),
+                     "target": round(t["entry"] + P["partial_at_r"] * t["risk_ps"], 2) if P["partial_at_r"] else None,
+                     "risk_ps": round(t["risk_ps"], 2), "shares": t["shares"],
+                     "notional": round(t["shares"] * t["entry"], 2), "exit_time": exit_t,
+                     "exit_price": round(t["exit_price"], 2), "exit_reason": t["reason"],
+                     "gross_pnl": round(t["gross"], 2), "costs": round(t["costs"], 2), "net_pnl": round(t["net"], 2),
+                     "r_net": round(t["r_net"], 3), "data_note": dn})
+    pos = state["positions"]
+    nv = luk.nav(state)
+    unreal = sum(p["shares"] * p["last_close"] for p in pos.values()) - sum(
+        p["shares"] * p["entry"] for p in pos.values())
+    open_txt = "offen: %d Pos.%s, brutto %.0f %% vom Konto, unreal. %+.0f $" % (
+        len(pos), (" (" + ",".join(sorted(pos)) + ")") if pos else "", 100 * luk.gross(state) / nv if nv else 0, unreal)
+    if det["missing_daily"]:
+        open_txt += "; Tagesdaten fehlen: " + ",".join(det["missing_daily"])
+    if not det["market_ok"]:
+        open_txt += "; Marktfilter aus"
+    note = "; ".join(x for x in (open_txt, note) if x)
+    det.update({"entries": [{"symbol": e["symbol"], "shares": e["shares"], "entry": round(e["entry"], 2),
+                             "stop": round(e["stop"], 2)} for e in entries],
+                "taken": rows, "open_positions": {s: {"entry_date": p["entry_date"], "shares": p["shares"],
+                                                       "entry": round(p["entry"], 2), "stop": round(p["stop"], 2),
+                                                       "last_close": round(p["last_close"], 2),
+                                                       "pending": p["pending"]} for s, p in pos.items()},
+                "nav": round(nv, 2), "note": note})
+    day_row = {"watchlist": len(det["leaders"]), "with_data": len(det["leaders"]), "triggers": len(det["signals"]),
+               "taken": len(entries), "skipped": len(skipped)}
+    return rows, day_row, det
+
+
 SPECIAL = {"sip_orb": run_sip_orb, "spy_momentum": run_spy_momentum,
            "last_half_hour": run_last_half_hour, "etf_orb": run_etf_orb,
-           "gap_continuation": run_gap_continuation}
+           "gap_continuation": run_gap_continuation, "luk_pullback": run_luk}
 
 
 SCALED = ("capital", "max_loss_per_trade", "max_daily_loss", "max_order_usd")
@@ -1129,7 +1301,8 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None, equit
             continue  # forward-only variant: no backfill before its start
         cfg = account_cfg(base_cfg, (equity or {}).get(vname))
         if vcfg.get("strategy") in SPECIAL:
-            tr, drow, det = SPECIAL[vcfg["strategy"]](day, data, symbols, spark, cfg, vcfg, vname)
+            own = base_cfg if vcfg.get("own_account") else cfg  # L keeps its own account (luk_state.json)
+            tr, drow, det = SPECIAL[vcfg["strategy"]](day, data, symbols, spark, own, vcfg, vname)
             trades.extend(tr)
             days.append(dict(drow, date=day.isoformat(), variant=vname, spy_open=spy_o, spy_close=spy_c,
                              net_pnl=round(sum(t["net_pnl"] for t in tr), 2), note=det.get("note", "")))

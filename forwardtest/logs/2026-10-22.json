@@ -2641,6 +2641,41 @@
      "why": "Volumen 1.2x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 244,
+   "leaders": [
+    "AI",
+    "APPN",
+    "ASAN",
+    "CAI",
+    "CDNA",
+    "CERT",
+    "CNXC",
+    "DXC",
+    "FIVN",
+    "ILMN",
+    "LIFE",
+    "MNDY",
+    "NTSK",
+    "OKTA",
+    "RGEN",
+    "RSKD",
+    "SLN",
+    "SNAP",
+    "VSTM",
+    "WIX",
+    "ZETA"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

@@ -82,6 +82,29 @@ Studien regelgetreu um. Sie handeln long und short und haben eigene Größenrege
   ersten 30 Minuten, Ausstieg 16:00. Ein Nachweis über die SEC-Meldung (8-K, Punkt 2.02) ist
   vorbereitet, braucht aber eine SEC-Kontaktangabe im Absender.
 
+**Variante L, Luk-Pullback-Swing** (seit 18.11.2026, Backfill ab 20.10., vorwärts ab 17.11.)
+setzt die Pullback-Regel von Martin Luk mechanisch um, mit den Parametern des Backtests
+rootchunhe/martin-luk-backtesting (dort auf CRSP/TAQ 2016–2026 geprüft). Anders als alle
+anderen Varianten hält L Positionen über Nacht und arbeitet mit Tageskerzen (Code: `luk.py`):
+
+| Schritt | Regel |
+|---|---|
+| Leader (Vortag) | Schluss ≥ 5 $, 20-Tage-Dollar-Volumen ≥ 20 Mio. $, ADR(20) ≥ 5 %, +30 % in 21 oder 63 Tagen, EMA 9 > 21 > 50, Schluss über dem AVWAP ab dem höchsten Hoch der letzten 250 Tage |
+| Signal (Tag D) | Tief ≤ EMA9 des Vortags (höchstens 1 ADR darunter), Schluss > Open und > EMA9, Schluss in den oberen 60 % der Spanne |
+| Einstieg | zum Schlusskurs (Ersatz für 15:55), nur wenn bei QQQ EMA9 > EMA21; bei mehr Signalen zuerst die stärkste 63-Tage-Rendite |
+| Stop | Tagestief des Signaltags, Abstand 2–5 % und höchstens ½ ADR, sonst kein Trade |
+| Größe | 0,5 % Risiko vom Kontostand, max. 30 % je Position, max. 100 % brutto (kein Margin), max. 5 Positionen, Mindestorder 500 $ |
+| Ausstieg | 15 % bei +3R (Limit); Rest zum nächsten Open nach dem ersten Schluss unter der EMA9, spätestens nach 15 Handelstagen |
+| Simulation | Gap durch den Stop füllt zum Open; Stop und 3R am selben Tag: Stop zuerst |
+
+Der Kontostand und die offenen Positionen stehen je Tag in `journal/luk_state.json`. Ein
+Trade wird am Tag des Ausstiegs gebucht; `days.csv` zeigt das realisierte Ergebnis und in
+`note` die offenen Positionen mit unrealisiertem Ergebnis. Der Backfill (20.10.–16.11.)
+rechnet mit fester Basis von 10.000 $ und stellt am 16.11. alles glatt
+(`segment_end`); vorwärts startet L am 17.11. mit 10.000 $ ohne Positionen. Der lange
+Backtest auf Tageskerzen (2016–2026) steht in `backtest_luk.md`
+(`python3 forwardtest/backtest_luk.py download` und `run --out forwardtest/backtest_luk.md`).
+
 F, G, I und J bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
 US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital.
 
@@ -101,6 +124,7 @@ weitere Variante dazu, nicht als Änderung an A oder B.
 - `journal/trades.csv`: jeder simulierte Trade, inkl. Time-Machine-Prognose
 - `journal/days.csv`: je Tag und Variante Watchlist, Trigger, Trades, Netto
 - `logs/<Datum>.json`: Watchlist, alle Trigger, übersprungene Trigger mit Grund
+- `journal/luk_state.json`: Konto und offene Positionen von L je Tag (letzte 40 Tage)
 
 ## Bekannte Grenzen
 

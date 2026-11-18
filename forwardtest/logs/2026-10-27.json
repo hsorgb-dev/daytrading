@@ -1845,6 +1845,45 @@
      "why": "Volumen 1.2x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 225,
+   "leaders": [
+    "AI",
+    "ASAN",
+    "ASST",
+    "CAI",
+    "CERT",
+    "CVI",
+    "DXC",
+    "FIGS",
+    "FIVN",
+    "FROG",
+    "GRAL",
+    "HTFL",
+    "ILMN",
+    "KSS",
+    "KVYO",
+    "NTSK",
+    "OKTA",
+    "PLSE",
+    "QLYS",
+    "RPD",
+    "SAIL",
+    "SNAP",
+    "TENB",
+    "VSTM",
+    "WIX"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

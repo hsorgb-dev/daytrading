@@ -3175,6 +3175,71 @@
      "why": "Volumen 0.9x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 234,
+   "leaders": [
+    "ABCL",
+    "AI",
+    "ALMR",
+    "ASAN",
+    "AZTA",
+    "BBNX",
+    "BLMN",
+    "CAI",
+    "CDNA",
+    "CERT",
+    "DNA",
+    "EFOR",
+    "ENTG",
+    "FIVN",
+    "GMAB",
+    "GRAL",
+    "HTFL",
+    "ILMN",
+    "KOD",
+    "LIFE",
+    "MANE",
+    "MRNA",
+    "NTSK",
+    "OKTA",
+    "P",
+    "QLYS",
+    "REPL",
+    "RGEN",
+    "RPD",
+    "SAIL",
+    "SDGR",
+    "TEM",
+    "TENB",
+    "TWST",
+    "TXG",
+    "VSTM",
+    "WIX",
+    "ZS"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [
+    {
+     "symbol": "VSTM",
+     "entry": 9.75,
+     "stop": 9.5,
+     "ema9": 9.58,
+     "ret63_pct": 66.6
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "VSTM",
+     "why": "Marktfilter QQQ EMA9 <= EMA21"
+    }
+   ],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

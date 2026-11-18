@@ -2182,6 +2182,41 @@
      "why": "Volumen 0.9x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 147,
+   "leaders": [
+    "ARHS",
+    "BETA",
+    "ENOV",
+    "KD",
+    "KOD",
+    "MAZE",
+    "MRNA",
+    "ORKA",
+    "REAL",
+    "REPL",
+    "SDGR",
+    "SG",
+    "STGW",
+    "TDOC",
+    "TEM",
+    "TRAX",
+    "VRDN",
+    "VYX",
+    "WING",
+    "XERS",
+    "XNCR"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

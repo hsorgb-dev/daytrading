@@ -2844,6 +2844,35 @@
      "why": "Hebel-Limit oder Order unter Minimum"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 156,
+   "leaders": [
+    "APPN",
+    "CERT",
+    "DXC",
+    "ENOV",
+    "KD",
+    "REAL",
+    "SDGR",
+    "SEZL",
+    "SG",
+    "TDOC",
+    "VRDN",
+    "VSTM",
+    "VYX",
+    "WGO",
+    "WING"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

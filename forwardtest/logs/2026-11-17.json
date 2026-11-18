@@ -2478,6 +2478,44 @@
      "why": "Volumen 0.5x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 152,
+   "leaders": [
+    "ACHC",
+    "ALGT",
+    "AMPL",
+    "APPN",
+    "AZTA",
+    "BOBS",
+    "CNXC",
+    "ENOV",
+    "GDYN",
+    "GKOS",
+    "KD",
+    "KVYO",
+    "LFTO",
+    "ORKA",
+    "PAR",
+    "SEZL",
+    "TDOC",
+    "UPBD",
+    "VIA",
+    "VRDN",
+    "VYX",
+    "WGO",
+    "WING",
+    "XMTR"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

@@ -1761,6 +1761,44 @@
      "why": "Volumen 0.7x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 164,
+   "leaders": [
+    "ALGT",
+    "AMPL",
+    "APPN",
+    "BETA",
+    "BOBS",
+    "CNXC",
+    "ENOV",
+    "GKOS",
+    "HTFL",
+    "IRON",
+    "KD",
+    "MAZE",
+    "ORKA",
+    "PAR",
+    "PEPG",
+    "REAL",
+    "REPL",
+    "TDOC",
+    "TEM",
+    "VIA",
+    "VRDN",
+    "VYX",
+    "WGO",
+    "XERS"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }

@@ -2641,6 +2641,42 @@
      "why": "Volumen 0.4x"
     }
    ]
+  },
+  "L": {
+   "pre_candidates": 161,
+   "leaders": [
+    "ALGT",
+    "AMPL",
+    "APPN",
+    "BOBS",
+    "CNXC",
+    "ENOV",
+    "GKOS",
+    "IRON",
+    "KD",
+    "KOD",
+    "ORKA",
+    "PRAX",
+    "REAL",
+    "REPL",
+    "RYTM",
+    "TDOC",
+    "UPBD",
+    "VIA",
+    "VRDN",
+    "VYX",
+    "WING",
+    "XERS"
+   ],
+   "market_ok": false,
+   "missing_daily": [],
+   "signals": [],
+   "skipped": [],
+   "entries": [],
+   "taken": [],
+   "open_positions": {},
+   "nav": 10000.0,
+   "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
   }
  }
 }
