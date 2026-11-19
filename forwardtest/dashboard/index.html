@@ -26,6 +26,11 @@
   .ft th, .ft td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
   .ft th:nth-child(-n+4), .ft td:nth-child(-n+4) { text-align: left; }
   .ft th { color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+  .ft-tabs { display: flex; gap: var(--cds-gap-sm); border-bottom: 1px solid var(--color-border-line); }
+  .ft-tab { font: inherit; font-size: var(--cds-font-size-body); background: none; border: 0; border-bottom: 2px solid transparent; color: var(--color-fg-muted); padding: 6px 10px; cursor: pointer; margin-bottom: -1px; }
+  .ft-tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); }
+  .ft-view { display: flex; flex-direction: column; gap: var(--cds-gap-lg); }
+  .ft-view[hidden] { display: none; }
   .ft-row { display: flex; justify-content: space-between; align-items: baseline; gap: var(--cds-gap-md); flex-wrap: wrap; }
   .ft-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: var(--cds-gap-sm) 0 0; }
   .ft-tm th:nth-child(-n+4), .ft-tm td:nth-child(-n+4) { text-align: right; } .ft-tm th:first-child, .ft-tm td:first-child { text-align: left; }
@@ -39,6 +44,12 @@
     <p class="ft-sub">Paper-Test von 14 Intraday-Varianten, einer Swing-Variante (L) und sieben Vergleichs-Zwillingen ohne Hebel (-1x), Tag für Tag nach US-Börsenschluss nachgespielt. Start mit 10.000 $ je Variante, 1 % Risiko vom aktuellen Kontostand je Trade, Gewinne und Verluste werden reinvestiert, Kosten abgezogen. Keine echten Orders. Alle Kennzahlen zählen ab dem gemeinsamen Vorwärts-Start am 17.11.2026; die nachgerechneten Tage davor stehen unten als Referenz.</p>
   </header>
 
+  <div class="ft-tabs" role="tablist" aria-label="Ansicht">
+    <button type="button" class="ft-tab" role="tab" id="tab-ursprung" aria-controls="ansicht-ursprung" aria-selected="true">Ursprungsstrategien</button>
+    <button type="button" class="ft-tab" role="tab" id="tab-ohne-hebel" aria-controls="ansicht-ohne-hebel" aria-selected="false">Ohne Hebel (1×)</button>
+  </div>
+
+  <section class="ft-view" id="ansicht-ursprung" role="tabpanel" aria-labelledby="tab-ursprung">
   <p class="ft-lead" id="fazit">Variante A: <b data-draw="leadA">—</b>. Variante B: <b data-draw="leadB">—</b>. Variante C: <b data-draw="leadC">—</b>. Variante D: <b data-draw="leadD">—</b>. Variante E: <b data-draw="leadE">—</b>. Variante C2: <b data-draw="leadC2">—</b>. Variante C3: <b data-draw="leadC3">—</b>. Variante F: <b data-draw="leadF">—</b>. Variante G: <b data-draw="leadG">—</b>. Variante G2: <b data-draw="leadG2">—</b>. Variante GQ: <b data-draw="leadGQ">—</b>. Variante H: <b data-draw="leadH">—</b>. Variante I: <b data-draw="leadI">—</b>. Variante J: <b data-draw="leadJ">—</b>. Variante L: <b data-draw="leadL">—</b>. Stand: <span data-draw="stand">—</span>.</p>
 
   <div class="ft-cols" id="kennzahlen">
@@ -241,18 +252,9 @@
 
   <section class="ft-card" id="equity">
     <h2>Equity-Verlauf (Start 10.000 $ am 17.11.2026)</h2>
-    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span><span><i data-draw="legC3"></i>C3 · VWAP Trailing</span><span><i data-draw="legF"></i>F · Stocks in Play</span><span><i data-draw="legG"></i>G · SPY-Momentum</span><span><i data-draw="legG2"></i>G2 · SPY breit</span><span><i data-draw="legGQ"></i>GQ · QQQ</span><span><i data-draw="legH"></i>H · SPY 15:30</span><span><i data-draw="legI"></i>I · QQQ-ORB</span><span><i data-draw="legJ"></i>J · Gap</span><span><i data-draw="legL"></i>L · Luk-Swing</span><span>- - - gestrichelt: gleiche Variante ohne Hebel (1x)</span></div>
+    <div class="ft-legend"><span><i data-draw="legA"></i>A · Original</span><span><i data-draw="legB"></i>B · mit Filtern</span><span><i data-draw="legC"></i>C · VWAP</span><span><i data-draw="legD"></i>D · Mean Rev.</span><span><i data-draw="legE"></i>E · PDH/PDL</span><span><i data-draw="legC2"></i>C2 · VWAP weit</span><span><i data-draw="legC3"></i>C3 · VWAP Trailing</span><span><i data-draw="legF"></i>F · Stocks in Play</span><span><i data-draw="legG"></i>G · SPY-Momentum</span><span><i data-draw="legG2"></i>G2 · SPY breit</span><span><i data-draw="legGQ"></i>GQ · QQQ</span><span><i data-draw="legH"></i>H · SPY 15:30</span><span><i data-draw="legI"></i>I · QQQ-ORB</span><span><i data-draw="legJ"></i>J · Gap</span><span><i data-draw="legL"></i>L · Luk-Swing</span></div>
     <div class="ft-chart" data-draw="equity-chart" data-source="equity"></div>
     <p class="ft-note">CIM-Vergleich folgt, sobald die CIM-Equity als Datei angebunden ist.</p>
-  </section>
-
-  <section class="ft-card ft-tm" id="hebel">
-    <h2>Mit und ohne Hebel</h2>
-    <p class="ft-cap">Die Varianten mit Hebel bis 4× neben ihrem Zwilling mit gleichen Regeln, aber höchstens 1× Kontokapital als Positionsvolumen (seit 19.11.2026, Backfill ab 20.10., vorwärts ab 17.11.)</p>
-    <div class="ft-wrap"><table data-source="leverage" data-row-key="variant">
-      <thead><tr><th data-field="variant">Variante</th><th data-field="net_lev">Netto mit Hebel</th><th data-field="net_1x">Netto 1×</th><th data-field="trades_lev">Trades mit Hebel</th><th data-field="trades_1x">Trades 1×</th><th data-field="dd_lev">Max. DD mit Hebel</th><th data-field="dd_1x">Max. DD 1×</th></tr></thead>
-      <tbody data-draw="lev-table"></tbody>
-    </table></div>
   </section>
 
   <div class="ft-cols" id="analyse">
@@ -272,7 +274,7 @@
 
   <section class="ft-card" id="trades">
     <div class="ft-row"><h2>Trades</h2>
-      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option><option value="C2">Nur C2</option><option value="C3">Nur C3</option><option value="F">Nur F</option><option value="G">Nur G</option><option value="G2">Nur G2</option><option value="GQ">Nur GQ</option><option value="H">Nur H</option><option value="I">Nur I</option><option value="J">Nur J</option><option value="L">Nur L</option><option value="F-1x">Nur F-1x</option><option value="G-1x">Nur G-1x</option><option value="G2-1x">Nur G2-1x</option><option value="GQ-1x">Nur GQ-1x</option><option value="H-1x">Nur H-1x</option><option value="I-1x">Nur I-1x</option><option value="J-1x">Nur J-1x</option></select>
+      <select class="dash-select" id="trade-filter" aria-label="Variante"><option value="">Alle Varianten</option><option value="A">Nur A</option><option value="B">Nur B</option><option value="C">Nur C</option><option value="D">Nur D</option><option value="E">Nur E</option><option value="C2">Nur C2</option><option value="C3">Nur C3</option><option value="F">Nur F</option><option value="G">Nur G</option><option value="G2">Nur G2</option><option value="GQ">Nur GQ</option><option value="H">Nur H</option><option value="I">Nur I</option><option value="J">Nur J</option><option value="L">Nur L</option></select>
     </div>
     <div class="ft-wrap"><table data-source="trades" data-row-key="date,variant,symbol">
       <thead><tr><th data-field="date">Datum</th><th data-field="variant">Var.</th><th data-field="symbol">Titel</th><th data-field="setups">Setup</th><th data-field="trigger_time">Einstieg ET</th><th data-field="entry">Kurs</th><th data-field="stop">Stop</th><th data-field="target">Ziel</th><th data-field="shares">Stück</th><th data-field="exit_reason">Ausstieg</th><th data-field="exit_time">um</th><th data-field="net_pnl">Netto $</th><th data-field="r_net">R netto</th><th data-field="tm_target_pct">TM Ziel %</th></tr></thead>
@@ -287,6 +289,141 @@
       <thead><tr><th data-field="variant">Variante</th><th data-field="trades">Trades</th><th data-field="net_pnl">Netto $</th><th data-field="avg_r">R netto je Risiko-$</th></tr></thead>
       <tbody data-draw="backfill-table"></tbody>
     </table></div>
+  </section>
+
+  </section>
+
+  <section class="ft-view" id="ansicht-ohne-hebel" role="tabpanel" aria-labelledby="tab-ohne-hebel" hidden>
+  <p class="ft-lead" id="fazit-1x">Variante F-1x: <b data-draw="leadF-1x">—</b>. Variante G-1x: <b data-draw="leadG-1x">—</b>. Variante G2-1x: <b data-draw="leadG2-1x">—</b>. Variante GQ-1x: <b data-draw="leadGQ-1x">—</b>. Variante H-1x: <b data-draw="leadH-1x">—</b>. Variante I-1x: <b data-draw="leadI-1x">—</b>. Variante J-1x: <b data-draw="leadJ-1x">—</b>. Stand: <span data-draw="stand">—</span>.</p>
+
+  <div class="ft-cols" id="kennzahlen-1x">
+    <section class="ft-card" id="karte-f-1x">
+      <h3>F-1x · Stocks-in-Play-ORB ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie F, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-F-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=F-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-F-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=F-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-F-1x-trades" data-source="kpis" data-field="trades" data-where="variant=F-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-F-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=F-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-F-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=F-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-F-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=F-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-F-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-F-1x"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-g-1x">
+      <h3>G-1x · SPY Intraday-Momentum ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie G, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-G-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=G-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-G-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=G-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-G-1x-trades" data-source="kpis" data-field="trades" data-where="variant=G-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-G-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=G-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-G-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=G-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-G-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=G-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-G-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-G-1x"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-g2-1x">
+      <h3>G2-1x · SPY-Momentum, breites Band ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie G2, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-G2-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=G2-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-G2-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=G2-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-G2-1x-trades" data-source="kpis" data-field="trades" data-where="variant=G2-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-G2-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=G2-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-G2-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=G2-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-G2-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=G2-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-G2-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-G2-1x"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-gq-1x">
+      <h3>GQ-1x · QQQ-Momentum ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie GQ, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-GQ-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=GQ-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-GQ-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=GQ-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-GQ-1x-trades" data-source="kpis" data-field="trades" data-where="variant=GQ-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-GQ-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=GQ-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-GQ-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=GQ-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-GQ-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=GQ-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-GQ-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-GQ-1x"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-h-1x">
+      <h3>H-1x · SPY letzte halbe Stunde ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie H, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-H-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=H-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-H-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=H-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-H-1x-trades" data-source="kpis" data-field="trades" data-where="variant=H-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-H-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=H-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-H-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=H-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-H-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=H-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-H-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-H-1x"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-i-1x">
+      <h3>I-1x · QQQ 5-Min-ORB ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie I, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-I-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=I-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-I-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=I-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-I-1x-trades" data-source="kpis" data-field="trades" data-where="variant=I-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-I-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=I-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-I-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=I-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-I-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=I-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-I-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-I-1x"></div></div></div>
+    </section>
+    <section class="ft-card" id="karte-j-1x">
+      <h3>J-1x · Gap-Continuation ohne Hebel</h3>
+      <p class="ft-cap">Regeln wie J, Positionsvolumen höchstens 1× Kontostand (kein Margin)</p>
+      <div class="ft-kpis">
+        <div class="ft-kpi"><div class="ft-k">Netto P&amp;L</div><div class="ft-v" data-draw="kpi-J-1x-net_pnl" data-source="kpis" data-field="net_pnl" data-where="variant=J-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">R netto je Risiko-$</div><div class="ft-v" data-draw="kpi-J-1x-avg_r" data-source="kpis" data-field="avg_r" data-where="variant=J-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Trades</div><div class="ft-v" data-draw="kpi-J-1x-trades" data-source="kpis" data-field="trades" data-where="variant=J-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Gewinner-Quote</div><div class="ft-v" data-draw="kpi-J-1x-win_rate" data-source="kpis" data-field="win_rate" data-where="variant=J-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Profit Factor</div><div class="ft-v" data-draw="kpi-J-1x-profit_factor" data-source="kpis" data-field="profit_factor" data-where="variant=J-1x">—</div></div>
+        <div class="ft-kpi"><div class="ft-k">Max. Drawdown</div><div class="ft-v" data-draw="kpi-J-1x-max_dd" data-source="kpis" data-field="max_dd" data-where="variant=J-1x">—</div></div>
+      </div>
+      <div class="ft-prog">Fortschritt bis zur Entscheidung (60 Trades): <span data-draw="prog-J-1x-txt">—</span><div class="ft-bar"><div data-draw="prog-J-1x"></div></div></div>
+    </section>
+  </div>
+
+  <section class="ft-card ft-tm" id="hebel">
+    <h2>Mit und ohne Hebel im Vergleich</h2>
+    <p class="ft-cap">Die Varianten mit Hebel bis 4× neben ihrem Zwilling mit gleichen Regeln, aber höchstens 1× Kontokapital als Positionsvolumen (seit 19.11.2026, Backfill ab 20.10., vorwärts ab 17.11.)</p>
+    <div class="ft-wrap"><table data-source="leverage" data-row-key="variant">
+      <thead><tr><th data-field="variant">Variante</th><th data-field="net_lev">Netto mit Hebel</th><th data-field="net_1x">Netto 1×</th><th data-field="trades_lev">Trades mit Hebel</th><th data-field="trades_1x">Trades 1×</th><th data-field="dd_lev">Max. DD mit Hebel</th><th data-field="dd_1x">Max. DD 1×</th></tr></thead>
+      <tbody data-draw="lev-table"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ft-card" id="equity-1x">
+    <h2>Equity-Verlauf ohne Hebel (Start 10.000 $ am 17.11.2026)</h2>
+    <div class="ft-legend"><span><i data-draw="legF-1x"></i>F-1x · Stocks in Play</span><span><i data-draw="legG-1x"></i>G-1x · SPY-Momentum</span><span><i data-draw="legG2-1x"></i>G2-1x · SPY breit</span><span><i data-draw="legGQ-1x"></i>GQ-1x · QQQ</span><span><i data-draw="legH-1x"></i>H-1x · SPY 15:30</span><span><i data-draw="legI-1x"></i>I-1x · QQQ-ORB</span><span><i data-draw="legJ-1x"></i>J-1x · Gap</span></div>
+    <div class="ft-chart" data-draw="equity-chart-1x" data-source="equity"></div>
+    <p class="ft-note">Farben wie bei der jeweiligen Ursprungsvariante.</p>
+  </section>
+
+  <section class="ft-card" id="trades-1x">
+    <div class="ft-row"><h2>Trades ohne Hebel</h2>
+      <select class="dash-select" id="trade-filter-1x" aria-label="Variante"><option value="">Alle Varianten ohne Hebel</option><option value="F-1x">Nur F-1x</option><option value="G-1x">Nur G-1x</option><option value="G2-1x">Nur G2-1x</option><option value="GQ-1x">Nur GQ-1x</option><option value="H-1x">Nur H-1x</option><option value="I-1x">Nur I-1x</option><option value="J-1x">Nur J-1x</option></select>
+    </div>
+    <div class="ft-wrap"><table data-source="trades" data-row-key="date,variant,symbol">
+      <thead><tr><th data-field="date">Datum</th><th data-field="variant">Var.</th><th data-field="symbol">Titel</th><th data-field="setups">Setup</th><th data-field="trigger_time">Einstieg ET</th><th data-field="entry">Kurs</th><th data-field="stop">Stop</th><th data-field="target">Ziel</th><th data-field="shares">Stück</th><th data-field="exit_reason">Ausstieg</th><th data-field="exit_time">um</th><th data-field="net_pnl">Netto $</th><th data-field="r_net">R netto</th><th data-field="tm_target_pct">TM Ziel %</th></tr></thead>
+      <tbody data-draw="trade-rows-1x"></tbody>
+    </table></div>
+  </section>
+
+  <section class="ft-card ft-tm" id="backfill-1x">
+    <h2>Backfill 20.10.–16.11.2026 ohne Hebel (Referenz)</h2>
+    <p class="ft-cap">Nachgerechnete Tage vor dem Vorwärts-Start, nur als Referenz. Die Zwillinge wurden am 19.11. nachgerechnet, mit leicht anderem Universum-Vorfilter als F und J; an einzelnen Backfill-Tagen weichen die Signale deshalb ab.</p>
+    <div class="ft-wrap"><table data-source="backfill" data-row-key="variant">
+      <thead><tr><th data-field="variant">Variante</th><th data-field="trades">Trades</th><th data-field="net_pnl">Netto $</th><th data-field="avg_r">R netto je Risiko-$</th></tr></thead>
+      <tbody data-draw="backfill-table-1x"></tbody>
+    </table></div>
+  </section>
   </section>
 
   <details id="regelwerk">
@@ -379,8 +516,9 @@
   };
 
   const kpiFields = { net_pnl: 'usd', avg_r: 'r', trades: 'int', win_rate: 'pct', profit_factor: 'num', max_dd: 'usd' };
-  window.ftVariants.forEach((v, vi) => {
-    dash.draw('leg' + v, (el) => { el.style.background = dash.colors[vi % dash.colors.length]; });
+  window.ftVariants.concat(window.ftTwins).forEach((v) => {
+    const ci = window.ftVariants.indexOf(v.replace('-1x', ''));
+    dash.draw('leg' + v, (el) => { el.style.background = dash.colors[ci % dash.colors.length]; });
     Object.entries(kpiFields).forEach(([f, kind]) => {
       dash.draw('kpi-' + v + '-' + f, (el) => {
         const r = window.ftRow(v);
@@ -411,36 +549,32 @@
     el.textContent = r && r.last_date ? d3.utcFormat('%d.%m.%Y')(new Date(r.last_date + 'T00:00:00Z')) : '—';
   });
 
-  dash.draw('equity-chart', (el) => {
+  window.ftEquity = (el, list) => {
     const d = dash.data('equity');
     el.replaceChildren();
     if (d.status === 'error') { el.textContent = 'Konnte nicht geladen werden'; return; }
     if (d.status !== 'ok' || !d.data || !d.data.length) { el.textContent = '—'; return; }
-    const rows = d.data.map((r) => ({ ...r, t: new Date(r.date + 'T00:00:00Z') }));
+    const rows = d.data.filter((r) => list.includes(r.variant)).map((r) => ({ ...r, t: new Date(r.date + 'T00:00:00Z') }));
+    if (!rows.length) { el.textContent = '—'; return; }
     const W = el.clientWidth || 600, H = 260, m = { t: 10, r: 16, b: 26, l: 56 };
     const x = d3.scaleUtc().domain(d3.extent(rows, (r) => r.t)).range([m.l, W - m.r]);
     const ext = d3.extent(rows.map((r) => r.equity).concat([10000]));
     const pad = Math.max(50, (ext[1] - ext[0]) * 0.1);
     const y = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).nice().range([H - m.b, m.t]);
     const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', H).attr('viewBox', `0 0 ${W} ${H}`)
-      .attr('role', 'img').attr('aria-label', 'Equity je Handelstag für die Varianten A bis E, Start 10.000 Dollar');
+      .attr('role', 'img').attr('aria-label', 'Equity je Handelstag für die Varianten ' + list.join(', ') + ', Start 10.000 Dollar');
     svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 110))).tickFormat(d3.utcFormat('%d.%m.')))
       .call((g) => g.selectAll('line,path').style('stroke', 'var(--cds-chart-axis)'));
     svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat((v) => d3.format(',')(v).replace(/,/g, '.')))
       .call((g) => g.select('.domain').remove()).call((g) => g.selectAll('line').style('stroke', 'var(--cds-chart-grid)'));
     svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(10000)).attr('y2', y(10000)).style('stroke', 'var(--cds-chart-reference)').style('stroke-dasharray', '3 3');
     const tip = d3.select(el).append('div').attr('class', 'ft-tip').style('display', 'none');
-    window.ftVariants.forEach((v, i) => {
+    list.forEach((v) => {
+      const i = window.ftVariants.indexOf(v.replace('-1x', ''));
       const s = rows.filter((r) => r.variant === v);
       svg.append('path').datum(s).attr('fill', 'none').style('stroke', dash.colors[i % dash.colors.length]).attr('stroke-width', 2)
         .attr('d', d3.line().x((r) => x(r.t)).y((r) => y(r.equity)));
       svg.selectAll(null).data(s).join('circle').attr('cx', (r) => x(r.t)).attr('cy', (r) => y(r.equity)).attr('r', 3).style('fill', dash.colors[i % dash.colors.length]);
-    });
-    window.ftTwins.forEach((v) => {
-      const i = window.ftVariants.indexOf(v.replace('-1x', ''));
-      const s = rows.filter((r) => r.variant === v);
-      svg.append('path').datum(s).attr('fill', 'none').style('stroke', dash.colors[i % dash.colors.length]).attr('stroke-width', 1.5)
-        .style('stroke-dasharray', '5 3').attr('d', d3.line().x((r) => x(r.t)).y((r) => y(r.equity)));
     });
     const dates = Array.from(new Set(rows.map((r) => r.date))).sort();
     svg.append('rect').attr('x', m.l).attr('y', m.t).attr('width', W - m.l - m.r).attr('height', H - m.t - m.b).attr('fill', 'transparent')
@@ -450,21 +584,23 @@
         const dt = dates.reduce((a, b) => Math.abs(new Date(b + 'T00:00:00Z') - t) < Math.abs(new Date(a + 'T00:00:00Z') - t) ? b : a);
         tip.selectAll('*').remove();
         tip.append('div').text(d3.utcFormat('%d.%m.%Y')(new Date(dt + 'T00:00:00Z')));
-        window.ftVariants.concat(window.ftTwins).forEach((v) => {
+        list.forEach((v) => {
           const r = rows.find((q) => q.date === dt && q.variant === v);
           tip.append('div').text(v + ' ' + (r ? d3.format(',.0f')(r.equity).replace(/,/g, '.') + ' $' : '–'));
         });
         tip.style('display', null).style('left', Math.min(px + 12, W - 120) + 'px').style('top', '8px');
       })
       .on('pointerleave', () => tip.style('display', 'none'));
-  });
+  };
+  dash.draw('equity-chart', (el) => window.ftEquity(el, window.ftVariants));
+  dash.draw('equity-chart-1x', (el) => window.ftEquity(el, window.ftTwins));
 
   dash.draw('exit-chart', (el) => {
     const k = dash.data('kpis');
     el.replaceChildren();
     if (k.status !== 'ok' || !k.data) { el.textContent = '—'; return; }
     const cats = [['pct_target', 'Ziel'], ['pct_stop', 'Stop'], ['pct_trail', 'Trailing-Stop'], ['pct_flat', 'Glattstellung 15:55']];
-    const W = el.clientWidth || 400, rowH = 20, m = { t: 6, r: 44, l: 130 };
+    const W = el.clientWidth || 400, rowH = 20, m = { t: 6, r: 72, l: 130 };
     const kd = k.data.filter((r) => !r.variant.endsWith('-1x'));
     const nv = kd.length;
     const H = m.t + cats.length * (rowH * nv + 10);
@@ -499,13 +635,15 @@
     });
   });
 
-  window.ftFilter = '';
-  document.querySelectorAll('#trade-filter').forEach((s) => s.addEventListener('change', () => { window.ftFilter = s.value; dash.draw('trade-rows'); }));
-  dash.draw('trade-rows', (tb) => {
+  window.ftFilter = { 'trade-rows': '', 'trade-rows-1x': '' };
+  document.querySelectorAll('#trade-filter').forEach((s) => s.addEventListener('change', () => { window.ftFilter['trade-rows'] = s.value; dash.draw('trade-rows'); }));
+  document.querySelectorAll('#trade-filter-1x').forEach((s) => s.addEventListener('change', () => { window.ftFilter['trade-rows-1x'] = s.value; dash.draw('trade-rows-1x'); }));
+  window.ftTradeRows = (tb, name, list) => {
     const d = dash.data('trades');
     tb.replaceChildren();
     if (d.status !== 'ok') return;
-    const rows = d.data.filter((r) => r.date >= '2026-11-17' && (!window.ftFilter || r.variant === window.ftFilter))
+    const f = window.ftFilter[name];
+    const rows = d.data.filter((r) => r.date >= '2026-11-17' && list.includes(r.variant) && (!f || r.variant === f))
       .slice().sort((a, b) => (a.date + a.trigger_time < b.date + b.trigger_time ? 1 : -1));
     const reason = { target: 'Ziel', stop: 'Stop', stop_gap: 'Stop (Gap)', trail: 'Trailing', trail_gap: 'Trailing (Gap)', flat: 'Glatt', ema9: 'unter EMA9', max_hold: 'max. Haltedauer', segment_end: 'Backfill-Ende' };
     rows.forEach((r) => {
@@ -523,7 +661,9 @@
       });
       tb.appendChild(tr);
     });
-  });
+  };
+  dash.draw('trade-rows', (tb) => window.ftTradeRows(tb, 'trade-rows', window.ftVariants));
+  dash.draw('trade-rows-1x', (tb) => window.ftTradeRows(tb, 'trade-rows-1x', window.ftTwins));
 
   dash.calc('backfill', {
     title: 'Backfill 20.10.–16.11.2026 je Variante',
@@ -536,11 +676,11 @@
       return { variant, trades: t.length, net_pnl: Math.round(net * 100) / 100, avg_r: risk ? Math.round(1000 * net / risk) / 1000 : null };
     }),
   });
-  dash.draw('backfill-table', (tb) => {
+  window.ftBackfill = (tb, list) => {
     const k = dash.data('backfill');
     tb.replaceChildren();
     if (k.status !== 'ok' || !k.data) return;
-    k.data.forEach((r) => {
+    k.data.filter((r) => list.includes(r.variant)).forEach((r) => {
       const tr = document.createElement('tr');
       tr.setAttribute('data-key', r.variant);
       [r.variant, String(r.trades), window.ftFmt.usd(r.net_pnl), r.avg_r == null ? '–' : window.ftFmt.r(r.avg_r)].forEach((v, i) => {
@@ -551,7 +691,15 @@
       });
       tb.appendChild(tr);
     });
-  });
+  };
+  dash.draw('backfill-table', (tb) => window.ftBackfill(tb, window.ftVariants));
+  dash.draw('backfill-table-1x', (tb) => window.ftBackfill(tb, window.ftTwins));;
+  document.querySelectorAll('.ft-tab').forEach((btn) => btn.addEventListener('click', () => {
+    document.querySelectorAll('.ft-tab').forEach((b) => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
+    document.querySelectorAll('.ft-view').forEach((v) => { v.hidden = v.id !== btn.getAttribute('aria-controls'); });
+    dash.setLink(btn.getAttribute('aria-controls'));
+  }));
+
   dash.calc('leverage', {
     title: 'Mit und ohne Hebel',
     description: 'Kennzahlen ab dem Vorwärts-Start am 17.11.2026 für jede Variante mit Hebel bis 4× und ihren Zwilling mit höchstens 1× Kontokapital.',
