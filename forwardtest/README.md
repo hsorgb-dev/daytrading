@@ -105,8 +105,15 @@ rechnet mit fester Basis von 10.000 $ und stellt am 16.11. alles glatt
 Backtest auf Tageskerzen (2016–2026) steht in `backtest_luk.md`
 (`python3 forwardtest/backtest_luk.py download` und `run --out forwardtest/backtest_luk.md`).
 
-F, G, I und J bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts); für Daytrading mit
-US-Aktien gilt dort meist die Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital.
+F, G, I und J bräuchten in der Praxis ein Margin-Konto (Hebel, Shorts). Die
+Pattern-Day-Trader-Regel mit 25.000 $ Mindestkapital hat die SEC 2026 abgeschafft; die
+Intraday-Margin richtet sich seitdem nach den tatsächlichen Positionen (FINRA 26-10).
+
+**Zwillinge ohne Hebel** (seit 19.11.2026, Backfill ab 20.10., vorwärts ab 17.11.):
+F-1x, G-1x, G2-1x, GQ-1x, H-1x, I-1x und J-1x haben die Regeln ihrer Ausgangsvariante,
+aber `leverage` bzw. `max_leverage` = 1. Das Positionsvolumen ist also auf 1× den
+Kontostand begrenzt, wie bei einem Konto ohne Margin. Shorts bleiben erlaubt. Sie zeigen,
+wie viel des Ergebnisses vom Hebel kommt.
 
 **Gemeinsamer Vorwärts-Start am 17.11.2026, mit Reinvestieren.** Ab diesem Tag startet
 jede Variante mit 10.000 $ und rechnet mit ihrem aktuellen Kontostand: 1 % Risiko vom

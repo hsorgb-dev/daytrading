@@ -1768,6 +1768,755 @@
    "open_positions": {},
    "nav": 10000.0,
    "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
+  },
+  "F-1x": {
+   "universe": 1259,
+   "in_play": [
+    {
+     "symbol": "TNGX",
+     "rv": 41.75
+    },
+    {
+     "symbol": "SLM",
+     "rv": 23.85
+    },
+    {
+     "symbol": "DECK",
+     "rv": 17.9
+    },
+    {
+     "symbol": "LKQ",
+     "rv": 16.24
+    },
+    {
+     "symbol": "RNG",
+     "rv": 13.16
+    },
+    {
+     "symbol": "JBL",
+     "rv": 10.22
+    },
+    {
+     "symbol": "RHI",
+     "rv": 10.1
+    },
+    {
+     "symbol": "KLAR",
+     "rv": 9.98
+    },
+    {
+     "symbol": "RDN",
+     "rv": 9.25
+    },
+    {
+     "symbol": "CCI",
+     "rv": 8.34
+    },
+    {
+     "symbol": "BAH",
+     "rv": 8.08
+    },
+    {
+     "symbol": "AMT",
+     "rv": 6.8
+    },
+    {
+     "symbol": "OMC",
+     "rv": 6.51
+    },
+    {
+     "symbol": "ZYME",
+     "rv": 5.79
+    },
+    {
+     "symbol": "DOV",
+     "rv": 5.48
+    },
+    {
+     "symbol": "MTG",
+     "rv": 5.29
+    },
+    {
+     "symbol": "NCNO",
+     "rv": 5.07
+    },
+    {
+     "symbol": "REXR",
+     "rv": 5.0
+    },
+    {
+     "symbol": "SBAC",
+     "rv": 4.97
+    },
+    {
+     "symbol": "TEVA",
+     "rv": 4.9
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "TNGX",
+     "time": "09:35",
+     "side": -1,
+     "price": 23.58
+    },
+    {
+     "symbol": "JBL",
+     "time": "09:35",
+     "side": -1,
+     "price": 262.81
+    },
+    {
+     "symbol": "DOV",
+     "time": "09:35",
+     "side": 1,
+     "price": 196.24
+    },
+    {
+     "symbol": "TEVA",
+     "time": "09:35",
+     "side": -1,
+     "price": 39.21
+    },
+    {
+     "symbol": "RNG",
+     "time": "09:36",
+     "side": -1,
+     "price": 90.19
+    },
+    {
+     "symbol": "RHI",
+     "time": "09:36",
+     "side": 1,
+     "price": 44.77
+    },
+    {
+     "symbol": "KLAR",
+     "time": "09:36",
+     "side": -1,
+     "price": 12.88
+    },
+    {
+     "symbol": "BAH",
+     "time": "09:36",
+     "side": -1,
+     "price": 76.6
+    },
+    {
+     "symbol": "MTG",
+     "time": "09:36",
+     "side": 1,
+     "price": 28.87
+    },
+    {
+     "symbol": "SBAC",
+     "time": "09:36",
+     "side": -1,
+     "price": 190.11
+    },
+    {
+     "symbol": "OMC",
+     "time": "09:37",
+     "side": 1,
+     "price": 84.63
+    },
+    {
+     "symbol": "REXR",
+     "time": "09:37",
+     "side": 1,
+     "price": 38.11
+    },
+    {
+     "symbol": "CCI",
+     "time": "09:51",
+     "side": -1,
+     "price": 88.0
+    },
+    {
+     "symbol": "AMT",
+     "time": "09:53",
+     "side": -1,
+     "price": 192.44
+    },
+    {
+     "symbol": "SLM",
+     "time": "10:38",
+     "side": -1,
+     "price": 19.52
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "F-1x",
+     "symbol": "TNGX",
+     "setups": "short RV 41.8x",
+     "dollar_vol_prev": null,
+     "or_high": 25.94,
+     "or_low": 23.58,
+     "trigger_time": "09:35",
+     "volume_x": 41.75,
+     "signal": "sip_short",
+     "ref_level": 23.58,
+     "entry": 23.58,
+     "stop": 23.75,
+     "target": null,
+     "risk_ps": 0.17,
+     "shares": 424,
+     "notional": 9997.92,
+     "exit_time": "09:38",
+     "exit_price": 23.75,
+     "exit_reason": "stop",
+     "gross_pnl": -72.08,
+     "costs": 14.27,
+     "net_pnl": -86.35,
+     "r_net": -1.198,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "F-1x",
+     "symbol": "CCI",
+     "setups": "short RV 8.3x",
+     "dollar_vol_prev": null,
+     "or_high": 91.45,
+     "or_low": 88.0,
+     "trigger_time": "09:51",
+     "volume_x": 8.34,
+     "signal": "sip_short",
+     "ref_level": 88.0,
+     "entry": 88.0,
+     "stop": 88.32,
+     "target": null,
+     "risk_ps": 0.32,
+     "shares": 113,
+     "notional": 9944.0,
+     "exit_time": "10:15",
+     "exit_price": 88.32,
+     "exit_reason": "stop",
+     "gross_pnl": -36.16,
+     "costs": 11.96,
+     "net_pnl": -48.12,
+     "r_net": -1.331,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "F-1x",
+     "symbol": "SLM",
+     "setups": "short RV 23.8x",
+     "dollar_vol_prev": null,
+     "or_high": 20.96,
+     "or_low": 19.52,
+     "trigger_time": "10:38",
+     "volume_x": 23.85,
+     "signal": "sip_short",
+     "ref_level": 19.52,
+     "entry": 19.52,
+     "stop": 19.59,
+     "target": null,
+     "risk_ps": 0.07,
+     "shares": 512,
+     "notional": 9994.24,
+     "exit_time": "10:40",
+     "exit_price": 19.59,
+     "exit_reason": "stop",
+     "gross_pnl": -35.84,
+     "costs": 15.13,
+     "net_pnl": -50.97,
+     "r_net": -1.422,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "JBL",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "DOV",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "TEVA",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "RNG",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "RHI",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "KLAR",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "BAH",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "MTG",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "SBAC",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "OMC",
+     "time": "09:37",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "REXR",
+     "time": "09:37",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "AMT",
+     "time": "09:53",
+     "why": "0 Stueck (Hebel-Limit)"
+    }
+   ]
+  },
+  "G-1x": {
+   "shares": 13,
+   "daily_vol_pct": 0.665,
+   "prior_close": 763.9600219726562,
+   "taken": []
+  },
+  "G2-1x": {
+   "shares": 13,
+   "daily_vol_pct": 0.665,
+   "prior_close": 763.9600219726562,
+   "taken": []
+  },
+  "GQ-1x": {
+   "shares": 14,
+   "daily_vol_pct": 1.299,
+   "prior_close": 704.469970703125,
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "GQ-1x",
+     "symbol": "QQQ",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 707.24,
+     "or_low": 699.34,
+     "trigger_time": "11:00",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 707.24,
+     "entry": 708.5,
+     "stop": 707.24,
+     "target": null,
+     "risk_ps": 1.27,
+     "shares": 14,
+     "notional": 9919.0,
+     "exit_time": "11:30",
+     "exit_price": 707.73,
+     "exit_reason": "trail",
+     "gross_pnl": -10.71,
+     "costs": 3.98,
+     "net_pnl": -14.69,
+     "r_net": -0.826,
+     "data_note": "Hebel 0.98x (Tagesvola 1.30 %)"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "GQ-1x",
+     "symbol": "QQQ",
+     "setups": "long Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 708.13,
+     "or_low": 698.45,
+     "trigger_time": "12:00",
+     "volume_x": null,
+     "signal": "spy_mom_long",
+     "ref_level": 708.13,
+     "entry": 708.55,
+     "stop": 708.13,
+     "target": null,
+     "risk_ps": 0.42,
+     "shares": 14,
+     "notional": 9919.7,
+     "exit_time": "12:30",
+     "exit_price": 706.55,
+     "exit_reason": "trail",
+     "gross_pnl": -28.0,
+     "costs": 3.98,
+     "net_pnl": -31.98,
+     "r_net": -5.439,
+     "data_note": "Hebel 0.98x (Tagesvola 1.30 %)"
+    }
+   ]
+  },
+  "H-1x": {
+   "first_half_hour_pct": -0.396,
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "H-1x",
+     "symbol": "SPY",
+     "setups": "short erste 30 Min -0.40%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_short",
+     "ref_level": null,
+     "entry": 760.5,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.4,
+     "shares": 13,
+     "notional": 9886.5,
+     "exit_time": "16:00",
+     "exit_price": 759.91,
+     "exit_reason": "flat",
+     "gross_pnl": 7.67,
+     "costs": 3.98,
+     "net_pnl": 3.69,
+     "r_net": 0.203,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I-1x": {
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "I-1x",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 703.87,
+     "or_low": 701.37,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 701.37,
+     "entry": 702.38,
+     "stop": 701.37,
+     "target": 712.48,
+     "risk_ps": 1.01,
+     "shares": 14,
+     "notional": 9833.32,
+     "exit_time": "09:40",
+     "exit_price": 701.37,
+     "exit_reason": "stop",
+     "gross_pnl": -14.14,
+     "costs": 3.97,
+     "net_pnl": -18.11,
+     "r_net": -1.281,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J-1x": {
+   "gaps": [
+    {
+     "symbol": "LKQ",
+     "gap_pct": -19.18
+    },
+    {
+     "symbol": "CCI",
+     "gap_pct": 15.46
+    },
+    {
+     "symbol": "RNG",
+     "gap_pct": 14.56
+    },
+    {
+     "symbol": "RHI",
+     "gap_pct": 11.33
+    },
+    {
+     "symbol": "AMT",
+     "gap_pct": 10.55
+    },
+    {
+     "symbol": "SBAC",
+     "gap_pct": 9.91
+    },
+    {
+     "symbol": "TNGX",
+     "gap_pct": -8.56
+    },
+    {
+     "symbol": "FLG",
+     "gap_pct": -7.78
+    },
+    {
+     "symbol": "BNC",
+     "gap_pct": 7.71
+    },
+    {
+     "symbol": "CRDO",
+     "gap_pct": -7.08
+    },
+    {
+     "symbol": "GNTX",
+     "gap_pct": -7.04
+    },
+    {
+     "symbol": "BE",
+     "gap_pct": -6.78
+    },
+    {
+     "symbol": "DECK",
+     "gap_pct": -5.68
+    },
+    {
+     "symbol": "RITM",
+     "gap_pct": 5.18
+    },
+    {
+     "symbol": "TMUS",
+     "gap_pct": -5.16
+    },
+    {
+     "symbol": "HSAI",
+     "gap_pct": 5.02
+    },
+    {
+     "symbol": "INFY",
+     "gap_pct": -4.61
+    },
+    {
+     "symbol": "T",
+     "gap_pct": -4.4
+    },
+    {
+     "symbol": "SLM",
+     "gap_pct": -4.37
+    },
+    {
+     "symbol": "PHAT",
+     "gap_pct": -4.14
+    },
+    {
+     "symbol": "VRSN",
+     "gap_pct": -4.06
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-23",
+     "variant": "J-1x",
+     "symbol": "TNGX",
+     "setups": "short Gap -8.6% RV30 18.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 18.11,
+     "signal": "gap_short",
+     "ref_level": 25.94,
+     "entry": 23.17,
+     "stop": 25.94,
+     "target": null,
+     "risk_ps": 2.77,
+     "shares": 36,
+     "notional": 834.12,
+     "exit_time": "16:00",
+     "exit_price": 23.33,
+     "exit_reason": "flat",
+     "gross_pnl": -5.76,
+     "costs": 2.84,
+     "net_pnl": -8.6,
+     "r_net": -0.086,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "J-1x",
+     "symbol": "CRDO",
+     "setups": "short Gap -7.1% RV30 3.0x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.02,
+     "signal": "gap_short",
+     "ref_level": 152.07,
+     "entry": 148.13,
+     "stop": 152.07,
+     "target": null,
+     "risk_ps": 3.94,
+     "shares": 25,
+     "notional": 3703.25,
+     "exit_time": "10:35",
+     "exit_price": 152.07,
+     "exit_reason": "stop",
+     "gross_pnl": -98.5,
+     "costs": 5.75,
+     "net_pnl": -104.25,
+     "r_net": -1.058,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "J-1x",
+     "symbol": "BE",
+     "setups": "short Gap -6.8% RV30 4.2x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 4.23,
+     "signal": "gap_short",
+     "ref_level": 206.0,
+     "entry": 191.66,
+     "stop": 206.0,
+     "target": null,
+     "risk_ps": 14.34,
+     "shares": 6,
+     "notional": 1149.96,
+     "exit_time": "16:00",
+     "exit_price": 193.12,
+     "exit_reason": "flat",
+     "gross_pnl": -8.76,
+     "costs": 3.15,
+     "net_pnl": -11.91,
+     "r_net": -0.138,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "J-1x",
+     "symbol": "RITM",
+     "setups": "long Gap +5.2% RV30 5.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 5.1,
+     "signal": "gap_long",
+     "ref_level": 8.99,
+     "entry": 9.25,
+     "stop": 8.99,
+     "target": null,
+     "risk_ps": 0.26,
+     "shares": 384,
+     "notional": 3552.0,
+     "exit_time": "16:00",
+     "exit_price": 9.39,
+     "exit_reason": "flat",
+     "gross_pnl": 53.76,
+     "costs": 7.42,
+     "net_pnl": 46.34,
+     "r_net": 0.464,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-23",
+     "variant": "J-1x",
+     "symbol": "SLM",
+     "setups": "short Gap -4.4% RV30 15.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 15.08,
+     "signal": "gap_short",
+     "ref_level": 20.96,
+     "entry": 19.78,
+     "stop": 20.96,
+     "target": null,
+     "risk_ps": 1.18,
+     "shares": 38,
+     "notional": 751.64,
+     "exit_time": "16:00",
+     "exit_price": 19.42,
+     "exit_reason": "flat",
+     "gross_pnl": 13.87,
+     "costs": 2.74,
+     "net_pnl": 11.13,
+     "r_net": 0.248,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "LKQ",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CCI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "RNG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "RHI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "AMT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SBAC",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "FLG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "BNC",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "GNTX",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "DECK",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TMUS",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "HSAI",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "INFY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "T",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "VRSN",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "PHAT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    }
+   ]
   }
  }
 }

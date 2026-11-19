@@ -1882,6 +1882,978 @@
    "open_positions": {},
    "nav": 10000.0,
    "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
+  },
+  "F-1x": {
+   "universe": 1249,
+   "in_play": [
+    {
+     "symbol": "AXGN",
+     "rv": 36.29
+    },
+    {
+     "symbol": "ENPH",
+     "rv": 33.78
+    },
+    {
+     "symbol": "EAT",
+     "rv": 21.37
+    },
+    {
+     "symbol": "TEX",
+     "rv": 16.56
+    },
+    {
+     "symbol": "CAKE",
+     "rv": 16.49
+    },
+    {
+     "symbol": "WING",
+     "rv": 16.45
+    },
+    {
+     "symbol": "DAN",
+     "rv": 13.87
+    },
+    {
+     "symbol": "GEHC",
+     "rv": 13.23
+    },
+    {
+     "symbol": "BSX",
+     "rv": 12.15
+    },
+    {
+     "symbol": "ETSY",
+     "rv": 11.53
+    },
+    {
+     "symbol": "UCTT",
+     "rv": 10.21
+    },
+    {
+     "symbol": "ST",
+     "rv": 10.14
+    },
+    {
+     "symbol": "SLS",
+     "rv": 10.02
+    },
+    {
+     "symbol": "EPRT",
+     "rv": 9.94
+    },
+    {
+     "symbol": "CTRI",
+     "rv": 9.22
+    },
+    {
+     "symbol": "XYL",
+     "rv": 9.18
+    },
+    {
+     "symbol": "EXTR",
+     "rv": 8.38
+    },
+    {
+     "symbol": "SEDG",
+     "rv": 8.35
+    },
+    {
+     "symbol": "STNG",
+     "rv": 8.08
+    },
+    {
+     "symbol": "LOGI",
+     "rv": 8.03
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "ENPH",
+     "time": "09:35",
+     "side": 1,
+     "price": 25.53
+    },
+    {
+     "symbol": "CAKE",
+     "time": "09:35",
+     "side": 1,
+     "price": 104.77
+    },
+    {
+     "symbol": "BSX",
+     "time": "09:35",
+     "side": -1,
+     "price": 40.54
+    },
+    {
+     "symbol": "CTRI",
+     "time": "09:35",
+     "side": -1,
+     "price": 20.73
+    },
+    {
+     "symbol": "EXTR",
+     "time": "09:35",
+     "side": -1,
+     "price": 24.63
+    },
+    {
+     "symbol": "EAT",
+     "time": "09:36",
+     "side": 1,
+     "price": 210.84
+    },
+    {
+     "symbol": "SLS",
+     "time": "09:36",
+     "side": -1,
+     "price": 11.03
+    },
+    {
+     "symbol": "STNG",
+     "time": "09:36",
+     "side": 1,
+     "price": 91.85
+    },
+    {
+     "symbol": "ST",
+     "time": "09:37",
+     "side": 1,
+     "price": 42.01
+    },
+    {
+     "symbol": "DAN",
+     "time": "09:38",
+     "side": -1,
+     "price": 25.69
+    },
+    {
+     "symbol": "XYL",
+     "time": "09:40",
+     "side": -1,
+     "price": 88.86
+    },
+    {
+     "symbol": "AXGN",
+     "time": "09:44",
+     "side": 1,
+     "price": 46.15
+    },
+    {
+     "symbol": "EPRT",
+     "time": "10:21",
+     "side": -1,
+     "price": 26.43
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "F-1x",
+     "symbol": "ENPH",
+     "setups": "long RV 33.8x",
+     "dollar_vol_prev": null,
+     "or_high": 25.53,
+     "or_low": 23.83,
+     "trigger_time": "09:35",
+     "volume_x": 33.78,
+     "signal": "sip_long",
+     "ref_level": 25.53,
+     "entry": 25.53,
+     "stop": 25.35,
+     "target": null,
+     "risk_ps": 0.18,
+     "shares": 391,
+     "notional": 9982.23,
+     "exit_time": "09:37",
+     "exit_price": 25.35,
+     "exit_reason": "stop",
+     "gross_pnl": -70.38,
+     "costs": 13.86,
+     "net_pnl": -84.24,
+     "r_net": -1.197,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F-1x",
+     "symbol": "ST",
+     "setups": "long RV 10.1x",
+     "dollar_vol_prev": null,
+     "or_high": 42.01,
+     "or_low": 40.65,
+     "trigger_time": "09:37",
+     "volume_x": 10.14,
+     "signal": "sip_long",
+     "ref_level": 42.01,
+     "entry": 42.01,
+     "stop": 41.87,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 238,
+     "notional": 9998.38,
+     "exit_time": "09:38",
+     "exit_price": 41.87,
+     "exit_reason": "stop",
+     "gross_pnl": -33.32,
+     "costs": 12.36,
+     "net_pnl": -45.68,
+     "r_net": -1.371,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F-1x",
+     "symbol": "DAN",
+     "setups": "short RV 13.9x",
+     "dollar_vol_prev": null,
+     "or_high": 27.04,
+     "or_low": 25.69,
+     "trigger_time": "09:38",
+     "volume_x": 13.87,
+     "signal": "sip_short",
+     "ref_level": 25.69,
+     "entry": 25.69,
+     "stop": 25.8,
+     "target": null,
+     "risk_ps": 0.11,
+     "shares": 389,
+     "notional": 9993.41,
+     "exit_time": "09:39",
+     "exit_price": 25.8,
+     "exit_reason": "stop",
+     "gross_pnl": -42.79,
+     "costs": 13.9,
+     "net_pnl": -56.69,
+     "r_net": -1.325,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F-1x",
+     "symbol": "XYL",
+     "setups": "short RV 9.2x",
+     "dollar_vol_prev": null,
+     "or_high": 91.4,
+     "or_low": 88.86,
+     "trigger_time": "09:40",
+     "volume_x": 9.18,
+     "signal": "sip_short",
+     "ref_level": 88.86,
+     "entry": 88.86,
+     "stop": 89.19,
+     "target": null,
+     "risk_ps": 0.33,
+     "shares": 112,
+     "notional": 9952.32,
+     "exit_time": "09:41",
+     "exit_price": 89.19,
+     "exit_reason": "stop",
+     "gross_pnl": -36.96,
+     "costs": 11.97,
+     "net_pnl": -48.93,
+     "r_net": -1.324,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F-1x",
+     "symbol": "AXGN",
+     "setups": "long RV 36.3x",
+     "dollar_vol_prev": null,
+     "or_high": 46.15,
+     "or_low": 43.5,
+     "trigger_time": "09:44",
+     "volume_x": 36.29,
+     "signal": "sip_long",
+     "ref_level": 46.15,
+     "entry": 46.15,
+     "stop": 46.01,
+     "target": null,
+     "risk_ps": 0.14,
+     "shares": 216,
+     "notional": 9968.4,
+     "exit_time": "09:45",
+     "exit_price": 46.01,
+     "exit_reason": "stop",
+     "gross_pnl": -30.24,
+     "costs": 12.11,
+     "net_pnl": -42.35,
+     "r_net": -1.4,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "F-1x",
+     "symbol": "EPRT",
+     "setups": "short RV 9.9x",
+     "dollar_vol_prev": null,
+     "or_high": 26.65,
+     "or_low": 26.43,
+     "trigger_time": "10:21",
+     "volume_x": 9.94,
+     "signal": "sip_short",
+     "ref_level": 26.43,
+     "entry": 26.43,
+     "stop": 26.5,
+     "target": null,
+     "risk_ps": 0.07,
+     "shares": 378,
+     "notional": 9990.54,
+     "exit_time": "10:57",
+     "exit_price": 26.5,
+     "exit_reason": "stop",
+     "gross_pnl": -26.46,
+     "costs": 13.78,
+     "net_pnl": -40.24,
+     "r_net": -1.521,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "CAKE",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "BSX",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "CTRI",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "EXTR",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "EAT",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "SLS",
+     "time": "09:36",
+     "why": "Order unter Minimum"
+    },
+    {
+     "symbol": "STNG",
+     "time": "09:36",
+     "why": "0 Stueck (Hebel-Limit)"
+    }
+   ]
+  },
+  "G-1x": {
+   "shares": 12,
+   "daily_vol_pct": 0.68,
+   "prior_close": 769.6599731445312,
+   "taken": []
+  },
+  "G2-1x": {
+   "shares": 12,
+   "daily_vol_pct": 0.68,
+   "prior_close": 769.6599731445312,
+   "taken": []
+  },
+  "GQ-1x": {
+   "shares": 13,
+   "daily_vol_pct": 1.379,
+   "prior_close": 721.25,
+   "taken": []
+  },
+  "H-1x": {
+   "first_half_hour_pct": 0.12,
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "H-1x",
+     "symbol": "SPY",
+     "setups": "long erste 30 Min +0.12%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_long",
+     "ref_level": null,
+     "entry": 770.79,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.45,
+     "shares": 12,
+     "notional": 9249.48,
+     "exit_time": "16:00",
+     "exit_price": 772.35,
+     "exit_reason": "flat",
+     "gross_pnl": 18.72,
+     "costs": 3.85,
+     "net_pnl": 14.87,
+     "r_net": 0.855,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I-1x": {
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "I-1x",
+     "symbol": "QQQ",
+     "setups": "long",
+     "dollar_vol_prev": null,
+     "or_high": 724.73,
+     "or_low": 723.17,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_long",
+     "ref_level": 723.17,
+     "entry": 724.16,
+     "stop": 723.17,
+     "target": 734.06,
+     "risk_ps": 0.99,
+     "shares": 13,
+     "notional": 9414.08,
+     "exit_time": "09:40",
+     "exit_price": 723.17,
+     "exit_reason": "stop",
+     "gross_pnl": -12.87,
+     "costs": 3.88,
+     "net_pnl": -16.75,
+     "r_net": -1.301,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J-1x": {
+   "gaps": [
+    {
+     "symbol": "AXGN",
+     "gap_pct": 21.33
+    },
+    {
+     "symbol": "ENPH",
+     "gap_pct": -19.86
+    },
+    {
+     "symbol": "RAPP",
+     "gap_pct": -18.12
+    },
+    {
+     "symbol": "VRT",
+     "gap_pct": 16.51
+    },
+    {
+     "symbol": "WEN",
+     "gap_pct": 14.5
+    },
+    {
+     "symbol": "ULCC",
+     "gap_pct": 14.29
+    },
+    {
+     "symbol": "BBNX",
+     "gap_pct": -12.51
+    },
+    {
+     "symbol": "LOGI",
+     "gap_pct": -10.67
+    },
+    {
+     "symbol": "PUMP",
+     "gap_pct": 9.39
+    },
+    {
+     "symbol": "TEX",
+     "gap_pct": 9.0
+    },
+    {
+     "symbol": "SEDG",
+     "gap_pct": -8.89
+    },
+    {
+     "symbol": "SKHY",
+     "gap_pct": 8.53
+    },
+    {
+     "symbol": "EXTR",
+     "gap_pct": 7.92
+    },
+    {
+     "symbol": "WING",
+     "gap_pct": 7.75
+    },
+    {
+     "symbol": "CAKE",
+     "gap_pct": -7.71
+    },
+    {
+     "symbol": "FLEX",
+     "gap_pct": 7.38
+    },
+    {
+     "symbol": "CHRW",
+     "gap_pct": -7.25
+    },
+    {
+     "symbol": "OI",
+     "gap_pct": -7.15
+    },
+    {
+     "symbol": "BSX",
+     "gap_pct": -6.9
+    },
+    {
+     "symbol": "GEHC",
+     "gap_pct": 6.88
+    },
+    {
+     "symbol": "MAS",
+     "gap_pct": 6.8
+    },
+    {
+     "symbol": "IP",
+     "gap_pct": -6.68
+    },
+    {
+     "symbol": "STNG",
+     "gap_pct": 6.53
+    },
+    {
+     "symbol": "TER",
+     "gap_pct": -6.49
+    },
+    {
+     "symbol": "GSK",
+     "gap_pct": -6.46
+    },
+    {
+     "symbol": "HSAI",
+     "gap_pct": 6.37
+    },
+    {
+     "symbol": "CSGP",
+     "gap_pct": -6.28
+    },
+    {
+     "symbol": "ETSY",
+     "gap_pct": 6.21
+    },
+    {
+     "symbol": "NXPI",
+     "gap_pct": -6.06
+    },
+    {
+     "symbol": "FTV",
+     "gap_pct": 6.05
+    },
+    {
+     "symbol": "APH",
+     "gap_pct": 5.97
+    },
+    {
+     "symbol": "HAYW",
+     "gap_pct": 5.91
+    },
+    {
+     "symbol": "SW",
+     "gap_pct": -5.85
+    },
+    {
+     "symbol": "HOOD",
+     "gap_pct": -5.64
+    },
+    {
+     "symbol": "NVT",
+     "gap_pct": 5.55
+    },
+    {
+     "symbol": "FPS",
+     "gap_pct": 5.52
+    },
+    {
+     "symbol": "FRO",
+     "gap_pct": 5.5
+    },
+    {
+     "symbol": "RES",
+     "gap_pct": -5.45
+    },
+    {
+     "symbol": "TTMI",
+     "gap_pct": 5.24
+    },
+    {
+     "symbol": "EAT",
+     "gap_pct": 5.23
+    },
+    {
+     "symbol": "PPG",
+     "gap_pct": 5.08
+    },
+    {
+     "symbol": "WHR",
+     "gap_pct": -4.96
+    },
+    {
+     "symbol": "INIO",
+     "gap_pct": 4.89
+    },
+    {
+     "symbol": "DB",
+     "gap_pct": 4.79
+    },
+    {
+     "symbol": "UCTT",
+     "gap_pct": 4.78
+    },
+    {
+     "symbol": "MOD",
+     "gap_pct": 4.76
+    },
+    {
+     "symbol": "NOV",
+     "gap_pct": -4.72
+    },
+    {
+     "symbol": "DAN",
+     "gap_pct": -4.23
+    },
+    {
+     "symbol": "APAM",
+     "gap_pct": 4.22
+    },
+    {
+     "symbol": "AVTR",
+     "gap_pct": -4.2
+    },
+    {
+     "symbol": "TRMD",
+     "gap_pct": 4.19
+    },
+    {
+     "symbol": "ICHR",
+     "gap_pct": 4.15
+    },
+    {
+     "symbol": "RUN",
+     "gap_pct": -4.12
+    },
+    {
+     "symbol": "SHAZ",
+     "gap_pct": 4.08
+    },
+    {
+     "symbol": "ADT",
+     "gap_pct": 4.08
+    },
+    {
+     "symbol": "ACMR",
+     "gap_pct": 4.01
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-10-28",
+     "variant": "J-1x",
+     "symbol": "AXGN",
+     "setups": "long Gap +21.3% RV30 26.6x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 26.56,
+     "signal": "gap_long",
+     "ref_level": 43.5,
+     "entry": 45.82,
+     "stop": 43.5,
+     "target": null,
+     "risk_ps": 2.32,
+     "shares": 43,
+     "notional": 1970.26,
+     "exit_time": "16:00",
+     "exit_price": 49.11,
+     "exit_reason": "flat",
+     "gross_pnl": 141.47,
+     "costs": 4.04,
+     "net_pnl": 137.43,
+     "r_net": 1.378,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "J-1x",
+     "symbol": "WEN",
+     "setups": "long Gap +14.5% RV30 30.0x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 30.01,
+     "signal": "gap_long",
+     "ref_level": 7.01,
+     "entry": 7.11,
+     "stop": 7.01,
+     "target": null,
+     "risk_ps": 0.1,
+     "shares": 999,
+     "notional": 7102.89,
+     "exit_time": "10:35",
+     "exit_price": 7.01,
+     "exit_reason": "stop",
+     "gross_pnl": -99.9,
+     "costs": 17.04,
+     "net_pnl": -116.94,
+     "r_net": -1.171,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-10-28",
+     "variant": "J-1x",
+     "symbol": "BBNX",
+     "setups": "short Gap -12.5% RV30 3.4x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 3.41,
+     "signal": "gap_short",
+     "ref_level": 20.07,
+     "entry": 18.35,
+     "stop": 20.07,
+     "target": null,
+     "risk_ps": 1.72,
+     "shares": 50,
+     "notional": 917.5,
+     "exit_time": "16:00",
+     "exit_price": 17.76,
+     "exit_reason": "flat",
+     "gross_pnl": 29.5,
+     "costs": 2.9,
+     "net_pnl": 26.6,
+     "r_net": 0.309,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "ENPH",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "RAPP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "VRT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "ULCC",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PUMP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TEX",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SEDG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SKHY",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "EXTR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "WING",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CAKE",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "FLEX",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "MAS",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "IP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "STNG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TER",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "GSK",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "HSAI",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "ETSY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "NXPI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "APH",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "SW",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "HOOD",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "NVT",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "FPS",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "FRO",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "RES",
+     "why": "Volumen 0.6x"
+    },
+    {
+     "symbol": "TTMI",
+     "why": "Volumen 0.5x"
+    },
+    {
+     "symbol": "PPG",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "WHR",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "INIO",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "DB",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "MOD",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "AVTR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TRMD",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "ICHR",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "RUN",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "SHAZ",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "LOGI",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CHRW",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "OI",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "BSX",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "GEHC",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CSGP",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "FTV",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "HAYW",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "EAT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "UCTT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "NOV",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "DAN",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "APAM",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ADT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ACMR",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    }
+   ]
   }
  }
 }

@@ -17,12 +17,20 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-20,F,SHW,long RV 2.6x,,334.78,331.61,09:37,2.63,sip_long,334.78,334.78,333.99,,0.79,61,20421.58,09:50,333.99,stop,-48.19,22.4,-70.59,-1.465,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-20,F,SE,short RV 4.1x,,86.43,83.2,09:43,4.08,sip_short,83.2,83.2,83.53,,0.33,205,17056.0,09:45,83.53,stop,-67.65,19.14,-86.79,-1.283,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-20,F,BRZE,short RV 171.9x,,45.58,45.28,10:00,171.94,sip_short,45.28,45.28,45.44,,0.16,624,28254.72,11:58,45.44,stop,-99.84,34.54,-134.38,-1.346,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-20,F-1x,HAS,long RV 33.7x,,106.65,101.5,09:35,33.71,sip_long,106.65,106.65,106.39,,0.26,93,9918.45,09:46,106.39,stop,-24.18,11.91,-36.09,-1.493,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-20,F-1x,BRZE,short RV 171.9x,,45.58,45.28,10:00,171.94,sip_short,45.28,45.28,45.44,,0.16,220,9961.6,11:58,45.44,stop,-35.2,12.18,-47.38,-1.346,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-20,G,SPY,long Noise Area,,767.43,764.91,10:00,,spy_mom_long,767.43,767.96,767.43,,0.53,43,33022.28,11:30,769.26,trail,55.9,8.61,47.29,2.075,,,,,,,Hebel 3.29x (Tagesvola 0.60 %)
+2026-10-20,G-1x,SPY,long Noise Area,,767.43,764.91,10:00,,spy_mom_long,767.43,767.96,767.43,,0.53,13,9983.48,11:30,769.26,trail,16.9,4.0,12.9,1.872,,,,,,,Hebel 1.00x (Tagesvola 0.60 %)
 2026-10-20,G2,SPY,long Noise Area,,767.9,764.44,10:00,,spy_mom_long,767.9,767.96,767.9,,0.05,43,33022.28,11:30,769.26,trail,55.9,8.61,47.29,21.995,,,,,,,Hebel 3.29x (Tagesvola 0.60 %)
+2026-10-20,G2-1x,SPY,long Noise Area,,767.9,764.44,10:00,,spy_mom_long,767.9,767.96,767.9,,0.05,13,9983.48,11:30,769.26,trail,16.9,4.0,12.9,19.846,,,,,,,Hebel 1.00x (Tagesvola 0.60 %)
 2026-10-20,GQ,QQQ,long Noise Area,,720.95,712.61,10:30,,spy_mom_long,720.95,722.11,720.95,,1.16,25,18052.75,11:30,719.08,trail,-75.82,5.6,-81.42,-2.808,,,,,,,Hebel 1.79x (Tagesvola 1.11 %)
+2026-10-20,GQ-1x,QQQ,long Noise Area,,720.95,712.61,10:30,,spy_mom_long,720.95,722.11,720.95,,1.16,13,9387.43,11:30,719.08,trail,-39.43,3.87,-43.3,-2.871,,,,,,,Hebel 0.93x (Tagesvola 1.11 %)
 2026-10-20,H,SPY,long erste 30 Min +0.19%,,,,15:30,,ihm_long,,768.13,,,1.27,43,33029.59,16:00,769.02,flat,38.27,8.61,29.66,0.543,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-20,H-1x,SPY,long erste 30 Min +0.19%,,,,15:30,,ihm_long,,768.13,,,1.27,13,9985.69,16:00,769.02,flat,11.57,4.0,7.57,0.459,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-20,I,QQQ,short,,715.52,713.01,09:35,,etf_orb_short,715.52,713.74,715.52,695.94,1.78,56,39969.44,10:00,715.52,stop,-99.68,10.0,-109.68,-1.1,,,,,,,5-Min-Bars
+2026-10-20,I-1x,QQQ,short,,715.52,713.01,09:35,,etf_orb_short,715.52,713.74,715.52,695.94,1.78,14,9992.36,10:00,715.52,stop,-24.92,4.0,-28.92,-1.161,,,,,,,5-Min-Bars
 2026-10-20,J,KVYO,long Gap +8.0% RV30 12.3x,,,,10:00,12.26,gap_long,18.6,19.4,18.6,,0.8,124,2405.6,16:00,19.59,flat,23.56,4.42,19.14,0.193,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-20,J-1x,TLK,long Gap +8.1% RV30 4.4x,,,,10:00,4.42,gap_long,11.25,11.34,11.25,,0.09,881,9990.54,16:00,11.64,flat,264.3,18.93,245.37,3.095,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-21,A,MRNA,breakout_20d,4081202543,247.31,239.55,09:50,0.74,,,247.32,243.43,255.1,3.89,6,1483.92,10:05,243.43,stop,-23.34,3.47,-26.81,-1.149,38.8,55.3,6.0,0.251,0.344,"No clear lean, within the noise of 41 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 41 % (target first 38.8 % vs stop first 55.3 %).",
 2026-10-21,A,TSLA,reclaim_ma20,12004798169,386.68,380.51,09:50,0.76,,,387.55,383.59,395.47,3.96,19,7363.45,10:40,383.59,stop,-75.24,9.33,-84.57,-1.124,18.3,45.5,36.2,0.057,-0.117,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 29 % (target first 18.3 % vs stop first 45.5 %).,
 2026-10-21,A,CVX,breakout_20d,1808366003,226.46,224.69,10:10,0.73,,,226.77,225.57,229.17,1.2,7,1587.39,12:40,225.57,stop,-8.4,3.58,-11.98,-1.427,18.2,53.9,27.9,-0.06,-0.01,"No clear lean, within the noise of 41 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 18.2 % vs stop first 53.9 %).",
@@ -40,12 +48,25 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-21,F,FITB,short RV 4.7x,,53.31,52.67,09:39,4.67,sip_short,52.67,52.67,52.79,,0.12,577,30390.59,09:44,52.79,stop_gap,-69.24,36.2,-105.44,-1.523,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-21,F,NFLX,long RV 6.1x,,66.33,64.1,09:45,6.14,sip_long,66.33,66.33,66.15,,0.18,458,30379.14,10:12,66.15,stop,-82.44,34.92,-117.36,-1.424,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-21,F,DUOT,short RV 3.2x,,6.3,6.11,09:54,3.24,sip_short,6.11,6.11,6.17,,0.06,1574,9617.14,09:58,6.17,stop,-94.44,25.4,-119.84,-1.269,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-21,F-1x,ROIV,short RV 24.3x,,38.37,36.51,09:35,24.27,sip_short,36.51,36.51,36.63,,0.12,273,9967.23,09:39,36.63,stop,-32.76,12.71,-45.47,-1.388,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-21,F-1x,FITB,short RV 4.7x,,53.31,52.67,09:39,4.67,sip_short,52.67,52.67,52.79,,0.12,189,9954.63,09:44,52.79,stop_gap,-22.68,11.97,-34.65,-1.528,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-21,F-1x,NFLX,long RV 6.1x,,66.33,64.1,09:45,6.14,sip_long,66.33,66.33,66.15,,0.18,150,9949.5,10:12,66.15,stop,-27.0,11.94,-38.94,-1.442,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-21,F-1x,PEGA,short RV 6.7x,,35.52,34.51,10:15,6.67,sip_short,34.51,34.51,34.68,,0.17,289,9973.39,10:18,34.68,stop_gap,-49.13,12.89,-62.02,-1.262,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-21,F-1x,NTRS,short RV 4.3x,,170.0,165.32,10:25,4.34,sip_short,165.32,165.29,165.65,,0.36,60,9917.4,10:28,165.65,stop,-21.6,11.93,-33.53,-1.552,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-21,G,SPY,long Noise Area,,774.1,766.13,14:30,,spy_mom_long,774.1,774.29,774.1,,0.19,43,33294.47,15:00,772.08,trail,-95.03,8.65,-103.68,-12.69,,,,,,,Hebel 3.32x (Tagesvola 0.60 %)
+2026-10-21,G-1x,SPY,long Noise Area,,774.1,766.13,14:30,,spy_mom_long,774.1,774.29,774.1,,0.19,12,9291.48,15:00,772.08,trail,-26.52,3.86,-30.38,-13.325,,,,,,,Hebel 0.93x (Tagesvola 0.60 %)
 2026-10-21,GQ,QQQ,long Noise Area,,725.76,714.11,12:00,,spy_mom_long,725.76,726.22,725.76,,0.46,25,18155.5,12:30,725.22,trail,-24.97,5.63,-30.6,-2.661,,,,,,,Hebel 1.81x (Tagesvola 1.10 %)
 2026-10-21,GQ,QQQ,long Noise Area,,725.92,713.95,13:00,,spy_mom_long,725.92,726.89,725.92,,0.96,25,18172.25,14:00,726.43,trail,-11.5,5.63,-17.13,-0.714,,,,,,,Hebel 1.81x (Tagesvola 1.10 %)
 2026-10-21,GQ,QQQ,long Noise Area,,726.54,713.34,14:30,,spy_mom_long,726.54,727.19,726.54,,0.65,25,18179.75,15:00,724.41,trail,-69.5,5.63,-75.13,-4.623,,,,,,,Hebel 1.81x (Tagesvola 1.10 %)
+2026-10-21,GQ-1x,QQQ,long Noise Area,,725.76,714.11,12:00,,spy_mom_long,725.76,726.22,725.76,,0.46,13,9440.86,12:30,725.22,trail,-12.99,3.89,-16.87,-2.821,,,,,,,Hebel 0.94x (Tagesvola 1.10 %)
+2026-10-21,GQ-1x,QQQ,long Noise Area,,725.92,713.95,13:00,,spy_mom_long,725.92,726.89,725.92,,0.96,13,9449.57,14:00,726.43,trail,-5.98,3.89,-9.87,-0.791,,,,,,,Hebel 0.94x (Tagesvola 1.10 %)
+2026-10-21,GQ-1x,QQQ,long Noise Area,,726.54,713.34,14:30,,spy_mom_long,726.54,727.19,726.54,,0.65,13,9453.47,15:00,724.41,trail,-36.14,3.89,-40.03,-4.737,,,,,,,Hebel 0.94x (Tagesvola 1.10 %)
 2026-10-21,H,SPY,long erste 30 Min +0.21%,,,,15:30,,ihm_long,,773.23,,,1.28,43,33248.89,16:00,773.13,flat,-4.3,8.65,-12.95,-0.235,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-21,H-1x,SPY,long erste 30 Min +0.21%,,,,15:30,,ihm_long,,773.23,,,1.28,12,9278.76,16:00,773.13,flat,-1.2,3.86,-5.06,-0.329,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-21,I,QQQ,long,,723.07,721.04,09:35,,etf_orb_long,721.04,722.39,721.04,735.89,1.35,55,39731.45,09:40,721.04,stop,-74.25,9.94,-84.19,-1.134,,,,,,,5-Min-Bars
+2026-10-21,I-1x,QQQ,long,,723.07,721.04,09:35,,etf_orb_long,721.04,722.39,721.04,735.89,1.35,13,9391.07,09:40,721.04,stop,-17.55,3.88,-21.43,-1.221,,,,,,,5-Min-Bars
+2026-10-21,J-1x,AVEX,short Gap -18.8% RV30 15.8x,,,,10:00,15.85,gap_short,12.44,11.35,12.44,,1.09,91,1032.85,16:00,9.65,flat,155.15,2.96,152.2,1.534,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-21,J-1x,HSAI,short Gap -4.1% RV30 3.5x,,,,10:00,3.53,gap_short,13.41,13.1,13.41,,0.31,322,4218.2,16:00,13.18,flat,-24.15,7.45,-31.6,-0.317,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-22,A,AMAT,oversold_bounce,2581679129,385.0,380.92,09:50,0.6,,,386.14,382.96,392.5,3.18,4,1544.56,10:50,382.96,stop,-12.72,3.54,-16.26,-1.278,21.9,69.1,8.9,-0.206,-0.176,"No clear lean, within the noise of 42 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 24 % (target first 21.9 % vs stop first 69.1 %).",
 2026-10-22,A,TSLA,breakout_20d,18889030486,382.14,374.55,09:50,0.57,,,383.37,378.34,393.43,5.03,19,7284.03,13:10,378.34,stop,-95.57,9.24,-104.81,-1.097,8.5,35.2,56.3,0.026,-0.158,"No clear lean, within the noise of 42 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 20 % (target first 8.5 % vs stop first 35.2 %).",
 2026-10-22,A,WMT,bull_flag,2112389655,119.42,117.96,10:55,0.34,,,119.54,118.69,121.24,0.85,14,1673.56,15:55,121.06,flat,21.21,3.68,17.53,1.473,5.3,12.7,82.0,0.314,0.287,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 30 % (target first 5.3 % vs stop first 12.7 %).,
@@ -69,16 +90,31 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-22,F,TTMI,short RV 12.3x,,84.09,77.6,10:07,12.32,sip_short,77.6,77.6,78.52,,0.92,108,8380.8,16:00,73.98,flat,390.96,10.19,380.77,3.832,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-22,F,AVTR,short RV 5.9x,,17.38,17.2,10:09,5.95,sip_short,17.2,17.2,17.26,,0.06,1666,28655.2,10:18,17.26,stop,-99.96,45.37,-145.33,-1.454,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-22,F,DXCM,short RV 22.6x,,80.49,78.23,10:26,22.65,sip_short,78.23,78.23,78.51,,0.28,357,27928.11,10:31,78.51,stop,-99.96,31.55,-131.51,-1.316,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-22,F-1x,BHVN,long RV 335.6x,,16.24,15.75,09:35,335.57,sip_long,16.24,16.24,16.17,,0.07,615,9987.6,09:38,16.17,stop,-43.05,16.12,-59.17,-1.374,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-22,F-1x,HXL,long RV 43.3x,,80.86,78.01,09:40,43.35,sip_long,80.86,80.86,80.61,,0.25,123,9945.78,09:43,80.61,stop,-30.75,11.93,-42.68,-1.388,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-22,F-1x,SON,long RV 7.8x,,49.29,46.67,09:50,7.8,sip_long,49.29,49.29,49.17,,0.12,202,9956.58,09:52,49.12,stop_gap,-34.34,11.96,-46.3,-1.91,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-22,F-1x,TTMI,short RV 12.3x,,84.09,77.6,10:07,12.32,sip_short,77.6,77.6,78.52,,0.92,108,8380.8,16:00,73.98,flat,390.96,10.19,380.77,3.832,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-22,F-1x,DXCM,short RV 22.6x,,80.49,78.23,10:26,22.65,sip_short,78.23,78.23,78.51,,0.28,20,1564.6,10:31,78.51,stop,-5.6,3.57,-9.17,-1.637,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-22,G,SPY,short Noise Area,,774.78,764.71,10:30,,spy_mom_short,764.71,763.34,764.71,,1.37,42,32060.28,12:00,764.77,trail,-60.06,8.42,-68.48,-1.19,,,,,,,Hebel 3.22x (Tagesvola 0.61 %)
 2026-10-22,G,SPY,short Noise Area,,775.5,764.0,13:00,,spy_mom_short,764.0,763.75,764.0,,0.25,42,32077.5,16:00,763.99,flat,-10.08,8.42,-18.5,-1.762,,,,,,,Hebel 3.22x (Tagesvola 0.61 %)
+2026-10-22,G-1x,SPY,short Noise Area,,774.78,764.71,10:30,,spy_mom_short,764.71,763.34,764.71,,1.37,13,9923.42,12:00,764.77,trail,-18.59,3.99,-22.58,-1.268,,,,,,,Hebel 1.00x (Tagesvola 0.61 %)
+2026-10-22,G-1x,SPY,short Noise Area,,775.5,764.0,13:00,,spy_mom_short,764.0,763.75,764.0,,0.25,13,9928.75,16:00,763.99,flat,-3.12,3.99,-7.11,-2.188,,,,,,,Hebel 1.00x (Tagesvola 0.61 %)
 2026-10-22,G2,SPY,short Noise Area,,775.63,763.87,10:30,,spy_mom_short,763.87,763.34,763.87,,0.53,42,32060.28,11:30,763.45,trail,-4.62,8.41,-13.03,-0.585,,,,,,,Hebel 3.22x (Tagesvola 0.61 %)
+2026-10-22,G2-1x,SPY,short Noise Area,,775.63,763.87,10:30,,spy_mom_short,763.87,763.34,763.87,,0.53,13,9923.42,11:30,763.45,trail,-1.43,3.98,-5.41,-0.785,,,,,,,Hebel 1.00x (Tagesvola 0.61 %)
 2026-10-22,GQ,QQQ,short Noise Area,,727.84,711.08,10:30,,spy_mom_short,711.08,709.85,711.08,,1.23,24,17036.4,16:00,704.59,flat,126.24,5.39,120.84,4.093,,,,,,,Hebel 1.71x (Tagesvola 1.15 %)
+2026-10-22,GQ-1x,QQQ,short Noise Area,,727.84,711.08,10:30,,spy_mom_short,711.08,709.85,711.08,,1.23,14,9937.9,16:00,704.59,flat,73.64,3.98,69.66,4.045,,,,,,,Hebel 1.00x (Tagesvola 1.15 %)
 2026-10-22,H,SPY,short erste 30 Min -0.77%,,,,15:30,,ihm_short,,763.13,,,1.29,42,32051.46,16:00,763.99,flat,-36.12,8.41,-44.53,-0.822,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-22,H-1x,SPY,short erste 30 Min -0.77%,,,,15:30,,ihm_short,,763.13,,,1.29,13,9920.69,16:00,763.99,flat,-11.18,3.99,-15.17,-0.905,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-22,I,QQQ,long,,714.74,712.45,09:35,,etf_orb_long,712.45,714.14,712.45,731.04,1.69,56,39991.84,09:50,712.45,stop,-94.64,9.99,-104.63,-1.106,,,,,,,5-Min-Bars
+2026-10-22,I-1x,QQQ,long,,714.74,712.45,09:35,,etf_orb_long,712.45,714.14,712.45,731.04,1.69,14,9997.96,09:50,712.45,stop,-23.66,4.0,-27.66,-1.169,,,,,,,5-Min-Bars
 2026-10-22,J,FPS,short Gap -14.4% RV30 7.6x,,,,10:00,7.56,gap_short,27.31,25.69,27.31,,1.62,61,1567.09,16:00,24.98,flat,43.31,3.55,39.76,0.402,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-22,J,IAG,short Gap -5.2% RV30 3.1x,,,,10:00,3.05,gap_short,16.9,16.58,16.9,,0.32,312,5172.96,16:00,16.42,flat,51.48,8.27,43.21,0.433,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-22,J,NOK,short Gap -7.4% RV30 3.2x,,,,10:00,3.18,gap_short,8.61,8.51,8.61,,0.1,999,8501.49,16:00,7.86,flat,649.25,18.17,631.08,6.317,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-22,J,TTMI,short Gap -18.0% RV30 10.4x,,,,10:00,10.43,gap_short,84.09,80.45,84.09,,3.64,27,2172.15,16:00,73.98,flat,174.69,4.08,170.61,1.736,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-22,J-1x,FPS,short Gap -14.4% RV30 7.6x,,,,10:00,7.56,gap_short,27.31,25.69,27.31,,1.62,61,1567.09,16:00,24.98,flat,43.31,3.55,39.76,0.402,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-22,J-1x,GGG,short Gap -10.6% RV30 13.4x,,,,10:00,13.41,gap_short,74.5,70.94,74.5,,3.56,28,1986.32,16:00,69.32,flat,45.36,3.96,41.4,0.415,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-22,J-1x,NOK,short Gap -7.4% RV30 3.2x,,,,10:00,3.18,gap_short,8.61,8.51,8.61,,0.1,502,4272.02,16:00,7.86,flat,326.25,9.13,317.12,6.317,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-22,J-1x,TTMI,short Gap -18.0% RV30 10.4x,,,,10:00,10.43,gap_short,84.09,80.45,84.09,,3.64,27,2172.15,16:00,73.98,flat,174.69,4.08,170.61,1.736,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-23,A,COHR,oversold,2605730380,212.15,203.55,09:50,0.65,,,212.24,207.85,221.02,4.39,17,3608.08,15:55,209.37,flat,-48.79,5.58,-54.38,-0.729,15.9,48.1,36.0,-0.028,-0.065,"No clear lean, within the noise of 43 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 25 % (target first 15.9 % vs stop first 48.1 %).",
 2026-10-23,A,CRWV,oversold,4546795515,55.84,54.07,09:50,0.59,,,56.01,54.95,58.13,1.06,94,5264.94,10:00,54.95,stop,-99.64,7.22,-106.86,-1.072,18.8,57.4,23.8,-0.116,0.113,"No clear lean, within the noise of 43 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 18.8 % vs stop first 57.4 %).",
 2026-10-23,A,LRCX,oversold,5293035590,229.0,225.79,10:30,0.35,,,229.15,227.39,232.67,1.76,23,5270.45,10:45,232.67,target,80.96,4.64,76.32,1.885,28.4,62.6,9.0,-0.014,0.129,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 31 % (target first 28.4 % vs stop first 62.6 %).,
@@ -95,13 +131,25 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-23,F,TEVA,short RV 4.9x,,39.75,39.21,09:35,4.9,sip_short,39.21,39.21,39.32,,0.11,909,35641.89,09:44,39.32,stop,-99.99,44.78,-144.77,-1.448,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-23,F,DOW,long RV 2.4x,,32.25,31.91,11:11,2.35,sip_long,32.25,32.25,32.16,,0.09,1111,35829.75,16:00,32.6,flat,388.85,47.13,341.71,3.417,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-23,F,IBKR,short RV 3.6x,,81.56,80.61,15:07,3.61,sip_short,80.61,80.61,80.91,,0.3,51,4111.11,16:00,80.27,flat,17.34,6.1,11.24,0.735,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-23,F-1x,TNGX,short RV 41.8x,,25.94,23.58,09:35,41.75,sip_short,23.58,23.58,23.75,,0.17,424,9997.92,09:38,23.75,stop,-72.08,14.27,-86.35,-1.198,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-23,F-1x,CCI,short RV 8.3x,,91.45,88.0,09:51,8.34,sip_short,88.0,88.0,88.32,,0.32,113,9944.0,10:15,88.32,stop,-36.16,11.96,-48.12,-1.331,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-23,F-1x,SLM,short RV 23.8x,,20.96,19.52,10:38,23.85,sip_short,19.52,19.52,19.59,,0.07,512,9994.24,10:40,19.59,stop,-35.84,15.13,-50.97,-1.422,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-23,GQ,QQQ,long Noise Area,,707.24,699.34,11:00,,spy_mom_long,707.24,708.5,707.24,,1.27,21,14878.5,11:30,707.73,trail,-16.07,4.97,-21.04,-0.789,,,,,,,Hebel 1.47x (Tagesvola 1.30 %)
 2026-10-23,GQ,QQQ,long Noise Area,,708.13,698.45,12:00,,spy_mom_long,708.13,708.55,708.13,,0.42,21,14879.55,12:30,706.55,trail,-42.0,4.97,-46.97,-5.325,,,,,,,Hebel 1.47x (Tagesvola 1.30 %)
+2026-10-23,GQ-1x,QQQ,long Noise Area,,707.24,699.34,11:00,,spy_mom_long,707.24,708.5,707.24,,1.27,14,9919.0,11:30,707.73,trail,-10.71,3.98,-14.69,-0.826,,,,,,,Hebel 0.98x (Tagesvola 1.30 %)
+2026-10-23,GQ-1x,QQQ,long Noise Area,,708.13,698.45,12:00,,spy_mom_long,708.13,708.55,708.13,,0.42,14,9919.7,12:30,706.55,trail,-28.0,3.98,-31.98,-5.439,,,,,,,Hebel 0.98x (Tagesvola 1.30 %)
 2026-10-23,H,SPY,short erste 30 Min -0.40%,,,,15:30,,ihm_short,,760.5,,,1.4,39,29659.5,16:00,759.91,flat,23.01,7.93,15.08,0.276,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-23,H-1x,SPY,short erste 30 Min -0.40%,,,,15:30,,ihm_short,,760.5,,,1.4,13,9886.5,16:00,759.91,flat,7.67,3.98,3.69,0.203,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-23,I,QQQ,long,,703.87,701.37,09:35,,etf_orb_long,701.37,702.38,701.37,712.48,1.01,56,39333.28,09:40,701.37,stop,-56.56,9.86,-66.42,-1.174,,,,,,,5-Min-Bars
+2026-10-23,I-1x,QQQ,long,,703.87,701.37,09:35,,etf_orb_long,701.37,702.38,701.37,712.48,1.01,14,9833.32,09:40,701.37,stop,-14.14,3.97,-18.11,-1.281,,,,,,,5-Min-Bars
 2026-10-23,J,BE,short Gap -6.8% RV30 4.2x,,,,10:00,4.23,gap_short,206.0,191.66,206.0,,14.34,6,1149.96,16:00,193.12,flat,-8.76,3.15,-11.91,-0.138,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-23,J,CRDO,short Gap -7.1% RV30 3.0x,,,,10:00,3.02,gap_short,152.07,148.13,152.07,,3.94,25,3703.25,10:35,152.07,stop,-98.5,5.75,-104.25,-1.058,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-23,J,RITM,long Gap +5.2% RV30 5.1x,,,,10:00,5.1,gap_long,8.99,9.25,8.99,,0.26,384,3552.0,16:00,9.39,flat,53.76,7.42,46.34,0.464,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-23,J-1x,BE,short Gap -6.8% RV30 4.2x,,,,10:00,4.23,gap_short,206.0,191.66,206.0,,14.34,6,1149.96,16:00,193.12,flat,-8.76,3.15,-11.91,-0.138,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-23,J-1x,CRDO,short Gap -7.1% RV30 3.0x,,,,10:00,3.02,gap_short,152.07,148.13,152.07,,3.94,25,3703.25,10:35,152.07,stop,-98.5,5.75,-104.25,-1.058,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-23,J-1x,RITM,long Gap +5.2% RV30 5.1x,,,,10:00,5.1,gap_long,8.99,9.25,8.99,,0.26,384,3552.0,16:00,9.39,flat,53.76,7.42,46.34,0.464,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-23,J-1x,SLM,short Gap -4.4% RV30 15.1x,,,,10:00,15.08,gap_short,20.96,19.78,20.96,,1.18,38,751.64,16:00,19.42,flat,13.87,2.74,11.13,0.248,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-23,J-1x,TNGX,short Gap -8.6% RV30 18.1x,,,,10:00,18.11,gap_short,25.94,23.17,25.94,,2.77,36,834.12,16:00,23.33,flat,-5.76,2.84,-8.6,-0.086,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-26,A,GEV,oversold,3144433000,832.11,819.85,09:50,0.63,,,835.45,825.98,854.39,9.47,8,6683.6,10:00,825.98,stop,-75.76,8.65,-84.41,-1.114,20.6,56.4,22.9,-0.049,0.102,"No clear lean, within the noise of 44 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 27 % (target first 20.6 % vs stop first 56.4 %).",
 2026-10-26,A,LRCX,oversold,2929495218,237.1,230.51,09:50,0.32,,,237.98,233.8,246.34,4.18,9,2141.82,15:55,237.27,flat,-6.39,4.14,-10.53,-0.28,7.8,39.6,52.6,-0.014,0.217,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 16 % (target first 7.8 % vs stop first 39.6 %).,
 2026-10-26,A,ISRG,breakout_20d,1358860102,455.84,449.52,10:00,0.57,,,455.88,452.68,462.28,3.2,15,6838.2,11:30,452.68,stop,-48.0,8.81,-56.81,-1.184,29.6,53.6,16.8,0.148,0.525,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 36 % (target first 29.6 % vs stop first 53.6 %).,
@@ -123,17 +171,34 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-26,F,CART,long RV 17.4x,,54.78,53.72,10:40,17.37,sip_long,54.78,54.78,54.58,,0.2,307,16817.46,10:47,54.58,stop,-61.4,19.86,-81.26,-1.323,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-26,F,PBR,long RV 13.2x,,22.42,21.45,13:54,13.16,sip_long,22.42,22.42,22.35,,0.07,751,16837.42,14:03,22.35,stop,-52.57,24.32,-76.89,-1.463,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-26,F,PBR.A,long RV 6.9x,,20.05,19.35,15:29,6.86,sip_long,20.05,20.05,19.99,,0.06,840,16842.0,15:31,19.99,stop,-50.4,25.22,-75.62,-1.5,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-26,F-1x,STNE,long RV 48.5x,,7.88,7.06,09:35,48.46,sip_long,7.88,7.88,7.82,,0.06,1269,9999.72,09:36,7.82,stop,-76.14,22.65,-98.79,-1.297,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-26,F-1x,VSNT,long RV 7.1x,,31.48,31.15,09:38,7.09,sip_long,31.48,31.54,31.45,,0.09,317,9998.18,09:41,31.43,stop_gap,-34.87,13.15,-48.02,-1.683,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-26,F-1x,LPX,short RV 8.5x,,74.17,72.95,09:42,8.55,sip_short,72.95,72.82,73.06,,0.24,137,9976.34,09:47,73.12,stop_gap,-41.1,12.0,-53.1,-1.615,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-26,F-1x,AR,long RV 5.5x,,41.26,39.51,09:49,5.52,sip_long,41.26,41.28,41.15,,0.13,242,9989.76,10:07,41.15,stop,-31.46,12.39,-43.85,-1.394,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-26,F-1x,CSGP,short RV 6.4x,,34.26,33.67,10:24,6.37,sip_short,33.67,33.67,33.8,,0.13,297,9999.99,16:00,33.7,flat,-8.91,12.97,-21.88,-0.567,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-26,G,SPY,long Noise Area,,763.84,758.39,10:30,,spy_mom_long,763.84,764.78,763.84,,0.94,40,30591.2,12:00,765.22,trail,17.6,8.12,9.48,0.252,,,,,,,Hebel 3.05x (Tagesvola 0.64 %)
 2026-10-26,G,SPY,long Noise Area,,764.27,757.95,12:30,,spy_mom_long,764.27,765.59,765.31,,0.28,40,30623.6,15:00,765.05,trail,-21.6,8.12,-29.72,-2.654,,,,,,,Hebel 3.05x (Tagesvola 0.64 %)
 2026-10-26,G,SPY,long Noise Area,,765.1,757.13,15:30,,spy_mom_long,765.1,765.4,765.34,,0.06,40,30616.0,16:00,765.22,flat,-7.0,8.12,-15.12,-6.3,,,,,,,Hebel 3.05x (Tagesvola 0.64 %)
+2026-10-26,G-1x,SPY,long Noise Area,,763.84,758.39,10:30,,spy_mom_long,763.84,764.78,763.84,,0.94,13,9942.14,12:00,765.22,trail,5.72,3.99,1.73,0.142,,,,,,,Hebel 0.99x (Tagesvola 0.64 %)
+2026-10-26,G-1x,SPY,long Noise Area,,764.27,757.95,12:30,,spy_mom_long,764.27,765.59,765.31,,0.28,13,9952.67,15:00,765.05,trail,-7.02,3.99,-11.01,-3.025,,,,,,,Hebel 0.99x (Tagesvola 0.64 %)
+2026-10-26,G-1x,SPY,long Noise Area,,765.1,757.13,15:30,,spy_mom_long,765.1,765.4,765.34,,0.06,13,9950.2,16:00,765.22,flat,-2.28,3.99,-6.27,-8.038,,,,,,,Hebel 0.99x (Tagesvola 0.64 %)
 2026-10-26,G2,SPY,long Noise Area,,764.63,757.6,10:30,,spy_mom_long,764.63,764.78,764.63,,0.15,40,30591.2,12:00,765.22,trail,17.6,8.12,9.48,1.58,,,,,,,Hebel 3.05x (Tagesvola 0.64 %)
 2026-10-26,G2,SPY,long Noise Area,,765.28,756.95,12:30,,spy_mom_long,765.28,765.59,765.31,,0.28,40,30623.6,13:00,765.45,trail,-5.6,8.12,-13.72,-1.225,,,,,,,Hebel 3.05x (Tagesvola 0.64 %)
+2026-10-26,G2-1x,SPY,long Noise Area,,764.63,757.6,10:30,,spy_mom_long,764.63,764.78,764.63,,0.15,13,9942.14,12:00,765.22,trail,5.72,3.99,1.73,0.887,,,,,,,Hebel 0.99x (Tagesvola 0.64 %)
+2026-10-26,G2-1x,SPY,long Noise Area,,765.28,756.95,12:30,,spy_mom_long,765.28,765.59,765.31,,0.28,13,9952.67,13:00,765.45,trail,-1.82,3.99,-5.81,-1.596,,,,,,,Hebel 0.99x (Tagesvola 0.64 %)
 2026-10-26,GQ,QQQ,long Noise Area,,709.62,701.85,10:30,,spy_mom_long,709.62,709.9,709.62,,0.27,22,15617.8,16:00,712.12,flat,48.84,5.13,43.71,7.359,,,,,,,Hebel 1.56x (Tagesvola 1.25 %)
+2026-10-26,GQ-1x,QQQ,long Noise Area,,709.62,701.85,10:30,,spy_mom_long,709.62,709.9,709.62,,0.27,14,9938.6,16:00,712.12,flat,31.08,3.99,27.09,7.167,,,,,,,Hebel 0.99x (Tagesvola 1.25 %)
 2026-10-26,H,SPY,long erste 30 Min +0.38%,,,,15:30,,ihm_long,,765.4,,,1.36,40,30616.0,16:00,765.22,flat,-7.0,8.12,-15.12,-0.278,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-26,H-1x,SPY,long erste 30 Min +0.38%,,,,15:30,,ihm_long,,765.4,,,1.36,13,9950.2,16:00,765.22,flat,-2.28,3.99,-6.27,-0.355,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-26,I,QQQ,long,,707.93,705.58,09:35,,etf_orb_long,705.58,707.45,705.58,726.15,1.87,53,37494.85,16:00,712.12,flat,247.51,9.52,237.99,2.401,,,,,,,5-Min-Bars
+2026-10-26,I-1x,QQQ,long,,707.93,705.58,09:35,,etf_orb_long,705.58,707.45,705.58,726.15,1.87,14,9904.3,16:00,712.12,flat,65.38,3.99,61.39,2.345,,,,,,,5-Min-Bars
 2026-10-26,J,ITUB,short Gap -22.8% RV30 8.2x,,,,10:00,8.23,gap_short,7.79,7.42,7.79,,0.37,270,2003.4,16:00,7.69,flat,-72.9,4.74,-77.64,-0.777,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-26,J,PBR.A,short Gap -17.6% RV30 5.7x,,,,10:00,5.69,gap_short,20.05,19.39,20.05,,0.66,151,2927.89,15:30,20.05,stop,-99.66,4.98,-104.64,-1.05,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-26,J,VIV,short Gap -15.8% RV30 12.6x,,,,10:00,12.58,gap_short,11.11,10.79,11.11,,0.32,312,3366.48,11:20,11.11,stop,-99.84,6.54,-106.38,-1.066,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-26,J-1x,ITUB,short Gap -22.8% RV30 8.2x,,,,10:00,8.23,gap_short,7.79,7.42,7.79,,0.37,270,2003.4,16:00,7.69,flat,-72.9,4.74,-77.64,-0.777,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-26,J-1x,PAX,short Gap -14.8% RV30 12.4x,,,,10:00,12.35,gap_short,10.15,9.71,10.15,,0.44,175,1699.25,16:00,9.77,flat,-9.63,3.7,-13.33,-0.173,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-26,J-1x,PBR.A,short Gap -17.6% RV30 5.7x,,,,10:00,5.69,gap_short,20.05,19.39,20.05,,0.66,151,2927.89,15:30,20.05,stop,-99.66,4.98,-104.64,-1.05,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-26,J-1x,VIV,short Gap -15.8% RV30 12.6x,,,,10:00,12.58,gap_short,11.11,10.79,11.11,,0.32,312,3366.48,11:20,11.11,stop,-99.84,6.54,-106.38,-1.066,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-27,A,ADI,reclaim_ma20,1554498823,417.12,411.12,09:50,2.18,,,418.01,414.12,425.79,3.89,11,4598.11,15:35,425.79,target,85.58,4.3,81.28,1.9,22.8,46.6,30.6,0.174,0.071,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 33 % (target first 22.8 % vs stop first 46.6 %).,
 2026-10-27,A,XP,oversold,2090162735,16.53,15.81,09:50,0.6,,,16.57,16.17,17.37,0.4,249,4125.93,10:00,16.17,stop,-99.6,6.57,-106.17,-1.066,9.2,22.5,68.3,0.179,0.202,"No clear lean, within the noise of 45 days: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 29 % (target first 9.2 % vs stop first 22.5 %).",
 2026-10-27,A,RRC,breakout_20d,1417792152,54.04,53.51,10:00,1.0,,,54.05,53.77,54.61,0.28,81,4378.05,10:50,54.61,target,45.36,4.19,41.17,1.815,35.0,60.6,4.4,0.045,0.047,Close to break-even: at 2R after costs the target has to come first in 36 % of the replays that hit one side; it did in 37 % (target first 35.0 % vs stop first 60.6 %).,
@@ -152,14 +217,24 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-27,F,CLRO,short RV 10.1x,,6.23,5.53,09:38,10.06,sip_short,5.53,5.53,5.61,,0.08,1249,6906.97,09:40,5.61,stop,-99.92,19.45,-119.37,-1.195,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-27,F,TRU,short RV 3.8x,,82.36,79.0,09:45,3.84,sip_short,79.0,78.94,79.28,,0.34,294,23208.36,09:47,79.28,stop,-99.96,26.2,-126.16,-1.262,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-27,F,INIO,long RV 9.2x,,17.4,16.49,09:48,9.17,sip_long,17.4,17.4,17.26,,0.14,714,12423.6,09:50,17.26,stop,-99.96,19.51,-119.47,-1.195,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-27,F-1x,INGM,short RV 19.1x,,28.91,28.71,09:35,19.06,sip_short,28.71,28.7,28.79,,0.09,348,9987.6,10:48,28.79,stop,-31.32,13.48,-44.8,-1.43,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-27,F-1x,BRO,short RV 10.0x,,68.96,67.29,11:14,10.03,sip_short,67.29,67.29,67.5,,0.21,148,9958.92,11:28,67.5,stop,-31.08,11.97,-43.05,-1.385,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-27,G,SPY,long Noise Area,,769.64,763.08,12:00,,spy_mom_long,769.64,770.65,769.64,,1.01,39,30055.35,13:00,769.4,trail,-48.75,8.01,-56.76,-1.441,,,,,,,Hebel 2.99x (Tagesvola 0.66 %)
+2026-10-27,G-1x,SPY,long Noise Area,,769.64,763.08,12:00,,spy_mom_long,769.64,770.65,769.64,,1.01,13,10018.45,13:00,769.4,trail,-16.25,4.0,-20.25,-1.542,,,,,,,Hebel 1.00x (Tagesvola 0.66 %)
 2026-10-27,GQ,QQQ,long Noise Area,,718.46,708.85,11:00,,spy_mom_long,718.46,718.71,718.46,,0.25,21,15092.91,14:30,720.34,trail,34.23,5.02,29.21,5.564,,,,,,,Hebel 1.50x (Tagesvola 1.30 %)
 2026-10-27,GQ,QQQ,long Noise Area,,720.54,706.78,15:00,,spy_mom_long,720.54,721.09,720.54,,0.55,21,15142.89,16:00,721.24,flat,3.15,5.03,-1.88,-0.163,,,,,,,Hebel 1.50x (Tagesvola 1.30 %)
+2026-10-27,GQ-1x,QQQ,long Noise Area,,718.46,708.85,11:00,,spy_mom_long,718.46,718.71,718.46,,0.25,13,9343.23,14:30,720.34,trail,21.19,3.87,17.32,5.329,,,,,,,Hebel 0.93x (Tagesvola 1.30 %)
+2026-10-27,GQ-1x,QQQ,long Noise Area,,720.54,706.78,15:00,,spy_mom_long,720.54,721.09,720.54,,0.55,13,9374.17,16:00,721.24,flat,1.95,3.88,-1.93,-0.27,,,,,,,Hebel 0.93x (Tagesvola 1.30 %)
 2026-10-27,H,SPY,long erste 30 Min +0.11%,,,,15:30,,ihm_long,,770.15,,,1.4,39,30035.85,16:00,769.72,flat,-16.77,8.01,-24.78,-0.454,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-27,H-1x,SPY,long erste 30 Min +0.11%,,,,15:30,,ihm_long,,770.15,,,1.4,12,9241.8,16:00,769.72,flat,-5.16,3.85,-9.01,-0.536,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-27,I,QQQ,long,,716.77,714.61,09:35,,etf_orb_long,714.61,716.65,714.61,737.05,2.04,49,35115.85,09:55,714.61,stop,-99.96,9.01,-108.97,-1.09,,,,,,,5-Min-Bars
+2026-10-27,I-1x,QQQ,long,,716.77,714.61,09:35,,etf_orb_long,714.61,716.65,714.61,737.05,2.04,13,9316.45,09:55,714.61,stop,-26.52,3.86,-30.38,-1.146,,,,,,,5-Min-Bars
 2026-10-27,J,AMKR,long Gap +4.8% RV30 3.4x,,,,10:00,3.36,gap_long,37.36,38.74,37.36,,1.38,72,2789.28,16:00,39.96,flat,87.84,4.83,83.01,0.835,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-27,J,CLS,long Gap +7.2% RV30 7.2x,,,,10:00,7.23,gap_long,261.5,274.77,261.5,,13.27,7,1923.39,16:00,276.33,flat,10.92,3.93,6.99,0.075,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-27,J,SOFI,long Gap +10.5% RV30 6.8x,,,,10:00,6.84,gap_long,15.67,16.1,15.67,,0.43,232,3735.2,16:00,16.4,flat,68.44,6.09,62.35,0.625,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-27,J-1x,CLS,long Gap +7.2% RV30 7.2x,,,,10:00,7.23,gap_long,261.5,274.77,261.5,,13.27,7,1923.39,16:00,276.33,flat,10.92,3.93,6.99,0.075,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-27,J-1x,HSBC,short Gap -6.2% RV30 3.0x,,,,10:00,3.04,gap_short,85.87,85.22,85.87,,0.65,50,4261.0,10:35,85.87,stop,-32.5,6.28,-38.78,-1.193,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-27,J-1x,SOFI,long Gap +10.5% RV30 6.8x,,,,10:00,6.84,gap_long,15.67,16.1,15.67,,0.43,232,3735.2,16:00,16.4,flat,68.44,6.09,62.35,0.625,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-28,A,JNJ,breakout_20d,1551808321,268.42,264.2,09:50,0.2,,,268.75,266.31,273.63,2.44,27,7256.25,15:55,271.31,flat,69.12,9.29,59.83,0.908,5.2,37.8,57.0,-0.055,-0.051,Strongly toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 12 % (target first 5.2 % vs stop first 37.8 %).,
 2026-10-28,A,KLAC,oversold_bounce,1580838752,157.25,155.58,09:55,0.31,,,157.47,156.41,159.59,1.06,11,1732.17,12:55,159.59,target,23.32,2.87,20.45,1.754,29.4,68.4,2.2,-0.1,0.023,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 30 % (target first 29.4 % vs stop first 68.4 %).,
 2026-10-28,A,GOOG,oversold_bounce,5635264873,322.6,319.68,13:05,0.5,,,322.82,321.14,326.18,1.68,5,1614.1,13:10,321.14,stop,-8.4,3.61,-12.01,-1.43,2.8,43.0,54.2,-0.24,-0.073,Strongly toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 6 % (target first 2.8 % vs stop first 43.0 %).,
@@ -176,11 +251,22 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-28,F,NXPI,long RV 4.9x,,245.54,235.0,09:37,4.94,sip_long,245.54,245.54,244.63,,0.91,57,13995.78,09:39,244.63,stop,-51.87,15.97,-67.84,-1.308,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-28,F,GSK,long RV 6.3x,,48.22,47.35,09:40,6.31,sip_long,48.22,48.22,48.11,,0.11,293,14128.46,16:00,48.76,flat,158.22,17.14,141.08,4.377,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-28,F,BA,short RV 3.9x,,170.2,166.82,09:50,3.86,sip_short,166.82,166.82,167.36,,0.54,155,25857.1,11:19,167.36,stop,-83.7,27.9,-111.6,-1.333,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-28,F-1x,ENPH,long RV 33.8x,,25.53,23.83,09:35,33.78,sip_long,25.53,25.53,25.35,,0.18,391,9982.23,09:37,25.35,stop,-70.38,13.86,-84.24,-1.197,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-28,F-1x,ST,long RV 10.1x,,42.01,40.65,09:37,10.14,sip_long,42.01,42.01,41.87,,0.14,238,9998.38,09:38,41.87,stop,-33.32,12.36,-45.68,-1.371,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-28,F-1x,DAN,short RV 13.9x,,27.04,25.69,09:38,13.87,sip_short,25.69,25.69,25.8,,0.11,389,9993.41,09:39,25.8,stop,-42.79,13.9,-56.69,-1.325,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-28,F-1x,XYL,short RV 9.2x,,91.4,88.86,09:40,9.18,sip_short,88.86,88.86,89.19,,0.33,112,9952.32,09:41,89.19,stop,-36.96,11.97,-48.93,-1.324,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-28,F-1x,AXGN,long RV 36.3x,,46.15,43.5,09:44,36.29,sip_long,46.15,46.15,46.01,,0.14,216,9968.4,09:45,46.01,stop,-30.24,12.11,-42.35,-1.4,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-28,F-1x,EPRT,short RV 9.9x,,26.65,26.43,10:21,9.94,sip_short,26.43,26.43,26.5,,0.07,378,9990.54,10:57,26.5,stop,-26.46,13.78,-40.24,-1.521,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-28,H,SPY,long erste 30 Min +0.12%,,,,15:30,,ihm_long,,770.79,,,1.45,38,29290.02,16:00,772.35,flat,59.28,7.86,51.42,0.933,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-28,H-1x,SPY,long erste 30 Min +0.12%,,,,15:30,,ihm_long,,770.79,,,1.45,12,9249.48,16:00,772.35,flat,18.72,3.85,14.87,0.855,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-28,I,QQQ,long,,724.73,723.17,09:35,,etf_orb_long,723.17,724.16,723.17,734.06,0.99,55,39828.8,09:40,723.17,stop,-54.45,9.96,-64.41,-1.183,,,,,,,5-Min-Bars
+2026-10-28,I-1x,QQQ,long,,724.73,723.17,09:35,,etf_orb_long,723.17,724.16,723.17,734.06,0.99,13,9414.08,09:40,723.17,stop,-12.87,3.88,-16.75,-1.301,,,,,,,5-Min-Bars
 2026-10-28,J,ADT,long Gap +4.1% RV30 12.6x,,,,10:00,12.59,gap_long,7.01,7.36,7.01,,0.35,285,2097.6,16:00,7.41,flat,15.67,4.96,10.72,0.107,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-28,J,BSX,short Gap -6.9% RV30 10.6x,,,,10:00,10.55,gap_short,42.2,40.94,42.2,,1.26,79,3234.26,10:55,42.2,stop,-99.54,5.28,-104.82,-1.053,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-28,J,WEN,long Gap +14.5% RV30 30.0x,,,,10:00,30.01,gap_long,7.01,7.11,7.01,,0.1,999,7102.89,10:35,7.01,stop,-99.9,17.04,-116.94,-1.171,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-28,J-1x,AXGN,long Gap +21.3% RV30 26.6x,,,,10:00,26.56,gap_long,43.5,45.82,43.5,,2.32,43,1970.26,16:00,49.11,flat,141.47,4.04,137.43,1.378,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-28,J-1x,BBNX,short Gap -12.5% RV30 3.4x,,,,10:00,3.41,gap_short,20.07,18.35,20.07,,1.72,50,917.5,16:00,17.76,flat,29.5,2.9,26.6,0.309,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-28,J-1x,WEN,long Gap +14.5% RV30 30.0x,,,,10:00,30.01,gap_long,7.01,7.11,7.01,,0.1,999,7102.89,10:35,7.01,stop,-99.9,17.04,-116.94,-1.171,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-29,A,BA,oversold,3510575119,169.06,167.74,09:50,0.82,,,169.21,168.4,170.83,0.81,44,7445.24,10:25,170.83,target,71.28,5.72,65.56,1.839,30.2,67.3,2.6,-0.085,-0.4,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 31 % (target first 30.2 % vs stop first 67.3 %).,
 2026-10-29,A,HCA,reclaim_ma20,987307111,472.73,464.92,09:50,1.31,,,476.42,468.82,491.62,7.6,3,1429.26,15:55,477.68,flat,3.78,3.43,0.35,0.015,3.5,27.3,69.2,-0.041,-0.023,"No clear lean, within the noise of 47 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 12 % (target first 3.5 % vs stop first 27.3 %).",
 2026-10-29,A,TXN,breakout_20d,2278830534,309.29,306.03,10:35,0.29,,,309.55,307.66,313.33,1.89,24,7429.2,10:50,307.66,stop,-45.36,9.41,-54.77,-1.207,37.1,48.2,14.6,0.326,-0.083,"No clear lean, within the noise of 47 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 43 % (target first 37.1 % vs stop first 48.2 %).",
@@ -196,8 +282,12 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-29,F,NCLH,long RV 13.4x,,17.77,17.4,09:35,13.36,sip_long,17.77,17.77,17.7,,0.07,1428,25375.56,09:53,17.7,stop,-99.96,39.61,-139.57,-1.396,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-29,F,CVNA,long RV 8.2x,,67.71,63.81,09:44,8.16,sip_long,67.71,67.71,67.41,,0.3,215,14557.65,09:45,67.41,stop,-64.5,16.68,-81.18,-1.259,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-29,F,FTRE,short RV 5.2x,,23.79,22.5,10:09,5.23,sip_short,22.5,22.5,22.62,,0.12,833,18742.5,10:17,22.62,stop,-99.96,27.12,-127.08,-1.271,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-29,F-1x,CROX,long RV 14.6x,,144.52,139.32,09:35,14.63,sip_long,144.52,145.49,145.08,,0.41,68,9893.32,10:11,145.08,stop,-27.88,11.88,-39.76,-1.426,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-29,F-1x,RSI,short RV 29.8x,,15.13,13.57,15:57,29.81,sip_short,13.57,13.57,13.68,,0.11,736,9987.52,16:00,13.6,flat,-25.76,17.36,-43.12,-0.533,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-29,H,SPY,short erste 30 Min -0.46%,,,,15:30,,ihm_short,,768.22,,,1.45,38,29192.36,16:00,769.53,flat,-49.78,7.84,-57.62,-1.046,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-29,H-1x,SPY,short erste 30 Min -0.46%,,,,15:30,,ihm_short,,768.22,,,1.45,13,9986.86,16:00,769.53,flat,-17.03,4.0,-21.03,-1.116,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-29,I,QQQ,short,,716.99,712.26,09:35,,etf_orb_short,716.99,712.3,716.99,665.4,4.69,21,14958.3,11:35,716.99,stop,-98.49,5.0,-103.49,-1.051,,,,,,,5-Min-Bars
+2026-10-29,I-1x,QQQ,short,,716.99,712.26,09:35,,etf_orb_short,716.99,712.3,716.99,665.4,4.69,14,9972.2,11:35,716.99,stop,-65.66,4.0,-69.66,-1.061,,,,,,,5-Min-Bars
 2026-10-29,J,CVNA,long Gap +10.6% RV30 6.0x,,,,10:00,5.99,gap_long,63.81,68.68,63.81,,4.87,20,1373.6,16:00,68.25,flat,-8.6,3.37,-11.97,-0.123,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-29,J,FTRE,short Gap -8.7% RV30 3.4x,,,,10:00,3.39,gap_short,23.79,22.91,23.79,,0.88,113,2588.83,16:00,23.14,flat,-25.43,4.6,-30.03,-0.302,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-29,J,GEN,long Gap +10.5% RV30 4.3x,,,,10:00,4.28,gap_long,26.61,27.98,26.61,,1.37,72,2014.56,16:00,28.2,flat,15.84,4.02,11.82,0.12,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -208,6 +298,13 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-29,J,NCLH,long Gap +9.3% RV30 8.2x,,,,10:00,8.17,gap_long,17.4,17.71,17.4,,0.31,322,5702.62,16:00,18.2,flat,159.39,9.0,150.39,1.507,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-29,J,NOW,short Gap -19.5% RV30 7.3x,,,,10:00,7.33,gap_short,121.5,114.23,121.5,,7.27,13,1484.99,16:00,109.65,flat,59.54,3.46,56.08,0.593,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-29,J,TDOC,long Gap +15.1% RV30 15.3x,,,,10:00,15.3,gap_long,7.9,8.74,7.9,,0.84,119,1040.06,16:00,8.72,flat,-2.38,3.04,-5.42,-0.054,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,CROX,long Gap +17.0% RV30 12.9x,,,,10:00,12.85,gap_long,139.32,147.09,139.32,,7.77,12,1765.08,16:00,150.25,flat,37.92,3.78,34.14,0.366,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,GKOS,long Gap +16.3% RV30 25.8x,,,,10:00,25.85,gap_long,207.41,230.87,207.41,,23.46,4,923.48,16:00,242.39,flat,46.08,2.95,43.13,0.46,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,GOOGL,short Gap -11.7% RV30 9.1x,,,,10:00,9.13,gap_short,288.2,284.55,288.2,,3.65,10,2845.5,11:45,288.2,stop,-36.5,4.86,-41.36,-1.133,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,IOVA,short Gap -27.8% RV30 13.9x,,,,10:00,13.91,gap_short,11.58,10.44,11.58,,1.14,87,908.28,16:00,9.55,flat,77.44,2.87,74.57,0.752,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,NOW,short Gap -19.5% RV30 7.3x,,,,10:00,7.33,gap_short,121.5,114.23,121.5,,7.27,13,1484.99,16:00,109.65,flat,59.54,3.46,56.08,0.593,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,PRCH,long Gap +19.4% RV30 20.4x,,,,10:00,20.43,gap_long,18.75,20.81,18.75,,2.06,48,998.88,16:00,20.91,flat,4.56,3.0,1.56,0.016,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-29,J-1x,TDOC,long Gap +15.1% RV30 15.3x,,,,10:00,15.3,gap_long,7.9,8.74,7.9,,0.84,119,1040.06,16:00,8.72,flat,-2.38,3.04,-5.42,-0.054,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-30,A,CAT,oversold,5287363728,634.24,621.85,09:55,0.22,,,634.41,628.04,647.15,6.37,11,6978.51,12:50,628.04,stop,-70.07,8.94,-79.01,-1.128,15.2,45.9,38.9,0.008,-0.152,"No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 25 % (target first 15.2 % vs stop first 45.9 %).",
 2026-10-30,A,FTNT,oversold,2414929116,137.72,134.93,09:55,0.47,,,138.37,136.32,142.47,2.05,14,1937.18,10:00,136.32,stop,-28.7,3.92,-32.62,-1.137,11.4,34.2,54.3,0.138,0.293,"No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 11.4 % vs stop first 34.2 %).",
 2026-10-30,A,CMG,reclaim_ma20,1328833861,32.22,31.49,10:00,0.96,,,32.27,31.85,33.11,0.42,62,2000.74,10:40,31.85,stop,-26.04,3.99,-30.03,-1.153,9.1,35.8,55.1,-0.064,0.096,"No clear lean, within the noise of 48 days: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 20 % (target first 9.1 % vs stop first 35.8 %).",
@@ -225,14 +322,27 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-30,F,RDDT,short RV 24.4x,,101.98,96.12,09:37,24.41,sip_short,96.12,96.12,96.95,,0.83,120,11534.4,09:42,96.95,stop,-99.6,13.58,-113.18,-1.136,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-30,F,CSX,short RV 3.8x,,52.31,51.46,09:41,3.8,sip_short,51.46,51.46,51.58,,0.12,553,28457.38,09:44,51.58,stop,-66.36,34.02,-100.38,-1.513,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-30,F,CL,short RV 5.6x,,98.38,96.53,09:54,5.57,sip_short,96.53,96.53,96.74,,0.21,414,39963.42,09:56,96.74,stop,-86.94,44.15,-131.09,-1.508,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-30,F-1x,ATEC,long RV 30.8x,,7.49,6.81,09:35,30.79,sip_long,7.49,7.49,7.43,,0.06,1335,9999.15,09:36,7.43,stop,-80.1,23.31,-103.41,-1.291,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-30,F-1x,RGEN,long RV 51.5x,,180.0,175.37,09:36,51.53,sip_long,180.0,180.0,179.17,,0.83,55,9900.0,09:38,179.17,stop_gap,-45.65,11.88,-57.53,-1.26,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-30,F-1x,FDXF,long RV 10.0x,,125.72,115.2,09:41,9.98,sip_long,125.72,125.72,125.29,,0.43,79,9931.88,09:42,125.29,stop,-33.97,11.91,-45.88,-1.351,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-30,F-1x,DLR,short RV 8.2x,,185.71,179.62,09:43,8.24,sip_short,179.62,179.62,180.1,,0.48,55,9879.1,09:44,180.1,stop,-26.4,11.89,-38.29,-1.45,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-10-30,F-1x,ARIS,short RV 6.2x,,15.12,14.71,10:08,6.18,sip_short,14.71,14.71,14.79,,0.08,679,9988.09,10:40,14.79,stop,-54.32,16.81,-71.13,-1.309,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-10-30,G,SPY,short Noise Area,,771.01,759.77,10:30,,spy_mom_short,759.77,758.06,759.76,,1.7,39,29564.34,11:00,759.8,trail,-67.86,7.92,-75.78,-1.143,,,,,,,Hebel 2.97x (Tagesvola 0.66 %)
 2026-10-30,G,SPY,short Noise Area,,771.89,758.89,11:30,,spy_mom_short,758.89,758.51,758.89,,0.38,39,29581.89,16:00,755.71,flat,109.2,7.91,101.29,6.835,,,,,,,Hebel 2.97x (Tagesvola 0.66 %)
+2026-10-30,G-1x,SPY,short Noise Area,,771.01,759.77,10:30,,spy_mom_short,759.77,758.06,759.76,,1.7,13,9854.78,11:00,759.8,trail,-22.62,3.97,-26.59,-1.203,,,,,,,Hebel 0.99x (Tagesvola 0.66 %)
+2026-10-30,G-1x,SPY,short Noise Area,,771.89,758.89,11:30,,spy_mom_short,758.89,758.51,758.89,,0.38,13,9860.63,16:00,755.71,flat,36.4,3.97,32.43,6.565,,,,,,,Hebel 0.99x (Tagesvola 0.66 %)
 2026-10-30,G2,SPY,short Noise Area,,771.83,758.95,10:30,,spy_mom_short,758.95,758.06,758.95,,0.89,39,29564.34,11:00,759.8,trail,-67.86,7.92,-75.78,-2.183,,,,,,,Hebel 2.97x (Tagesvola 0.66 %)
 2026-10-30,G2,SPY,short Noise Area,,772.59,758.2,12:30,,spy_mom_short,758.2,757.58,758.2,,0.62,39,29545.62,16:00,755.71,flat,72.93,7.9,65.03,2.689,,,,,,,Hebel 2.97x (Tagesvola 0.66 %)
+2026-10-30,G2-1x,SPY,short Noise Area,,771.83,758.95,10:30,,spy_mom_short,758.95,758.06,758.95,,0.89,13,9854.78,11:00,759.8,trail,-22.62,3.97,-26.59,-2.298,,,,,,,Hebel 0.99x (Tagesvola 0.66 %)
+2026-10-30,G2-1x,SPY,short Noise Area,,772.59,758.2,12:30,,spy_mom_short,758.2,757.58,758.2,,0.62,13,9848.54,16:00,755.71,flat,24.31,3.97,20.34,2.524,,,,,,,Hebel 0.99x (Tagesvola 0.66 %)
 2026-10-30,GQ,QQQ,short Noise Area,,717.99,694.54,10:30,,spy_mom_short,694.54,694.09,694.54,,0.45,20,13881.8,11:00,696.64,trail,-51.0,4.78,-55.78,-6.198,,,,,,,Hebel 1.39x (Tagesvola 1.39 %)
 2026-10-30,GQ,QQQ,short Noise Area,,719.64,692.94,12:30,,spy_mom_short,692.94,692.61,692.94,,0.33,20,13852.2,16:00,690.56,flat,41.0,4.77,36.23,5.489,,,,,,,Hebel 1.39x (Tagesvola 1.39 %)
+2026-10-30,GQ-1x,QQQ,short Noise Area,,717.99,694.54,10:30,,spy_mom_short,694.54,694.09,694.54,,0.45,14,9717.26,11:00,696.64,trail,-35.7,3.95,-39.65,-6.294,,,,,,,Hebel 0.98x (Tagesvola 1.39 %)
+2026-10-30,GQ-1x,QQQ,short Noise Area,,719.64,692.94,12:30,,spy_mom_short,692.94,692.61,692.94,,0.33,14,9696.54,16:00,690.56,flat,28.7,3.94,24.76,5.359,,,,,,,Hebel 0.98x (Tagesvola 1.39 %)
 2026-10-30,H,SPY,short erste 30 Min -1.07%,,,,15:30,,ihm_short,,752.86,,,1.38,40,30114.4,16:00,755.71,flat,-114.0,8.03,-122.04,-2.211,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-10-30,H-1x,SPY,short erste 30 Min -1.07%,,,,15:30,,ihm_short,,752.86,,,1.38,13,9787.18,16:00,755.71,flat,-37.05,3.96,-41.01,-2.286,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-10-30,I,QQQ,short,,697.41,694.46,09:35,,etf_orb_short,697.41,694.51,697.41,665.51,2.9,34,23613.34,10:00,697.41,stop,-98.6,6.73,-105.33,-1.068,,,,,,,5-Min-Bars
+2026-10-30,I-1x,QQQ,short,,697.41,694.46,09:35,,etf_orb_short,697.41,694.51,697.41,665.51,2.9,14,9723.14,10:00,697.41,stop,-40.6,3.95,-44.55,-1.097,,,,,,,5-Min-Bars
 2026-10-30,J,CCJ,short Gap -9.3% RV30 7.0x,,,,10:00,6.97,gap_short,76.47,74.25,76.47,,2.22,45,3341.25,15:35,76.47,stop,-99.9,5.39,-105.29,-1.054,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-30,J,COIN,short Gap -7.7% RV30 4.2x,,,,10:00,4.19,gap_short,148.5,143.4,148.5,,5.1,19,2724.6,16:00,143.51,flat,-2.09,4.73,-6.82,-0.07,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-30,J,CPRI,long Gap +10.5% RV30 10.7x,,,,10:00,10.66,gap_long,17.6,18.58,17.6,,0.98,102,1895.16,16:00,18.64,flat,6.12,3.9,2.22,0.022,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -241,6 +351,12 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-10-30,J,RBLX,short Gap -12.8% RV30 9.6x,,,,10:00,9.59,gap_short,47.76,43.71,47.76,,4.05,24,1049.04,16:00,42.98,flat,17.52,3.04,14.48,0.149,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-30,J,RDDT,short Gap -22.6% RV30 12.5x,,,,10:00,12.45,gap_short,101.98,98.29,101.98,,3.69,27,2653.83,16:00,91.65,flat,179.28,4.56,174.72,1.754,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-10-30,J,VIAV,short Gap -7.0% RV30 3.1x,,,,10:00,3.15,gap_short,31.61,30.55,31.61,,1.06,94,2871.7,16:00,29.92,flat,59.22,4.84,54.38,0.546,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-30,J-1x,CDNA,long Gap +12.7% RV30 7.4x,,,,10:00,7.41,gap_long,81.22,89.85,81.22,,8.63,11,988.35,16:00,87.42,flat,-26.73,2.97,-29.71,-0.313,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-30,J-1x,CPRI,long Gap +10.5% RV30 10.7x,,,,10:00,10.66,gap_long,17.6,18.58,17.6,,0.98,93,1727.94,16:00,18.64,flat,5.58,3.73,1.85,0.02,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-30,J-1x,GRRR,short Gap -12.7% RV30 4.4x,,,,10:00,4.4,gap_short,8.02,7.55,8.02,,0.47,212,1600.6,16:00,7.53,flat,3.18,3.72,-0.54,-0.005,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-30,J-1x,INTC,short Gap -25.8% RV30 6.8x,,,,10:00,6.82,gap_short,68.76,65.48,68.76,,3.28,30,1964.4,16:00,65.88,flat,-12.0,3.97,-15.97,-0.162,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-30,J-1x,RBLX,short Gap -12.8% RV30 9.6x,,,,10:00,9.59,gap_short,47.76,43.71,47.76,,4.05,24,1049.04,16:00,42.98,flat,17.52,3.04,14.48,0.149,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-10-30,J-1x,RDDT,short Gap -22.6% RV30 12.5x,,,,10:00,12.45,gap_short,101.98,98.29,101.98,,3.69,27,2653.83,16:00,91.65,flat,179.28,4.56,174.72,1.754,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-02,A,GOOG,oversold,12552312685,284.55,280.44,09:50,0.46,,,284.67,282.49,289.03,2.18,26,7401.42,11:00,282.49,stop,-56.68,9.37,-66.05,-1.165,10.3,53.8,35.9,-0.182,-0.338,Strongly toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 16 % (target first 10.3 % vs stop first 53.8 %).,
 2026-11-02,A,MA,breakout_20d,2882146418,650.81,641.25,09:50,0.67,,,651.49,646.03,662.41,5.46,2,1302.98,15:55,658.26,flat,13.53,3.31,10.22,0.936,3.6,29.4,66.9,0.009,0.015,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 11 % (target first 3.6 % vs stop first 29.4 %).,
 2026-11-02,A,LIN,breakout_20d,1602783202,520.54,517.13,11:55,0.33,,,520.57,518.83,524.05,1.74,14,7287.98,12:55,518.83,stop,-24.36,9.28,-33.64,-1.381,16.4,49.0,34.6,-0.008,-0.151,"No clear lean, within the noise of 23 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 16.4 % vs stop first 49.0 %).",
@@ -256,15 +372,30 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-02,F,LITE,short RV 3.6x,,800.12,753.0,09:35,3.61,sip_short,753.0,753.0,760.19,,7.19,1,753.0,09:40,760.19,stop,-7.19,2.76,-9.95,-1.384,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-02,F,ORLY,long RV 7.2x,,90.06,88.9,09:35,7.16,sip_long,90.06,90.06,89.83,,0.23,434,39086.04,10:18,89.83,stop,-99.82,43.38,-143.2,-1.435,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-02,F,HMY,long RV 3.1x,,15.31,14.96,09:46,3.12,sip_long,15.31,15.31,15.24,,0.07,59,903.29,10:59,15.24,stop,-4.13,2.9,-7.03,-1.702,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-02,F-1x,QURE,short RV 18.4x,,26.6,24.61,09:35,18.42,sip_short,24.61,24.61,24.75,,0.14,406,9991.66,09:36,24.75,stop,-56.84,14.08,-70.92,-1.248,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-02,F-1x,MHK,long RV 6.2x,,147.24,143.0,09:36,6.2,sip_long,147.24,147.24,146.64,,0.6,67,9865.08,09:38,146.64,stop,-40.2,11.84,-52.04,-1.295,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-02,F-1x,GEO,short RV 7.1x,,28.58,28.15,09:38,7.1,sip_short,28.15,28.15,28.27,,0.12,355,9993.25,09:40,28.27,stop,-42.6,13.56,-56.16,-1.318,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-02,F-1x,PWP,long RV 11.3x,,14.95,14.41,09:45,11.27,sip_long,14.95,14.95,14.84,,0.11,668,9986.6,11:42,14.84,stop,-73.48,16.63,-90.11,-1.226,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-02,G,SPY,long Noise Area,,760.36,754.81,10:00,,spy_mom_long,760.36,760.45,760.36,,0.09,32,24334.4,11:00,760.98,trail,16.96,6.87,10.09,3.503,,,,,,,Hebel 2.43x (Tagesvola 0.80 %)
+2026-11-02,G-1x,SPY,long Noise Area,,760.36,754.81,10:00,,spy_mom_long,760.36,760.45,760.36,,0.09,13,9885.85,11:00,760.98,trail,6.89,3.98,2.91,2.487,,,,,,,Hebel 0.99x (Tagesvola 0.80 %)
 2026-11-02,G2,SPY,long Noise Area,,762.16,753.02,10:30,,spy_mom_long,762.16,763.64,762.16,,1.47,32,24436.48,11:00,760.98,trail,-85.12,6.88,-92.0,-1.956,,,,,,,Hebel 2.43x (Tagesvola 0.80 %)
+2026-11-02,G2-1x,SPY,long Noise Area,,762.16,753.02,10:30,,spy_mom_long,762.16,763.64,762.16,,1.47,13,9927.32,11:00,760.98,trail,-34.58,3.98,-38.56,-2.018,,,,,,,Hebel 0.99x (Tagesvola 0.80 %)
 2026-11-02,GQ,QQQ,long Noise Area,,697.88,687.94,10:30,,spy_mom_long,697.88,699.32,697.88,,1.43,17,11888.44,11:00,695.4,trail,-66.64,4.37,-71.01,-2.921,,,,,,,Hebel 1.18x (Tagesvola 1.62 %)
 2026-11-02,GQ,QQQ,short Noise Area,,700.93,684.91,15:30,,spy_mom_short,684.91,684.22,684.91,,0.69,17,11631.74,16:00,681.13,flat,52.53,4.32,48.21,4.11,,,,,,,Hebel 1.18x (Tagesvola 1.62 %)
+2026-11-02,GQ-1x,QQQ,long Noise Area,,697.88,687.94,10:30,,spy_mom_long,697.88,699.32,697.88,,1.43,14,9790.48,11:00,695.4,trail,-54.88,3.95,-58.83,-2.939,,,,,,,Hebel 0.97x (Tagesvola 1.62 %)
+2026-11-02,GQ-1x,QQQ,short Noise Area,,700.93,684.91,15:30,,spy_mom_short,684.91,684.22,684.91,,0.69,14,9579.08,16:00,681.13,flat,43.26,3.91,39.35,4.073,,,,,,,Hebel 0.97x (Tagesvola 1.62 %)
 2026-11-02,H,SPY,long erste 30 Min +0.63%,,,,15:30,,ihm_long,,754.26,,,1.68,33,24890.58,16:00,752.12,flat,-70.62,6.97,-77.59,-1.4,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-02,H-1x,SPY,long erste 30 Min +0.63%,,,,15:30,,ihm_long,,754.26,,,1.68,13,9805.38,16:00,752.12,flat,-27.82,3.96,-31.78,-1.455,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-02,I,QQQ,short,,695.71,694.14,09:35,,etf_orb_short,695.71,695.09,695.71,688.89,0.62,57,39620.13,09:45,695.71,stop,-35.34,9.93,-45.27,-1.281,,,,,,,5-Min-Bars
+2026-11-02,I-1x,QQQ,short,,695.71,694.14,09:35,,etf_orb_short,695.71,695.09,695.71,688.89,0.62,14,9731.26,09:45,695.71,stop,-8.68,3.95,-12.63,-1.455,,,,,,,5-Min-Bars
 2026-11-02,J,CAPR,long Gap +7.8% RV30 3.2x,,,,10:00,3.16,gap_long,6.67,7.08,6.67,,0.41,243,1720.44,16:00,7.23,flat,36.45,4.17,32.28,0.324,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-02,J,PGEN,short Gap -22.8% RV30 9.9x,,,,10:00,9.89,gap_short,5.36,5.07,5.36,,0.29,344,1744.08,13:00,5.36,stop,-99.76,5.23,-104.99,-1.052,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-02,J,RIVN,long Gap +4.9% RV30 3.5x,,,,10:00,3.46,gap_long,12.65,13.02,12.65,,0.37,270,3515.4,16:00,13.19,flat,46.44,6.24,40.2,0.402,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-02,J-1x,AXSM,short Gap -5.0% RV30 10.3x,,,,10:00,10.31,gap_short,136.62,128.97,136.62,,7.65,13,1676.61,15:50,136.62,stop,-99.45,3.73,-103.18,-1.038,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-02,J-1x,CAPR,long Gap +7.8% RV30 3.2x,,,,10:00,3.16,gap_long,6.67,7.08,6.67,,0.41,243,1720.44,16:00,7.23,flat,36.45,4.17,32.28,0.324,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-02,J-1x,OIS,short Gap -4.3% RV30 4.4x,,,,10:00,4.38,gap_short,9.36,9.17,9.36,,0.19,146,1338.82,10:35,9.36,stop,-27.74,3.35,-31.09,-1.121,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-02,J-1x,PGEN,short Gap -22.8% RV30 9.9x,,,,10:00,9.89,gap_short,5.36,5.07,5.36,,0.29,344,1744.08,13:00,5.36,stop,-99.76,5.23,-104.99,-1.052,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-02,J-1x,RIVN,long Gap +4.9% RV30 3.5x,,,,10:00,3.46,gap_long,12.65,13.02,12.65,,0.37,270,3515.4,16:00,13.19,flat,46.44,6.24,40.2,0.402,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-03,A,COIN,oversold,1465877201,143.42,137.89,09:50,0.51,,,143.52,140.65,149.26,2.87,14,2009.28,10:50,149.26,target,80.36,3.0,77.36,1.925,13.7,46.8,39.5,-0.06,-0.021,"No clear lean, within the noise of 50 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 23 % (target first 13.7 % vs stop first 46.8 %).",
 2026-11-03,A,INTC,oversold,13834449597,62.43,60.93,09:50,0.5,,,62.58,61.68,64.38,0.9,111,6946.38,10:25,61.68,stop,-99.9,8.9,-108.8,-1.089,20.9,52.9,26.2,-0.017,0.089,"No clear lean, within the noise of 50 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 28 % (target first 20.9 % vs stop first 52.9 %).",
 2026-11-03,A,BRK.B,breakout_20d,3339885350,556.0,551.94,10:25,0.28,,,556.19,553.97,560.63,2.22,12,6674.28,15:55,556.96,flat,9.21,8.68,0.53,0.02,19.5,24.8,55.7,0.391,-0.147,"No clear lean, within the noise of 24 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 44 % (target first 19.5 % vs stop first 24.8 %).",
@@ -287,15 +418,33 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-03,F,VLTO,short RV 3.9x,,114.68,113.0,09:39,3.93,sip_short,113.0,113.0,113.29,,0.29,334,37742.0,09:42,113.29,stop,-96.86,41.13,-137.99,-1.425,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-03,F,SGML,long RV 16.4x,,5.63,5.18,10:34,16.44,sip_long,5.63,5.63,5.55,,0.08,1249,7031.87,11:04,5.55,stop,-99.92,19.47,-119.39,-1.195,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-03,F,SUPN,long RV 14.8x,,31.0,28.35,10:38,14.82,sip_long,31.0,31.0,30.86,,0.14,714,22134.0,10:40,30.86,stop,-99.96,29.22,-129.18,-1.292,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-03,F-1x,BLZE,short RV 29.7x,,9.67,7.9,09:35,29.71,sip_short,7.9,7.9,8.0,,0.1,999,7892.1,09:37,8.0,stop,-99.9,17.93,-117.83,-1.179,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-03,F-1x,LSCC,long RV 24.2x,,107.47,101.78,09:35,24.21,sip_long,107.47,107.47,106.81,,0.66,19,2041.93,09:39,106.81,stop,-12.54,4.04,-16.58,-1.322,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-03,F-1x,BUD,long RV 11.4x,,81.98,81.63,09:56,11.4,sip_long,81.98,81.98,81.78,,0.2,121,9919.58,10:02,81.78,stop,-24.2,11.91,-36.11,-1.492,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-03,F-1x,TVTX,short RV 28.7x,,47.74,45.0,10:11,28.71,sip_short,45.0,45.0,45.25,,0.25,222,9990.0,10:15,45.25,stop,-55.5,12.24,-67.74,-1.221,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-03,F-1x,IRM,long RV 8.0x,,116.56,115.37,10:24,7.95,sip_long,116.56,116.56,116.18,,0.38,85,9907.6,10:40,116.18,stop,-32.3,11.89,-44.19,-1.368,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-03,G,SPY,long Noise Area,,753.65,751.18,10:00,,spy_mom_long,753.65,753.82,753.65,,0.16,33,24876.06,10:30,754.56,trail,24.42,6.98,17.44,3.303,,,,,,,Hebel 2.48x (Tagesvola 0.80 %)
 2026-11-03,G,SPY,long Noise Area,,754.92,749.91,11:00,,spy_mom_long,754.92,756.2,754.92,,1.28,33,24954.6,12:00,755.36,trail,-27.72,6.99,-34.71,-0.822,,,,,,,Hebel 2.48x (Tagesvola 0.80 %)
 2026-11-03,G,SPY,long Noise Area,,755.09,749.74,12:30,,spy_mom_long,755.09,755.69,755.09,,0.6,33,24937.77,14:30,755.36,trail,-10.89,6.99,-17.88,-0.903,,,,,,,Hebel 2.48x (Tagesvola 0.80 %)
+2026-11-03,G-1x,SPY,long Noise Area,,753.65,751.18,10:00,,spy_mom_long,753.65,753.82,753.65,,0.16,13,9799.66,10:30,754.56,trail,9.62,3.96,5.66,2.721,,,,,,,Hebel 0.98x (Tagesvola 0.80 %)
+2026-11-03,G-1x,SPY,long Noise Area,,754.92,749.91,11:00,,spy_mom_long,754.92,756.2,754.92,,1.28,13,9830.6,12:00,755.36,trail,-10.92,3.97,-14.89,-0.895,,,,,,,Hebel 0.98x (Tagesvola 0.80 %)
+2026-11-03,G-1x,SPY,long Noise Area,,755.09,749.74,12:30,,spy_mom_long,755.09,755.69,755.09,,0.6,13,9823.97,14:30,755.36,trail,-4.29,3.96,-8.25,-1.058,,,,,,,Hebel 0.98x (Tagesvola 0.80 %)
 2026-11-03,G2,SPY,long Noise Area,,756.01,748.82,11:00,,spy_mom_long,756.01,756.2,756.01,,0.19,33,24954.6,11:30,755.79,trail,-13.53,6.99,-20.52,-3.273,,,,,,,Hebel 2.48x (Tagesvola 0.80 %)
+2026-11-03,G2-1x,SPY,long Noise Area,,756.01,748.82,11:00,,spy_mom_long,756.01,756.2,756.01,,0.19,13,9830.6,11:30,755.79,trail,-5.33,3.97,-9.3,-3.765,,,,,,,Hebel 0.98x (Tagesvola 0.80 %)
 2026-11-03,GQ,QQQ,long Noise Area,,687.5,677.81,11:00,,spy_mom_long,687.5,688.08,687.5,,0.58,17,11697.36,11:30,686.42,trail,-28.22,4.34,-32.56,-3.302,,,,,,,Hebel 1.16x (Tagesvola 1.64 %)
+2026-11-03,GQ-1x,QQQ,long Noise Area,,687.5,677.81,11:00,,spy_mom_long,687.5,688.08,687.5,,0.58,14,9633.12,11:30,686.42,trail,-23.24,3.92,-27.16,-3.345,,,,,,,Hebel 0.96x (Tagesvola 1.64 %)
 2026-11-03,H,SPY,long erste 30 Min +0.23%,,,,15:30,,ihm_long,,754.49,,,1.68,33,24898.17,16:00,754.41,flat,-2.64,6.98,-9.62,-0.174,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-03,H-1x,SPY,long erste 30 Min +0.23%,,,,15:30,,ihm_long,,754.49,,,1.68,13,9808.37,16:00,754.41,flat,-1.04,3.96,-5.0,-0.229,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-03,I,QQQ,long,,685.63,683.18,09:35,,etf_orb_long,683.18,685.5,683.18,708.7,2.32,43,29476.5,16:00,685.34,flat,-6.88,7.89,-14.77,-0.148,,,,,,,5-Min-Bars
+2026-11-03,I-1x,QQQ,long,,685.63,683.18,09:35,,etf_orb_long,683.18,685.5,683.18,708.7,2.32,14,9597.0,16:00,685.34,flat,-2.24,3.92,-6.16,-0.19,,,,,,,5-Min-Bars
 2026-11-03,J,AEHR,long Gap +10.8% RV30 5.9x,,,,10:00,5.94,gap_long,54.01,62.56,54.01,,8.55,11,688.16,16:00,65.04,flat,27.28,2.7,24.58,0.261,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-03,J,KDP,short Gap -4.1% RV30 3.7x,,,,10:00,3.75,gap_short,35.78,34.64,35.78,,1.14,87,3013.68,16:00,34.72,flat,-7.39,5.02,-12.41,-0.125,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-03,J-1x,AEHR,long Gap +10.8% RV30 5.9x,,,,10:00,5.94,gap_long,54.01,62.56,54.01,,8.55,11,688.16,16:00,65.04,flat,27.28,2.7,24.58,0.261,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-03,J-1x,BETA,long Gap +10.2% RV30 7.9x,,,,10:00,7.86,gap_long,22.23,23.83,22.23,,1.6,62,1477.46,16:00,23.67,flat,-10.23,3.47,-13.7,-0.138,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-03,J-1x,IT,short Gap -11.6% RV30 7.9x,,,,10:00,7.95,gap_short,208.0,192.72,208.0,,15.28,6,1156.32,16:00,204.2,flat,-68.88,3.19,-72.07,-0.786,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-03,J-1x,LSCC,long Gap +12.1% RV30 17.5x,,,,10:00,17.48,gap_long,101.78,107.28,101.78,,5.5,18,1931.04,16:00,105.94,flat,-24.12,3.92,-28.04,-0.283,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-03,J-1x,NBIX,long Gap +9.4% RV30 9.5x,,,,10:00,9.48,gap_long,157.91,165.75,157.91,,7.84,12,1989.0,16:00,164.9,flat,-10.2,3.98,-14.18,-0.151,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-03,J-1x,RVTY,long Gap +7.5% RV30 3.9x,,,,10:00,3.92,gap_long,162.21,168.36,162.21,,6.15,16,2693.76,16:00,163.82,flat,-72.64,4.66,-77.3,-0.786,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-04,A,COIN,oversold_bounce,1552795077,148.5,141.88,09:50,0.3,,,149.09,145.19,156.89,3.9,25,3727.25,15:55,151.24,flat,53.63,5.75,47.87,0.491,6.5,34.6,58.9,-0.054,0.072,"No clear lean, within the noise of 51 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 16 % (target first 6.5 % vs stop first 34.6 %).",
 2026-11-04,A,HOOD,oversold_bounce,1183489276,86.14,83.46,09:50,0.56,,,86.35,84.8,89.45,1.55,61,5267.35,15:55,87.39,flat,63.44,7.3,56.14,0.594,13.6,45.7,40.7,-0.081,-0.3,"No clear lean, within the noise of 51 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 23 % (target first 13.6 % vs stop first 45.7 %).",
 2026-11-04,B,VRSN,breakout_20d,868317646,317.91,311.47,10:00,4.37,,,318.13,314.69,325.01,3.44,23,7316.99,15:55,317.83,flat,-6.9,9.31,-16.21,-0.205,13.3,40.4,46.3,0.089,0.038,"No clear lean, within the noise of 27 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 13.3 % vs stop first 40.4 %).",
@@ -312,14 +461,24 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-04,F,C,long RV 12.1x,,127.12,125.0,09:44,12.08,sip_long,127.12,127.12,126.83,,0.29,314,39915.68,09:46,126.83,stop,-91.06,43.01,-134.07,-1.472,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-04,F,OSCR,short RV 21.0x,,36.16,34.04,09:56,20.96,sip_short,34.04,34.04,34.2,,0.16,624,21240.96,10:38,34.2,stop,-99.84,27.53,-127.37,-1.276,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-04,F,MDLN,long RV 11.4x,,38.25,37.06,10:00,11.37,sip_long,38.25,38.25,38.12,,0.13,490,18742.5,10:03,38.12,stop,-63.7,23.61,-87.31,-1.371,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-04,F-1x,RIOT,short RV 29.1x,,15.87,15.4,09:35,29.12,sip_short,15.4,15.4,15.54,,0.14,649,9994.6,09:40,15.54,stop,-90.86,16.53,-107.39,-1.182,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-04,F-1x,OSCR,short RV 21.0x,,36.16,34.04,09:56,20.96,sip_short,34.04,34.04,34.2,,0.16,293,9973.72,10:38,34.2,stop,-46.88,12.93,-59.81,-1.276,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-04,G,SPY,long Noise Area,,763.89,753.46,10:00,,spy_mom_long,763.89,767.23,764.94,,2.29,33,25318.59,11:30,764.16,trail,-101.31,7.05,-108.36,-1.434,,,,,,,Hebel 2.52x (Tagesvola 0.78 %)
 2026-11-04,G,SPY,long Noise Area,,765.61,751.76,12:00,,spy_mom_long,765.61,768.6,765.99,,2.61,33,25363.8,16:00,766.73,flat,-61.71,7.07,-68.78,-0.799,,,,,,,Hebel 2.52x (Tagesvola 0.78 %)
+2026-11-04,G-1x,SPY,long Noise Area,,763.89,753.46,10:00,,spy_mom_long,763.89,767.23,764.94,,2.29,13,9973.99,11:30,764.16,trail,-39.91,3.99,-43.9,-1.475,,,,,,,Hebel 0.99x (Tagesvola 0.78 %)
+2026-11-04,G-1x,SPY,long Noise Area,,765.61,751.76,12:00,,spy_mom_long,765.61,768.6,765.99,,2.61,13,9991.8,16:00,766.73,flat,-24.31,4.0,-28.31,-0.834,,,,,,,Hebel 0.99x (Tagesvola 0.78 %)
 2026-11-04,G2,SPY,long Noise Area,,764.34,753.02,10:00,,spy_mom_long,764.34,767.23,764.94,,2.29,33,25318.59,11:00,766.05,trail,-38.94,7.06,-46.0,-0.609,,,,,,,Hebel 2.52x (Tagesvola 0.78 %)
 2026-11-04,G2,SPY,long Noise Area,,766.91,750.47,12:00,,spy_mom_long,766.91,768.6,766.91,,1.69,33,25363.8,14:00,767.37,trail,-40.59,7.07,-47.66,-0.855,,,,,,,Hebel 2.52x (Tagesvola 0.78 %)
+2026-11-04,G2-1x,SPY,long Noise Area,,764.34,753.02,10:00,,spy_mom_long,764.34,767.23,764.94,,2.29,13,9973.99,11:00,766.05,trail,-15.34,3.99,-19.33,-0.649,,,,,,,Hebel 0.99x (Tagesvola 0.78 %)
+2026-11-04,G2-1x,SPY,long Noise Area,,766.91,750.47,12:00,,spy_mom_long,766.91,768.6,766.91,,1.69,13,9991.8,14:00,767.37,trail,-15.99,4.0,-19.99,-0.91,,,,,,,Hebel 0.99x (Tagesvola 0.78 %)
 2026-11-04,GQ,QQQ,long Noise Area,,689.78,683.95,10:00,,spy_mom_long,689.78,697.68,692.7,,4.98,17,11860.56,11:00,693.14,trail,-77.18,4.36,-81.54,-0.963,,,,,,,Hebel 1.17x (Tagesvola 1.62 %)
 2026-11-04,GQ,QQQ,long Noise Area,,692.66,681.08,12:00,,spy_mom_long,692.66,696.35,695.19,,1.16,17,11837.95,13:30,695.02,trail,-22.61,4.37,-26.98,-1.368,,,,,,,Hebel 1.17x (Tagesvola 1.62 %)
+2026-11-04,GQ-1x,QQQ,long Noise Area,,689.78,683.95,10:00,,spy_mom_long,689.78,697.68,692.7,,4.98,14,9767.52,11:00,693.14,trail,-63.56,3.95,-67.51,-0.968,,,,,,,Hebel 0.96x (Tagesvola 1.62 %)
+2026-11-04,GQ-1x,QQQ,long Noise Area,,692.66,681.08,12:00,,spy_mom_long,692.66,696.35,695.19,,1.16,14,9748.9,13:30,695.02,trail,-18.62,3.95,-22.57,-1.39,,,,,,,Hebel 0.96x (Tagesvola 1.62 %)
 2026-11-04,H,SPY,long erste 30 Min +1.71%,,,,15:30,,ihm_long,,767.9,,,1.65,33,25340.7,16:00,766.73,flat,-38.61,7.06,-45.67,-0.839,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-04,H-1x,SPY,long erste 30 Min +1.71%,,,,15:30,,ihm_long,,767.9,,,1.65,13,9982.7,16:00,766.73,flat,-15.21,4.0,-19.21,-0.896,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-04,I,QQQ,short,,691.43,687.9,09:35,,etf_orb_short,691.43,688.16,691.43,655.46,3.27,30,20644.8,09:40,691.43,stop,-98.1,6.14,-104.24,-1.063,,,,,,,5-Min-Bars
+2026-11-04,I-1x,QQQ,short,,691.43,687.9,09:35,,etf_orb_short,691.43,688.16,691.43,655.46,3.27,14,9634.24,09:40,691.43,stop,-45.78,3.93,-49.71,-1.086,,,,,,,5-Min-Bars
 2026-11-04,J,CIFR,short Gap -13.9% RV30 3.2x,,,,10:00,3.18,gap_short,7.34,6.69,7.34,,0.65,153,1023.57,16:00,6.51,flat,28.3,3.01,25.3,0.254,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-04,J,CLSK,short Gap -12.3% RV30 3.7x,,,,10:00,3.7,gap_short,7.55,7.08,7.55,,0.47,212,1500.96,16:00,6.8,flat,58.3,3.59,54.71,0.549,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-04,J,DDOG,short Gap -9.4% RV30 9.0x,,,,10:00,8.99,gap_short,207.74,198.54,207.74,,9.2,3,595.62,16:00,188.63,flat,29.73,2.58,27.15,0.984,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -334,6 +493,14 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-04,J,TRMB,short Gap -11.5% RV30 6.7x,,,,10:00,6.73,gap_short,58.69,53.46,58.69,,5.23,19,1015.74,16:00,54.24,flat,-14.82,3.02,-17.84,-0.18,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-04,J,VST,short Gap -10.2% RV30 5.7x,,,,10:00,5.69,gap_short,128.07,125.46,128.07,,2.61,38,4767.48,16:00,120.25,flat,197.98,6.67,191.31,1.929,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-04,J,XYZ,long Gap +10.5% RV30 9.3x,,,,10:00,9.29,gap_long,83.26,85.83,83.26,,2.57,38,3261.54,16:00,87.57,flat,66.12,5.29,60.83,0.623,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,CIFR,short Gap -13.9% RV30 3.2x,,,,10:00,3.18,gap_short,7.34,6.69,7.34,,0.65,153,1023.57,16:00,6.51,flat,28.3,3.01,25.3,0.254,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,CLSK,short Gap -12.3% RV30 3.7x,,,,10:00,3.7,gap_short,7.55,7.08,7.55,,0.47,212,1500.96,16:00,6.8,flat,58.3,3.59,54.71,0.549,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,DUOL,long Gap +25.0% RV30 15.2x,,,,10:00,15.22,gap_long,157.0,165.79,157.0,,8.79,11,1823.69,16:00,161.22,flat,-50.27,3.8,-54.07,-0.559,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,FIS,short Gap -21.6% RV30 18.6x,,,,10:00,18.64,gap_short,32.4,30.33,32.4,,2.07,48,1455.84,16:00,29.77,flat,26.88,3.44,23.44,0.236,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,HUT,short Gap -16.2% RV30 3.4x,,,,10:00,3.39,gap_short,56.98,52.82,56.98,,4.16,24,1267.68,16:00,48.96,flat,92.76,3.22,89.54,0.897,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,KD,long Gap +15.2% RV30 11.5x,,,,10:00,11.51,gap_long,14.62,15.95,14.62,,1.33,75,1196.25,16:00,16.87,flat,69.0,3.23,65.77,0.659,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,NRIX,short Gap -33.5% RV30 14.2x,,,,10:00,14.19,gap_short,17.25,15.48,17.25,,1.77,56,866.88,16:00,15.95,flat,-26.32,2.88,-29.2,-0.295,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-04,J-1x,TRMB,short Gap -11.5% RV30 6.7x,,,,10:00,6.73,gap_short,58.69,53.46,58.69,,5.23,16,855.36,16:00,54.24,flat,-12.48,2.86,-15.34,-0.183,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-05,A,JNJ,breakout_20d,2658170838,279.36,276.77,09:50,1.21,,,279.65,278.06,282.83,1.59,26,7270.9,11:25,278.06,stop,-41.34,9.25,-50.59,-1.224,19.4,60.0,20.6,-0.121,0.033,"No clear lean, within the noise of 52 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 24 % (target first 19.4 % vs stop first 60.0 %).",
 2026-11-05,A,PG,breakout_20d,2335787302,169.57,168.66,09:50,0.63,,,169.57,169.11,170.49,0.46,10,1695.7,10:10,169.11,stop,-4.6,3.69,-8.29,-1.803,36.5,61.1,2.4,0.087,-0.301,Close to break-even: at 2R after costs the target has to come first in 35 % of the replays that hit one side; it did in 37 % (target first 36.5 % vs stop first 61.1 %).,
 2026-11-05,A,MCD,breakout_20d,3231356944,281.0,277.5,10:10,0.38,,,281.32,279.25,285.46,2.07,6,1687.92,10:35,279.25,stop,-12.42,3.68,-16.1,-1.296,6.0,40.3,53.7,-0.074,-0.232,"No clear lean, within the noise of 16 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 13 % (target first 6.0 % vs stop first 40.3 %).",
@@ -354,11 +521,18 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-05,F,BROS,short RV 8.2x,,37.83,36.06,09:58,8.21,sip_short,36.06,36.06,36.25,,0.19,526,18967.56,10:01,36.25,stop,-99.94,24.28,-124.22,-1.243,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-05,F,RUN,short RV 8.4x,,10.63,9.51,10:00,8.41,sip_short,9.51,9.51,9.57,,0.06,1666,15843.66,13:27,9.57,stop,-99.96,32.55,-132.51,-1.326,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-05,F,FUN,short RV 10.1x,,9.57,9.18,10:12,10.1,sip_short,9.18,9.18,9.24,,0.06,1666,15293.88,10:17,9.24,stop,-99.96,32.0,-131.96,-1.32,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-05,F-1x,JAN,long RV 213.6x,,29.54,29.09,09:35,213.57,sip_long,29.54,29.54,29.43,,0.11,338,9984.52,09:39,29.43,stop,-37.18,13.35,-50.53,-1.359,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-05,F-1x,RELY,short RV 13.9x,,24.0,22.21,09:39,13.92,sip_short,22.21,22.21,22.32,,0.11,450,9994.5,16:00,21.55,flat,299.25,14.34,284.91,5.756,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-05,G,SPY,short Noise Area,,767.96,764.32,10:00,,spy_mom_short,764.32,754.13,758.0,,3.87,28,21115.64,16:00,733.13,flat,588.0,6.16,581.84,5.37,,,,,,,Hebel 2.14x (Tagesvola 0.91 %)
+2026-11-05,G-1x,SPY,short Noise Area,,767.96,764.32,10:00,,spy_mom_short,764.32,754.13,758.0,,3.87,13,9803.69,16:00,733.13,flat,273.0,3.93,269.07,5.348,,,,,,,Hebel 1.00x (Tagesvola 0.91 %)
 2026-11-05,G2,SPY,short Noise Area,,768.54,763.75,10:00,,spy_mom_short,763.75,754.13,758.0,,3.87,28,21115.64,16:00,733.13,flat,588.0,6.16,581.84,5.37,,,,,,,Hebel 2.14x (Tagesvola 0.91 %)
+2026-11-05,G2-1x,SPY,short Noise Area,,768.54,763.75,10:00,,spy_mom_short,763.75,754.13,758.0,,3.87,13,9803.69,16:00,733.13,flat,273.0,3.93,269.07,5.348,,,,,,,Hebel 1.00x (Tagesvola 0.91 %)
 2026-11-05,GQ,QQQ,short Noise Area,,693.86,679.38,10:00,,spy_mom_short,679.38,666.83,673.04,,6.21,17,11336.11,16:00,648.06,flat,319.09,4.24,314.85,2.982,,,,,,,Hebel 1.16x (Tagesvola 1.66 %)
+2026-11-05,GQ-1x,QQQ,short Noise Area,,693.86,679.38,10:00,,spy_mom_short,679.38,666.83,673.04,,6.21,14,9335.62,16:00,648.06,flat,262.78,3.84,258.94,2.978,,,,,,,Hebel 0.95x (Tagesvola 1.66 %)
 2026-11-05,H,SPY,short erste 30 Min -1.65%,,,,15:30,,ihm_short,,735.21,,,1.85,29,21321.09,16:00,733.13,flat,60.32,6.26,54.06,1.008,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-05,H-1x,SPY,short erste 30 Min -1.65%,,,,15:30,,ihm_short,,735.21,,,1.85,13,9557.73,16:00,733.13,flat,27.04,3.91,23.13,0.962,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-05,I,QQQ,short,,683.64,677.6,09:35,,etf_orb_short,683.64,677.61,683.64,617.31,6.03,16,10841.76,16:00,648.06,flat,472.8,4.12,468.68,4.858,,,,,,,5-Min-Bars
+2026-11-05,I-1x,QQQ,short,,683.64,677.6,09:35,,etf_orb_short,683.64,677.61,683.64,617.31,6.03,14,9486.54,16:00,648.06,flat,413.7,3.86,409.84,4.855,,,,,,,5-Min-Bars
 2026-11-05,J,APP,long Gap +28.7% RV30 16.6x,,,,10:00,16.64,gap_long,338.88,359.45,338.88,,20.57,4,1437.8,16:00,356.36,flat,-12.36,3.43,-15.79,-0.192,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-05,J,ARM,short Gap -10.3% RV30 4.5x,,,,10:00,4.49,gap_short,175.83,171.32,175.83,,4.51,22,3769.04,16:00,166.68,flat,102.08,5.72,96.36,0.971,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-05,J,ASX,short Gap -9.6% RV30 3.1x,,,,10:00,3.13,gap_short,34.0,32.51,34.0,,1.49,67,2178.17,16:00,29.72,flat,187.26,4.08,183.18,1.835,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -377,6 +551,11 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-05,J,VISN,short Gap -9.3% RV30 7.5x,,,,10:00,7.49,gap_short,6.01,5.8,6.01,,0.21,476,2760.8,16:00,5.41,flat,188.02,7.43,180.59,1.807,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-05,J,WU,long Gap +7.4% RV30 14.3x,,,,10:00,14.32,gap_long,6.94,7.45,6.94,,0.51,196,1460.2,12:35,6.94,stop,-99.96,3.41,-103.37,-1.034,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-05,J,ZGN,short Gap -8.6% RV30 16.1x,,,,10:00,16.12,gap_short,13.76,13.53,13.76,,0.23,434,5872.02,11:30,13.76,stop,-99.82,10.26,-110.08,-1.103,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-05,J-1x,APP,long Gap +28.7% RV30 16.6x,,,,10:00,16.64,gap_long,338.88,359.45,338.88,,20.57,4,1437.8,16:00,356.36,flat,-12.36,3.43,-15.79,-0.192,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-05,J-1x,CAI,short Gap -18.2% RV30 6.1x,,,,10:00,6.15,gap_short,27.76,26.93,27.76,,0.83,120,3231.6,16:00,26.03,flat,108.0,5.18,102.82,1.032,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-05,J-1x,FSLY,short Gap -18.2% RV30 5.1x,,,,10:00,5.11,gap_short,17.54,16.09,17.54,,1.45,68,1094.12,16:00,15.35,flat,49.98,3.07,46.91,0.476,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-05,J-1x,FUN,long Gap +17.3% RV30 5.7x,,,,10:00,5.69,gap_long,9.18,9.4,9.18,,0.22,310,2914.0,10:15,9.18,stop,-68.2,5.98,-74.18,-1.088,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-05,J-1x,XERS,long Gap +19.6% RV30 18.4x,,,,10:00,18.4,gap_long,12.32,13.33,12.32,,1.01,99,1319.67,16:00,13.09,flat,-23.76,3.31,-27.07,-0.271,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-06,A,AMD,oversold,28808404125,453.64,433.93,09:50,0.56,,,456.69,443.78,482.51,12.91,7,3196.83,10:30,443.78,stop,-90.37,5.15,-95.52,-1.057,1.1,19.7,79.2,-0.042,-0.009,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 1.1 % vs stop first 19.7 %).,
 2026-11-06,A,MU,oversold,51114862694,717.7,688.67,09:50,0.5,,,718.31,703.18,748.57,15.13,6,4309.86,10:15,703.18,stop,-90.78,6.26,-97.04,-1.069,6.0,36.2,57.8,-0.08,-0.017,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 6.0 % vs stop first 36.2 %).,
 2026-11-06,A,SNDK,oversold,24775626093,898.64,847.58,09:50,0.43,,,899.84,873.11,953.3,26.73,1,899.84,10:00,873.11,stop,-26.73,2.89,-29.62,-1.108,3.2,32.5,64.2,-0.118,0.008,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 9 % (target first 3.2 % vs stop first 32.5 %).,
@@ -393,12 +572,21 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-06,F,ADPT,long RV 6.2x,,27.79,26.86,09:39,6.22,sip_long,27.79,27.79,27.62,,0.17,588,16340.52,09:40,27.62,stop,-99.96,22.17,-122.13,-1.222,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-06,F,ABNB,short RV 10.3x,,192.5,184.78,09:52,10.26,sip_short,184.78,184.78,185.32,,0.54,185,34184.3,09:55,185.32,stop,-99.9,36.23,-136.13,-1.363,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-06,F,HRL,long RV 15.7x,,22.19,21.87,10:11,15.67,sip_long,22.19,22.19,22.13,,0.06,1666,36968.54,10:48,22.13,stop,-99.96,53.58,-153.54,-1.536,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-06,F-1x,SKM,short RV 22.1x,,31.28,30.72,09:35,22.12,sip_short,30.72,30.72,30.84,,0.12,325,9984.0,09:37,30.84,stop_gap,-39.0,13.25,-52.25,-1.34,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-06,F-1x,YELP,long RV 13.6x,,19.75,18.0,09:39,13.56,sip_long,19.75,19.75,19.64,,0.11,506,9993.5,10:22,19.64,stop,-55.66,15.03,-70.69,-1.27,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-06,F-1x,KKR,short RV 12.9x,,97.72,96.51,13:38,12.85,sip_short,96.51,96.51,96.86,,0.35,103,9940.53,13:51,96.86,stop,-36.05,11.96,-48.01,-1.332,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-06,G,SPY,long Noise Area,,736.58,731.25,10:00,,spy_mom_long,736.58,740.57,737.52,,3.05,18,13330.26,13:00,737.04,trail,-63.45,4.66,-68.11,-1.241,,,,,,,Hebel 1.32x (Tagesvola 1.46 %)
+2026-11-06,G-1x,SPY,long Noise Area,,736.58,731.25,10:00,,spy_mom_long,736.58,740.57,737.52,,3.05,13,9627.41,13:00,737.04,trail,-45.83,3.92,-49.75,-1.255,,,,,,,Hebel 0.96x (Tagesvola 1.46 %)
 2026-11-06,G2,SPY,long Noise Area,,737.45,730.37,10:00,,spy_mom_long,737.45,740.57,737.52,,3.05,18,13330.26,10:30,739.0,trail,-28.26,4.66,-32.92,-0.6,,,,,,,Hebel 1.32x (Tagesvola 1.46 %)
 2026-11-06,G2,SPY,long Noise Area,,739.86,727.98,11:30,,spy_mom_long,739.86,739.86,739.86,,0.01,18,13317.48,12:00,740.46,trail,10.8,4.66,6.14,34.111,,,,,,,Hebel 1.32x (Tagesvola 1.46 %)
+2026-11-06,G2-1x,SPY,long Noise Area,,737.45,730.37,10:00,,spy_mom_long,737.45,740.57,737.52,,3.05,13,9627.41,10:30,739.0,trail,-20.41,3.92,-24.33,-0.614,,,,,,,Hebel 0.96x (Tagesvola 1.46 %)
+2026-11-06,G2-1x,SPY,long Noise Area,,739.86,727.98,11:30,,spy_mom_long,739.86,739.86,739.86,,0.01,13,9618.18,12:00,740.46,trail,7.8,3.92,3.88,29.846,,,,,,,Hebel 0.96x (Tagesvola 1.46 %)
 2026-11-06,GQ,QQQ,long Noise Area,,660.86,644.58,10:00,,spy_mom_long,660.86,662.61,660.86,,1.75,13,8613.93,10:30,658.27,trail,-56.42,3.72,-60.14,-2.644,,,,,,,Hebel 0.86x (Tagesvola 2.28 %)
+2026-11-06,GQ-1x,QQQ,long Noise Area,,660.86,644.58,10:00,,spy_mom_long,660.86,662.61,660.86,,1.75,13,8613.93,10:30,658.27,trail,-56.42,3.72,-60.14,-2.644,,,,,,,Hebel 0.86x (Tagesvola 2.28 %)
 2026-11-06,H,SPY,long erste 30 Min +1.03%,,,,15:30,,ihm_long,,737.97,,,3.0,18,13283.46,16:00,735.34,flat,-47.34,4.65,-51.99,-0.963,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-06,H-1x,SPY,long erste 30 Min +1.03%,,,,15:30,,ihm_long,,737.97,,,3.0,13,9593.61,16:00,735.34,flat,-34.19,3.92,-38.1,-0.977,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-06,I,QQQ,short,,658.95,655.72,09:35,,etf_orb_short,658.95,656.45,658.95,631.45,2.5,40,26258.0,09:40,658.95,stop,-100.0,7.26,-107.26,-1.073,,,,,,,5-Min-Bars
+2026-11-06,I-1x,QQQ,short,,658.95,655.72,09:35,,etf_orb_short,658.95,656.45,658.95,631.45,2.5,15,9846.75,09:40,658.95,stop,-37.5,3.97,-41.47,-1.106,,,,,,,5-Min-Bars
 2026-11-06,J,BKD,short Gap -10.0% RV30 5.8x,,,,10:00,5.82,gap_short,10.11,9.51,10.11,,0.6,166,1578.66,16:00,9.01,flat,83.0,3.54,79.46,0.798,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-06,J,DKNG,short Gap -26.3% RV30 15.0x,,,,10:00,14.98,gap_short,17.83,17.14,17.83,,0.69,144,2468.16,13:05,17.83,stop,-99.36,4.52,-103.88,-1.045,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-06,J,FLY,long Gap +12.7% RV30 5.4x,,,,10:00,5.43,gap_long,16.31,17.76,16.31,,1.45,68,1207.68,16:00,20.75,flat,203.66,3.31,200.35,2.032,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -406,6 +594,12 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-06,J,OKLO,long Gap +10.5% RV30 3.1x,,,,10:00,3.14,gap_long,20.86,22.07,20.86,,1.21,82,1809.74,16:00,23.56,flat,122.18,3.87,118.31,1.192,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-06,J,VIAV,long Gap +5.4% RV30 5.0x,,,,10:00,4.96,gap_long,26.76,28.94,26.76,,2.18,45,1302.3,16:00,28.46,flat,-21.6,3.29,-24.89,-0.254,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-06,J,VSTM,short Gap -7.7% RV30 3.4x,,,,10:00,3.41,gap_short,8.83,8.06,8.83,,0.77,129,1039.74,16:00,8.41,flat,-45.79,3.06,-48.86,-0.492,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-06,J-1x,DKNG,short Gap -26.3% RV30 15.0x,,,,10:00,14.98,gap_short,17.83,17.14,17.83,,0.69,144,2468.16,13:05,17.83,stop,-99.36,4.52,-103.88,-1.045,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-06,J-1x,EXTR,long Gap +14.2% RV30 14.0x,,,,10:00,13.96,gap_long,23.51,25.11,23.51,,1.6,62,1556.82,16:00,24.03,flat,-67.06,3.52,-70.58,-0.711,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-06,J-1x,FIVN,short Gap -21.7% RV30 13.8x,,,,10:00,13.78,gap_short,28.0,26.99,28.0,,1.01,99,2672.01,11:40,28.0,stop,-99.99,4.72,-104.71,-1.047,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-06,J-1x,FLY,long Gap +12.7% RV30 5.4x,,,,10:00,5.43,gap_long,16.31,17.76,16.31,,1.45,46,816.96,16:00,20.75,flat,137.77,2.89,134.88,2.022,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-06,J-1x,FROG,long Gap +27.3% RV30 10.7x,,,,10:00,10.65,gap_long,89.32,97.87,89.32,,8.55,11,1076.57,16:00,100.99,flat,34.32,3.09,31.23,0.332,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-06,J-1x,TMDX,long Gap +14.7% RV30 8.8x,,,,10:00,8.78,gap_long,76.5,82.22,76.5,,5.72,17,1397.74,16:00,88.11,flat,100.13,3.45,96.68,0.994,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-09,A,INTC,oversold+oversold_bounce,9814235631,57.54,55.83,09:50,0.49,,,57.59,56.68,59.41,0.91,10,575.9,15:25,59.41,target,18.2,2.29,15.91,1.749,18.2,53.9,27.9,-0.083,0.039,"No clear lean, within the noise of 54 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 25 % (target first 18.2 % vs stop first 53.9 %).",
 2026-11-09,A,MU,oversold_bounce,30972651000,709.75,689.65,09:50,0.79,,,719.0,699.7,757.6,19.3,5,3595.0,15:55,731.13,flat,60.65,5.63,55.02,0.57,2.3,26.7,71.1,-0.096,0.043,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 8 % (target first 2.3 % vs stop first 26.7 %).,
 2026-11-09,A,NVDA,oversold_bounce,33634823562,176.45,171.25,09:50,0.37,,,177.44,173.85,184.62,3.59,27,4790.88,15:55,178.0,flat,15.12,6.8,8.32,0.086,0.2,21.0,78.8,-0.226,-0.133,Strongly toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 1 % (target first 0.2 % vs stop first 21.0 %).,
@@ -423,11 +617,20 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-09,F,IONS,short RV 22.0x,,32.58,31.08,09:37,21.95,sip_short,31.08,31.08,31.26,,0.18,555,17249.4,16:00,30.98,flat,55.5,22.77,32.73,0.328,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-09,F,OMH,long RV 24.1x,,23.43,19.92,09:38,24.12,sip_long,23.43,24.6,24.35,,0.25,216,5313.6,14:25,24.35,stop,-54.0,7.45,-61.45,-1.138,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-09,F,SU,short RV 3.2x,,68.01,66.72,14:44,3.18,sip_short,66.72,66.72,66.99,,0.27,340,22684.8,14:49,66.99,stop,-91.8,26.13,-117.93,-1.285,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-09,F-1x,VIR,long RV 21.5x,,13.95,13.11,09:35,21.51,sip_long,13.95,13.95,13.87,,0.08,716,9988.2,09:42,13.87,stop,-57.28,17.12,-74.4,-1.299,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-09,F-1x,SGRY,long RV 20.7x,,26.08,25.77,09:43,20.71,sip_long,26.08,26.08,26.0,,0.08,383,9988.64,09:49,26.0,stop,-30.64,13.8,-44.44,-1.45,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-09,F-1x,ARWR,short RV 17.9x,,52.51,48.97,09:52,17.85,sip_short,48.97,48.97,49.21,,0.24,204,9989.88,09:57,49.21,stop,-48.96,12.05,-61.01,-1.246,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-09,F-1x,YETI,long RV 10.0x,,45.87,45.37,15:14,10.04,sip_long,45.87,45.87,45.69,,0.18,218,9999.66,16:00,45.83,flat,-8.72,12.18,-20.89,-0.532,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-09,G,SPY,long Noise Area,,744.09,733.17,10:00,,spy_mom_long,744.09,747.73,745.04,,2.69,18,13459.14,16:00,752.61,flat,87.84,4.7,83.14,1.717,,,,,,,Hebel 1.34x (Tagesvola 1.46 %)
+2026-11-09,G-1x,SPY,long Noise Area,,744.09,733.17,10:00,,spy_mom_long,744.09,747.73,745.04,,2.69,13,9720.49,16:00,752.61,flat,63.44,3.95,59.49,1.701,,,,,,,Hebel 0.96x (Tagesvola 1.46 %)
 2026-11-09,G2,SPY,long Noise Area,,745.16,732.1,10:00,,spy_mom_long,745.16,747.73,745.16,,2.57,18,13459.14,16:00,752.61,flat,87.84,4.7,83.14,1.797,,,,,,,Hebel 1.34x (Tagesvola 1.46 %)
+2026-11-09,G2-1x,SPY,long Noise Area,,745.16,732.1,10:00,,spy_mom_long,745.16,747.73,745.16,,2.57,13,9720.49,16:00,752.61,flat,63.44,3.95,59.49,1.781,,,,,,,Hebel 0.96x (Tagesvola 1.46 %)
 2026-11-09,GQ,QQQ,long Noise Area,,665.4,653.4,10:00,,spy_mom_long,665.4,673.34,668.03,,5.31,13,8753.42,16:00,678.76,flat,70.46,3.76,66.7,0.966,,,,,,,Hebel 0.86x (Tagesvola 2.29 %)
+2026-11-09,GQ-1x,QQQ,long Noise Area,,665.4,653.4,10:00,,spy_mom_long,665.4,673.34,668.03,,5.31,13,8753.42,16:00,678.76,flat,70.46,3.76,66.7,0.966,,,,,,,Hebel 0.86x (Tagesvola 2.29 %)
 2026-11-09,H,SPY,long erste 30 Min +1.69%,,,,15:30,,ihm_long,,755.18,,,3.06,18,13593.24,16:00,752.61,flat,-46.26,4.71,-50.97,-0.925,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-09,H-1x,SPY,long erste 30 Min +1.69%,,,,15:30,,ihm_long,,755.18,,,3.06,13,9817.34,16:00,752.61,flat,-33.41,3.96,-37.37,-0.939,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-09,I,QQQ,long,,665.91,662.02,09:35,,etf_orb_long,662.02,665.63,662.02,701.73,3.61,27,17972.01,16:00,678.76,flat,354.51,5.63,348.88,3.579,,,,,,,5-Min-Bars
+2026-11-09,I-1x,QQQ,long,,665.91,662.02,09:35,,etf_orb_long,662.02,665.63,662.02,701.73,3.61,15,9984.45,16:00,678.76,flat,196.95,4.02,192.93,3.563,,,,,,,5-Min-Bars
 2026-11-09,J,CNH,long Gap +5.2% RV30 3.8x,,,,10:00,3.79,gap_long,12.15,12.57,12.15,,0.42,238,2991.66,16:00,12.84,flat,63.07,5.4,57.67,0.577,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-09,J,IBRX,short Gap -16.4% RV30 12.1x,,,,10:00,12.12,gap_short,7.26,6.7,7.26,,0.56,178,1192.6,14:40,7.26,stop,-99.68,3.24,-102.92,-1.033,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-09,J,IONS,short Gap -18.1% RV30 23.8x,,,,10:00,23.76,gap_short,32.58,28.64,32.58,,3.94,25,716.0,16:00,30.98,flat,-58.5,2.75,-61.25,-0.622,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -435,6 +638,7 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-09,J,QXO,long Gap +9.4% RV30 3.4x,,,,10:00,3.36,gap_long,12.4,13.15,12.4,,0.75,133,1748.95,16:00,13.79,flat,85.12,3.79,81.33,0.815,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-09,J,TTD,long Gap +6.6% RV30 6.1x,,,,10:00,6.09,gap_long,13.75,14.22,13.75,,0.47,212,3014.64,16:00,14.95,flat,155.82,5.21,150.61,1.512,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-09,J,VIR,long Gap +7.7% RV30 21.7x,,,,10:00,21.72,gap_long,13.11,13.99,13.11,,0.88,113,1580.87,16:00,13.65,flat,-38.42,3.56,-41.98,-0.422,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-09,J-1x,GFR,long Gap +38.0% RV30 59.1x,,,,10:00,59.12,gap_long,7.72,7.74,7.72,,0.02,1291,9992.34,10:35,7.72,stop,-25.82,22.89,-48.71,-1.887,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-10,A,INTC,oversold+oversold_bounce,8742244217,58.86,57.58,09:55,0.55,,,59.46,58.22,61.94,1.24,80,4756.8,10:50,58.22,stop,-99.2,6.71,-105.91,-1.068,9.5,38.2,52.3,-0.027,0.102,"No clear lean, within the noise of 55 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 20 % (target first 9.5 % vs stop first 38.2 %).",
 2026-11-10,A,MRVL,oversold_bounce,5220563926,153.66,147.79,09:55,0.43,,,155.82,150.72,166.02,5.1,10,1558.2,12:40,150.72,stop,-51.0,3.53,-54.53,-1.069,1.2,26.0,72.8,-0.068,-0.157,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 1.2 % vs stop first 26.0 %).,
 2026-11-10,A,SNDK,oversold_bounce,12396778675,865.78,839.41,09:55,0.48,,,883.63,852.59,945.71,31.04,3,2650.89,10:50,852.59,stop,-93.12,4.6,-97.72,-1.049,1.3,26.2,72.5,-0.133,-0.032,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 1.3 % vs stop first 26.2 %).,
@@ -456,13 +660,29 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-10,F,VIK,long RV 7.8x,,87.96,86.7,10:36,7.85,sip_long,87.96,87.96,87.62,,0.34,33,2902.68,10:42,87.62,stop,-11.22,4.9,-16.12,-1.437,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-10,F,TTD,long RV 18.0x,,15.16,14.3,10:55,18.02,sip_long,15.16,15.16,15.08,,0.08,192,2910.72,10:57,15.08,stop,-15.36,4.9,-20.26,-1.319,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-10,F,QBTS,long RV 7.6x,,11.4,10.83,13:00,7.62,sip_long,11.4,11.4,11.31,,0.09,256,2918.4,13:02,10.25,stop_gap,-294.4,5.33,-299.73,-13.009,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-10,F-1x,DBX,long RV 128.1x,,32.33,31.72,09:35,128.13,sip_long,32.33,32.33,32.2,,0.13,309,9989.97,09:37,32.2,stop,-40.17,13.06,-53.23,-1.325,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-10,F-1x,AVTX,long RV 23.5x,,7.25,6.98,09:37,23.48,sip_long,7.25,7.25,7.15,,0.1,999,7242.75,11:01,7.14,stop_gap,-104.9,17.18,-122.08,-1.222,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-10,F-1x,WGS,long RV 17.7x,,57.89,52.89,09:42,17.71,sip_long,57.89,57.94,57.32,,0.62,47,2723.18,09:43,57.32,stop,-29.14,4.71,-33.85,-1.162,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-10,F-1x,GFL,long RV 52.7x,,41.68,40.65,09:46,52.71,sip_long,41.68,41.68,41.54,,0.14,66,2750.88,09:49,41.54,stop,-9.24,4.75,-13.99,-1.514,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-10,F-1x,CHYM,short RV 11.2x,,32.6,32.22,09:53,11.16,sip_short,32.22,32.22,32.37,,0.15,85,2738.7,09:56,32.37,stop,-12.75,4.75,-17.5,-1.373,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-10,F-1x,ICE,long RV 8.2x,,174.89,173.58,10:35,8.21,sip_long,174.89,174.89,174.42,,0.47,15,2623.35,16:00,176.34,flat,21.75,4.63,17.12,2.428,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-10,H,SPY,short erste 30 Min -0.26%,,,,15:30,,ihm_short,,749.4,,,3.37,16,11990.4,16:00,749.94,flat,-8.64,4.4,-13.04,-0.242,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-10,H-1x,SPY,short erste 30 Min -0.26%,,,,15:30,,ihm_short,,749.4,,,3.37,13,9742.2,16:00,749.94,flat,-7.02,3.95,-10.97,-0.25,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-10,I,QQQ,long,,673.57,669.92,09:35,,etf_orb_long,669.92,673.43,669.92,708.53,3.51,28,18856.04,12:00,669.92,stop,-98.28,5.76,-104.04,-1.059,,,,,,,5-Min-Bars
+2026-11-10,I-1x,QQQ,long,,673.57,669.92,09:35,,etf_orb_long,669.92,673.43,669.92,708.53,3.51,14,9428.02,12:00,669.92,stop,-49.14,3.88,-53.02,-1.079,,,,,,,5-Min-Bars
 2026-11-10,J,APPS,short Gap -26.6% RV30 15.1x,,,,10:00,15.06,gap_short,8.23,7.37,8.23,,0.86,116,854.92,13:05,8.23,stop,-99.76,2.9,-102.66,-1.029,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-10,J,EQPT,short Gap -7.5% RV30 7.3x,,,,10:00,7.31,gap_short,15.02,12.53,15.02,,2.49,40,501.2,13:05,15.02,stop,-99.6,2.55,-102.15,-1.026,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-10,J,ONON,short Gap -7.5% RV30 3.4x,,,,10:00,3.44,gap_short,35.58,34.7,35.58,,0.88,113,3921.1,16:00,34.73,flat,-3.39,5.92,-9.31,-0.094,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-10,J,SECZ,long Gap +27.5% RV30 12.8x,,,,10:00,12.81,gap_long,8.25,9.44,8.25,,1.19,84,792.96,16:00,8.55,flat,-74.76,2.76,-77.52,-0.776,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-10,J,TTWO,long Gap +5.2% RV30 7.0x,,,,10:00,7.02,gap_long,214.29,218.6,214.29,,4.31,23,5027.8,13:05,214.29,stop,-99.13,6.98,-106.11,-1.07,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,AAON,long Gap +13.9% RV30 10.3x,,,,10:00,10.3,gap_long,67.87,76.86,67.87,,8.99,11,845.46,13:05,67.87,stop,-98.89,2.8,-101.69,-1.028,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,APPS,short Gap -26.6% RV30 15.1x,,,,10:00,15.06,gap_short,8.23,7.37,8.23,,0.86,116,854.92,13:05,8.23,stop,-99.76,2.9,-102.66,-1.029,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,CSQR,long Gap +12.0% RV30 5.4x,,,,10:00,5.37,gap_long,16.86,17.94,16.86,,1.08,92,1650.48,16:00,17.52,flat,-38.64,3.63,-42.27,-0.425,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,FA,short Gap -9.8% RV30 43.6x,,,,10:00,43.62,gap_short,21.5,21.1,21.5,,0.4,42,886.2,13:05,21.5,stop,-16.8,2.89,-19.69,-1.172,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,GILT,short Gap -19.1% RV30 9.3x,,,,10:00,9.35,gap_short,6.34,6.01,6.34,,0.33,303,1821.03,13:05,6.34,stop,-99.99,4.9,-104.89,-1.049,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,SANM,long Gap +11.2% RV30 15.3x,,,,10:00,15.31,gap_long,153.51,165.07,153.51,,11.56,8,1320.56,12:00,153.51,stop,-92.48,3.27,-95.75,-1.035,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,SECZ,long Gap +27.5% RV30 12.8x,,,,10:00,12.81,gap_long,8.25,9.44,8.25,,1.19,84,792.96,16:00,8.55,flat,-74.76,2.76,-77.52,-0.776,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-10,J-1x,WGS,short Gap -14.4% RV30 11.5x,,,,10:00,11.54,gap_short,58.07,55.07,58.07,,3.0,33,1817.31,13:05,58.07,stop,-99.0,3.87,-102.87,-1.039,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-11,A,KO,breakout_20d,1651104187,96.61,95.65,09:50,0.35,,,96.71,96.13,97.87,0.58,77,7446.67,10:10,96.13,stop,-44.66,9.42,-54.08,-1.211,13.1,35.9,50.9,0.058,0.001,"No clear lean, within the noise of 56 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 27 % (target first 13.1 % vs stop first 35.9 %).",
 2026-11-11,A,SPOT,bull_flag,739527742,602.69,596.29,09:50,0.65,,,602.91,599.49,609.75,3.42,2,1205.82,10:10,599.49,stop,-6.84,3.2,-10.04,-1.468,34.6,63.8,1.6,0.056,-0.108,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 35 % (target first 34.6 % vs stop first 63.8 %).,
 2026-11-11,A,TTWO,breakout_20d,1897152187,233.37,225.21,10:30,0.44,,,233.48,229.29,241.86,4.19,23,5370.04,15:55,231.93,flat,-35.65,7.35,-43.0,-0.446,0.6,18.9,80.5,-0.159,-0.126,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 3 % (target first 0.6 % vs stop first 18.9 %).,
@@ -480,14 +700,28 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-11,F,ERAS,long RV 4.2x,,15.99,15.58,09:41,4.17,sip_long,15.99,15.99,15.88,,0.11,683,10921.17,09:42,15.88,stop,-75.13,17.71,-92.84,-1.236,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-11,F,CFG,long RV 3.7x,,65.56,65.06,09:52,3.7,sip_long,65.56,65.56,65.39,,0.17,588,38549.28,10:12,65.39,stop,-99.96,44.38,-144.34,-1.444,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-11,F,FROG,long RV 2.8x,,112.0,108.22,12:16,2.83,sip_long,112.0,112.0,111.12,,0.88,113,12656.0,13:36,111.12,stop,-99.44,14.61,-114.05,-1.147,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-11,F-1x,SNEX,long RV 7.8x,,58.0,57.64,09:35,7.79,sip_long,58.0,58.0,57.78,,0.22,172,9976.0,09:37,57.78,stop,-37.84,11.96,-49.8,-1.316,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-11,F-1x,VMC,short RV 10.5x,,285.74,284.89,09:38,10.52,sip_short,284.89,284.57,285.55,,0.98,35,9959.95,09:40,285.57,stop_gap,-35.0,11.98,-46.98,-1.37,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-11,F-1x,ERAS,long RV 4.2x,,15.99,15.58,09:41,4.17,sip_long,15.99,15.99,15.88,,0.11,625,9993.75,09:42,15.88,stop,-68.75,16.21,-84.96,-1.236,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-11,F-1x,CYTK,long RV 5.1x,,56.63,55.85,09:44,5.11,sip_long,56.63,56.63,56.35,,0.28,176,9966.88,16:00,58.54,flat,336.16,12.13,324.03,6.575,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-11,G,SPY,long Noise Area,,761.7,745.06,13:30,,spy_mom_long,761.7,762.1,761.7,,0.4,16,12193.6,14:00,762.05,trail,-0.8,4.44,-5.24,-0.819,,,,,,,Hebel 1.21x (Tagesvola 1.61 %)
+2026-11-11,G-1x,SPY,long Noise Area,,761.7,745.06,13:30,,spy_mom_long,761.7,762.1,761.7,,0.4,13,9907.3,14:00,762.05,trail,-0.65,3.98,-4.63,-0.89,,,,,,,Hebel 0.98x (Tagesvola 1.61 %)
 2026-11-11,GQ,QQQ,long Noise Area,,692.21,669.91,11:30,,spy_mom_long,692.21,692.46,692.21,,0.25,11,7617.06,14:30,692.38,trail,-0.88,3.52,-4.4,-1.6,,,,,,,Hebel 0.76x (Tagesvola 2.52 %)
+2026-11-11,GQ-1x,QQQ,long Noise Area,,692.21,669.91,11:30,,spy_mom_long,692.21,692.46,692.21,,0.25,11,7617.06,14:30,692.38,trail,-0.88,3.52,-4.4,-1.6,,,,,,,Hebel 0.76x (Tagesvola 2.52 %)
 2026-11-11,H,SPY,long erste 30 Min +0.86%,,,,15:30,,ihm_long,,760.14,,,3.39,16,12162.24,16:00,759.79,flat,-5.6,4.43,-10.03,-0.185,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-11,H-1x,SPY,long erste 30 Min +0.86%,,,,15:30,,ihm_long,,760.14,,,3.39,13,9881.82,16:00,759.79,flat,-4.55,3.98,-8.53,-0.194,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-11,I,QQQ,short,,689.02,686.81,09:35,,etf_orb_short,689.02,687.2,689.02,669.0,1.82,54,37108.8,10:45,689.02,stop,-98.28,9.43,-107.71,-1.096,,,,,,,5-Min-Bars
+2026-11-11,I-1x,QQQ,short,,689.02,686.81,09:35,,etf_orb_short,689.02,687.2,689.02,669.0,1.82,14,9620.8,10:45,689.02,stop,-25.48,3.93,-29.41,-1.154,,,,,,,5-Min-Bars
 2026-11-11,J,AADX,short Gap -5.8% RV30 3.1x,,,,10:00,3.09,gap_short,10.29,9.77,10.29,,0.52,192,1875.84,16:00,9.29,flat,92.16,3.83,88.33,0.885,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-11,J,CRWV,long Gap +14.8% RV30 3.9x,,,,10:00,3.93,gap_long,53.81,57.16,53.81,,3.35,29,1657.64,16:00,60.84,flat,106.72,3.71,103.01,1.06,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-11,J,RUM,long Gap +4.9% RV30 3.9x,,,,10:00,3.88,gap_long,5.05,5.49,5.05,,0.44,227,1246.23,16:00,5.95,flat,104.42,3.57,100.85,1.01,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-11,J,VELO,short Gap -15.6% RV30 5.5x,,,,10:00,5.53,gap_short,5.38,4.97,5.38,,0.41,243,1207.71,16:00,4.89,flat,20.65,3.63,17.03,0.171,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-11,J-1x,AADX,short Gap -5.8% RV30 3.1x,,,,10:00,3.09,gap_short,10.29,9.77,10.29,,0.52,192,1875.84,16:00,9.29,flat,92.16,3.83,88.33,0.885,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-11,J-1x,CRWV,long Gap +14.8% RV30 3.9x,,,,10:00,3.93,gap_long,53.81,57.16,53.81,,3.35,29,1657.64,16:00,60.84,flat,106.72,3.71,103.01,1.06,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-11,J-1x,REZI,long Gap +6.2% RV30 12.4x,,,,10:00,12.41,gap_long,19.51,21.41,19.51,,1.9,52,1113.32,16:00,22.98,flat,81.64,3.15,78.49,0.794,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-11,J-1x,RSKD,long Gap +23.8% RV30 22.6x,,,,10:00,22.56,gap_long,10.26,10.85,10.26,,0.59,169,1833.65,12:15,10.26,stop,-99.71,3.78,-103.49,-1.038,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-11,J-1x,RUM,long Gap +4.9% RV30 3.9x,,,,10:00,3.88,gap_long,5.05,5.49,5.05,,0.44,227,1246.23,16:00,5.95,flat,104.42,3.57,100.85,1.01,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-11,J-1x,VELO,short Gap -15.6% RV30 5.5x,,,,10:00,5.53,gap_short,5.38,4.97,5.38,,0.41,243,1207.71,16:00,4.89,flat,20.65,3.63,17.03,0.171,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-12,A,NVDA,oversold+oversold_bounce,58931785755,162.33,149.27,10:00,0.18,,,162.66,155.8,176.38,6.86,14,2277.24,15:55,165.45,flat,39.06,4.3,34.76,0.362,0.1,1.3,98.6,-0.115,-0.247,"No clear lean, within the noise of 57 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 7 % (target first 0.1 % vs stop first 1.3 %).",
 2026-11-12,A,ORCL,reclaim_ma20,4980656345,126.1,123.05,10:40,0.19,,,126.21,124.57,129.49,1.64,53,6689.13,15:55,127.18,flat,51.41,8.71,42.7,0.491,10.6,49.5,39.9,-0.12,-0.011,"No clear lean, within the noise of 20 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 18 % (target first 10.6 % vs stop first 49.5 %).",
 2026-11-12,C,INTC,oversold_bounce,8324431250,,,10:00,1.05,vwap_pullback,60.47,60.79,60.18,62.01,0.61,123,7477.17,10:10,60.18,stop,-75.03,9.44,-84.47,-1.126,30.9,62.7,6.3,-0.01,-0.041,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 33 % (target first 30.9 % vs stop first 62.7 %).,
@@ -504,14 +738,24 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-12,F,JBS,short RV 5.6x,,12.11,11.91,09:46,5.65,sip_short,11.91,11.91,11.97,,0.06,1666,19842.06,16:00,11.9,flat,24.99,36.49,-11.5,-0.115,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-12,F,FCX,short RV 4.5x,,60.92,60.27,10:07,4.46,sip_short,60.27,60.27,60.56,,0.29,207,12475.89,10:41,60.56,stop,-60.03,14.58,-74.61,-1.243,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-12,F,BZ,short RV 20.1x,,13.96,12.9,10:50,20.07,sip_short,12.9,12.9,12.96,,0.06,968,12487.2,10:58,12.96,stop,-58.08,22.2,-80.28,-1.382,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-12,F-1x,CTRE,long RV 132.1x,,38.05,37.6,09:35,132.13,sip_long,38.05,38.05,37.95,,0.1,262,9969.1,09:38,37.95,stop,-26.2,12.58,-38.78,-1.48,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-12,F-1x,WTRG,short RV 7.8x,,45.36,45.01,09:38,7.77,sip_short,45.01,45.01,45.12,,0.11,222,9992.22,10:11,45.12,stop,-24.42,12.22,-36.64,-1.5,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-12,F-1x,YETI,short RV 19.2x,,40.85,39.12,10:14,19.16,sip_short,39.12,39.12,39.31,,0.19,255,9975.6,10:21,39.31,stop,-48.45,12.55,-61.0,-1.259,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-12,F-1x,SONO,long RV 6.5x,,19.4,18.77,10:41,6.46,sip_long,19.4,19.4,19.31,,0.09,515,9991.0,11:11,19.31,stop,-46.35,15.12,-61.47,-1.326,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-12,H,SPY,short erste 30 Min -0.28%,,,,15:30,,ihm_short,,757.3,,,3.42,16,12116.8,16:00,757.2,flat,1.6,4.42,-2.82,-0.052,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-12,H-1x,SPY,short erste 30 Min -0.28%,,,,15:30,,ihm_short,,757.3,,,3.42,13,9844.9,16:00,757.2,flat,1.3,3.97,-2.67,-0.06,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-12,I,QQQ,long,,683.83,679.84,09:35,,etf_orb_long,679.84,683.76,679.84,722.96,3.92,25,17094.0,16:00,688.21,flat,111.25,5.43,105.82,1.08,,,,,,,5-Min-Bars
+2026-11-12,I-1x,QQQ,long,,683.83,679.84,09:35,,etf_orb_long,679.84,683.76,679.84,722.96,3.92,14,9572.64,16:00,688.21,flat,62.3,3.92,58.38,1.064,,,,,,,5-Min-Bars
 2026-11-12,J,BABA,short Gap -5.9% RV30 3.5x,,,,10:00,3.46,gap_short,95.92,94.94,95.92,,0.98,102,9683.88,16:00,94.36,flat,59.67,11.65,48.02,0.48,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-12,J,BZ,short Gap -16.6% RV30 11.8x,,,,10:00,11.77,gap_short,13.96,13.65,13.96,,0.31,322,4395.3,16:00,12.48,flat,375.13,7.43,367.7,3.684,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-12,J,CTVA,short Gap -13.4% RV30 6.2x,,,,10:00,6.16,gap_short,10.69,9.4,10.69,,1.29,77,723.8,16:00,9.19,flat,16.17,2.72,13.45,0.135,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-12,J,FIGR,long Gap +4.8% RV30 6.9x,,,,10:00,6.87,gap_long,24.0,25.76,24.0,,1.76,56,1442.56,16:00,25.68,flat,-4.48,3.44,-7.92,-0.08,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-12,J,KDP,short Gap -4.6% RV30 3.3x,,,,10:00,3.25,gap_short,36.78,35.96,36.78,,0.82,121,4351.16,16:00,35.42,flat,65.94,6.32,59.63,0.601,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-12,J,MBGL,long Gap +6.0% RV30 6.0x,,,,10:00,5.99,gap_long,21.09,22.18,21.09,,1.09,91,2018.38,16:00,23.15,flat,88.27,4.06,84.21,0.849,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-12,J-1x,AVEX,long Gap +12.5% RV30 7.2x,,,,10:00,7.22,gap_long,13.12,13.95,13.12,,0.83,120,1674.0,16:00,13.77,flat,-21.0,3.66,-24.66,-0.248,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-12,J-1x,BZ,short Gap -16.6% RV30 11.8x,,,,10:00,11.77,gap_short,13.96,13.65,13.96,,0.31,322,4395.3,16:00,12.48,flat,375.13,7.43,367.7,3.684,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-12,J-1x,CTVA,short Gap -13.4% RV30 6.2x,,,,10:00,6.16,gap_short,10.69,9.4,10.69,,1.29,77,723.8,16:00,9.19,flat,16.17,2.72,13.45,0.135,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-12,J-1x,YETI,short Gap -7.0% RV30 15.9x,,,,10:00,15.9,gap_short,40.85,39.58,40.85,,1.27,78,3087.24,16:00,38.33,flat,97.5,5.04,92.46,0.933,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-13,A,ABT,bull_flag,1067630850,108.3,107.03,09:50,1.68,,,108.51,107.66,110.21,0.85,21,2278.71,15:55,108.41,flat,-2.1,4.28,-6.38,-0.357,14.8,52.9,32.3,-0.115,-0.184,"No clear lean, within the noise of 58 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 22 % (target first 14.8 % vs stop first 52.9 %).",
 2026-11-13,A,COST,breakout_20d,2406138544,1105.22,1092.64,09:50,0.45,,,1105.79,1098.93,1119.51,6.86,6,6634.74,15:55,1105.48,flat,-1.86,8.63,-10.49,-0.255,14.1,38.1,47.8,0.12,0.086,"No clear lean, within the noise of 58 days: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 27 % (target first 14.1 % vs stop first 38.1 %).",
 2026-11-13,C,LOW,bull_flag,868783496,,,10:05,0.59,vwap_pullback,224.77,225.26,224.18,227.42,1.08,33,7433.58,10:20,224.18,stop,-35.64,9.42,-45.06,-1.264,32.6,57.5,10.0,0.104,-0.289,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 36 % (target first 32.6 % vs stop first 57.5 %).,
@@ -530,15 +774,31 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-13,F,FIGS,short RV 4.0x,,22.92,22.04,10:18,3.96,sip_short,22.04,22.04,22.18,,0.14,714,15736.56,11:25,22.18,stop,-99.96,22.93,-122.89,-1.229,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-13,F,DLO,long RV 2.4x,,13.55,13.24,10:49,2.42,sip_long,13.55,13.55,13.48,,0.07,954,12926.7,16:00,13.69,flat,133.56,22.53,111.03,1.663,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-13,F,HAWK,long RV 10.5x,,17.97,16.63,15:01,10.45,sip_long,17.97,17.97,17.86,,0.11,875,15723.75,16:00,18.19,flat,192.5,24.57,167.93,1.745,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-13,F-1x,CADL,long RV 43.3x,,5.97,5.2,09:35,43.32,sip_long,5.97,5.97,5.9,,0.07,1428,8525.16,09:37,5.9,stop,-99.96,22.76,-122.72,-1.228,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-13,F-1x,KDP,long RV 17.3x,,36.19,35.62,09:35,17.27,sip_long,36.19,36.19,36.05,,0.14,40,1447.6,10:14,36.05,stop,-5.6,3.44,-9.04,-1.614,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-13,F-1x,EPD,short RV 4.3x,,37.97,37.72,09:37,4.34,sip_short,37.72,37.72,37.81,,0.09,226,8524.72,09:41,37.81,stop,-20.34,10.79,-31.13,-1.53,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-13,F-1x,VIR,short RV 16.9x,,10.7,10.2,09:41,16.85,sip_short,10.2,10.2,10.29,,0.09,838,8547.6,16:00,9.95,flat,205.31,16.82,188.49,2.499,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-13,F-1x,HAWK,long RV 10.5x,,17.97,16.63,15:01,10.45,sip_long,17.97,17.97,17.86,,0.11,80,1437.6,16:00,18.19,flat,17.6,3.45,14.15,1.608,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-13,G,SPY,short Noise Area,,762.69,753.4,10:30,,spy_mom_short,753.4,750.07,753.4,,3.33,16,12001.12,13:00,751.77,trail,-27.2,4.4,-31.6,-0.593,,,,,,,Hebel 1.21x (Tagesvola 1.63 %)
+2026-11-13,G-1x,SPY,short Noise Area,,762.69,753.4,10:30,,spy_mom_short,753.4,750.07,753.4,,3.33,13,9750.91,13:00,751.77,trail,-22.1,3.95,-26.05,-0.602,,,,,,,Hebel 0.99x (Tagesvola 1.63 %)
 2026-11-13,G2,SPY,short Noise Area,,764.55,751.55,10:30,,spy_mom_short,751.55,750.07,751.55,,1.48,16,12001.12,11:00,750.65,trail,-9.28,4.4,-13.68,-0.578,,,,,,,Hebel 1.21x (Tagesvola 1.63 %)
+2026-11-13,G2-1x,SPY,short Noise Area,,764.55,751.55,10:30,,spy_mom_short,751.55,750.07,751.55,,1.48,13,9750.91,11:00,750.65,trail,-7.54,3.95,-11.49,-0.597,,,,,,,Hebel 0.99x (Tagesvola 1.63 %)
 2026-11-13,GQ,QQQ,short Noise Area,,692.88,683.8,10:00,,spy_mom_short,683.8,681.16,683.8,,2.64,11,7492.76,12:30,677.16,trail,44.0,3.49,40.5,1.395,,,,,,,Hebel 0.76x (Tagesvola 2.52 %)
+2026-11-13,GQ-1x,QQQ,short Noise Area,,692.88,683.8,10:00,,spy_mom_short,683.8,681.16,683.8,,2.64,11,7492.76,12:30,677.16,trail,44.0,3.49,40.5,1.395,,,,,,,Hebel 0.76x (Tagesvola 2.52 %)
 2026-11-13,H,SPY,short erste 30 Min -0.36%,,,,15:30,,ihm_short,,752.91,,,3.4,16,12046.56,16:00,754.25,flat,-21.44,4.41,-25.85,-0.475,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-13,H-1x,SPY,short erste 30 Min -0.36%,,,,15:30,,ihm_short,,752.91,,,3.4,13,9787.83,16:00,754.25,flat,-17.42,3.96,-21.38,-0.484,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-13,I,QQQ,short,,688.75,686.21,09:35,,etf_orb_short,688.75,686.4,688.75,662.9,2.35,42,28828.8,16:00,679.9,flat,273.0,7.74,265.26,2.688,,,,,,,5-Min-Bars
+2026-11-13,I-1x,QQQ,short,,688.75,686.21,09:35,,etf_orb_short,688.75,686.4,688.75,662.9,2.35,14,9609.6,16:00,679.9,flat,91.0,3.91,87.09,2.647,,,,,,,5-Min-Bars
 2026-11-13,J,CBRS,long Gap +11.2% RV30 6.5x,,,,10:00,6.45,gap_long,105.2,108.72,105.2,,3.52,28,3044.16,10:25,105.2,stop,-98.56,4.99,-103.55,-1.051,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-13,J,HAWK,long Gap +13.5% RV30 10.1x,,,,10:00,10.06,gap_long,16.06,16.81,16.06,,0.75,133,2235.73,16:00,18.19,flat,183.54,4.33,179.21,1.797,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-13,J,VIR,short Gap -13.7% RV30 13.1x,,,,10:00,13.05,gap_short,10.7,10.11,10.7,,0.59,169,1708.59,16:00,9.95,flat,26.2,3.7,22.5,0.226,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-13,J,YSS,short Gap -11.8% RV30 8.2x,,,,10:00,8.21,gap_short,6.12,5.36,6.12,,0.76,131,702.16,16:00,5.77,flat,-53.71,2.73,-56.44,-0.567,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-13,J-1x,CBRS,long Gap +11.2% RV30 6.5x,,,,10:00,6.45,gap_long,105.2,108.72,105.2,,3.52,28,3044.16,10:25,105.2,stop,-98.56,4.99,-103.55,-1.051,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-13,J-1x,HAWK,long Gap +13.5% RV30 10.1x,,,,10:00,10.06,gap_long,16.06,16.81,16.06,,0.75,133,2235.73,16:00,18.19,flat,183.54,4.33,179.21,1.797,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-13,J-1x,TNDM,long Gap +8.5% RV30 3.3x,,,,10:00,3.28,gap_long,18.53,19.64,18.53,,1.11,90,1767.6,16:00,20.05,flat,36.9,3.79,33.11,0.331,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-13,J-1x,VIR,short Gap -13.7% RV30 13.1x,,,,10:00,13.05,gap_short,10.7,10.11,10.7,,0.59,169,1708.59,16:00,9.95,flat,26.2,3.7,22.5,0.226,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-13,J-1x,YSS,short Gap -11.8% RV30 8.2x,,,,10:00,8.21,gap_short,6.12,5.36,6.12,,0.76,131,702.16,16:00,5.77,flat,-53.71,2.73,-56.44,-0.567,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-13,J-1x,ZVRA,short Gap -4.7% RV30 5.0x,,,,10:00,5.03,gap_short,10.65,9.48,10.65,,1.17,57,540.36,16:00,9.06,flat,23.94,2.53,21.41,0.321,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-16,A,SO,reclaim_ma20,2066644940,94.44,93.15,09:50,0.61,,,94.47,93.79,95.83,0.68,79,7463.13,11:30,93.79,stop,-53.72,9.44,-63.16,-1.176,12.9,29.8,57.3,0.197,0.169,Close to break-even: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 30 % (target first 12.9 % vs stop first 29.8 %).,
 2026-11-16,A,KDP,reclaim_ma20,2193115375,36.78,36.48,10:05,0.99,,,36.81,36.63,37.17,0.18,41,1509.21,11:55,36.63,stop,-7.38,3.51,-10.89,-1.475,41.7,54.2,4.2,0.202,-0.033,"No clear lean, within the noise of 17 days: at 2R after costs the target has to come first in 37 % of the replays that hit one side; it did in 43 % (target first 41.7 % vs stop first 54.2 %).",
 2026-11-16,A,APP,bull_flag,1402885741,416.64,404.78,11:55,0.54,,,416.67,410.71,428.59,5.96,16,6666.72,14:35,410.71,stop,-95.36,8.62,-103.98,-1.09,5.2,32.2,62.6,-0.039,0.021,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 14 % (target first 5.2 % vs stop first 32.2 %).,
@@ -559,15 +819,25 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-16,F,BKR,short RV 2.9x,,48.72,48.12,09:40,2.89,sip_short,48.12,48.12,48.36,,0.24,416,20017.92,09:43,48.36,stop,-99.84,24.23,-124.07,-1.243,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-16,F,RIVN,long RV 4.0x,,12.2,11.96,09:45,4.03,sip_long,12.2,12.2,12.12,,0.08,1249,15237.8,09:52,12.12,stop,-99.92,27.68,-127.6,-1.277,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-16,F,CHYM,short RV 5.3x,,34.63,34.14,10:05,5.31,sip_short,34.14,34.14,34.29,,0.15,599,20449.86,10:33,34.29,stop_gap,-89.85,26.48,-116.34,-1.295,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-16,F-1x,HELP,short RV 121.4x,,9.55,8.65,09:35,121.39,sip_short,8.65,8.65,8.74,,0.09,1111,9610.15,16:00,7.67,flat,1088.78,20.18,1068.6,10.687,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-16,G,SPY,short Noise Area,,757.45,746.6,10:00,,spy_mom_short,746.6,746.51,746.6,,0.1,16,11944.16,11:00,746.74,trail,-3.68,4.39,-8.07,-5.044,,,,,,,Hebel 1.20x (Tagesvola 1.62 %)
 2026-11-16,G,SPY,short Noise Area,,759.82,744.25,12:30,,spy_mom_short,744.25,743.52,744.25,,0.73,16,11896.32,16:00,740.05,flat,55.52,4.37,51.15,4.379,,,,,,,Hebel 1.20x (Tagesvola 1.62 %)
+2026-11-16,G-1x,SPY,short Noise Area,,757.45,746.6,10:00,,spy_mom_short,746.6,746.51,746.6,,0.1,13,9704.63,11:00,746.74,trail,-2.99,3.94,-6.93,-5.331,,,,,,,Hebel 0.97x (Tagesvola 1.62 %)
+2026-11-16,G-1x,SPY,short Noise Area,,759.82,744.25,12:30,,spy_mom_short,744.25,743.52,744.25,,0.73,13,9665.76,16:00,740.05,flat,45.11,3.93,41.18,4.339,,,,,,,Hebel 0.97x (Tagesvola 1.62 %)
 2026-11-16,G2,SPY,short Noise Area,,762.92,741.16,13:30,,spy_mom_short,741.16,740.56,741.16,,0.6,16,11848.96,14:00,741.76,trail,-19.2,4.37,-23.57,-2.455,,,,,,,Hebel 1.20x (Tagesvola 1.62 %)
 2026-11-16,G2,SPY,short Noise Area,,763.18,740.9,14:30,,spy_mom_short,740.9,740.21,740.9,,0.69,16,11843.36,16:00,740.05,flat,2.56,4.37,-1.81,-0.164,,,,,,,Hebel 1.20x (Tagesvola 1.62 %)
+2026-11-16,G2-1x,SPY,short Noise Area,,762.92,741.16,13:30,,spy_mom_short,741.16,740.56,741.16,,0.6,13,9627.28,14:00,741.76,trail,-15.6,3.93,-19.53,-2.504,,,,,,,Hebel 0.97x (Tagesvola 1.62 %)
+2026-11-16,G2-1x,SPY,short Noise Area,,763.18,740.9,14:30,,spy_mom_short,740.9,740.21,740.9,,0.69,13,9622.73,16:00,740.05,flat,2.08,3.92,-1.84,-0.205,,,,,,,Hebel 0.97x (Tagesvola 1.62 %)
 2026-11-16,GQ,QQQ,short Noise Area,,685.58,665.44,10:30,,spy_mom_short,665.44,664.11,665.44,,1.33,11,7305.21,11:00,668.46,trail,-47.9,3.47,-51.36,-3.511,,,,,,,Hebel 0.74x (Tagesvola 2.51 %)
 2026-11-16,GQ,QQQ,short Noise Area,,687.6,663.44,13:30,,spy_mom_short,663.44,662.71,663.44,,0.73,11,7289.81,14:00,664.61,trail,-20.9,3.46,-24.36,-3.034,,,,,,,Hebel 0.74x (Tagesvola 2.51 %)
 2026-11-16,GQ,QQQ,short Noise Area,,687.32,663.71,14:30,,spy_mom_short,663.71,663.54,663.71,,0.17,11,7298.94,16:00,661.86,flat,18.48,3.46,15.02,8.032,,,,,,,Hebel 0.74x (Tagesvola 2.51 %)
+2026-11-16,GQ-1x,QQQ,short Noise Area,,685.58,665.44,10:30,,spy_mom_short,665.44,664.11,665.44,,1.33,11,7305.21,11:00,668.46,trail,-47.9,3.47,-51.36,-3.511,,,,,,,Hebel 0.74x (Tagesvola 2.51 %)
+2026-11-16,GQ-1x,QQQ,short Noise Area,,687.6,663.44,13:30,,spy_mom_short,663.44,662.71,663.44,,0.73,11,7289.81,14:00,664.61,trail,-20.9,3.46,-24.36,-3.034,,,,,,,Hebel 0.74x (Tagesvola 2.51 %)
+2026-11-16,GQ-1x,QQQ,short Noise Area,,687.32,663.71,14:30,,spy_mom_short,663.71,663.54,663.71,,0.17,11,7298.94,16:00,661.86,flat,18.48,3.46,15.02,8.032,,,,,,,Hebel 0.74x (Tagesvola 2.51 %)
 2026-11-16,H,SPY,short erste 30 Min -1.04%,,,,15:30,,ihm_short,,739.32,,,3.31,16,11829.12,16:00,740.05,flat,-11.68,4.37,-16.05,-0.303,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-16,H-1x,SPY,short erste 30 Min -1.04%,,,,15:30,,ihm_short,,739.32,,,3.31,13,9611.16,16:00,740.05,flat,-9.49,3.92,-13.41,-0.312,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-16,I,QQQ,short,,671.18,667.09,09:35,,etf_orb_short,671.18,667.9,671.18,635.1,3.28,30,20037.0,09:40,671.18,stop,-98.4,6.02,-104.42,-1.061,,,,,,,5-Min-Bars
+2026-11-16,I-1x,QQQ,short,,671.18,667.09,09:35,,etf_orb_short,671.18,667.9,671.18,635.1,3.28,14,9350.6,09:40,671.18,stop,-45.92,3.87,-49.79,-1.084,,,,,,,5-Min-Bars
 2026-11-17,A,HD,bull_flag,2156021603,342.86,334.44,09:50,0.48,orb,,343.94,338.65,354.52,5.29,18,6190.92,12:30,338.61,stop_gap,-95.94,8.14,-104.08,-1.093,0.5,9.5,90.1,0.071,0.124,Strongly toward the stop: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 5 % (target first 0.5 % vs stop first 9.5 %).,
 2026-11-17,A,MCD,bull_flag,1572211157,275.68,271.0,09:50,0.7,orb,,275.82,273.34,280.78,2.48,10,2758.2,15:55,275.6,flat,-2.25,4.76,-7.01,-0.283,5.2,30.3,64.5,-0.019,0.005,Strongly toward the stop: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 15 % (target first 5.2 % vs stop first 30.3 %).,
 2026-11-17,B,CL,breakout_20d,889742079,100.6,99.78,09:55,4.06,orb,,100.86,100.19,102.2,0.67,74,7463.64,14:05,100.19,stop,-49.58,9.44,-59.02,-1.19,9.9,47.9,42.2,-0.163,-0.045,"No clear lean, within the noise of 17 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 17 % (target first 9.9 % vs stop first 47.9 %).",
@@ -589,23 +859,40 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-17,F,AS,long RV 14.2x,,31.08,29.63,09:35,14.16,sip_long,31.08,31.08,30.94,,0.14,659,20481.72,11:50,30.94,stop,-92.26,27.03,-119.29,-1.293,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-17,F,SLS,short RV 58.9x,,24.89,21.44,09:35,58.87,sip_short,21.44,21.44,21.55,,0.11,909,19488.96,11:25,21.55,stop,-99.99,28.63,-128.62,-1.286,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-17,F,ENR,long RV 8.4x,,27.07,26.13,12:16,8.38,sip_long,27.07,27.07,26.97,,0.1,999,27042.93,12:26,26.97,stop,-99.9,36.98,-136.88,-1.37,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-17,F-1x,SLS,short RV 58.9x,,24.89,21.44,09:35,58.87,sip_short,21.44,21.44,21.55,,0.11,466,9991.04,11:25,21.55,stop,-51.26,14.68,-65.94,-1.286,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-17,F-1x,ENR,long RV 8.4x,,27.07,26.13,12:16,8.38,sip_long,27.07,27.07,26.97,,0.1,369,9988.83,12:26,26.97,stop,-36.9,13.66,-50.56,-1.37,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-17,G,SPY,short Noise Area,,744.87,733.48,11:00,,spy_mom_short,733.48,731.39,733.48,,2.09,16,11702.24,12:30,733.36,trail,-31.52,4.34,-35.86,-1.072,,,,,,,Hebel 1.18x (Tagesvola 1.67 %)
 2026-11-17,G,SPY,short Noise Area,,745.83,732.53,13:00,,spy_mom_short,732.53,731.52,732.2,,0.68,16,11704.32,13:30,733.33,trail,-28.96,4.34,-33.3,-3.061,,,,,,,Hebel 1.18x (Tagesvola 1.67 %)
 2026-11-17,G,SPY,short Noise Area,,746.01,732.34,14:00,,spy_mom_short,732.34,731.05,732.19,,1.13,16,11696.8,16:00,732.39,flat,-21.44,4.34,-25.78,-1.426,,,,,,,Hebel 1.18x (Tagesvola 1.67 %)
+2026-11-17,G-1x,SPY,short Noise Area,,744.87,733.48,11:00,,spy_mom_short,733.48,731.39,733.48,,2.09,13,9508.07,12:30,733.36,trail,-25.61,3.9,-29.51,-1.086,,,,,,,Hebel 0.96x (Tagesvola 1.67 %)
+2026-11-17,G-1x,SPY,short Noise Area,,745.83,732.53,13:00,,spy_mom_short,732.53,731.52,732.53,,1.01,13,9509.76,13:30,733.33,trail,-23.53,3.9,-27.43,-2.089,,,,,,,Hebel 0.96x (Tagesvola 1.67 %)
+2026-11-17,G-1x,SPY,short Noise Area,,746.01,732.34,14:00,,spy_mom_short,732.34,731.05,732.34,,1.29,13,9503.65,16:00,732.39,flat,-17.42,3.9,-21.32,-1.271,,,,,,,Hebel 0.96x (Tagesvola 1.67 %)
 2026-11-17,G2,SPY,short Noise Area,,746.6,731.75,11:30,,spy_mom_short,731.75,731.45,731.75,,0.3,16,11703.2,12:00,731.01,trail,7.04,4.34,2.7,0.563,,,,,,,Hebel 1.18x (Tagesvola 1.67 %)
 2026-11-17,G2,SPY,short Noise Area,,748.75,729.61,15:00,,spy_mom_short,729.61,728.93,729.61,,0.68,16,11662.88,15:30,730.11,trail,-18.88,4.33,-23.21,-2.133,,,,,,,Hebel 1.18x (Tagesvola 1.67 %)
+2026-11-17,G2-1x,SPY,short Noise Area,,746.6,731.75,11:30,,spy_mom_short,731.75,731.45,731.75,,0.3,13,9508.85,12:00,731.01,trail,5.72,3.9,1.82,0.467,,,,,,,Hebel 0.96x (Tagesvola 1.67 %)
+2026-11-17,G2-1x,SPY,short Noise Area,,748.75,729.61,15:00,,spy_mom_short,729.61,728.93,729.61,,0.68,13,9476.09,15:30,730.11,trail,-15.34,3.9,-19.24,-2.176,,,,,,,Hebel 0.96x (Tagesvola 1.67 %)
 2026-11-17,GQ,QQQ,short Noise Area,,669.69,655.12,11:00,,spy_mom_short,655.12,653.1,655.12,,2.02,11,7184.1,12:30,656.04,trail,-32.34,3.44,-35.78,-1.61,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
 2026-11-17,GQ,QQQ,short Noise Area,,670.44,654.37,13:00,,spy_mom_short,654.37,654.11,654.37,,0.26,11,7195.21,13:30,656.72,trail,-28.71,3.44,-32.15,-11.241,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
 2026-11-17,GQ,QQQ,short Noise Area,,670.56,654.26,14:00,,spy_mom_short,654.26,654.07,654.26,,0.19,11,7194.77,14:30,654.22,trail,-1.65,3.44,-5.09,-2.435,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
 2026-11-17,GQ,QQQ,short Noise Area,,670.22,654.6,15:00,,spy_mom_short,654.6,652.19,654.6,,2.41,11,7174.09,16:00,657.03,flat,-53.24,3.44,-56.68,-2.138,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
+2026-11-17,GQ-1x,QQQ,short Noise Area,,669.46,655.38,11:00,,spy_mom_short,655.38,653.1,655.38,,2.28,11,7184.1,12:30,656.04,trail,-32.34,3.44,-35.78,-1.427,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
+2026-11-17,GQ-1x,QQQ,short Noise Area,,670.45,654.39,13:00,,spy_mom_short,654.39,654.11,654.39,,0.28,11,7195.21,13:30,656.72,trail,-28.71,3.44,-32.15,-10.438,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
+2026-11-17,GQ-1x,QQQ,short Noise Area,,670.48,654.35,14:00,,spy_mom_short,654.35,654.07,654.35,,0.28,11,7194.77,16:00,657.03,flat,-32.56,3.44,-36.0,-11.688,,,,,,,Hebel 0.73x (Tagesvola 2.54 %)
 2026-11-17,H,SPY,short erste 30 Min -0.08%,,,,15:30,,ihm_short,,730.11,,,3.39,16,11681.76,16:00,732.39,flat,-36.48,4.34,-40.82,-0.753,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-17,H-1x,SPY,short erste 30 Min -0.08%,,,,15:30,,ihm_short,,730.11,,,3.39,13,9491.43,16:00,732.39,flat,-29.64,3.9,-33.54,-0.761,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-17,I,QQQ,short,,663.09,660.83,09:35,,etf_orb_short,663.09,660.81,663.09,638.01,2.28,43,28414.83,09:45,663.09,stop,-98.04,7.69,-105.73,-1.078,,,,,,,5-Min-Bars
+2026-11-17,I-1x,QQQ,short,,663.09,660.83,09:35,,etf_orb_short,663.09,660.81,663.09,638.01,2.28,15,9912.15,09:45,663.09,stop,-34.2,3.99,-38.19,-1.117,,,,,,,5-Min-Bars
 2026-11-17,J,ACM,long Gap +9.7% RV30 10.6x,,,,10:00,10.6,gap_long,78.25,80.99,78.25,,2.74,36,2915.64,16:00,80.61,flat,-13.86,4.91,-18.77,-0.19,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-17,J,CPRI,short Gap -5.1% RV30 3.5x,,,,10:00,3.49,gap_short,19.74,18.84,19.74,,0.9,111,2091.24,16:00,19.07,flat,-25.53,4.1,-29.63,-0.297,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-17,J,DLO,short Gap -4.4% RV30 12.1x,,,,10:00,12.09,gap_short,12.88,12.58,12.88,,0.3,333,4189.14,16:00,12.46,flat,39.96,7.5,32.46,0.325,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-17,J,FUBO,long Gap +4.9% RV30 5.5x,,,,10:00,5.45,gap_long,7.53,8.23,7.53,,0.7,142,1168.66,14:45,7.53,stop,-99.4,3.12,-102.52,-1.031,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-17,J,KEP,short Gap -4.3% RV30 3.1x,,,,10:00,3.14,gap_short,9.34,9.26,9.34,,0.08,1249,11565.74,16:00,9.16,flat,118.66,24.0,94.66,0.947,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-17,J,OMER,short Gap -12.5% RV30 11.9x,,,,10:00,11.88,gap_short,14.59,13.47,14.59,,1.12,89,1198.83,16:00,13.93,flat,-40.94,3.22,-44.16,-0.443,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-17,J-1x,ACM,long Gap +9.7% RV30 10.6x,,,,10:00,10.6,gap_long,78.25,80.99,78.25,,2.74,36,2915.64,16:00,80.61,flat,-13.86,4.91,-18.77,-0.19,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-17,J-1x,CPRI,short Gap -5.1% RV30 3.5x,,,,10:00,3.49,gap_short,19.74,18.84,19.74,,0.9,111,2091.24,16:00,19.07,flat,-25.53,4.1,-29.63,-0.297,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-17,J-1x,DLO,short Gap -4.4% RV30 12.1x,,,,10:00,12.09,gap_short,12.88,12.58,12.88,,0.3,208,2616.64,16:00,12.46,flat,24.96,4.68,20.28,0.325,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-17,J-1x,FUBO,long Gap +4.9% RV30 5.5x,,,,10:00,5.45,gap_long,7.53,8.23,7.53,,0.7,142,1168.66,14:45,7.53,stop,-99.4,3.12,-102.52,-1.031,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-17,J-1x,OMER,short Gap -12.5% RV30 11.9x,,,,10:00,11.88,gap_short,14.59,13.47,14.59,,1.12,89,1198.83,16:00,13.93,flat,-40.94,3.22,-44.16,-0.443,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-18,A,RTX,reclaim_ma20,1090861200,198.0,195.89,09:55,0.81,orb,,198.43,196.94,201.41,1.49,37,7341.91,10:10,196.94,stop,-55.13,9.31,-64.44,-1.169,15.2,47.7,37.1,-0.007,-0.025,"No clear lean, within the noise of 59 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 24 % (target first 15.2 % vs stop first 47.7 %).",
 2026-11-18,A,TSCO,breakout_20d,655176809,38.72,37.6,09:55,1.57,orb,,38.78,38.16,40.02,0.62,40,1551.2,15:55,39.03,flat,9.8,3.56,6.24,0.252,10.4,30.0,59.6,0.11,-0.109,"No clear lean, within the noise of 59 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 26 % (target first 10.4 % vs stop first 30.0 %).",
 2026-11-18,A,SPCX,reclaim_ma20,12649941318,144.78,141.22,10:15,0.52,orb,,144.91,143.0,148.73,1.91,50,7245.5,15:45,143.0,stop,-95.5,9.2,-104.7,-1.096,13.4,49.7,36.9,-0.074,-0.218,"No clear lean, within the noise of 20 days: at 2R after costs the target has to come first in 34 % of the replays that hit one side; it did in 21 % (target first 13.4 % vs stop first 49.7 %).",
@@ -626,8 +913,11 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-18,E,PWR,reclaim_ma20,610021806,,,10:00,1.62,pdh_breakout,605.66,607.04,600.46,620.2,6.58,2,1214.08,11:55,600.46,stop,-13.16,3.21,-16.37,-1.244,25.4,50.2,24.3,0.128,-0.096,Close to break-even: at 2R after costs the target has to come first in 33 % of the replays that hit one side; it did in 34 % (target first 25.4 % vs stop first 50.2 %).,
 2026-11-18,F,MDLN,long RV 58.1x,,37.38,36.75,09:35,58.12,sip_long,37.38,37.38,37.17,,0.21,457,17082.66,16:00,39.16,flat,813.46,22.06,791.4,8.246,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-18,F,PRMB,long RV 54.5x,,22.44,21.5,09:35,54.46,sip_long,22.44,22.44,22.35,,0.09,952,21362.88,16:00,22.94,flat,476.0,31.12,444.88,5.192,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
+2026-11-18,F-1x,MDLN,long RV 58.1x,,37.38,36.75,09:35,58.12,sip_long,37.38,37.38,37.17,,0.21,264,9868.32,16:00,39.16,flat,469.92,12.74,457.18,8.246,,,,,,,"1-Min-Bars, Stop-Order ab 9:35"
 2026-11-18,H,SPY,long erste 30 Min +0.17%,,,,15:30,,ihm_long,,729.91,,,3.39,16,11678.56,16:00,730.33,flat,6.72,4.34,2.38,0.044,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
+2026-11-18,H-1x,SPY,long erste 30 Min +0.17%,,,,15:30,,ihm_long,,729.91,,,3.39,13,9488.83,16:00,730.33,flat,5.46,3.9,1.56,0.035,,,,,,,kein Stop; R = Ergebnis / typische 30-Min-Bewegung
 2026-11-18,I,QQQ,short,,662.65,659.81,09:35,,etf_orb_short,662.65,659.99,662.65,633.39,2.66,37,24419.63,10:05,662.65,stop,-98.42,6.89,-105.31,-1.07,,,,,,,5-Min-Bars
+2026-11-18,I-1x,QQQ,short,,662.65,659.81,09:35,,etf_orb_short,662.65,659.99,662.65,633.39,2.66,15,9899.85,10:05,662.65,stop,-39.9,3.98,-43.88,-1.1,,,,,,,5-Min-Bars
 2026-11-18,J,BRBR,long Gap +20.0% RV30 15.6x,,,,10:00,15.6,gap_long,12.91,13.36,12.91,,0.45,220,2939.2,10:10,12.91,stop,-99.0,5.09,-104.09,-1.051,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-18,J,ERO,short Gap -5.5% RV30 7.7x,,,,10:00,7.73,gap_short,25.55,24.22,25.55,,1.33,74,1792.28,16:00,23.9,flat,23.68,3.78,19.9,0.202,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-18,J,EXK,short Gap -4.5% RV30 3.1x,,,,10:00,3.09,gap_short,6.85,6.74,6.85,,0.11,902,6079.48,16:00,6.55,flat,166.87,15.02,151.85,1.53,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
@@ -635,3 +925,8 @@ date,variant,symbol,setups,dollar_vol_prev,or_high,or_low,trigger_time,volume_x,
 2026-11-18,J,TGB,short Gap -4.0% RV30 4.4x,,,,10:00,4.44,gap_short,5.96,5.59,5.96,,0.37,268,1498.12,16:00,5.56,flat,8.04,4.17,3.87,0.039,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-18,J,TJX,long Gap +5.5% RV30 6.8x,,,,10:00,6.76,gap_long,134.05,142.02,134.05,,7.97,12,1704.24,16:00,140.28,flat,-20.88,3.69,-24.57,-0.257,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
 2026-11-18,J,TTWO,long Gap +4.3% RV30 8.0x,,,,10:00,8.04,gap_long,210.5,219.2,210.5,,8.7,11,2411.2,16:00,216.49,flat,-29.81,4.4,-34.21,-0.357,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-18,J-1x,BRBR,long Gap +20.0% RV30 15.6x,,,,10:00,15.6,gap_long,12.91,13.36,12.91,,0.45,218,2912.48,10:10,12.91,stop,-98.1,5.04,-103.14,-1.051,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-18,J-1x,ERO,short Gap -5.5% RV30 7.7x,,,,10:00,7.73,gap_short,25.55,24.22,25.55,,1.33,73,1768.06,16:00,23.9,flat,23.36,3.76,19.6,0.202,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-18,J-1x,EXK,short Gap -4.5% RV30 3.1x,,,,10:00,3.09,gap_short,6.85,6.74,6.85,,0.11,81,545.94,16:00,6.55,flat,14.99,2.54,12.45,1.397,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-18,J-1x,SCCO,short Gap -5.5% RV30 3.9x,,,,10:00,3.88,gap_short,149.47,144.68,149.47,,4.79,20,2893.6,16:00,146.13,flat,-29.0,4.91,-33.91,-0.354,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"
+2026-11-18,J-1x,TJX,long Gap +5.5% RV30 6.8x,,,,10:00,6.76,gap_long,134.05,142.02,134.05,,7.97,12,1704.24,16:00,140.28,flat,-20.88,3.69,-24.57,-0.257,,,,,,,"Gap-Proxy, ohne Earnings-Nachweis"

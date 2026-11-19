@@ -2816,6 +2816,2248 @@
    "open_positions": {},
    "nav": 10000.0,
    "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
+  },
+  "F-1x": {
+   "universe": 1354,
+   "in_play": [
+    {
+     "symbol": "OMH",
+     "rv": 857.74
+    },
+    {
+     "symbol": "JAN",
+     "rv": 213.57
+    },
+    {
+     "symbol": "VCYT",
+     "rv": 60.88
+    },
+    {
+     "symbol": "GIL",
+     "rv": 60.06
+    },
+    {
+     "symbol": "SSNC",
+     "rv": 43.32
+    },
+    {
+     "symbol": "U",
+     "rv": 39.72
+    },
+    {
+     "symbol": "RYTM",
+     "rv": 28.33
+    },
+    {
+     "symbol": "FWONK",
+     "rv": 27.73
+    },
+    {
+     "symbol": "EWTX",
+     "rv": 24.67
+    },
+    {
+     "symbol": "MGNI",
+     "rv": 23.3
+    },
+    {
+     "symbol": "BSY",
+     "rv": 18.69
+    },
+    {
+     "symbol": "EPAM",
+     "rv": 18.31
+    },
+    {
+     "symbol": "NFG",
+     "rv": 18.22
+    },
+    {
+     "symbol": "APP",
+     "rv": 17.98
+    },
+    {
+     "symbol": "WRBY",
+     "rv": 15.56
+    },
+    {
+     "symbol": "ZTS",
+     "rv": 15.48
+    },
+    {
+     "symbol": "TH",
+     "rv": 14.72
+    },
+    {
+     "symbol": "Z",
+     "rv": 13.95
+    },
+    {
+     "symbol": "RELY",
+     "rv": 13.92
+    },
+    {
+     "symbol": "ZG",
+     "rv": 13.12
+    }
+   ],
+   "triggers": [
+    {
+     "symbol": "JAN",
+     "time": "09:35",
+     "side": 1,
+     "price": 29.54
+    },
+    {
+     "symbol": "VCYT",
+     "time": "09:35",
+     "side": -1,
+     "price": 26.14
+    },
+    {
+     "symbol": "GIL",
+     "time": "09:35",
+     "side": 1,
+     "price": 32.88
+    },
+    {
+     "symbol": "MGNI",
+     "time": "09:35",
+     "side": 1,
+     "price": 27.17
+    },
+    {
+     "symbol": "BSY",
+     "time": "09:35",
+     "side": 1,
+     "price": 46.8
+    },
+    {
+     "symbol": "EPAM",
+     "time": "09:35",
+     "side": 1,
+     "price": 160.4
+    },
+    {
+     "symbol": "WRBY",
+     "time": "09:35",
+     "side": -1,
+     "price": 24.85
+    },
+    {
+     "symbol": "APP",
+     "time": "09:38",
+     "side": 1,
+     "price": 356.56
+    },
+    {
+     "symbol": "RELY",
+     "time": "09:39",
+     "side": -1,
+     "price": 22.21
+    },
+    {
+     "symbol": "RYTM",
+     "time": "09:40",
+     "side": -1,
+     "price": 107.75
+    },
+    {
+     "symbol": "EWTX",
+     "time": "09:40",
+     "side": -1,
+     "price": 41.3
+    },
+    {
+     "symbol": "OMH",
+     "time": "09:42",
+     "side": -1,
+     "price": 12.0
+    },
+    {
+     "symbol": "TH",
+     "time": "09:47",
+     "side": -1,
+     "price": 10.05
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "F-1x",
+     "symbol": "JAN",
+     "setups": "long RV 213.6x",
+     "dollar_vol_prev": null,
+     "or_high": 29.54,
+     "or_low": 29.09,
+     "trigger_time": "09:35",
+     "volume_x": 213.57,
+     "signal": "sip_long",
+     "ref_level": 29.54,
+     "entry": 29.54,
+     "stop": 29.43,
+     "target": null,
+     "risk_ps": 0.11,
+     "shares": 338,
+     "notional": 9984.52,
+     "exit_time": "09:39",
+     "exit_price": 29.43,
+     "exit_reason": "stop",
+     "gross_pnl": -37.18,
+     "costs": 13.35,
+     "net_pnl": -50.53,
+     "r_net": -1.359,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    },
+    {
+     "date": "2026-11-05",
+     "variant": "F-1x",
+     "symbol": "RELY",
+     "setups": "short RV 13.9x",
+     "dollar_vol_prev": null,
+     "or_high": 24.0,
+     "or_low": 22.21,
+     "trigger_time": "09:39",
+     "volume_x": 13.92,
+     "signal": "sip_short",
+     "ref_level": 22.21,
+     "entry": 22.21,
+     "stop": 22.32,
+     "target": null,
+     "risk_ps": 0.11,
+     "shares": 450,
+     "notional": 9994.5,
+     "exit_time": "16:00",
+     "exit_price": 21.55,
+     "exit_reason": "flat",
+     "gross_pnl": 299.25,
+     "costs": 14.34,
+     "net_pnl": 284.91,
+     "r_net": 5.756,
+     "data_note": "1-Min-Bars, Stop-Order ab 9:35"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "SSNC",
+     "why": "Doji"
+    },
+    {
+     "symbol": "VCYT",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "GIL",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "MGNI",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "BSY",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "EPAM",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "WRBY",
+     "time": "09:35",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "APP",
+     "time": "09:38",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "RYTM",
+     "time": "09:40",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "EWTX",
+     "time": "09:40",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "OMH",
+     "time": "09:42",
+     "why": "0 Stueck (Hebel-Limit)"
+    },
+    {
+     "symbol": "TH",
+     "time": "09:47",
+     "why": "0 Stueck (Hebel-Limit)"
+    }
+   ]
+  },
+  "G-1x": {
+   "shares": 13,
+   "daily_vol_pct": 0.908,
+   "prior_close": 766.8099975585938,
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "G-1x",
+     "symbol": "SPY",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 767.96,
+     "or_low": 764.32,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 764.32,
+     "entry": 754.13,
+     "stop": 758.0,
+     "target": null,
+     "risk_ps": 3.87,
+     "shares": 13,
+     "notional": 9803.69,
+     "exit_time": "16:00",
+     "exit_price": 733.13,
+     "exit_reason": "flat",
+     "gross_pnl": 273.0,
+     "costs": 3.93,
+     "net_pnl": 269.07,
+     "r_net": 5.348,
+     "data_note": "Hebel 1.00x (Tagesvola 0.91 %)"
+    }
+   ]
+  },
+  "G2-1x": {
+   "shares": 13,
+   "daily_vol_pct": 0.908,
+   "prior_close": 766.8099975585938,
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "G2-1x",
+     "symbol": "SPY",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 768.54,
+     "or_low": 763.75,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 763.75,
+     "entry": 754.13,
+     "stop": 758.0,
+     "target": null,
+     "risk_ps": 3.87,
+     "shares": 13,
+     "notional": 9803.69,
+     "exit_time": "16:00",
+     "exit_price": 733.13,
+     "exit_reason": "flat",
+     "gross_pnl": 273.0,
+     "costs": 3.93,
+     "net_pnl": 269.07,
+     "r_net": 5.348,
+     "data_note": "Hebel 1.00x (Tagesvola 0.91 %)"
+    }
+   ]
+  },
+  "GQ-1x": {
+   "shares": 14,
+   "daily_vol_pct": 1.658,
+   "prior_close": 691.9500122070312,
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "GQ-1x",
+     "symbol": "QQQ",
+     "setups": "short Noise Area",
+     "dollar_vol_prev": null,
+     "or_high": 693.86,
+     "or_low": 679.38,
+     "trigger_time": "10:00",
+     "volume_x": null,
+     "signal": "spy_mom_short",
+     "ref_level": 679.38,
+     "entry": 666.83,
+     "stop": 673.04,
+     "target": null,
+     "risk_ps": 6.21,
+     "shares": 14,
+     "notional": 9335.62,
+     "exit_time": "16:00",
+     "exit_price": 648.06,
+     "exit_reason": "flat",
+     "gross_pnl": 262.78,
+     "costs": 3.84,
+     "net_pnl": 258.94,
+     "r_net": 2.978,
+     "data_note": "Hebel 0.95x (Tagesvola 1.66 %)"
+    }
+   ]
+  },
+  "H-1x": {
+   "first_half_hour_pct": -1.654,
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "H-1x",
+     "symbol": "SPY",
+     "setups": "short erste 30 Min -1.65%",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "15:30",
+     "volume_x": null,
+     "signal": "ihm_short",
+     "ref_level": null,
+     "entry": 735.21,
+     "stop": null,
+     "target": null,
+     "risk_ps": 1.85,
+     "shares": 13,
+     "notional": 9557.73,
+     "exit_time": "16:00",
+     "exit_price": 733.13,
+     "exit_reason": "flat",
+     "gross_pnl": 27.04,
+     "costs": 3.91,
+     "net_pnl": 23.13,
+     "r_net": 0.962,
+     "data_note": "kein Stop; R = Ergebnis / typische 30-Min-Bewegung"
+    }
+   ]
+  },
+  "I-1x": {
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "I-1x",
+     "symbol": "QQQ",
+     "setups": "short",
+     "dollar_vol_prev": null,
+     "or_high": 683.64,
+     "or_low": 677.6,
+     "trigger_time": "09:35",
+     "volume_x": null,
+     "signal": "etf_orb_short",
+     "ref_level": 683.64,
+     "entry": 677.61,
+     "stop": 683.64,
+     "target": 617.31,
+     "risk_ps": 6.03,
+     "shares": 14,
+     "notional": 9486.54,
+     "exit_time": "16:00",
+     "exit_price": 648.06,
+     "exit_reason": "flat",
+     "gross_pnl": 413.7,
+     "costs": 3.86,
+     "net_pnl": 409.84,
+     "r_net": 4.855,
+     "data_note": "5-Min-Bars"
+    }
+   ]
+  },
+  "J-1x": {
+   "gaps": [
+    {
+     "symbol": "VCYT",
+     "gap_pct": -43.66
+    },
+    {
+     "symbol": "APP",
+     "gap_pct": 28.73
+    },
+    {
+     "symbol": "GIL",
+     "gap_pct": -26.05
+    },
+    {
+     "symbol": "LZ",
+     "gap_pct": -25.83
+    },
+    {
+     "symbol": "WRBY",
+     "gap_pct": 21.79
+    },
+    {
+     "symbol": "TRIP",
+     "gap_pct": -20.49
+    },
+    {
+     "symbol": "XERS",
+     "gap_pct": 19.6
+    },
+    {
+     "symbol": "RUN",
+     "gap_pct": 19.28
+    },
+    {
+     "symbol": "FSLY",
+     "gap_pct": -18.23
+    },
+    {
+     "symbol": "CAI",
+     "gap_pct": -18.18
+    },
+    {
+     "symbol": "FUN",
+     "gap_pct": 17.28
+    },
+    {
+     "symbol": "RELY",
+     "gap_pct": -16.47
+    },
+    {
+     "symbol": "ENOV",
+     "gap_pct": 16.42
+    },
+    {
+     "symbol": "OXLC",
+     "gap_pct": -15.64
+    },
+    {
+     "symbol": "ACHC",
+     "gap_pct": 15.29
+    },
+    {
+     "symbol": "ARQT",
+     "gap_pct": -14.83
+    },
+    {
+     "symbol": "RPD",
+     "gap_pct": 14.73
+    },
+    {
+     "symbol": "ADMA",
+     "gap_pct": 14.6
+    },
+    {
+     "symbol": "EWTX",
+     "gap_pct": 14.58
+    },
+    {
+     "symbol": "VERX",
+     "gap_pct": 14.38
+    },
+    {
+     "symbol": "JOBY",
+     "gap_pct": 14.26
+    },
+    {
+     "symbol": "BROS",
+     "gap_pct": -14.13
+    },
+    {
+     "symbol": "EPAM",
+     "gap_pct": 13.72
+    },
+    {
+     "symbol": "QCOM",
+     "gap_pct": -13.36
+    },
+    {
+     "symbol": "U",
+     "gap_pct": 13.19
+    },
+    {
+     "symbol": "MGNI",
+     "gap_pct": 12.99
+    },
+    {
+     "symbol": "VNT",
+     "gap_pct": 11.79
+    },
+    {
+     "symbol": "FOUR",
+     "gap_pct": -11.76
+    },
+    {
+     "symbol": "TPR",
+     "gap_pct": 11.72
+    },
+    {
+     "symbol": "MRVI",
+     "gap_pct": -11.27
+    },
+    {
+     "symbol": "PTLO",
+     "gap_pct": 10.83
+    },
+    {
+     "symbol": "VIAV",
+     "gap_pct": -10.79
+    },
+    {
+     "symbol": "UMC",
+     "gap_pct": -10.65
+    },
+    {
+     "symbol": "SNAP",
+     "gap_pct": -10.64
+    },
+    {
+     "symbol": "ARM",
+     "gap_pct": -10.3
+    },
+    {
+     "symbol": "ASX",
+     "gap_pct": -9.62
+    },
+    {
+     "symbol": "APPN",
+     "gap_pct": 9.57
+    },
+    {
+     "symbol": "PTON",
+     "gap_pct": 9.52
+    },
+    {
+     "symbol": "VISN",
+     "gap_pct": -9.32
+    },
+    {
+     "symbol": "Z",
+     "gap_pct": -9.22
+    },
+    {
+     "symbol": "EXPE",
+     "gap_pct": -9.04
+    },
+    {
+     "symbol": "TS",
+     "gap_pct": 8.94
+    },
+    {
+     "symbol": "CAVA",
+     "gap_pct": -8.84
+    },
+    {
+     "symbol": "SHOO",
+     "gap_pct": -8.83
+    },
+    {
+     "symbol": "TXG",
+     "gap_pct": -8.71
+    },
+    {
+     "symbol": "ZGN",
+     "gap_pct": -8.6
+    },
+    {
+     "symbol": "NAVI",
+     "gap_pct": -8.38
+    },
+    {
+     "symbol": "MXL",
+     "gap_pct": -8.21
+    },
+    {
+     "symbol": "ACCV",
+     "gap_pct": -8.03
+    },
+    {
+     "symbol": "ZG",
+     "gap_pct": -7.84
+    },
+    {
+     "symbol": "AEHR",
+     "gap_pct": -7.77
+    },
+    {
+     "symbol": "AMPL",
+     "gap_pct": 7.74
+    },
+    {
+     "symbol": "ACMR",
+     "gap_pct": -7.61
+    },
+    {
+     "symbol": "SMTC",
+     "gap_pct": -7.58
+    },
+    {
+     "symbol": "IRM",
+     "gap_pct": -7.53
+    },
+    {
+     "symbol": "WU",
+     "gap_pct": 7.44
+    },
+    {
+     "symbol": "AMD",
+     "gap_pct": -7.42
+    },
+    {
+     "symbol": "AXTI",
+     "gap_pct": -7.4
+    },
+    {
+     "symbol": "SNDK",
+     "gap_pct": -7.24
+    },
+    {
+     "symbol": "USDE",
+     "gap_pct": -7.23
+    },
+    {
+     "symbol": "ONTO",
+     "gap_pct": -7.22
+    },
+    {
+     "symbol": "MNSO",
+     "gap_pct": 7.2
+    },
+    {
+     "symbol": "VSH",
+     "gap_pct": -7.08
+    },
+    {
+     "symbol": "VELO",
+     "gap_pct": -7.0
+    },
+    {
+     "symbol": "PENG",
+     "gap_pct": -6.97
+    },
+    {
+     "symbol": "PGEN",
+     "gap_pct": -6.92
+    },
+    {
+     "symbol": "FWONK",
+     "gap_pct": 6.89
+    },
+    {
+     "symbol": "TTMI",
+     "gap_pct": -6.88
+    },
+    {
+     "symbol": "SKHY",
+     "gap_pct": -6.84
+    },
+    {
+     "symbol": "PRVA",
+     "gap_pct": 6.81
+    },
+    {
+     "symbol": "ULCC",
+     "gap_pct": 6.77
+    },
+    {
+     "symbol": "CIM",
+     "gap_pct": -6.68
+    },
+    {
+     "symbol": "GPGI",
+     "gap_pct": -6.65
+    },
+    {
+     "symbol": "CCOI",
+     "gap_pct": -6.63
+    },
+    {
+     "symbol": "RGNX",
+     "gap_pct": -6.61
+    },
+    {
+     "symbol": "AMCR",
+     "gap_pct": -6.6
+    },
+    {
+     "symbol": "STX",
+     "gap_pct": -6.53
+    },
+    {
+     "symbol": "LRCX",
+     "gap_pct": -6.51
+    },
+    {
+     "symbol": "MYGN",
+     "gap_pct": 6.48
+    },
+    {
+     "symbol": "RDW",
+     "gap_pct": -6.48
+    },
+    {
+     "symbol": "FORM",
+     "gap_pct": -6.42
+    },
+    {
+     "symbol": "CHYM",
+     "gap_pct": 6.39
+    },
+    {
+     "symbol": "ECVT",
+     "gap_pct": 6.32
+    },
+    {
+     "symbol": "NWSA",
+     "gap_pct": -6.28
+    },
+    {
+     "symbol": "CELH",
+     "gap_pct": 6.28
+    },
+    {
+     "symbol": "MTSI",
+     "gap_pct": -6.28
+    },
+    {
+     "symbol": "SONY",
+     "gap_pct": 6.24
+    },
+    {
+     "symbol": "ANET",
+     "gap_pct": -6.24
+    },
+    {
+     "symbol": "P",
+     "gap_pct": -6.23
+    },
+    {
+     "symbol": "SHAZ",
+     "gap_pct": -6.22
+    },
+    {
+     "symbol": "NVTS",
+     "gap_pct": -6.22
+    },
+    {
+     "symbol": "MDA",
+     "gap_pct": 6.21
+    },
+    {
+     "symbol": "BE",
+     "gap_pct": -6.19
+    },
+    {
+     "symbol": "WDC",
+     "gap_pct": -6.09
+    },
+    {
+     "symbol": "UCTT",
+     "gap_pct": -6.06
+    },
+    {
+     "symbol": "OUST",
+     "gap_pct": -6.05
+    },
+    {
+     "symbol": "COHU",
+     "gap_pct": -6.03
+    },
+    {
+     "symbol": "BYND",
+     "gap_pct": -6.01
+    },
+    {
+     "symbol": "DELL",
+     "gap_pct": -6.0
+    },
+    {
+     "symbol": "PZZA",
+     "gap_pct": -6.0
+    },
+    {
+     "symbol": "PURR",
+     "gap_pct": -5.99
+    },
+    {
+     "symbol": "AMAT",
+     "gap_pct": -5.9
+    },
+    {
+     "symbol": "MAIR",
+     "gap_pct": 5.89
+    },
+    {
+     "symbol": "FIG",
+     "gap_pct": -5.78
+    },
+    {
+     "symbol": "FN",
+     "gap_pct": -5.75
+    },
+    {
+     "symbol": "HOS",
+     "gap_pct": -5.7
+    },
+    {
+     "symbol": "BGC",
+     "gap_pct": 5.68
+    },
+    {
+     "symbol": "EROC",
+     "gap_pct": -5.67
+    },
+    {
+     "symbol": "NET",
+     "gap_pct": -5.65
+    },
+    {
+     "symbol": "CLS",
+     "gap_pct": -5.64
+    },
+    {
+     "symbol": "TDAY",
+     "gap_pct": -5.6
+    },
+    {
+     "symbol": "CYTK",
+     "gap_pct": -5.6
+    },
+    {
+     "symbol": "DNA",
+     "gap_pct": -5.58
+    },
+    {
+     "symbol": "GEO",
+     "gap_pct": -5.56
+    },
+    {
+     "symbol": "BILI",
+     "gap_pct": 5.55
+    },
+    {
+     "symbol": "ICHR",
+     "gap_pct": -5.47
+    },
+    {
+     "symbol": "TWST",
+     "gap_pct": -5.46
+    },
+    {
+     "symbol": "COHR",
+     "gap_pct": -5.42
+    },
+    {
+     "symbol": "AAP",
+     "gap_pct": -5.42
+    },
+    {
+     "symbol": "BABA",
+     "gap_pct": 5.4
+    },
+    {
+     "symbol": "AMKR",
+     "gap_pct": -5.38
+    },
+    {
+     "symbol": "MU",
+     "gap_pct": -5.35
+    },
+    {
+     "symbol": "ALAB",
+     "gap_pct": -5.31
+    },
+    {
+     "symbol": "CIEN",
+     "gap_pct": -5.25
+    },
+    {
+     "symbol": "MRVL",
+     "gap_pct": -5.25
+    },
+    {
+     "symbol": "KLAC",
+     "gap_pct": -5.25
+    },
+    {
+     "symbol": "ADPT",
+     "gap_pct": 5.24
+    },
+    {
+     "symbol": "UMAC",
+     "gap_pct": -5.22
+    },
+    {
+     "symbol": "NBIS",
+     "gap_pct": -5.2
+    },
+    {
+     "symbol": "LITE",
+     "gap_pct": -5.19
+    },
+    {
+     "symbol": "BAND",
+     "gap_pct": -5.19
+    },
+    {
+     "symbol": "VRT",
+     "gap_pct": -5.13
+    },
+    {
+     "symbol": "FCEL",
+     "gap_pct": -5.12
+    },
+    {
+     "symbol": "ALGM",
+     "gap_pct": -5.12
+    },
+    {
+     "symbol": "DOCN",
+     "gap_pct": -5.12
+    },
+    {
+     "symbol": "PRM",
+     "gap_pct": 5.09
+    },
+    {
+     "symbol": "INOD",
+     "gap_pct": -5.08
+    },
+    {
+     "symbol": "FPS",
+     "gap_pct": -5.08
+    },
+    {
+     "symbol": "NVT",
+     "gap_pct": -5.08
+    },
+    {
+     "symbol": "CMI",
+     "gap_pct": -5.05
+    },
+    {
+     "symbol": "TIC",
+     "gap_pct": -5.05
+    },
+    {
+     "symbol": "CGNX",
+     "gap_pct": -5.03
+    },
+    {
+     "symbol": "Q",
+     "gap_pct": -5.0
+    },
+    {
+     "symbol": "LSCC",
+     "gap_pct": -4.97
+    },
+    {
+     "symbol": "KVYO",
+     "gap_pct": -4.96
+    },
+    {
+     "symbol": "AMPX",
+     "gap_pct": -4.96
+    },
+    {
+     "symbol": "MOD",
+     "gap_pct": -4.95
+    },
+    {
+     "symbol": "CLYM",
+     "gap_pct": -4.93
+    },
+    {
+     "symbol": "PWR",
+     "gap_pct": -4.9
+    },
+    {
+     "symbol": "BLZE",
+     "gap_pct": -4.88
+    },
+    {
+     "symbol": "CTRI",
+     "gap_pct": 4.87
+    },
+    {
+     "symbol": "ZTS",
+     "gap_pct": -4.85
+    },
+    {
+     "symbol": "RMBS",
+     "gap_pct": -4.85
+    },
+    {
+     "symbol": "CRDO",
+     "gap_pct": -4.84
+    },
+    {
+     "symbol": "ALB",
+     "gap_pct": 4.83
+    },
+    {
+     "symbol": "LGN",
+     "gap_pct": -4.82
+    },
+    {
+     "symbol": "APPS",
+     "gap_pct": 4.82
+    },
+    {
+     "symbol": "HPE",
+     "gap_pct": -4.82
+    },
+    {
+     "symbol": "CAH",
+     "gap_pct": 4.81
+    },
+    {
+     "symbol": "TCOM",
+     "gap_pct": 4.8
+    },
+    {
+     "symbol": "INFQ",
+     "gap_pct": -4.79
+    },
+    {
+     "symbol": "CIFR",
+     "gap_pct": -4.77
+    },
+    {
+     "symbol": "NNE",
+     "gap_pct": -4.75
+    },
+    {
+     "symbol": "ERIC",
+     "gap_pct": -4.7
+    },
+    {
+     "symbol": "RVMD",
+     "gap_pct": 4.68
+    },
+    {
+     "symbol": "ADI",
+     "gap_pct": -4.67
+    },
+    {
+     "symbol": "VICR",
+     "gap_pct": -4.67
+    },
+    {
+     "symbol": "PTRN",
+     "gap_pct": 4.64
+    },
+    {
+     "symbol": "IREN",
+     "gap_pct": -4.63
+    },
+    {
+     "symbol": "MPWR",
+     "gap_pct": -4.62
+    },
+    {
+     "symbol": "QMCO",
+     "gap_pct": -4.59
+    },
+    {
+     "symbol": "EDU",
+     "gap_pct": 4.57
+    },
+    {
+     "symbol": "RBRK",
+     "gap_pct": -4.54
+    },
+    {
+     "symbol": "AAON",
+     "gap_pct": -4.53
+    },
+    {
+     "symbol": "GLW",
+     "gap_pct": -4.5
+    },
+    {
+     "symbol": "LI",
+     "gap_pct": 4.49
+    },
+    {
+     "symbol": "NOK",
+     "gap_pct": -4.48
+    },
+    {
+     "symbol": "JD",
+     "gap_pct": 4.47
+    },
+    {
+     "symbol": "GFI",
+     "gap_pct": 4.46
+    },
+    {
+     "symbol": "TSEM",
+     "gap_pct": -4.46
+    },
+    {
+     "symbol": "FSK",
+     "gap_pct": 4.45
+    },
+    {
+     "symbol": "BRUN",
+     "gap_pct": -4.44
+    },
+    {
+     "symbol": "STM",
+     "gap_pct": -4.41
+    },
+    {
+     "symbol": "AVTX",
+     "gap_pct": -4.38
+    },
+    {
+     "symbol": "STRL",
+     "gap_pct": -4.37
+    },
+    {
+     "symbol": "ENTG",
+     "gap_pct": -4.36
+    },
+    {
+     "symbol": "SMCI",
+     "gap_pct": -4.32
+    },
+    {
+     "symbol": "TEM",
+     "gap_pct": -4.31
+    },
+    {
+     "symbol": "LILAK",
+     "gap_pct": -4.3
+    },
+    {
+     "symbol": "ABSI",
+     "gap_pct": -4.29
+    },
+    {
+     "symbol": "BTDR",
+     "gap_pct": -4.29
+    },
+    {
+     "symbol": "FSLR",
+     "gap_pct": 4.29
+    },
+    {
+     "symbol": "CDNL",
+     "gap_pct": -4.29
+    },
+    {
+     "symbol": "AAOI",
+     "gap_pct": -4.27
+    },
+    {
+     "symbol": "HSAI",
+     "gap_pct": 4.2
+    },
+    {
+     "symbol": "BSY",
+     "gap_pct": 4.2
+    },
+    {
+     "symbol": "CBRS",
+     "gap_pct": -4.18
+    },
+    {
+     "symbol": "AVGO",
+     "gap_pct": -4.18
+    },
+    {
+     "symbol": "SG",
+     "gap_pct": -4.15
+    },
+    {
+     "symbol": "ASML",
+     "gap_pct": -4.15
+    },
+    {
+     "symbol": "MDU",
+     "gap_pct": -4.14
+    },
+    {
+     "symbol": "ADNT",
+     "gap_pct": -4.13
+    },
+    {
+     "symbol": "FLNC",
+     "gap_pct": -4.13
+    },
+    {
+     "symbol": "APLD",
+     "gap_pct": -4.12
+    },
+    {
+     "symbol": "CI",
+     "gap_pct": 4.12
+    },
+    {
+     "symbol": "TSM",
+     "gap_pct": -4.04
+    },
+    {
+     "symbol": "CRWV",
+     "gap_pct": -4.03
+    },
+    {
+     "symbol": "COLD",
+     "gap_pct": 4.02
+    },
+    {
+     "symbol": "RGTI",
+     "gap_pct": -4.01
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-05",
+     "variant": "J-1x",
+     "symbol": "APP",
+     "setups": "long Gap +28.7% RV30 16.6x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 16.64,
+     "signal": "gap_long",
+     "ref_level": 338.88,
+     "entry": 359.45,
+     "stop": 338.88,
+     "target": null,
+     "risk_ps": 20.57,
+     "shares": 4,
+     "notional": 1437.8,
+     "exit_time": "16:00",
+     "exit_price": 356.36,
+     "exit_reason": "flat",
+     "gross_pnl": -12.36,
+     "costs": 3.43,
+     "net_pnl": -15.79,
+     "r_net": -0.192,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-05",
+     "variant": "J-1x",
+     "symbol": "XERS",
+     "setups": "long Gap +19.6% RV30 18.4x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 18.4,
+     "signal": "gap_long",
+     "ref_level": 12.32,
+     "entry": 13.33,
+     "stop": 12.32,
+     "target": null,
+     "risk_ps": 1.01,
+     "shares": 99,
+     "notional": 1319.67,
+     "exit_time": "16:00",
+     "exit_price": 13.09,
+     "exit_reason": "flat",
+     "gross_pnl": -23.76,
+     "costs": 3.31,
+     "net_pnl": -27.07,
+     "r_net": -0.271,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-05",
+     "variant": "J-1x",
+     "symbol": "FSLY",
+     "setups": "short Gap -18.2% RV30 5.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 5.11,
+     "signal": "gap_short",
+     "ref_level": 17.54,
+     "entry": 16.09,
+     "stop": 17.54,
+     "target": null,
+     "risk_ps": 1.45,
+     "shares": 68,
+     "notional": 1094.12,
+     "exit_time": "16:00",
+     "exit_price": 15.35,
+     "exit_reason": "flat",
+     "gross_pnl": 49.98,
+     "costs": 3.07,
+     "net_pnl": 46.91,
+     "r_net": 0.476,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-05",
+     "variant": "J-1x",
+     "symbol": "CAI",
+     "setups": "short Gap -18.2% RV30 6.1x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 6.15,
+     "signal": "gap_short",
+     "ref_level": 27.76,
+     "entry": 26.93,
+     "stop": 27.76,
+     "target": null,
+     "risk_ps": 0.83,
+     "shares": 120,
+     "notional": 3231.6,
+     "exit_time": "16:00",
+     "exit_price": 26.03,
+     "exit_reason": "flat",
+     "gross_pnl": 108.0,
+     "costs": 5.18,
+     "net_pnl": 102.82,
+     "r_net": 1.032,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    },
+    {
+     "date": "2026-11-05",
+     "variant": "J-1x",
+     "symbol": "FUN",
+     "setups": "long Gap +17.3% RV30 5.7x",
+     "dollar_vol_prev": null,
+     "or_high": null,
+     "or_low": null,
+     "trigger_time": "10:00",
+     "volume_x": 5.69,
+     "signal": "gap_long",
+     "ref_level": 9.18,
+     "entry": 9.4,
+     "stop": 9.18,
+     "target": null,
+     "risk_ps": 0.22,
+     "shares": 310,
+     "notional": 2914.0,
+     "exit_time": "10:15",
+     "exit_price": 9.18,
+     "exit_reason": "stop",
+     "gross_pnl": -68.2,
+     "costs": 5.98,
+     "net_pnl": -74.18,
+     "r_net": -1.088,
+     "data_note": "Gap-Proxy, ohne Earnings-Nachweis"
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "GIL",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "LZ",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "WRBY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TRIP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "RUN",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "ENOV",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "RPD",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "EWTX",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "VERX",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "JOBY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "QCOM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "U",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "VNT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TPR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "MRVI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "VIAV",
+     "why": "Volumen 2.5x"
+    },
+    {
+     "symbol": "APPN",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "PTON",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "Z",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TS",
+     "why": "Volumen 2.5x"
+    },
+    {
+     "symbol": "TXG",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "NAVI",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "MXL",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "ACCV",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "ZG",
+     "why": "Volumen 2.4x"
+    },
+    {
+     "symbol": "AEHR",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "AMPL",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "IRM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "AMD",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "AXTI",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "SNDK",
+     "why": "Volumen 2.7x"
+    },
+    {
+     "symbol": "USDE",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "ONTO",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "MNSO",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PENG",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "FWONK",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "TTMI",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "SKHY",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "ULCC",
+     "why": "Volumen 1.9x"
+    },
+    {
+     "symbol": "CIM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "GPGI",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "RGNX",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "AMCR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "STX",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "LRCX",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "MYGN",
+     "why": "Volumen 0.6x"
+    },
+    {
+     "symbol": "FORM",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "CHYM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CELH",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "ANET",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "P",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "SHAZ",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "NVTS",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "BE",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "WDC",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "UCTT",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "OUST",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "COHU",
+     "why": "Volumen 2.8x"
+    },
+    {
+     "symbol": "DELL",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "PZZA",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "PURR",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "AMAT",
+     "why": "Volumen 1.9x"
+    },
+    {
+     "symbol": "MAIR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "FN",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "BGC",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "EROC",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "NET",
+     "why": "Volumen 2.5x"
+    },
+    {
+     "symbol": "CLS",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "TDAY",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "DNA",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "BILI",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "ICHR",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "TWST",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "COHR",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "AAP",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "BABA",
+     "why": "Volumen 2.8x"
+    },
+    {
+     "symbol": "AMKR",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "MU",
+     "why": "Volumen 2.4x"
+    },
+    {
+     "symbol": "ALAB",
+     "why": "Volumen 2.7x"
+    },
+    {
+     "symbol": "CIEN",
+     "why": "Volumen 2.5x"
+    },
+    {
+     "symbol": "MRVL",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "KLAC",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "ADPT",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "UMAC",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "NBIS",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "LITE",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "BAND",
+     "why": "Volumen 0.9x"
+    },
+    {
+     "symbol": "VRT",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "FCEL",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "ALGM",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "DOCN",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "PRM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "INOD",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "FPS",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "NVT",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "CMI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "Q",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "LSCC",
+     "why": "Volumen 0.5x"
+    },
+    {
+     "symbol": "KVYO",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "AMPX",
+     "why": "Volumen 2.7x"
+    },
+    {
+     "symbol": "MOD",
+     "why": "Volumen 2.7x"
+    },
+    {
+     "symbol": "CLYM",
+     "why": "Volumen 0.8x"
+    },
+    {
+     "symbol": "BLZE",
+     "why": "Volumen 0.6x"
+    },
+    {
+     "symbol": "CTRI",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "ZTS",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CRDO",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "APPS",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "HPE",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "TCOM",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "INFQ",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "CIFR",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "NNE",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "ERIC",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "RVMD",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "ADI",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "VICR",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "PTRN",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "IREN",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "MPWR",
+     "why": "Volumen 2.6x"
+    },
+    {
+     "symbol": "QMCO",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "EDU",
+     "why": "Volumen 0.7x"
+    },
+    {
+     "symbol": "RBRK",
+     "why": "Volumen 1.9x"
+    },
+    {
+     "symbol": "AAON",
+     "why": "Volumen 1.9x"
+    },
+    {
+     "symbol": "GLW",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "LI",
+     "why": "Volumen 2.4x"
+    },
+    {
+     "symbol": "NOK",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "JD",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "GFI",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "TSEM",
+     "why": "Volumen 1.9x"
+    },
+    {
+     "symbol": "BRUN",
+     "why": "Volumen 1.3x"
+    },
+    {
+     "symbol": "AVTX",
+     "why": "Volumen 0.1x"
+    },
+    {
+     "symbol": "STRL",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "ENTG",
+     "why": "Volumen 2.9x"
+    },
+    {
+     "symbol": "SMCI",
+     "why": "Volumen 1.5x"
+    },
+    {
+     "symbol": "TEM",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "LILAK",
+     "why": "Volumen 3.0x"
+    },
+    {
+     "symbol": "ABSI",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "BTDR",
+     "why": "Volumen 1.2x"
+    },
+    {
+     "symbol": "FSLR",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CDNL",
+     "why": "Volumen 2.0x"
+    },
+    {
+     "symbol": "AAOI",
+     "why": "Volumen 1.9x"
+    },
+    {
+     "symbol": "HSAI",
+     "why": "Volumen 1.0x"
+    },
+    {
+     "symbol": "CBRS",
+     "why": "Volumen 1.4x"
+    },
+    {
+     "symbol": "AVGO",
+     "why": "Volumen 2.2x"
+    },
+    {
+     "symbol": "SG",
+     "why": "Volumen 0.7x"
+    },
+    {
+     "symbol": "ASML",
+     "why": "Volumen 2.3x"
+    },
+    {
+     "symbol": "MDU",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "ADNT",
+     "why": "Volumen 2.1x"
+    },
+    {
+     "symbol": "FLNC",
+     "why": "Volumen 1.6x"
+    },
+    {
+     "symbol": "APLD",
+     "why": "Volumen 1.8x"
+    },
+    {
+     "symbol": "CI",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "CRWV",
+     "why": "Volumen 1.1x"
+    },
+    {
+     "symbol": "COLD",
+     "why": "keine Bestaetigung bis 10:00"
+    },
+    {
+     "symbol": "RGTI",
+     "why": "Volumen 1.7x"
+    },
+    {
+     "symbol": "VCYT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "RELY",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "OXLC",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ACHC",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ARQT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ADMA",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "BROS",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "EPAM",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "MGNI",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "FOUR",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "PTLO",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "UMC",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "SNAP",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ARM",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ASX",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "VISN",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "EXPE",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CAVA",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "SHOO",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ZGN",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ACMR",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "SMTC",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "WU",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "VSH",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "VELO",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "PGEN",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "PRVA",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CCOI",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "RDW",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ECVT",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "NWSA",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "MTSI",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "SONY",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "MDA",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "BYND",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "FIG",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "HOS",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CYTK",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "GEO",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "TIC",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CGNX",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "PWR",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "RMBS",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "ALB",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "LGN",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "CAH",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "FSK",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "STM",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "BSY",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    },
+    {
+     "symbol": "TSM",
+     "why": "Hebel-Limit oder Order unter Minimum"
+    }
+   ]
   }
  }
 }
