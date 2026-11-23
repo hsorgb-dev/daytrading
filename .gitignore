@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 trader/
 forwardtest/.cache/
+forwardtest/.cache_ema_bucket/
+forwardtest/ema_bucket.md
+forwardtest/ema_bucket_trades.csv

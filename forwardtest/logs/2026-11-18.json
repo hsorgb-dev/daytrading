@@ -3170,6 +3170,124 @@
      "why": "Hebel-Limit oder Order unter Minimum"
     }
    ]
+  },
+  "K": {
+   "triggers": [
+    {
+     "symbol": "TSCO",
+     "time": "09:55",
+     "price": 38.78,
+     "signal": "orb_ema12"
+    },
+    {
+     "symbol": "VIK",
+     "time": "10:00",
+     "price": 98.99,
+     "signal": "orb_ema12"
+    },
+    {
+     "symbol": "SPCX",
+     "time": "10:15",
+     "price": 144.91,
+     "signal": "orb_ema12"
+    },
+    {
+     "symbol": "PWR",
+     "time": "10:25",
+     "price": 609.88,
+     "signal": "orb_ema12"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-18",
+     "variant": "K",
+     "symbol": "TSCO",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 655176809,
+     "or_high": 38.72,
+     "or_low": 37.6,
+     "trigger_time": "09:55",
+     "volume_x": 1.57,
+     "signal": "orb_ema12",
+     "ref_level": 1.05,
+     "entry": 38.78,
+     "stop": 37.6,
+     "target": null,
+     "risk_ps": 1.18,
+     "shares": 84,
+     "notional": 3257.52,
+     "exit_time": "15:55",
+     "exit_price": 39.03,
+     "exit_reason": "flat",
+     "gross_pnl": 20.58,
+     "costs": 5.27,
+     "net_pnl": 15.31,
+     "r_net": 0.154,
+     "data_note": ""
+    },
+    {
+     "date": "2026-11-18",
+     "variant": "K",
+     "symbol": "VIK",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 1014226515,
+     "or_high": 98.82,
+     "or_low": 94.05,
+     "trigger_time": "10:00",
+     "volume_x": 0.48,
+     "signal": "orb_ema12",
+     "ref_level": 1.39,
+     "entry": 98.99,
+     "stop": 94.05,
+     "target": null,
+     "risk_ps": 4.94,
+     "shares": 20,
+     "notional": 1979.8,
+     "exit_time": "15:55",
+     "exit_price": 100.28,
+     "exit_reason": "flat",
+     "gross_pnl": 25.8,
+     "costs": 3.99,
+     "net_pnl": 21.81,
+     "r_net": 0.221,
+     "data_note": ""
+    },
+    {
+     "date": "2026-11-18",
+     "variant": "K",
+     "symbol": "SPCX",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 12649941318,
+     "or_high": 144.78,
+     "or_low": 141.22,
+     "trigger_time": "10:15",
+     "volume_x": 0.52,
+     "signal": "orb_ema12",
+     "ref_level": 0.44,
+     "entry": 144.91,
+     "stop": 141.22,
+     "target": null,
+     "risk_ps": 3.69,
+     "shares": 25,
+     "notional": 3622.75,
+     "exit_time": "15:55",
+     "exit_price": 143.75,
+     "exit_reason": "flat",
+     "gross_pnl": -29.0,
+     "costs": 5.61,
+     "net_pnl": -34.61,
+     "r_net": -0.375,
+     "data_note": ""
+    }
+   ],
+   "skipped": [
+    {
+     "symbol": "PWR",
+     "time": "10:25",
+     "why": "max. Trades/Tag erreicht"
+    }
+   ]
   }
  }
 }

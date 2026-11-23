@@ -4460,6 +4460,112 @@
    "open_positions": {},
    "nav": 10000.0,
    "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
+  },
+  "K": {
+   "triggers": [
+    {
+     "symbol": "AMD",
+     "time": "09:50",
+     "price": 554.47,
+     "signal": "orb_ema12"
+    },
+    {
+     "symbol": "TJX",
+     "time": "09:50",
+     "price": 139.62,
+     "signal": "orb_ema12"
+    },
+    {
+     "symbol": "TGT",
+     "time": "10:05",
+     "price": 168.11,
+     "signal": "orb_ema12"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-19",
+     "variant": "K",
+     "symbol": "AMD",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 18039922502,
+     "or_high": 552.0,
+     "or_low": 537.09,
+     "trigger_time": "09:50",
+     "volume_x": 0.6,
+     "signal": "orb_ema12",
+     "ref_level": 0.6,
+     "entry": 554.47,
+     "stop": 537.09,
+     "target": null,
+     "risk_ps": 17.38,
+     "shares": 5,
+     "notional": 2772.35,
+     "exit_time": "10:15",
+     "exit_price": 537.09,
+     "exit_reason": "stop",
+     "gross_pnl": -86.9,
+     "costs": 4.73,
+     "net_pnl": -91.63,
+     "r_net": -1.054,
+     "data_note": ""
+    },
+    {
+     "date": "2026-11-19",
+     "variant": "K",
+     "symbol": "TJX",
+     "setups": "reclaim_ma20",
+     "dollar_vol_prev": 2532162515,
+     "or_high": 139.4,
+     "or_low": 136.98,
+     "trigger_time": "09:50",
+     "volume_x": 0.9,
+     "signal": "orb_ema12",
+     "ref_level": 0.49,
+     "entry": 139.62,
+     "stop": 136.98,
+     "target": null,
+     "risk_ps": 2.64,
+     "shares": 37,
+     "notional": 5165.94,
+     "exit_time": "15:55",
+     "exit_price": 139.64,
+     "exit_reason": "flat",
+     "gross_pnl": 0.74,
+     "costs": 7.17,
+     "net_pnl": -6.43,
+     "r_net": -0.066,
+     "data_note": ""
+    },
+    {
+     "date": "2026-11-19",
+     "variant": "K",
+     "symbol": "TGT",
+     "setups": "breakout_20d",
+     "dollar_vol_prev": 2026519594,
+     "or_high": 167.77,
+     "or_low": 165.2,
+     "trigger_time": "10:05",
+     "volume_x": 0.39,
+     "signal": "orb_ema12",
+     "ref_level": 1.16,
+     "entry": 168.11,
+     "stop": 165.2,
+     "target": null,
+     "risk_ps": 2.91,
+     "shares": 6,
+     "notional": 1008.66,
+     "exit_time": "15:55",
+     "exit_price": 167.88,
+     "exit_reason": "flat",
+     "gross_pnl": -1.38,
+     "costs": 3.01,
+     "net_pnl": -4.39,
+     "r_net": -0.251,
+     "data_note": ""
+    }
+   ],
+   "skipped": []
   }
  }
 }

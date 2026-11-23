@@ -22,6 +22,10 @@ Ablauf je Tag D (nur Daten, die zum jeweiligen Zeitpunkt bekannt waren):
      Variante C3 = C2 plus Trailing-Stop (trail_r, trail_after_r): ab +1R folgt der
      Stop dem Hoch im Abstand 1,5R, nur nach oben, wirksam ab dem naechsten Bar.
      forward_from verhindert einen Backfill vor ihrem Start.
+     Variante K = ORB wie A, aber nur Titel, deren Open in ATR(14) mindestens 0,25 und
+     hoechstens 1,5 ueber dem Daily-EMA12 (Schluesse bis D-1) liegt (ema_bias), Einstieg bis
+     11:30, Stop am Range-Tief (stop_rule or_low), kein festes Ziel; ab +2R Stop auf +1R,
+     danach 1,5R unter dem bisherigen Hoch (trail_lock_r).
   3. Plan wie trader-exit: Stop Range-Mitte (abgerundet), Ziel 2R, flat 15:55.
   4. Groesse wie trader-budget: min(max. Verlust / Risiko, Positionslimit,
      max. Order, freies Cash). Max. 3 Einstiege am Tag, chronologisch.
@@ -282,12 +286,7 @@ def find_trigger(bars, day, cfg, vcfg, spy):
     rng = [bars[k] for k in range(n_or)]
     oh, ol = max(b["h"] for b in rng), min(b["l"] for b in rng)
     avg_v = sum(b["v"] for b in rng) / float(n_or)
-    s = scan.session(day)
-    close_dt = datetime.datetime.combine(day, s[1])
-    before = datetime.datetime.combine(day, hhmm(cfg["no_entries_before"]))
-    after = datetime.datetime.combine(day, hhmm(cfg["no_entries_after"]))
-    if s[1] != scan.CLOSE:
-        after = min(after, close_dt - datetime.timedelta(minutes=30))
+    before, after = entry_window(day, cfg, vcfg)  # A/B: global window; K: own no_entries_after
     spy_open = spy[0]["o"] if spy and 0 in spy else None
     for k in sorted(bars):
         b = bars[k]
@@ -465,6 +464,27 @@ def find_pdh_pdl(bars, prev_bars, day, cfg, vcfg):
     return None, "kein Trigger"
 
 
+def ema_bias(data, sym, day, today_open, eb):
+    """K: (Open - EMA(period) der Tagesschluesse bis D-1) / ATR(atr, Wilder) bis D-1. None ohne Daten."""
+    ch = data.chart(sym, "6mo", "1d")
+    if "error" in ch:
+        return None
+    rows = _ohlcv_days(ch)
+    hist = [rows[d] for d in sorted(rows) if d < day]
+    n_ema, n_atr = eb.get("period", 12), eb.get("atr", 14)
+    if len(hist) < max(3 * n_ema, n_atr + 1):
+        return None
+    k = 2.0 / (n_ema + 1)
+    ema = hist[0][3]
+    for b in hist[1:]:
+        ema = b[3] * k + ema * (1 - k)
+    trs = [max(b[1] - b[2], abs(b[1] - p[3]), abs(b[2] - p[3])) for p, b in zip(hist[:-1], hist[1:])]
+    atr = sum(trs[:n_atr]) / n_atr
+    for tr in trs[n_atr:]:
+        atr = (atr * (n_atr - 1) + tr) / n_atr
+    return (today_open - ema) / atr if atr > 0 else None
+
+
 STRATEGIES = {"vwap_pullback": find_vwap_pullback, "mean_reversion": find_mean_reversion,
               "pdh_pdl": find_pdh_pdl}
 
@@ -481,6 +501,8 @@ def make_plan(trig, cfg, vcfg=None):
     entry = trig["price"]
     if trig.get("stop") is not None:
         stop = trig["stop"]
+    elif vcfg.get("stop_rule") == "or_low":
+        stop = floor_cent(trig["or_low"])
     else:
         stop = floor_cent((trig["or_high"] + trig["or_low"]) / 2.0)
     if vcfg.get("stop_mult"):  # wider stop, same $ risk (fewer shares)
@@ -546,6 +568,8 @@ def simulate(plan, trig, bars, day, cfg, vcfg=None):
             hi = b["h"] if hi is None else max(hi, b["h"])
             if hi >= plan["entry"] + trail_after * plan["risk"]:
                 stop = max(stop, floor_cent(hi - trail * plan["risk"]))
+                if vcfg.get("trail_lock_r") is not None:  # K: once active, at least +lock R
+                    stop = max(stop, floor_cent(plan["entry"] + vcfg["trail_lock_r"] * plan["risk"]))
     if last is None:
         return plan["entry"], "flat", trig["time"], "keine Bars nach Einstieg"
     note = "" if last["end"] >= flat else "Bars enden vor flat_by (%s)" % label(last["end"])
@@ -1313,7 +1337,15 @@ def run_day(day, data, symbols, spark, cfg, use_tm, tm_cache, frozen=None, equit
             b = bars_by[w["symbol"]]
             if not b:
                 continue
+            eb = vcfg.get("ema_bias")
+            if eb:  # K: only symbols whose open is above the daily EMA12, but not stretched
+                d = ema_bias(data, w["symbol"], day, b[0]["o"], eb) if 0 in b else None
+                if d is None or d < eb.get("min_d", 0.25) or d > eb.get("max_d", 1.5):
+                    continue
             trig, why = find_any_trigger(b, prev_by[w["symbol"]], day, cfg, vcfg, spy)
+            if trig and eb:
+                trig["ref_level"] = round(d, 2)  # journal: EMA12 distance in ATR
+                trig["signal"] = "orb_ema12"
             if trig:
                 cands.append((trig["time"], -w["dollar_vol_prev"], w, trig))
         cands.sort(key=lambda x: (x[0], x[1]))

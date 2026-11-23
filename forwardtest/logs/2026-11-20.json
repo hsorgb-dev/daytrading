@@ -3319,6 +3319,46 @@
    "open_positions": {},
    "nav": 10000.0,
    "note": "offen: 0 Pos., brutto 0 % vom Konto, unreal. +0 $; Marktfilter aus"
+  },
+  "K": {
+   "triggers": [
+    {
+     "symbol": "CMCSA",
+     "time": "10:00",
+     "price": 25.33,
+     "signal": "orb_ema12"
+    }
+   ],
+   "taken": [
+    {
+     "date": "2026-11-20",
+     "variant": "K",
+     "symbol": "CMCSA",
+     "setups": "bull_flag",
+     "dollar_vol_prev": 688594671,
+     "or_high": 25.29,
+     "or_low": 25.07,
+     "trigger_time": "10:00",
+     "volume_x": 0.25,
+     "signal": "orb_ema12",
+     "ref_level": 0.61,
+     "entry": 25.33,
+     "stop": 25.07,
+     "target": null,
+     "risk_ps": 0.26,
+     "shares": 291,
+     "notional": 7371.03,
+     "exit_time": "14:10",
+     "exit_price": 25.07,
+     "exit_reason": "stop",
+     "gross_pnl": -75.66,
+     "costs": 10.24,
+     "net_pnl": -85.9,
+     "r_net": -1.135,
+     "data_note": ""
+    }
+   ],
+   "skipped": []
   }
  }
 }
